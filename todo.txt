@@ -1,0 +1,5 @@
+v Parsing data into class (I will make this, this afternoon on GitHub)
+
+- Make a basic CNN for that class, or with a template (Filip)
+- Looking into IR data formats (Smarts and Smiles are data formats for IR chemical compounds data) (Andrea)
+- Preprocessing of the data from the class (Sam)
