@@ -1,3 +1,10 @@
+Setup:
+
+
+
+
+
+
 The standard format for spectroscopic data found online and used by the Chemotion repository is JCAMP-DX file. Therefore I looked into the format to understand how to extract the data. JCAMP-DX files use only printable ASCII characters, it consists of a data label and an associated data set. It starts with ##TITLE= and ending with ##END=;
 
 The relevant information that we should extract from a JCAMP-DX file for our purposes:

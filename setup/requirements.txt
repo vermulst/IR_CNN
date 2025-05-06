@@ -1,0 +1,3 @@
+jcamp
+numpy
+matplotlib
