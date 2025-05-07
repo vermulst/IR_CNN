@@ -16,13 +16,6 @@ for compound in compounds:
             filename = attachment["identifier"].split("/", 1)[1] 
             filenames.append(filename)
 
-# go through every file
-samples = []
-for identifier in filenames:
-    path = f"data/samples/{identifier}"
-    try:
-        sample = SpectraSample(path)
-        samples.append(sample)
-    except Exception as e:
-        print(f"Error in {identifier}: {e}")
+
+samples = [SpectraSample(f"data/samples/{identifier}") for identifier in filenames]
 print(len(samples))
