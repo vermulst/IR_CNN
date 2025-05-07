@@ -5,8 +5,6 @@ from jcamp import jcamp_readfile
 class SpectraSample():
     def __init__(self, path, params=False):
         self.data = jcamp_readfile(path)
-        print(self.data)
-
         #commented out probably don't matter
 
         #self.title = self.data["title"]
@@ -33,6 +31,3 @@ class SpectraSample():
         self.x = self.data["x"] 
         # array of corresponding y values ()
         self.y = self.data["y"]
-
-
-ss = SpectraSample("data\\samples\\00a0ee9a-ac02-4c9e-96a6-656d069fb80a")
