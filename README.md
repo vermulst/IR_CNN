@@ -1,20 +1,24 @@
 Setup:
 
 
-Option 1:
-Virtual python enviroment
-- running setup/venv.bat will create it
-- .vscode/settings.json refers to the virtual environment
-- the virtual environment contains all the libraries
+## Option 1: Virtual Python Environment
 
-Option 2:
-Install python libraries system-wide
-- run system.bat
-- can fail if you have multiple python installations
+- Run `setup/venv.bat` to create the virtual environment.
+- VS Code is configured to use it via `.vscode/settings.json`.
+- All required libraries will be installed in the environment.
 
+## Option 2: Install Python Libraries System-Wide
 
+- Run `setup/system.bat`.
+- This may fail if multiple Python installations are present on your system.
+
+---
+
+# JCAMP-DX Format Overview
 
 The standard format for spectroscopic data found online and used by the Chemotion repository is JCAMP-DX file. Therefore I looked into the format to understand how to extract the data. JCAMP-DX files use only printable ASCII characters, it consists of a data label and an associated data set. It starts with ##TITLE= and ending with ##END=;
+
+## Relevant Fields to Extract
 
 The relevant information that we should extract from a JCAMP-DX file for our purposes:
 - ##TITLE= : Description of the spectrum (required as first LDR)
@@ -28,6 +32,10 @@ The relevant information that we should extract from a JCAMP-DX file for our pur
 - ##XYDATA= : For ordinates at equal X-intervals
 - (X++(Y..Y)) : For data with equally spaced X values
 - ##DELTAX= spacing of X-intervals
+
+---
+
+# SMILES and SMARTS
 
 The SMILES name for the compound of the respective spectra is in the JSON metadata (for Chemotion JCAMP files). The 2025 Punjabi J paper provides the code for extracting spectroscopic data from JCAMP files into their custom SpectraCarrier() class. I would suggest to use their code to extract the data from JCAMP files of the chemotion repository. In this code they include a lot of data preprocessing that should be looked into. We can then format the data into the class or other data structure we will use in our algorithm.
 
