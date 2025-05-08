@@ -14,8 +14,8 @@ print(f"Loaded {len(samples)} valid samples.")
 for sample in samples:
     process(sample)
 
-# visualize the first sample
-plot_sample(samples[0])
-
 end = time.time()
 print(end - start)
+
+# visualize the first sample
+plot_sample(samples[0])
