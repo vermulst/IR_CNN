@@ -1,31 +1,18 @@
-import sys
-#print(sys.executable)
-from SpectraSample import SpectraSample
+from loader import load_samples
+from visualizer import plot_sample
 import preprocessing as pp
-import json
+import time
+
+start = time.time()
 
 
-# Load the JSON metadata
-with open("data/meta_data.json", "r", encoding="utf-8") as f:
-    compounds = json.load(f)
-
-# fetch a list of files
-filenames = [
-    attachment["identifier"].split("/", 1)[1]
-    for compound in compounds
-    for dataset in compound.get("datasets", [])
-    for attachment in dataset.get("attacments", [])
-]
-
-
-def load_sample(identifier):
-    path = f"data/samples/{identifier}"
-    try:
-        return SpectraSample(path)
-    except Exception as e:
-        print(f"Error in {identifier}: {e}")
-        return None
-
-# go through every file
-samples = [s for s in (load_sample(fid) for fid in filenames) if s is not None]
+# loading the samples from the data in correct format
+samples = load_samples("data/public")
 print(f"Loaded {len(samples)} valid samples.")
+
+# visualize the first sample
+plot_sample(samples[0])
+
+
+end = time.time()
+print(end - start)

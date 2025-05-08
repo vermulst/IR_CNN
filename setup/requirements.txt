@@ -1,3 +1,5 @@
 jcamp
 numpy
 matplotlib
+orjson
+pandas
