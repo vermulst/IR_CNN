@@ -1,5 +1,4 @@
-Setup:
-
+### Setup
 
 ## Option 1: Virtual Python Environment
 
