@@ -1,7 +1,16 @@
 Setup:
 
 
+Option 1:
+Virtual python enviroment
+- running setup/venv.bat will create it
+- .vscode/settings.json refers to the virtual environment
+- the virtual environment contains all the libraries
 
+Option 2:
+Install python libraries system-wide
+- run system.bat
+- can fail if you have multiple python installations
 
 
 
