@@ -8,6 +8,8 @@ def process(sample):
     # Crop to fingerprint region
     crop_spectrum(sample, min_x=500, max_x=4000)
 
+    if (len(sample.x) == 0):
+        return sample
     # Interpolate to fixed length
     interpolate_spectrum(sample, n_points=1000)
 
