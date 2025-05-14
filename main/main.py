@@ -1,10 +1,10 @@
 from loader import load_samples
+from loader import load_first_sample
 from visualizer import plot_sample
 from preprocessing import process
 import time
 
 start = time.time()
-
 
 # loading the samples from the data in correct format
 samples = load_samples("data/public")
@@ -14,8 +14,11 @@ print(f"Loaded {len(samples)} valid samples.")
 for sample in samples:
     process(sample)
 
+print("finished processing")
+
 end = time.time()
 print(end - start)
 
 # visualize the first sample
+#plot_sample(samples[0])
 plot_sample(samples[0])
