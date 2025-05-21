@@ -1,0 +1,3 @@
+Formula: C13H12N2S
+Molecular Weight: 228.3
+Name: 1,3-diphenylthiourea

@@ -1,0 +1,3 @@
+Formula: C11H14O2
+Molecular Weight: 178.2
+Name: p-butoxybenzaldehyde

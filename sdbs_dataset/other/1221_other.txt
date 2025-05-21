@@ -1,0 +1,3 @@
+Formula: C4H7BrO2
+Molecular Weight: 167.0
+Name: ethyl bromoacetate

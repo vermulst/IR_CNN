@@ -1,0 +1,3 @@
+Formula: C8H10O3S 2H2O
+Molecular Weight: 186.2
+Name: m-xylene-4-sulfonic acid

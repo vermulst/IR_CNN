@@ -1,0 +1,3 @@
+Formula: C4H5N
+Molecular Weight: 67.1
+Name: pyrrole

@@ -1,0 +1,3 @@
+Formula: C4H9NO
+Molecular Weight: 87.1
+Name: N,N-dimethylacetamide

@@ -1,0 +1,3 @@
+Formula: C4H8Cl3O4P
+Molecular Weight: 257.4
+Name: dimethyl (2,2,2-trichloro-1-hydroxyethyl)phosphonate

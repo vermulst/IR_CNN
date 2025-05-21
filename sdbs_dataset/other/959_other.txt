@@ -1,0 +1,3 @@
+Formula: C15H30N2O
+Molecular Weight: 254.4
+Name: 4-(3-(4-piperidyl)propyl)-1-piperidineethanol

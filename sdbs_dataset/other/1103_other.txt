@@ -1,0 +1,3 @@
+Formula: C5H9N3 2HCl
+Molecular Weight: 111.2
+Name: 2-(4-imidazolyl)ethylamine dihydrochloride

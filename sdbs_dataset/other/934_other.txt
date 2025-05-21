@@ -1,0 +1,3 @@
+Formula: C3HF5O2
+Molecular Weight: 164.0
+Name: pentafluoropropionic acid

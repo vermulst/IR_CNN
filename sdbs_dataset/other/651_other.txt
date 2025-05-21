@@ -1,0 +1,3 @@
+Formula: C27H50O6
+Molecular Weight: 470.7
+Name: glycerol tris(2-ethylhexanoate)

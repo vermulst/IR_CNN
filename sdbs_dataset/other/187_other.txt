@@ -1,0 +1,3 @@
+Formula: C2H2Cl2O
+Molecular Weight: 112.9
+Name: chloroacetyl chloride

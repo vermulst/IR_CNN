@@ -1,0 +1,3 @@
+Formula: C12H14O4
+Molecular Weight: 222.2
+Name: diethyl phthalate

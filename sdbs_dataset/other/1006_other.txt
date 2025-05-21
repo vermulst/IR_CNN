@@ -1,0 +1,3 @@
+Formula: C8H3NO5
+Molecular Weight: 193.1
+Name: 4-nitrophthalic anhydride

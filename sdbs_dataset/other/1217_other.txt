@@ -1,0 +1,3 @@
+Formula: C3H6Cl2O
+Molecular Weight: 129.0
+Name: 1,3-dichloro-2-propanol

@@ -1,0 +1,3 @@
+Formula: C8H6N4OS 1/2CH4O
+Molecular Weight: 206.2
+Name: 4-hydroxy-6-methylthiazolo(2,3-f)purine-methanol

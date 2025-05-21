@@ -1,0 +1,3 @@
+Formula: C4H4N2O2
+Molecular Weight: 112.1
+Name: maleic hydrazide

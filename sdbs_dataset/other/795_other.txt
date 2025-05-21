@@ -1,0 +1,3 @@
+Formula: C8H18O2
+Molecular Weight: 146.2
+Name: 2-ethyl-1,3-hexanediol

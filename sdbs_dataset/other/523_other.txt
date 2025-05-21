@@ -1,0 +1,3 @@
+Formula: C22H25N3O4
+Molecular Weight: 395.5
+Name: di-tert-butyl 1-(1-naphthyl)-1H-1,2,3-triazole-4,5-dicarboxylate

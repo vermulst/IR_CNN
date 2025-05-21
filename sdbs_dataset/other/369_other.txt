@@ -1,0 +1,3 @@
+Formula: C14H7FO2
+Molecular Weight: 226.2
+Name: 2-fluoroanthraquinone

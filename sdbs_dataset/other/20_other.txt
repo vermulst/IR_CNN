@@ -1,0 +1,3 @@
+Formula: C30H48O4
+Molecular Weight: 472.7
+Name: (3beta,4alpha)-3,23-dihydroxyolean-12-en-28-oic acid

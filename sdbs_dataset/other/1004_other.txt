@@ -1,0 +1,3 @@
+Formula: C8H7NO3S
+Molecular Weight: 197.2
+Name: N-methyl-o-sulfobenzoic cyclic imide

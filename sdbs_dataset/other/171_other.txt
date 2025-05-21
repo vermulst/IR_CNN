@@ -1,0 +1,3 @@
+Formula: C14H26O3
+Molecular Weight: 242.3
+Name: (-)-3-p-menthyl 3-hydroxybutyrate

@@ -1,0 +1,3 @@
+Formula: C8H11N2NaO3
+Molecular Weight: 206.2
+Name: sodium 5,5-diethylbarbiturate

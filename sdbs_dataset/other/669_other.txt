@@ -1,0 +1,3 @@
+Formula: C7H5N
+Molecular Weight: 103.1
+Name: benzonitrile

@@ -1,0 +1,3 @@
+Formula: C4H7NO
+Molecular Weight: 85.1
+Name: 2-pyrrolidone

@@ -1,0 +1,3 @@
+Formula: C6H13NO4S
+Molecular Weight: 195.2
+Name: 2-morpholinoethanesulfonic acid

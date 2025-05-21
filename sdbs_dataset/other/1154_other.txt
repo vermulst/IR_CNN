@@ -1,0 +1,3 @@
+Formula: C7H8O
+Molecular Weight: 108.1
+Name: anisole

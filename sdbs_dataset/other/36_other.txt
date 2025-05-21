@@ -1,0 +1,3 @@
+Formula: C13H21NO
+Molecular Weight: 207.3
+Name: 2-acetamido-2-methyltricyclo[3.3.1.1[3,7]]decane

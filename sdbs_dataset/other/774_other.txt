@@ -1,0 +1,3 @@
+Formula: C15H22O3
+Molecular Weight: 250.3
+Name: p-octyloxybenzoic acid

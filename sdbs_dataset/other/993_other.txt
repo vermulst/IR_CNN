@@ -1,0 +1,3 @@
+Formula: C6H11N3O4
+Molecular Weight: 189.2
+Name: glycyl-L-asparagine

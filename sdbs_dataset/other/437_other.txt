@@ -1,0 +1,3 @@
+Formula: C20H30O6
+Molecular Weight: 366.4
+Name: bis(2-butoxyethyl) phthalate

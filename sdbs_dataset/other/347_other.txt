@@ -1,0 +1,3 @@
+Formula: C5H13NOSi
+Molecular Weight: 131.3
+Name: n-(trimethylsilyl)acetamide

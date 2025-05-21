@@ -1,0 +1,3 @@
+Formula: C3H5Cl
+Molecular Weight: 76.5
+Name: cis-1-chloropropene

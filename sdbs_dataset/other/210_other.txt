@@ -1,0 +1,3 @@
+Formula: C11H20
+Molecular Weight: 152.3
+Name: 1,10-undecadiene

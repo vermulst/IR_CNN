@@ -1,0 +1,3 @@
+Formula: C8H16O2
+Molecular Weight: 144.2
+Name: ethyl hexanoate

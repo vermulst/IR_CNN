@@ -1,0 +1,3 @@
+Formula: C8H4O3
+Molecular Weight: 148.1
+Name: phthalic anhydride

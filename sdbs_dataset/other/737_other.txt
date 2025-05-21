@@ -1,0 +1,3 @@
+Formula: C8H12O2
+Molecular Weight: 140.2
+Name: 2,2,4-trimethyl-3-hydroxy-3-pentenoic acid beta-lactone

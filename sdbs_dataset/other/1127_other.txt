@@ -1,0 +1,3 @@
+Formula: C6H6BrN
+Molecular Weight: 172.0
+Name: o-bromoaniline

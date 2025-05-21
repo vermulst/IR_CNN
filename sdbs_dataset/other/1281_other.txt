@@ -1,0 +1,3 @@
+Formula: C4H6Cl2
+Molecular Weight: 125.0
+Name: 3,4-dichloro-1-butene

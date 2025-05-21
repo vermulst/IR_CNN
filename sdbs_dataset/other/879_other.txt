@@ -1,0 +1,3 @@
+Formula: C16H15Cl3O2
+Molecular Weight: 345.6
+Name: 1,1,1-trichloro-2,2-bis(p-methoxyphenyl)ethane

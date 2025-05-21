@@ -1,0 +1,3 @@
+Formula: C8H2Br4O4
+Molecular Weight: 481.7
+Name: tetrabromophthalic acid

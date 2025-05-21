@@ -1,0 +1,3 @@
+Formula: C5H6N2
+Molecular Weight: 94.1
+Name: 2-pyridinamine

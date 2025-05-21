@@ -1,0 +1,3 @@
+Formula: C8H20Si
+Molecular Weight: 144.3
+Name: tetraethylsilane

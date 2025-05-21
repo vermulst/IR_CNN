@@ -1,0 +1,3 @@
+Formula: C7H6O5 H2O
+Molecular Weight: 170.1
+Name: gallic acid

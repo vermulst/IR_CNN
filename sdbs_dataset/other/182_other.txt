@@ -1,0 +1,3 @@
+Formula: C13H19NO
+Molecular Weight: 205.3
+Name: N,N-dipropylbenzamide

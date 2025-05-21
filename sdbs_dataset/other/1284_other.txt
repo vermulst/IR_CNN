@@ -1,0 +1,3 @@
+Formula: C4H8Cl2O
+Molecular Weight: 143.0
+Name: bis(2-chloroethyl) ether

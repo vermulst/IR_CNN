@@ -1,0 +1,3 @@
+Formula: C5H4O3
+Molecular Weight: 112.1
+Name: 2-furoic acid

@@ -1,0 +1,3 @@
+Formula: C19H20N2O
+Molecular Weight: 292.4
+Name: p-(p-pentyloxybenzylideneamino)benzonitrile

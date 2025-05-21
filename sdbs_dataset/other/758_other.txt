@@ -1,0 +1,3 @@
+Formula: C8H10N2S
+Molecular Weight: 166.3
+Name: 1-(o-tolyl)thiourea

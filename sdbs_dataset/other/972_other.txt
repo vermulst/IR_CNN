@@ -1,0 +1,3 @@
+Formula: C12H18BaO14
+Molecular Weight: 523.6
+Name: barium D-galacturonate

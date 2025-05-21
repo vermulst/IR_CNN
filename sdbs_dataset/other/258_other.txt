@@ -1,0 +1,3 @@
+Formula: C10H10
+Molecular Weight: 130.2
+Name: 1-phenyl-1-butyne

@@ -1,0 +1,3 @@
+Formula: C10H6N2O4
+Molecular Weight: 218.2
+Name: 1,8-dinitronaphthalene

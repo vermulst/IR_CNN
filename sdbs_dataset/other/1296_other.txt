@@ -1,0 +1,3 @@
+Formula: C7H5BrO
+Molecular Weight: 185.0
+Name: p-bromobenzaldehyde

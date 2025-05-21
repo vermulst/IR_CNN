@@ -1,0 +1,3 @@
+Formula: C8H12O4
+Molecular Weight: 172.2
+Name: diethyl maleate

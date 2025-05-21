@@ -1,0 +1,3 @@
+Formula: C20H24O8S2
+Molecular Weight: 456.5
+Name: methyl 2-deoxy-3,5-di-o-tosyl-beta-D-ribofuranoside

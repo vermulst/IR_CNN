@@ -1,0 +1,3 @@
+Formula: CHI3
+Molecular Weight: 393.7
+Name: iodoform

@@ -1,0 +1,3 @@
+Formula: C4H2Cl2N2
+Molecular Weight: 149.0
+Name: 2,4-dichloropyrimidine

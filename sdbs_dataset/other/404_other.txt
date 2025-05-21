@@ -1,0 +1,3 @@
+Formula: C17H20N2O6S
+Molecular Weight: 380.4
+Name: methyl 3,3-dimethyl-7-oxo-6-phenoxyacetamido-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate 4-oxide

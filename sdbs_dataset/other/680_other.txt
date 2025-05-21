@@ -1,0 +1,3 @@
+Formula: C7H7IO
+Molecular Weight: 234.0
+Name: p-iodoanisole

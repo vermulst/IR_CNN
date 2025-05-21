@@ -1,0 +1,3 @@
+Formula: C3H5Br
+Molecular Weight: 121.0
+Name: 3-bromo-1-propene

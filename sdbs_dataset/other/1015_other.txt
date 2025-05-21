@@ -1,0 +1,3 @@
+Formula: C8H8N2OS
+Molecular Weight: 180.2
+Name: benzoylthiourea

@@ -1,0 +1,3 @@
+Formula: (C10H8O4)
+Molecular Weight: 0
+Name: poly(ethylene terephthalate)

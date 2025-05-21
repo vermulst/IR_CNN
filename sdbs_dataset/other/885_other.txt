@@ -1,0 +1,3 @@
+Formula: C20H24N2O3
+Molecular Weight: 340.4
+Name: p-(p-ethoxyphenylazo)phenyl hexanoate

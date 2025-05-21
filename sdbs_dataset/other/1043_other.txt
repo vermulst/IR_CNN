@@ -1,0 +1,3 @@
+Formula: CH5N3S 2HCl
+Molecular Weight: 91.2
+Name: thiosemicarbazide hydrochloride

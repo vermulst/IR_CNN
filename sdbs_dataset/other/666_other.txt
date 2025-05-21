@@ -1,0 +1,3 @@
+Formula: C7H4BrN
+Molecular Weight: 182.0
+Name: p-bromobenzonitrile

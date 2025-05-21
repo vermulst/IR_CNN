@@ -1,0 +1,3 @@
+Formula: C5H10NNaS2 3H2O
+Molecular Weight: 171.3
+Name: sodium N,N-diethyldithiocarbamate

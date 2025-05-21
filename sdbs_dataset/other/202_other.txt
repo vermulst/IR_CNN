@@ -1,0 +1,3 @@
+Formula: C8H16
+Molecular Weight: 112.2
+Name: 2,5-dimethyl-1-hexene

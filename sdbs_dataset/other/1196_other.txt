@@ -1,0 +1,3 @@
+Formula: C15H24O
+Molecular Weight: 220.3
+Name: 2,6-di-tert-butyl-p-cresol

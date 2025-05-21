@@ -1,0 +1,3 @@
+Formula: C3H6Cl2
+Molecular Weight: 113.0
+Name: 1,2-dichloropropane

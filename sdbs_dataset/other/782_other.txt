@@ -1,0 +1,3 @@
+Formula: C25H19ClN4
+Molecular Weight: 410.9
+Name: 3-(p-biphenylyl)-2,5-diphenyl-2H-tetrazolium chloride

@@ -1,0 +1,3 @@
+Formula: C5H5N3O
+Molecular Weight: 123.1
+Name: pyrazinecarboxamide

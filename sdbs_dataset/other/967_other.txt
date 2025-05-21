@@ -1,0 +1,3 @@
+Formula: C10H22O5S2
+Molecular Weight: 286.4
+Name: glucose diethyl dithioacetal

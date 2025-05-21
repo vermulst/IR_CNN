@@ -1,0 +1,3 @@
+Formula: C18H34O4
+Molecular Weight: 314.5
+Name: dibutyl sebacate

@@ -1,0 +1,3 @@
+Formula: C14H14S2
+Molecular Weight: 246.4
+Name: benzyl disulfide

@@ -1,0 +1,3 @@
+Formula: C12H9Cl
+Molecular Weight: 188.6
+Name: 4-chlorobiphenyl

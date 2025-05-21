@@ -1,0 +1,3 @@
+Formula: C20H18O11 H2O
+Molecular Weight: 434.3
+Name: avicularin

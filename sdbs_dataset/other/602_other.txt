@@ -1,0 +1,3 @@
+Formula: C18H18DNO5
+Molecular Weight: 330.3
+Name: 2-benzamido-3-(2,4-dimethoxyphenyl)propionic-3-D acid

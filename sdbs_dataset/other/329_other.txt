@@ -1,0 +1,3 @@
+Formula: C8H8N4O
+Molecular Weight: 176.2
+Name: 7-isopropenyl-1,7-dihydro-6H-purin-6-one

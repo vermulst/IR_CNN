@@ -1,0 +1,3 @@
+Formula: C10H8
+Molecular Weight: 128.2
+Name: azulene

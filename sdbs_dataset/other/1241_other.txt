@@ -1,0 +1,3 @@
+Formula: C12H18
+Molecular Weight: 162.3
+Name: hexylbenzene

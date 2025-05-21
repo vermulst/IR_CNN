@@ -1,0 +1,3 @@
+Formula: C18H32O16
+Molecular Weight: 504.4
+Name: D-(+)-raffinose

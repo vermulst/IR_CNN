@@ -3,3 +3,10 @@ numpy
 matplotlib
 orjson
 pandas
+RDkit
+beautifulsoup4
+requests
+selenium
+soupsieve
+webdriver-manager
+PyAutoGUI

@@ -1,0 +1,3 @@
+Formula: C22H42O4
+Molecular Weight: 370.6
+Name: di-2-ethylhexyl adipate

@@ -1,0 +1,3 @@
+Formula: C18H12
+Molecular Weight: 228.3
+Name: triphenylene

@@ -1,0 +1,3 @@
+Formula: C8H7Cl
+Molecular Weight: 138.6
+Name: o-chlorostyrene

@@ -1,0 +1,3 @@
+Formula: C15H24O
+Molecular Weight: 220.3
+Name: p-nonylphenol

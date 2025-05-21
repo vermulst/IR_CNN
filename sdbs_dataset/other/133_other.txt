@@ -1,0 +1,3 @@
+Formula: C6H5N5O2
+Molecular Weight: 179.2
+Name: 2-amino-4,6-pteridinediol

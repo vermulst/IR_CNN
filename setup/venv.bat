@@ -1,4 +1,4 @@
-@echo off
+vwnv@echo off
 SET SCRIPT_DIR=%~dp0
 SET PARENT_DIR=%SCRIPT_DIR%..
 

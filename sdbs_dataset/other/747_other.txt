@@ -1,0 +1,3 @@
+Formula: C3H3F3O2
+Molecular Weight: 128.1
+Name: methyl trifluoroacetate

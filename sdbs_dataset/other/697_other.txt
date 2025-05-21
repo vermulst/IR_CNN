@@ -1,0 +1,3 @@
+Formula: C7H12
+Molecular Weight: 96.2
+Name: 4-methylcyclohexene

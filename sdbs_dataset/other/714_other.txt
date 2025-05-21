@@ -1,0 +1,3 @@
+Formula: C7H20Si2
+Molecular Weight: 160.4
+Name: bis(trimethylsilyl)methane

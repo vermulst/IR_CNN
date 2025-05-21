@@ -1,0 +1,3 @@
+Formula: C21H20O12 H2O
+Molecular Weight: 464.4
+Name: hyperin

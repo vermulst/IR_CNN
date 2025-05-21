@@ -1,0 +1,3 @@
+Formula: C6H14O
+Molecular Weight: 102.2
+Name: 2-ethyl-1-butanol

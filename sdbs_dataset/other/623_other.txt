@@ -1,0 +1,3 @@
+Formula: C13H20N4O4S
+Molecular Weight: 328.4
+Name: N(2)-tosyl-L-arginine

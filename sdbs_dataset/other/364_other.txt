@@ -1,0 +1,3 @@
+Formula: C11H14O
+Molecular Weight: 162.2
+Name: 2',4',6'-trimethylacetophenone

@@ -1,0 +1,3 @@
+Formula: C6H4INO2
+Molecular Weight: 249.0
+Name: p-iodonitrobenzene

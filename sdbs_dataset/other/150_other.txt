@@ -1,0 +1,3 @@
+Formula: C7H10O4
+Molecular Weight: 158.2
+Name: trans-(+-)-1,2-cyclopentanedicarboxylic acid

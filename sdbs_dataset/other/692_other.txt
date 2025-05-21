@@ -1,0 +1,3 @@
+Formula: C7H9N
+Molecular Weight: 107.2
+Name: 3,4-dimethylpyridine

@@ -1,0 +1,3 @@
+Formula: C15H12O2
+Molecular Weight: 224.2
+Name: 1,3-diphenyl-1,3-propanedione

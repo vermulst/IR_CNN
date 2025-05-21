@@ -1,0 +1,3 @@
+Formula: HKO4S
+Molecular Weight: 136.2
+Name: potassium hydrogen sulfate

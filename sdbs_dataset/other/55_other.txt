@@ -1,0 +1,3 @@
+Formula: C3H3NS
+Molecular Weight: 85.1
+Name: thiazole

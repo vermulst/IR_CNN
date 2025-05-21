@@ -1,0 +1,3 @@
+Formula: C13H17FeN
+Molecular Weight: 243.1
+Name: (dimethylaminomethyl)ferrocene

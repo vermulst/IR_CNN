@@ -1,0 +1,3 @@
+Formula: C7H16O3
+Molecular Weight: 148.2
+Name: triethyl orthoformate

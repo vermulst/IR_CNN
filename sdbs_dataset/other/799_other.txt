@@ -1,0 +1,3 @@
+Formula: C8H20O3Si
+Molecular Weight: 192.3
+Name: triethoxyethylsilane

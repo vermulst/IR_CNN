@@ -1,0 +1,3 @@
+Formula: C25H32
+Molecular Weight: 332.5
+Name: 9-undecylanthracene

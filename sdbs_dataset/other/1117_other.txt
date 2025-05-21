@@ -1,0 +1,3 @@
+Formula: C6H4N2O4
+Molecular Weight: 168.1
+Name: m-dinitrobenzene

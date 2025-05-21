@@ -1,0 +1,3 @@
+Formula: C8H9NO2
+Molecular Weight: 151.2
+Name: o-ethylnitrobenzene

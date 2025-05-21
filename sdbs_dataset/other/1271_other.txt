@@ -1,0 +1,3 @@
+Formula: C18H36
+Molecular Weight: 252.5
+Name: dodecylcyclohexane

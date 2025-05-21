@@ -1,0 +1,3 @@
+Formula: C27H46O
+Molecular Weight: 386.6
+Name: cholesterol

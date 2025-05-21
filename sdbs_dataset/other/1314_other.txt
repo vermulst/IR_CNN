@@ -1,0 +1,3 @@
+Formula: C4H5NO2
+Molecular Weight: 99.1
+Name: methyl cyanoacetate

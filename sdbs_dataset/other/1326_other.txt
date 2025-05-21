@@ -1,0 +1,3 @@
+Formula: H3NO HCl
+Molecular Weight: 33.0
+Name: hydroxylamine hydrochloride

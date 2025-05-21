@@ -1,0 +1,3 @@
+Formula: C6Cl6
+Molecular Weight: 284.8
+Name: hexachlorobenzene

@@ -1,0 +1,3 @@
+Formula: C5H11Cl
+Molecular Weight: 106.6
+Name: 2-chloro-2-methylbutane

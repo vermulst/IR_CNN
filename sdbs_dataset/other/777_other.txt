@@ -1,0 +1,3 @@
+Formula: C7H15NO
+Molecular Weight: 129.2
+Name: 1-piperidineethanol

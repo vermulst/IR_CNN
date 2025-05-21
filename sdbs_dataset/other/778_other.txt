@@ -1,0 +1,3 @@
+Formula: C24H20AsCl HCl
+Molecular Weight: 418.8
+Name: tetraphenylarsonium chloride hydrochloride

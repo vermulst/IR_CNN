@@ -1,0 +1,3 @@
+Formula: C3H7Br
+Molecular Weight: 123.0
+Name: 2-bromopropane

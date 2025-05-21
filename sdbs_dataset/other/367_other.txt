@@ -1,0 +1,3 @@
+Formula: C10H5ClN2
+Molecular Weight: 188.6
+Name: 6-chloro-2-quinolinecarbonitrile

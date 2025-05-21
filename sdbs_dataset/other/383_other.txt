@@ -1,0 +1,3 @@
+Formula: C5H9N
+Molecular Weight: 83.1
+Name: valeronitrile

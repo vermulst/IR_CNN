@@ -1,0 +1,3 @@
+Formula: C3H7I
+Molecular Weight: 170.0
+Name: 1-iodopropane

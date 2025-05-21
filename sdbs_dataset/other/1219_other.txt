@@ -1,0 +1,3 @@
+Formula: C4H7ClO2
+Molecular Weight: 122.5
+Name: 2-chloroethyl acetate

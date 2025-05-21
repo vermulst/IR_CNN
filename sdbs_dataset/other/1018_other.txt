@@ -1,0 +1,3 @@
+Formula: C8H6Br4
+Molecular Weight: 421.7
+Name: alpha,alpha,alpha',alpha'-tetrabromo-p-xylene

@@ -1,0 +1,3 @@
+Formula: C8H6N4O2S
+Molecular Weight: 222.2
+Name: 6-methylthiazolo(2,3-f)purine-2,4(1H,3H)-dione

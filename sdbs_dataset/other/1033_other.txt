@@ -1,0 +1,3 @@
+Formula: C3H6O2
+Molecular Weight: 74.1
+Name: propionic acid

@@ -1,0 +1,3 @@
+Formula: C10H8O4
+Molecular Weight: 192.2
+Name: 2,2'-furoin

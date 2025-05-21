@@ -1,0 +1,3 @@
+Formula: C13H24N2O11
+Molecular Weight: 384.3
+Name: N,N'-bis(beta-D-glucopyranosyl)urea

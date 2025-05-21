@@ -1,0 +1,3 @@
+Formula: C8H11N
+Molecular Weight: 121.2
+Name: 2,3-xylidine

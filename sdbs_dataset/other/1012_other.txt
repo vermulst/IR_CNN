@@ -1,0 +1,3 @@
+Formula: C8H7BrO2
+Molecular Weight: 215.0
+Name: methyl p-bromobenzoate

@@ -1,0 +1,3 @@
+Formula: C5H5ClN2O
+Molecular Weight: 144.6
+Name: 3-chloro-6-methoxypyridazine

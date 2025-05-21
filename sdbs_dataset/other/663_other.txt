@@ -1,0 +1,3 @@
+Formula: C6H14O2
+Molecular Weight: 118.2
+Name: acetaldehyde diethyl acetal

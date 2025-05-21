@@ -1,0 +1,3 @@
+Formula: C10H14N2O5
+Molecular Weight: 242.2
+Name: thymidine

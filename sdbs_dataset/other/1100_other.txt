@@ -1,0 +1,3 @@
+Formula: C5H10O5
+Molecular Weight: 150.1
+Name: D-xylose

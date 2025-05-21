@@ -1,0 +1,3 @@
+Formula: C26H24P2
+Molecular Weight: 398.4
+Name: 1,2-bis(diphenylphosphino)ethane

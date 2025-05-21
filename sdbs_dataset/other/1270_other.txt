@@ -1,0 +1,3 @@
+Formula: C12H24
+Molecular Weight: 168.3
+Name: hexylcyclohexane

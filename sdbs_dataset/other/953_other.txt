@@ -1,0 +1,3 @@
+Formula: C13H19NO3
+Molecular Weight: 237.3
+Name: p-(heptyloxy)nitrobenzene

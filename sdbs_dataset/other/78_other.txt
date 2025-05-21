@@ -1,0 +1,3 @@
+Formula: C15H24O8
+Molecular Weight: 332.3
+Name: tetraethyl 1,1,2,3-propanetetracarboxylate

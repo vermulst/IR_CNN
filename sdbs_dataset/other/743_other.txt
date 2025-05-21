@@ -1,0 +1,3 @@
+Formula: C21H42
+Molecular Weight: 294.5
+Name: pentadecylcyclohexane

@@ -1,0 +1,3 @@
+Formula: CH3NO
+Molecular Weight: 45.0
+Name: formamide

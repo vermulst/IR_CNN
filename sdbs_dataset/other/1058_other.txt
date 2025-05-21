@@ -1,0 +1,3 @@
+Formula: C3H8N2O
+Molecular Weight: 88.1
+Name: ethylurea

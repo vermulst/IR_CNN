@@ -1,0 +1,3 @@
+Formula: C14H22O2
+Molecular Weight: 222.3
+Name: p-(octyloxy)phenol

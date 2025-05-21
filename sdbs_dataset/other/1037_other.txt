@@ -1,0 +1,3 @@
+Formula: C19H32O2
+Molecular Weight: 292.4
+Name: methyl cis,cis,cis-9,12,15-octadecatrienoate

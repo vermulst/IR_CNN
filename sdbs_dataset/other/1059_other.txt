@@ -1,0 +1,3 @@
+Formula: C3H8N2S
+Molecular Weight: 104.2
+Name: 1,3-dimethylthiourea

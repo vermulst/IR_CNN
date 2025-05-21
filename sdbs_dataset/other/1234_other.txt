@@ -1,0 +1,3 @@
+Formula: C4H11N
+Molecular Weight: 73.1
+Name: tert-butylamine

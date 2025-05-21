@@ -1,0 +1,3 @@
+Formula: C6H12N2O4S2
+Molecular Weight: 240.3
+Name: L-cystine

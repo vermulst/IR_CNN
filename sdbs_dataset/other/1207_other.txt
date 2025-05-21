@@ -1,0 +1,3 @@
+Formula: C10H10N2O2
+Molecular Weight: 190.2
+Name: 1,3-dimethyl-2,4(1H,3H)-quinazolinedione

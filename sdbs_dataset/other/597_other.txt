@@ -1,0 +1,3 @@
+Formula: C12H13DN2O
+Molecular Weight: 203.3
+Name: morpholinophenylacetonitrile-2-d

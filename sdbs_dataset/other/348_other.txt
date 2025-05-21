@@ -1,0 +1,3 @@
+Formula: C5H13N
+Molecular Weight: 87.2
+Name: isopentylamine

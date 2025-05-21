@@ -1,0 +1,3 @@
+Formula: C4H3BrN2
+Molecular Weight: 159.0
+Name: 2-bromopyrimidine

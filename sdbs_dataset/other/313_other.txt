@@ -1,0 +1,3 @@
+Formula: C3H4Br2O2
+Molecular Weight: 231.9
+Name: 2,3-dibromopropionic acid

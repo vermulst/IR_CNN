@@ -1,0 +1,3 @@
+Formula: C6H12O2S
+Molecular Weight: 148.2
+Name: 2,4-dimethyltetrahydrothiophene 1,1-dioxide

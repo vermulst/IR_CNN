@@ -1,0 +1,3 @@
+Formula: C10H16O
+Molecular Weight: 152.2
+Name: (-)-1,3,3-trimethyl-2-norbornanone

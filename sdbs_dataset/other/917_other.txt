@@ -1,0 +1,3 @@
+Formula: C10H10O2
+Molecular Weight: 162.2
+Name: trans-2-phenylcyclopropanecarboxylic acid

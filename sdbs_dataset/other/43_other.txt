@@ -1,0 +1,3 @@
+Formula: C11H17NO3 1/2H2O4S H2O
+Molecular Weight: 211.3
+Name: isoprenaline sulfate

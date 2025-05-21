@@ -1,0 +1,3 @@
+Formula: C20H18O2Sn
+Molecular Weight: 409.0
+Name: triphenyltin acetate

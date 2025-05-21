@@ -1,0 +1,3 @@
+Formula: C10H21Br
+Molecular Weight: 221.2
+Name: 1-bromodecane

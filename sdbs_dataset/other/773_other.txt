@@ -1,0 +1,3 @@
+Formula: C14H20O3
+Molecular Weight: 236.3
+Name: p-heptyloxybenzoic acid

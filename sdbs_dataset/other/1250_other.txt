@@ -1,0 +1,3 @@
+Formula: C23H40
+Molecular Weight: 316.6
+Name: heptadecylbenzene

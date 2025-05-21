@@ -1,0 +1,3 @@
+Formula: C37H27ClN4
+Molecular Weight: 563.1
+Name: 2,3,5-tri(4-biphenylyl)-2H-tetrazolium chloride

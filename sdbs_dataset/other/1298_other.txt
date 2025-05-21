@@ -1,0 +1,3 @@
+Formula: C2H7NO
+Molecular Weight: 61.1
+Name: 2-aminoethanol

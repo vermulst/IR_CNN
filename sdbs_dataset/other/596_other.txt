@@ -1,0 +1,3 @@
+Formula: C12H12ClDN2O
+Molecular Weight: 237.7
+Name: (m-chlorophenyl)morpholinoacetonitrile-2-d

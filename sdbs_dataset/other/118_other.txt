@@ -1,0 +1,3 @@
+Formula: C11H9NO4
+Molecular Weight: 219.2
+Name: 3-phthalimidopropionic acid

@@ -1,0 +1,3 @@
+Formula: C5H10N2O3
+Molecular Weight: 146.2
+Name: DL-glutamine

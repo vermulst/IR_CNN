@@ -1,0 +1,3 @@
+Formula: C6H8Cl2O2
+Molecular Weight: 183.0
+Name: adipoyl dichloride

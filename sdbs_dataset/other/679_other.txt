@@ -1,0 +1,3 @@
+Formula: C7H7I
+Molecular Weight: 218.0
+Name: p-iodotoluene

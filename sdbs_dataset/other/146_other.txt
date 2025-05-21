@@ -1,0 +1,3 @@
+Formula: C7H5ClO2S
+Molecular Weight: 188.6
+Name: 5-chloro-2-thiopheneacrylic acid

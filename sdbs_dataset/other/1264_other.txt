@@ -1,0 +1,3 @@
+Formula: C14H14
+Molecular Weight: 182.3
+Name: bibenzyl

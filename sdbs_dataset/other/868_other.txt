@@ -1,0 +1,3 @@
+Formula: C12H27N
+Molecular Weight: 185.3
+Name: tributylamine

@@ -1,0 +1,3 @@
+Formula: C3H5Br3
+Molecular Weight: 280.8
+Name: 1,2,3-tribromopropane

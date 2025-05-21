@@ -1,0 +1,3 @@
+Formula: C8Br4O3
+Molecular Weight: 463.7
+Name: tetrabromophthalic anhydride

@@ -1,0 +1,3 @@
+Formula: C18H18O6
+Molecular Weight: 330.3
+Name: p-ethoxyphenyl p-(ethoxycarbonyloxy)benzoate

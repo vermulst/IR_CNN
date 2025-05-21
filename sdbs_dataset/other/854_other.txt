@@ -1,0 +1,3 @@
+Formula: C11H16
+Molecular Weight: 148.2
+Name: p-tert-butyltoluene

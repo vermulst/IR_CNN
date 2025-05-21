@@ -1,0 +1,3 @@
+Formula: C4H4N2O2S
+Molecular Weight: 144.2
+Name: 2-thiobarbituric acid

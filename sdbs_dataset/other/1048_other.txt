@@ -1,0 +1,3 @@
+Formula: C2Cl6
+Molecular Weight: 236.7
+Name: hexachloroethane

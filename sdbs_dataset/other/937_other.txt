@@ -1,0 +1,3 @@
+Formula: C4H7NaO3
+Molecular Weight: 126.1
+Name: sodium DL-2-hydroxybutyrate

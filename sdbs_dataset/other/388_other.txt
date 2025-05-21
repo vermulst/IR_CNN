@@ -1,0 +1,3 @@
+Formula: C10H17N HCl
+Molecular Weight: 151.2
+Name: 2-adamantanamine hydrochloride

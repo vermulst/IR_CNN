@@ -1,0 +1,3 @@
+Formula: C15H14
+Molecular Weight: 194.3
+Name: 1,1-diphenyl-1-propene

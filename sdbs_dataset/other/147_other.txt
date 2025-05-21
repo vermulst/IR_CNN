@@ -1,0 +1,3 @@
+Formula: C7H5BrO2S
+Molecular Weight: 233.1
+Name: 5-bromo-2-thiopheneacrylic acid

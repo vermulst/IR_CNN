@@ -1,0 +1,3 @@
+Formula: C5H8
+Molecular Weight: 68.1
+Name: trans-1,3-pentadiene

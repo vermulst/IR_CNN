@@ -1,0 +1,3 @@
+Formula: C10H18O
+Molecular Weight: 154.2
+Name: 8-p-menthen-3-ol
