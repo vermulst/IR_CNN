@@ -1,5 +1,5 @@
 import numpy as np
-from visualizer import plot_sample, get_subplots
+from data_handling.visualizer import plot_sample, get_subplots
 from scipy.interpolate import interp1d
 from scipy.signal import savgol_filter
 from scipy import sparse

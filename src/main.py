@@ -1,7 +1,7 @@
 from data_handling.loader import load_samples
 from data_handling.preprocessing import process_samples
+from data_handling.visualizer import plot_show
 
-from visualizer import plot_show
 import time
 
 
