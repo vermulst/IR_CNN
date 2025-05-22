@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class BasicCNN1D(nn.Module):
-    def __init__(self, input_length, num_classes=10):
+    def __init__(self, input_length, num_classes=15):
         super(BasicCNN1D, self).__init__()
         
         # Convolutional layers (adapted for 1D data)
@@ -20,7 +20,6 @@ class BasicCNN1D(nn.Module):
         # Fully connected layers
         self.fc1 = nn.Linear(self.flattened_size, 512)
         self.fc2 = nn.Linear(512, num_classes)
-        
         # Dropout layer
         self.dropout = nn.Dropout(0.25)
     
@@ -38,5 +37,7 @@ class BasicCNN1D(nn.Module):
         x = F.relu(self.fc1(x))
         x = self.dropout(x)
         x = self.fc2(x)
+
+        x = torch.sigmoid(x)
         
         return x
