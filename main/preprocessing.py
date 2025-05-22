@@ -1,40 +1,55 @@
 import numpy as np
-from visualizer import plot_sample
+from visualizer import plot_sample, get_subplots
 from scipy.interpolate import interp1d
 from scipy.signal import savgol_filter
 from scipy import sparse
 from scipy.sparse.linalg import spsolve
 
-def process_with_plot(sample, plotAxs, plotIndex):
+
+def process_samples(samples):
+    # process first sample with visualization steps
+    process_with_plot(samples[0])
+
+    # process the rest normally
+    for sample in samples[1:]:
+        process(sample)
+    print("finished processing")
+
+def process_with_plot(sample):
+
+    fig, axs = get_subplots()
+
     #Full preprocessing pipeline for an IR spectrum.
     # Crop to fingerprint region
+    plot_sample(sample, axs, 0, "Original")
+
     crop_spectrum(sample, min_x=500, max_x=4000)
 
-    plot_sample(sample, plotAxs, plotIndex, "Cropped")
+    plot_sample(sample, axs, 1, "Cropped")
 
     if (len(sample.x) == 0):
-        return sample
+        return fig, axs
     # Interpolate to fixed length
     interpolate_spectrum(sample, n_points=1000)
 
-    plot_sample(sample, plotAxs, plotIndex + 1, "Interpolated")
+    plot_sample(sample, axs, 2, "Interpolated")
 
     # Baseline correction
     correct_baseline(sample)
 
-    plot_sample(sample, plotAxs, plotIndex + 2, "Baseline correction")
+    plot_sample(sample, axs, 3, "Baseline correction")
     
     # Normalize intensities
     normalize_spectrum(sample)
 
-    plot_sample(sample, plotAxs, plotIndex + 3, "Normalized")
+    plot_sample(sample, axs, 4, "Normalized")
     
     # Smooth the spectrum (for taking out noise)
     smooth_spectrum(sample)
 
-    plot_sample(sample, plotAxs, plotIndex + 4, "Smoothing")
+    plot_sample(sample, axs, 5, "Smoothing")
 
-    return sample
+    return fig, axs
 
 def process(sample):
     #Full preprocessing pipeline for an IR spectrum.
@@ -42,7 +57,7 @@ def process(sample):
     crop_spectrum(sample, min_x=500, max_x=4000)
 
     if (len(sample.x) == 0):
-        return sample
+        return
     # Interpolate to fixed length
     interpolate_spectrum(sample, n_points=1000)
 
@@ -54,8 +69,6 @@ def process(sample):
     
     # Smooth the spectrum (for taking out noise)
     smooth_spectrum(sample)
-
-    return sample
 
 
 def crop_spectrum(sample, min_x=500, max_x=4000):

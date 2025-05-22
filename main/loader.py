@@ -24,7 +24,9 @@ def load_samples(datafolder):
     ]
 
     samples = [s for s in (load_sample(datafolder, fid) for fid in filenames) if s is not None]
+    print(f"Loaded {len(samples)} valid samples.")
     return samples
+
 
 def load_first_sample(datafolder):
     # Load the JSON metadata
