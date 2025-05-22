@@ -2,25 +2,30 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 import numpy as np
 
+
 class CustomArrayDataset(Dataset):
-    def __init__(self, data_array):
-        self.data_array = data_array
+    def __init__(self, samples):
+        self.samples = samples
 
     def __len__(self):
-        # The total number of samples in your dataset
-        return len(self.data_array)
+        return len(self.samples)
 
     def __getitem__(self, idx):
-        # Retrieve the 'x' and 'y' for the given index
-        x_data = self.data_array[idx]['x']
-        y_data = self.data_array[idx]['y']
-
-        # Convert NumPy arrays to PyTorch tensors
-        # For 1D CNN, 'x' should be (channels, length). If your 'x_data' is just (length,),
-        # add an extra dimension for channels (e.g., 1 channel).
-        x_tensor = torch.tensor(x_data, dtype=torch.float32).unsqueeze(0) # Adds a channel dimension
+        sample = self.samples[idx]
         
-        # 'y' should be a float tensor for BCEWithLogitsLoss or BCELoss
-        y_tensor = torch.tensor(y_data, dtype=torch.float32)
-
-        return x_tensor, y_tensor
+        # Combine x and y arrays as input features
+        # Method 1: Concatenate them (assuming same length)
+        combined_features = np.concatenate([sample.x, sample.y])
+        
+        # Or Method 2: Stack them as separate channels
+        # combined_features = np.stack([sample.x, sample.y])
+        
+        input_tensor = torch.tensor(combined_features, dtype=torch.float32)
+        
+        # Add channel dimension if needed (for Method 1)
+        if input_tensor.ndim == 1:
+            input_tensor = input_tensor.unsqueeze(0)  # Shape: [1, length*2]
+        
+        labels_tensor = torch.tensor(sample.labels, dtype=torch.float32)
+        
+        return input_tensor, labels_tensor
