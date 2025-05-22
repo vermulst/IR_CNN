@@ -1,4 +1,3 @@
-# config.py
 # Preprocessing constants
 CROP_MIN_X = 500
 CROP_MAX_X = 4000
