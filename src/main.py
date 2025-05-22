@@ -24,20 +24,23 @@ def main():
     end = time.time()
     print(f"Total execution time: {end - start:.2f} seconds")
 
-    print(samples[0].label)
-    #input_length = 1000
-    #num_classes = 5
-    #num_samples = len(samples)
+    print(samples[0].labels)
 
-    #train_dataset = CustomArrayDataset(samples[:int(num_samples * 0.8)]) # 80% for training
-    #test_dataset = CustomArrayDataset(samples[int(num_samples * 0.8):])  # 20% for testing
+    input_length = 1000
+    num_classes = 5
+    num_samples = len(samples)
 
-    #batch_size = 32
-    #train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-    #test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
+    train_dataset = CustomArrayDataset(samples[:int(num_samples * 0.8)]) # 80% for training
+    test_dataset = CustomArrayDataset(samples[int(num_samples * 0.8):])  # 20% for testing
 
-    #print(f"Number of training batches: {len(train_loader)}")
-    #print(f"Number of testing batches: {len(test_loader)}")
+    batch_size = 32
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
+
+    print(f"Number of training batches: {len(train_loader)}")
+    print(f"Number of testing batches: {len(test_loader)}")
+
+
 
 
     # CNN
