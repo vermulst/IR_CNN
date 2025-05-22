@@ -1,5 +1,5 @@
 import orjson
-from SpectraSample import SpectraSample
+from data_handling.SpectraSample import SpectraSample
 
 # load a sample from a file name (JCAMP file)
 def load_sample(datafolder, identifier):
