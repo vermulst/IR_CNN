@@ -5,6 +5,11 @@ from scipy.signal import savgol_filter
 from scipy import sparse
 from scipy.sparse.linalg import spsolve
 
+from config import (
+    CROP_MIN_X, CROP_MAX_X, INTERPOLATION_N_POINTS,
+    SMOOTHING_WINDOW_LENGTH, SMOOTHING_POLYORDER,
+    BASELINE_SMOOTHNESS, BASELINE_ASMMETRY, BASELINE_MAX_ITERATIONS
+)
 
 def process_samples(samples):
     # process first sample with visualization steps
@@ -23,19 +28,19 @@ def process_with_plot(sample):
     # Crop to fingerprint region
     plot_sample(sample, axs, 0, "Original")
 
-    crop_spectrum(sample, min_x=500, max_x=4000)
+    crop_spectrum(sample, min_x = CROP_MIN_X, max_x = CROP_MAX_X)
 
     plot_sample(sample, axs, 1, "Cropped")
 
     if (len(sample.x) == 0):
         return fig, axs
     # Interpolate to fixed length
-    interpolate_spectrum(sample, n_points=1000)
+    interpolate_spectrum(sample, n_points = INTERPOLATION_N_POINTS)
 
     plot_sample(sample, axs, 2, "Interpolated")
 
     # Baseline correction
-    correct_baseline(sample)
+    correct_baseline(sample, smoothness = BASELINE_SMOOTHNESS, asymmetry = BASELINE_ASMMETRY, max_iterations = BASELINE_MAX_ITERATIONS)
 
     plot_sample(sample, axs, 3, "Baseline correction")
     
@@ -45,7 +50,7 @@ def process_with_plot(sample):
     plot_sample(sample, axs, 4, "Normalized")
     
     # Smooth the spectrum (for taking out noise)
-    smooth_spectrum(sample)
+    smooth_spectrum(sample, window_length = SMOOTHING_WINDOW_LENGTH, polyorder = SMOOTHING_POLYORDER)
 
     plot_sample(sample, axs, 5, "Smoothing")
 
@@ -54,40 +59,36 @@ def process_with_plot(sample):
 def process(sample):
     #Full preprocessing pipeline for an IR spectrum.
     # Crop to fingerprint region
-    crop_spectrum(sample, min_x=500, max_x=4000)
+    crop_spectrum(sample, min_x = CROP_MIN_X, max_x = CROP_MAX_X)
 
     if (len(sample.x) == 0):
         return
     # Interpolate to fixed length
-    interpolate_spectrum(sample, n_points=1000)
+    interpolate_spectrum(sample, n_points = INTERPOLATION_N_POINTS)
 
     # Baseline correction
-    correct_baseline(sample)
+    correct_baseline(sample, smoothness = BASELINE_SMOOTHNESS, asymmetry = BASELINE_ASMMETRY, max_iterations = BASELINE_MAX_ITERATIONS)
     
     # Normalize intensities
     normalize_spectrum(sample)
     
     # Smooth the spectrum (for taking out noise)
-    smooth_spectrum(sample)
+    smooth_spectrum(sample, window_length = SMOOTHING_WINDOW_LENGTH, polyorder = SMOOTHING_POLYORDER)
 
 
-def crop_spectrum(sample, min_x=500, max_x=4000):
+def crop_spectrum(sample, min_x, max_x):
     mask = (sample.x >= min_x) & (sample.x <= max_x)
     sample.x = sample.x[mask]
     sample.y = sample.y[mask]
 
 
-def interpolate_spectrum(sample, n_points=1000):
+def interpolate_spectrum(sample, n_points):
     f = interp1d(sample.x, sample.y, kind='linear')
     sample.x = np.linspace(min(sample.x), max(sample.x), n_points)
     sample.y = f(sample.x)
 
-def normalize_spectrum(sample):
-    # Min-Max normalization to scale intensities between 0 and 1.
-    sample.y = (sample.y - np.min(sample.y)) / (np.max(sample.y) - np.min(sample.y))
 
-
-def correct_baseline(sample, smoothness=1e6, asymmetry=0.01, max_iterations=10):
+def correct_baseline(sample, smoothness, asymmetry, max_iterations):
     """
     Applies baseline correction using Asymmetric Least Squares (ALS) smoothing.
 
@@ -120,6 +121,10 @@ def correct_baseline(sample, smoothness=1e6, asymmetry=0.01, max_iterations=10):
     sample.y = signal - baseline
     return sample
 
-def smooth_spectrum(sample, window_length=5, polyorder=2):
+def normalize_spectrum(sample):
+    # Min-Max normalization to scale intensities between 0 and 1.
+    sample.y = (sample.y - np.min(sample.y)) / (np.max(sample.y) - np.min(sample.y))
+
+def smooth_spectrum(sample, window_length, polyorder):
     # Apply Savitzky-Golay smoothing to reduce noise.
     sample.y = savgol_filter(sample.y, window_length=window_length, polyorder=polyorder)
