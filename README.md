@@ -11,6 +11,12 @@
 - Run `setup/system.bat`.
 - This may fail if multiple Python installations are present on your system.
 
+## Option 3: Anaconda Virtual Enviorment from Command Prompt
+- Install Anaconda
+- Go to repository directory
+- Run conda create --name ir python=3.11 (answer yes too al questions)
+- Run conda activate ir
+
 ---
 
 # JCAMP-DX Format Overview
