@@ -1,7 +1,40 @@
 import numpy as np
+from visualizer import plot_sample
 from scipy.interpolate import interp1d
 from scipy.signal import savgol_filter
-from BaselineRemoval import BaselineRemoval
+from scipy import sparse
+from scipy.sparse.linalg import spsolve
+
+def process_with_plot(sample, plotAxs, plotIndex):
+    #Full preprocessing pipeline for an IR spectrum.
+    # Crop to fingerprint region
+    crop_spectrum(sample, min_x=500, max_x=4000)
+
+    plot_sample(sample, plotAxs, plotIndex, "Cropped")
+
+    if (len(sample.x) == 0):
+        return sample
+    # Interpolate to fixed length
+    interpolate_spectrum(sample, n_points=1000)
+
+    plot_sample(sample, plotAxs, plotIndex + 1, "Interpolated")
+
+    # Baseline correction
+    correct_baseline(sample)
+
+    plot_sample(sample, plotAxs, plotIndex + 2, "Baseline correction")
+    
+    # Normalize intensities
+    normalize_spectrum(sample)
+
+    plot_sample(sample, plotAxs, plotIndex + 3, "Normalized")
+    
+    # Smooth the spectrum (for taking out noise)
+    smooth_spectrum(sample)
+
+    plot_sample(sample, plotAxs, plotIndex + 4, "Smoothing")
+
+    return sample
 
 def process(sample):
     #Full preprocessing pipeline for an IR spectrum.
@@ -14,7 +47,7 @@ def process(sample):
     interpolate_spectrum(sample, n_points=1000)
 
     # Baseline correction
-    #correct_baseline(sample)
+    correct_baseline(sample)
     
     # Normalize intensities
     normalize_spectrum(sample)
@@ -40,10 +73,39 @@ def normalize_spectrum(sample):
     # Min-Max normalization to scale intensities between 0 and 1.
     sample.y = (sample.y - np.min(sample.y)) / (np.max(sample.y) - np.min(sample.y))
 
-def correct_baseline(sample):
-    # Remove baseline drift using Asymmetric Least Squares (ALS)
-    baseObj = BaselineRemoval(sample.y)
-    sample.y = baseObj.als()
+
+def correct_baseline(sample, smoothness=1e6, asymmetry=0.01, max_iterations=10):
+    """
+    Applies baseline correction using Asymmetric Least Squares (ALS) smoothing.
+
+    Parameters:
+    - smoothness: Controls how smooth the estimated baseline should be (lambda).
+                  Higher values = smoother baseline.
+    - asymmetry:  Asymmetry parameter (p), between 0 and 1.
+                  Lower values assume that most data points are above the baseline.
+    - max_iterations: Number of iterations to refine the baseline estimate.
+    """
+    signal = sample.y
+    length = len(signal)
+
+    # Second-order difference matrix for smoothing
+    difference_matrix = sparse.diags([1, -2, 1], [0, -1, -2], shape=(length, length - 2))
+    smooth_penalty = smoothness * difference_matrix.dot(difference_matrix.transpose())
+
+    # Initial weights: all equal
+    weights = np.ones(length)
+
+    for _ in range(max_iterations):
+        W = sparse.spdiags(weights, 0, length, length)
+        Z = W + smooth_penalty
+        baseline = spsolve(Z, weights * signal)
+
+        # Update weights: lower for points above the baseline (likely peaks)
+        weights = asymmetry * (signal > baseline) + (1 - asymmetry) * (signal < baseline)
+
+    # Subtract the estimated baseline from the original signal
+    sample.y = signal - baseline
+    return sample
 
 def smooth_spectrum(sample, window_length=5, polyorder=2):
     # Apply Savitzky-Golay smoothing to reduce noise.
