@@ -60,7 +60,6 @@ def load_samples(datafolder):
                 if (sample := load_sample(datafolder, identifier)) and \
                    (label_vec := func_group_id.encode(smiles)):
                     sample.labels = label_vec
-                    print(f" - id: {identifier}, smiles: {smiles}, fg: {label_vec}")
                     samples.append(sample)
                     valid_count += 1
             except Exception as e:
