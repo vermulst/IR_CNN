@@ -19,7 +19,7 @@ class SpectraSample():
         self.xy_data = self.data.get("xydata")
         self.x = self.data.get("x")
         self.y = self.data.get("y")
-        self.label = None
+        self.labels = None
 
         # Optional metadata (uncomment if needed)
         # self.title = self.data.get("title")

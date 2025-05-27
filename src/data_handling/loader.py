@@ -1,6 +1,6 @@
 import orjson
-from SpectraSample import SpectraSample
-from func_group_identifier import FunctionalGroupIdentifier
+from data_handling.SpectraSample import SpectraSample
+from data_handling.func_group_identif import FunctionalGroupIdentifier
 
 func_grp_smarts = {
     'alkane': '[CX4;H0,H1,H2,H4]',
@@ -60,7 +60,7 @@ def load_samples(datafolder):
                 if (sample := load_sample(datafolder, identifier)) and \
                    (label_vec := func_group_id.encode(smiles)):
                     sample.labels = label_vec
-                    print(f" - id: {identifier}, smiles: {smiles}, fg: {label_vec}")
+                    #print(f" - id: {identifier}, smiles: {smiles}, fg: {label_vec}")
                     samples.append(sample)
                     valid_count += 1
             except Exception as e:
