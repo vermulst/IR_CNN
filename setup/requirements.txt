@@ -14,5 +14,4 @@ torchaudio
 torchvision
 BaselineRemoval
 scikit-learn
-matplotlib
 rdkit
