@@ -15,3 +15,7 @@ torchvision
 BaselineRemoval
 scikit-learn
 rdkit
+opencv-python
+pubchempy
+cirpy
+SciDataTool

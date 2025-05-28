@@ -10,9 +10,30 @@ import csv
 import cv2
 import re
 from smarts import fg_list_original, fg_list_extended
+import cirpy 
+#from SciDataTool import JCAMP_reader
 
-import cirpy
-from rdkit import Chem
+from pubchempy import get_compounds
+
+# List of compound names
+compound_names = ['phenyl isocyanate', 'p-nitroanisole', '4-ethylpyridine']
+
+# Function to convert name to SMILES
+def name_to_smiles(name):
+    try:
+        compounds = get_compounds(name, 'name')
+        if compounds:
+            return compounds[0].isomeric_smiles
+        else:
+            return None
+    except Exception as e:
+        return None
+
+# Convert and print
+for name in compound_names:
+    smiles = name_to_smiles(name)
+    print(f"{name} -> {smiles}")
+
 
 def name_to_smiles_and_inchi(name):
     smiles = cirpy.resolve(name, 'smiles')
