@@ -9,4 +9,4 @@ torchvision
 BaselineRemoval
 scikit-learn
 matplotlib
-rdkitkit
+rdkit

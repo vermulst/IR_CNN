@@ -15,10 +15,15 @@ def process_samples(samples):
     # process first sample with visualization steps
     process_with_plot(samples[0])
 
-    # process the rest normally
-    for sample in samples[1:]:
+    # Process the rest and filter empty samples
+    processed_samples = []
+    for sample in samples:
         process(sample)
-    print("finished processing")
+        if len(sample.y) == INTERPOLATION_N_POINTS:  # Only keep samples with non-empty y arrays
+            processed_samples.append(sample)
+
+    print(f"Finished processing. Kept {len(processed_samples)}/{len(samples)} samples")
+    return processed_samples  # Return the filtered list
 
 def process_with_plot(sample):
 

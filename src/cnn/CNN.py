@@ -10,34 +10,31 @@ class BasicCNN1D(nn.Module):
         self.conv1 = nn.Conv1d(in_channels=1, out_channels=16, kernel_size=3, stride=1, padding=1)
         self.conv2 = nn.Conv1d(in_channels=16, out_channels=32, kernel_size=3, stride=1, padding=1)
         self.conv3 = nn.Conv1d(in_channels=32, out_channels=64, kernel_size=3, stride=1, padding=1)
-        
-        # Pooling layer (adapted for 1D)
-        self.pool = nn.MaxPool1d(kernel_size=2, stride=2)
+        self.pool = nn.MaxPool1d(2)
         
         # Calculate flattened dimension
-        self.flattened_size = 64 * (input_length // 8)  # 3 pooling layers reduce length by 2^3
+        self.output_size = self.calculate_output_size(input_length)
         
         # Fully connected layers
-        self.fc1 = nn.Linear(self.flattened_size, 512)
+        self.fc1 = nn.Linear(self.output_size, 512)
         self.fc2 = nn.Linear(512, num_classes)
         # Dropout layer
         self.dropout = nn.Dropout(0.25)
-    
+
+    def calculate_output_size(self, input_length):
+        # Simulate forward pass to get output size
+        with torch.no_grad():
+            x = torch.zeros(1, 1, input_length)
+            x = self.pool(F.relu(self.conv1(x)))
+            x = self.pool(F.relu(self.conv2(x)))
+            x = self.pool(F.relu(self.conv3(x)))
+            return x.numel()  # Total elements after convolutions
+
     def forward(self, x):
-        # Convolutional layers with ReLU and pooling
         x = self.pool(F.relu(self.conv1(x)))
         x = self.pool(F.relu(self.conv2(x)))
         x = self.pool(F.relu(self.conv3(x)))
-        
-        # Flatten the output
-        x = x.view(-1, self.flattened_size)
-        
-        # Fully connected layers with dropout
-        x = self.dropout(x)
-        x = F.relu(self.fc1(x))
-        x = self.dropout(x)
+        x = x.view(x.size(0), -1)
+        x = self.dropout(F.relu(self.fc1(x)))
         x = self.fc2(x)
-
-        x = torch.sigmoid(x)
-        
-        return x
+        return torch.sigmoid(x)

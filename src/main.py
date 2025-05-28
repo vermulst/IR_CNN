@@ -19,22 +19,29 @@ def main():
     samples = load_samples("data/public")
 
     # preprocess
-    process_samples(samples)
-
-    # visualize
-    plot_show()
+    samples = process_samples(samples)
 
     end = time.time()
     print(f"Total execution time: {end - start:.2f} seconds")
 
     print(samples[0].labels)
 
-    input_length = 1000
-    num_classes = 5
     num_samples = len(samples)
+    input_length = max(len(s.y) for s in samples)  # Use maximum length
+    print(f"Using input length: {input_length}")
+
+    min_length = min(len(s.y) for s in samples)
+    print(f"Minimum spectrum length: {min_length}")
+
+    num_classes = len(samples[0].labels)  # Should be 15
 
     train_dataset = CustomArrayDataset(samples[:int(num_samples * 0.8)]) # 80% for training
     test_dataset = CustomArrayDataset(samples[int(num_samples * 0.8):])  # 20% for testing
+    
+    # Check tensor shapes in dataset
+    sample_input, sample_label = train_dataset[0]
+    print(f"Sample input shape: {sample_input.shape}")
+    print(f"Sample label shape: {sample_label.shape}")
 
     batch_size = 32
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
@@ -42,9 +49,6 @@ def main():
 
     print(f"Number of training batches: {len(train_loader)}")
     print(f"Number of testing batches: {len(test_loader)}")
-
-    combined_length = len(samples[0].x) + len(samples[0].y)
-    num_classes = len(samples[0].labels)
 
     # Initialize model, loss, and optimizer
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -61,40 +65,23 @@ def main():
         model.train()
         running_loss = 0.0
         
-        for batch_idx, (inputs, labels) in enumerate(train_loader):
+        for inputs, labels in train_loader:
             inputs, labels = inputs.to(device), labels.to(device)
-            
-            # Zero the parameter gradients
             optimizer.zero_grad()
-            
-            # Forward pass
             outputs = model(inputs)
-            
-            # Calculate loss
             loss = criterion(outputs, labels)
-            
-            # Backward pass and optimize
             loss.backward()
             optimizer.step()
-            
-            running_loss += loss.item()
-            
-            # Print statistics
-            if batch_idx % 10 == 9:  # Print every 10 batches
-                print(f'Epoch [{epoch+1}/{num_epochs}], Batch [{batch_idx+1}/{len(train_loader)}], Loss: {running_loss/10:.4f}')
-                running_loss = 0.0
         
         # Validation after each epoch
         model.eval()
-        correct = 0
-        total = 0
         with torch.no_grad():
+            correct = total = 0
             for inputs, labels in test_loader:
-                inputs, labels = inputs.to(device), labels.to(device)
-                outputs = model(inputs)
-                predicted = (outputs > 0.5).float()  # Threshold at 0.5 for binary classification
-                total += labels.size(0) * labels.size(1)  # Total number of labels
-                correct += (predicted == labels).sum().item()
+                outputs = model(inputs.to(device))
+                preds = (outputs > 0.5).float()
+                correct += (preds == labels.to(device)).sum().item()
+                total += labels.numel()
         
         accuracy = 100 * correct / total
         print(f'Epoch [{epoch+1}/{num_epochs}], Validation Accuracy: {accuracy:.2f}%')

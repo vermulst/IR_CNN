@@ -12,20 +12,7 @@ class CustomArrayDataset(Dataset):
 
     def __getitem__(self, idx):
         sample = self.samples[idx]
-        
-        # Combine x and y arrays as input features
-        # Method 1: Concatenate them (assuming same length)
-        combined_features = np.concatenate([sample.x, sample.y])
-        
-        # Or Method 2: Stack them as separate channels
-        # combined_features = np.stack([sample.x, sample.y])
-        
-        input_tensor = torch.tensor(combined_features, dtype=torch.float32)
-        
-        # Add channel dimension if needed (for Method 1)
-        if input_tensor.ndim == 1:
-            input_tensor = input_tensor.unsqueeze(0)  # Shape: [1, length*2]
-        
+        # Convert spectrum to tensor [length] -> [1, length]
+        input_tensor = torch.tensor(sample.y, dtype=torch.float32).unsqueeze(0)
         labels_tensor = torch.tensor(sample.labels, dtype=torch.float32)
-        
         return input_tensor, labels_tensor
