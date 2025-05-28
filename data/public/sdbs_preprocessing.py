@@ -9,7 +9,7 @@ import sys
 import csv
 import cv2
 import re
-from smarts import fg_list_original, fg_list_extended
+#from smarts import fg_list_original, fg_list_extended
 
 import cirpy
 from rdkit import Chem
@@ -33,12 +33,12 @@ def name_to_smiles_and_inchi(name):
 np.set_printoptions(threshold=sys.maxsize)
 
 # Define paths.
-nist_inchi_path = '../nist_dataset/inchi/'
+nist_inchi_path = '/nist_dataset/inchi/'
 nist_jdx_path = '../nist_dataset/jdx/'
-sdbs_gif_path = '../sdbs_dataset/gif/'
-sdbs_png_path = '../sdbs_dataset/png/'
-sdbs_other_path = '../sdbs_dataset/other/'
-save_path = '/processed_dataset/'
+sdbs_gif_path = './data/public/sdbs_dataset/gif/'
+sdbs_png_path = './data/public/sdbs_dataset/png/'
+sdbs_other_path = './data/public/sdbs_dataset/other/'
+save_path = './data/public/processed_dataset/'
 
 
 def convert_x(x_in, unit_from, unit_to):
@@ -126,9 +126,8 @@ def get_contours(image):
     # Find contours in the image
     contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     return contours
-
+"""
 def get_sdbs(fg_list):
-    """Create dataset in CSV format."""
     # Process data from SDBS database.
     print('Start SDBS processing')
     for file in listdir(sdbs_png_path):
@@ -153,31 +152,15 @@ def get_sdbs(fg_list):
                     inchi = None
                     for line in other_file:
                         match = re.match('Name: (.*)', line)
-                        if match is not None:
-                            inchi = match.groups()[0]
-                            break
-                    if inchi is None:
-                        print(f"No InChI found in {other_path}")
-                        continue
-                    print(f"InChI: {inchi}")
-                    mol = name_to_smiles_and_inchi(inchi)
-                    smiles, inchi = name_to_smiles_and_inchi(match)  # compound_name, not formula!
-                    if not inchi:
-                        print(f"Could not get InChI for {match}")
-                        continue
-                    mol = Chem.MolFromInchi(inchi)
-                    if mol is None:
-                        print(f"RDKit failed to parse InChI: {inchi}")
-                        continue
+
 
                     # ... rest of your processing ...
         except Exception as e:
             print(f"Error processing {file}: {e}")
 
 
-"""
 def get_sdbs(fg_list):
-    Create dataset in CSV format.
+    #Create dataset in CSV format.
     # Process data from SDBS database.
     print('Start SDBS processing')
     for file in listdir(sdbs_png_path):
@@ -254,9 +237,64 @@ def get_sdbs(fg_list):
             print('Error')
 """
 
+def get_sdbs():
+    print('Start SDBS processing')
+    for file in os.listdir(sdbs_png_path):
+        #try:
+            if 'KBr' in file or 'liquid' in file or 'nujol' in file:
+                if not file.startswith('.'):
+                    original_image = cv2.imread(os.path.join(sdbs_png_path, file), 0)
+                    print('a')
+                    if original_image is None:
+                        print(f"Failed to read image: {file}")
+                        continue
+                    height, width = original_image.shape
+                    print('b')
+                    print(f"{file}: width={width}, height={height}")
+                    if width != 715:
+                        print(f"Skipping {file}: width is not 715")
+                        continue
+                    sdbs_id = file.split('_')[0]
+                    print('c')
+                    other_path = os.path.join(sdbs_other_path, sdbs_id + '_other.txt')
+                    if not os.path.exists(other_path):
+                        print(f"Missing metadata: {other_path}")
+                        continue
+                    with open(other_path) as f:
+                        other_file = f.readlines()
+                    compound_name = None
+                    print('d')
+                    for line in other_file:
+                        match = re.match('Name: (.*)', line)
+                        if match:
+                            compound_name = match.group(1).strip()
+                            break
+                    if not compound_name:
+                        print(f"No name found in {other_path}")
+                        continue
+                    print('e')
+                    # --- Spectrum extraction/interpolation logic here ---
+                    # Replace the next two lines with your actual spectrum extraction code
+                    # For example, x = np.linspace(4000, 400, 600); y = ... (interpolated spectrum)
+                    x = np.linspace(4000, 400, 600)
+                    y = np.random.rand(600)  # Replace with actual spectrum extraction!
+
+                    # --- Write to CSV ---
+                    # Clean the compound name for safe filename
+                    safe_name = re.sub(r'[\\/*?:"<>|]', "_", compound_name)
+                    csv_filename = os.path.join('../processed_dataset/', f"{safe_name}.csv")
+                    with open(csv_filename, 'w', newline='') as csvfile:
+                        writer = csv.writer(csvfile)
+                        writer.writerow(['Wavenumber', 'Intensity'])
+                        for xi, yi in zip(x, y):
+                            writer.writerow([xi, yi])
+                    print(f"Saved {csv_filename}")
+
+        #except Exception as e:
+        #    print(f"Error processing {file}: {e}")
+
 def get_nist(fg_list):
-    """"""
-    # Process data from NIST database.
+      # Process data from NIST database.
     print('Start NIST processing')
     for file in listdir(nist_jdx_path):
         try:
@@ -352,5 +390,5 @@ def get_nist(fg_list):
 if __name__ == '__main__':
     get_png() 
     # Selected either original or extended list.
-    get_sdbs(fg_list_extended)
+    get_sdbs()
     #get_nist(fg_list_extended)
