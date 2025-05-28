@@ -11,6 +11,23 @@ import cv2
 import re
 from smarts import fg_list_original, fg_list_extended
 
+import cirpy
+from rdkit import Chem
+
+def name_to_smiles_and_inchi(name):
+    smiles = cirpy.resolve(name, 'smiles')
+    if smiles is None:
+        print(f"Could not resolve SMILES for: {name}")
+        return None, None
+    mol = Chem.MolFromSmiles(smiles)
+    if mol is None:
+        print(f"RDKit could not parse SMILES for: {name}")
+        return smiles, None
+    inchi = Chem.MolToInchi(mol)
+    return smiles, inchi
+
+
+
 
 # Set print options.
 np.set_printoptions(threshold=sys.maxsize)
@@ -21,7 +38,7 @@ nist_jdx_path = '../nist_dataset/jdx/'
 sdbs_gif_path = '../sdbs_dataset/gif/'
 sdbs_png_path = '../sdbs_dataset/png/'
 sdbs_other_path = '../sdbs_dataset/other/'
-save_path = '../processed_dataset/'
+save_path = '/processed_dataset/'
 
 
 def convert_x(x_in, unit_from, unit_to):
@@ -110,9 +127,57 @@ def get_contours(image):
     contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     return contours
 
-
 def get_sdbs(fg_list):
     """Create dataset in CSV format."""
+    # Process data from SDBS database.
+    print('Start SDBS processing')
+    for file in listdir(sdbs_png_path):
+        try:
+            if 'KBr' in file or 'liquid' in file or 'nujol' in file:
+                if not file.startswith('.'):
+                    original_image = cv2.imread(sdbs_png_path + '/' + file, 0)
+                    if original_image is None:
+                        print(f"Failed to read image: {file}")
+                        continue
+                    height, width = original_image.shape
+                    print(f"{file}: width={width}, height={height}")
+                    if width != 715:
+                        print(f"Skipping {file}: width is not 715")
+                        continue
+                    sdbs_id = file.split('_')[0]
+                    other_path = sdbs_other_path + '/' + sdbs_id + '_other.txt'
+                    if not os.path.exists(other_path):
+                        print(f"Missing metadata: {other_path}")
+                        continue
+                    other_file = open(other_path).readlines()
+                    inchi = None
+                    for line in other_file:
+                        match = re.match('Name: (.*)', line)
+                        if match is not None:
+                            inchi = match.groups()[0]
+                            break
+                    if inchi is None:
+                        print(f"No InChI found in {other_path}")
+                        continue
+                    print(f"InChI: {inchi}")
+                    mol = name_to_smiles_and_inchi(inchi)
+                    smiles, inchi = name_to_smiles_and_inchi(match)  # compound_name, not formula!
+                    if not inchi:
+                        print(f"Could not get InChI for {match}")
+                        continue
+                    mol = Chem.MolFromInchi(inchi)
+                    if mol is None:
+                        print(f"RDKit failed to parse InChI: {inchi}")
+                        continue
+
+                    # ... rest of your processing ...
+        except Exception as e:
+            print(f"Error processing {file}: {e}")
+
+
+"""
+def get_sdbs(fg_list):
+    Create dataset in CSV format.
     # Process data from SDBS database.
     print('Start SDBS processing')
     for file in listdir(sdbs_png_path):
@@ -126,7 +191,7 @@ def get_sdbs(fg_list):
                         sdbs_id = file.split('_')[0]
                         other_file = open(sdbs_other_path + '/' + sdbs_id + '_other.txt').readlines()
                         for line in other_file:
-                            match = re.match('InChI: (.*)', line)
+                            match = re.match('Formula: (.*)', line)
                             if match is not None:
                                 print(file)
                                 inchi = match.groups()[0]
@@ -187,7 +252,7 @@ def get_sdbs(fg_list):
                                     x_data_writer.writerow(y)
         except:
             print('Error')
-
+"""
 
 def get_nist(fg_list):
     """"""

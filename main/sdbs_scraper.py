@@ -25,13 +25,6 @@ disclaimer = 'https://sdbs.db.aist.go.jp/sdbs/cgi-bin/cre_disclaimer.cgi?REQURL=
 main = 'https://sdbs.db.aist.go.jp/sdbs/cgi-bin/landingpage?sdbsno='
 land = 'https://sdbs.db.aist.go.jp/SearchInformation.aspx'
 
-# Define regex strings used to match.
-formula = re.compile('Molecular Formula: (.*?)$')
-mw = re.compile('Molecular Weight: (.*?)$')
-#inchi = re.compile('InChI: (InChI=.*?)$')
-#inchikey = re.compile('InChIKey: (.*?)$')
-#cas = re.compile('RN: (.*?)$')
-name = re.compile('Description: Compound Name: (.*?)$')
 
 
 def check_dir():
@@ -85,7 +78,6 @@ for j in ids[:]:
         agree_button = wait.until(EC.element_to_be_clickable((By.XPATH, '//input[contains(@value, "I agree")]')))
         driver.execute_script("arguments[0].click();", agree_button)
 
-            #driver.find_element("xpath", '/html/body/form/input').click()
 
         # After scraping 30 unique compounds, start a new browser.
         if count % 30 == 0:
@@ -95,13 +87,6 @@ for j in ids[:]:
             agree_button = wait.until(EC.element_to_be_clickable((By.XPATH, '//input[contains(@value, "I agree")]')))
             driver.execute_script("arguments[0].click();", agree_button)
 
-            #driver.find_element("xpath", '/html/body/form/input').click()
-            
-
-        # Select first tab in the controlled window.
-        #driver.switch_to.window(driver.window_handles[0])
-        # Open profile of selected compound.
-        #driver.get(land)
         wait = WebDriverWait(driver, 5)
         sdbs_input = driver.find_element(By.XPATH, '//input[contains(@name, "ctl00$BodyContentPlaceHolder$INP_sdbsno")]')
         sdbs_input.clear()

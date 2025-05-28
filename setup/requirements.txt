@@ -3,10 +3,16 @@ numpy
 matplotlib
 orjson
 pandas
-RDkit
 beautifulsoup4
 requests
 selenium
 soupsieve
 webdriver-manager
 PyAutoGUI
+torch
+torchaudio
+torchvision
+BaselineRemoval
+scikit-learn
+matplotlib
+rdkit
