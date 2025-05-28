@@ -93,7 +93,7 @@ def main():
     
     print(f'Training complete. Best validation accuracy: {best_accuracy:.2f}%')
 
-    # CNN
+    #CNN
     #cnn = BasicCNN1D(input_length=len(samples), num_classes=10)
     #cnn.train()
 

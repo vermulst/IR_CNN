@@ -15,8 +15,8 @@ class SpectraSample():
         self.x_factor = self.data.get("xfactor")
         self.y_factor = self.data.get("yfactor")
         self.npoints = self.data.get("npoints")
-        self.first_y = self.data.get("firsty")
-        self.xy_data = self.data.get("xydata")
+    #    self.first_y = self.data.get("firsty")
+    #    self.xy_data = self.data.get("xydata")
         self.x = self.data.get("x")
         self.y = self.data.get("y")
         self.labels = None
