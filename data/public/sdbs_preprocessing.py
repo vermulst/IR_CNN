@@ -9,14 +9,14 @@ import sys
 import csv
 import cv2
 import re
-from smarts import fg_list_original, fg_list_extended
+#from smarts import fg_list_original, fg_list_extended
 import cirpy 
 #from SciDataTool import JCAMP_reader
 
 from pubchempy import get_compounds
 
 # List of compound names
-compound_names = ['phenyl isocyanate', 'p-nitroanisole', '4-ethylpyridine']
+#compound_names = ['phenyl isocyanate', 'p-nitroanisole', '4-ethylpyridine']
 
 # Function to convert name to SMILES
 def name_to_smiles(name):
@@ -303,7 +303,7 @@ def get_sdbs():
                     # --- Write to CSV ---
                     # Clean the compound name for safe filename
                     safe_name = re.sub(r'[\\/*?:"<>|]', "_", compound_name)
-                    csv_filename = os.path.join('../processed_dataset/', f"{safe_name}.csv")
+                    csv_filename = os.path.join(save_path, f"{safe_name}.csv")
                     with open(csv_filename, 'w', newline='') as csvfile:
                         writer = csv.writer(csvfile)
                         writer.writerow(['Wavenumber', 'Intensity'])
