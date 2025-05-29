@@ -74,11 +74,11 @@ def process(sample):
     # Baseline correction
     correct_baseline(sample, smoothness = BASELINE_SMOOTHNESS, asymmetry = BASELINE_ASMMETRY, max_iterations = BASELINE_MAX_ITERATIONS)
     
-    # Normalize intensities
-    normalize_spectrum(sample)
-    
     # Smooth the spectrum (for taking out noise)
     smooth_spectrum(sample, window_length = SMOOTHING_WINDOW_LENGTH, polyorder = SMOOTHING_POLYORDER)
+
+    # Normalize intensities
+    normalize_spectrum(sample)
 
 
 def crop_spectrum(sample, min_x, max_x):
@@ -128,7 +128,13 @@ def correct_baseline(sample, smoothness, asymmetry, max_iterations):
 
 def normalize_spectrum(sample):
     # Min-Max normalization to scale intensities between 0 and 1.
-    sample.y = (sample.y - np.min(sample.y)) / (np.max(sample.y) - np.min(sample.y))
+    min_y = np.min(sample.y)
+    max_y = np.max(sample.y)
+    if max_y - min_y == 0:
+        print(f"Constant spectrum detected")
+        sample.y = np.array([]) # set y array to empty so sample is skipped
+    else:
+        sample.y = (sample.y - min_y) / (max_y - min_y)
 
 def smooth_spectrum(sample, window_length, polyorder):
     # Apply Savitzky-Golay smoothing to reduce noise.
