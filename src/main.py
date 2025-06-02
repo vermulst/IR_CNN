@@ -120,9 +120,9 @@ def main():
         class_names = list(FUNCTIONAL_GROUP_SMARTS.keys())
         for i in range(num_classes):
             # avoid division by 0
-            if (class_tp[i] + class_fn[i]) == 0:
+            if (class_tp[i] == 0) and (class_fp[i] == 0 or class_fn[i] == 0):
                 continue
-            
+
             precision = class_tp[i] / (class_tp[i] + class_fp[i]) if (class_tp[i] + class_fp[i]) > 0 else 0
             recall = class_tp[i] / (class_tp[i] + class_fn[i]) if (class_tp[i] + class_fn[i]) > 0 else 0
             f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
