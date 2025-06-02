@@ -96,7 +96,7 @@ def preprocess_with_plot(sample):
     plot_sample(sample, axs, 2, "Interpolated")
 
     # Crop to fingerprint region
-    crop_spectrum(sample, REGIONS, True)
+    crop_spectrum(sample, REGIONS)
     plot_sample(sample, axs, 1, "Cropped")
 
     # Check for empty spectrum
@@ -104,11 +104,11 @@ def preprocess_with_plot(sample):
         return fig, axs
 
     # Baseline correction
-    correct_baseline(sample, smoothness = BASELINE_SMOOTHNESS, asymmetry = BASELINE_ASMMETRY, max_iterations = BASELINE_MAX_ITERATIONS)
+    #correct_baseline(sample, smoothness = BASELINE_SMOOTHNESS, asymmetry = BASELINE_ASMMETRY, max_iterations = BASELINE_MAX_ITERATIONS)
     plot_sample(sample, axs, 3, "Baseline correction")
     
     # Smooth the spectrum (for taking out noise)
-    smooth_spectrum(sample, window_length = SMOOTHING_WINDOW_LENGTH, polyorder = SMOOTHING_POLYORDER)
+    #smooth_spectrum(sample, window_length = SMOOTHING_WINDOW_LENGTH, polyorder = SMOOTHING_POLYORDER)
     plot_sample(sample, axs, 5, "Smoothing")
 
     # Normalize intensities
@@ -142,7 +142,7 @@ def interpolate_spectrum(sample):
     sample.x = TARGET_X
     sample.y = f(TARGET_X)
 
-def crop_spectrum(sample, regions, verbal=False):
+def crop_spectrum(sample, regions):
     x_segments = []
     y_segments = []
 

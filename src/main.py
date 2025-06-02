@@ -67,15 +67,63 @@ def main():
         model.eval()
         with torch.no_grad():
             correct = total = 0
+
+            # Per-class metrics
+            class_correct = [0, 0, 0]  # Correct predictions per class
+            class_total = [0, 0, 0]     # Total samples per class
+            class_tp = [0, 0, 0]        # True positives per class
+            class_fp = [0, 0, 0]        # False positives per class
+            class_fn = [0, 0, 0]        # False negatives per class
+
             for inputs, labels in test_loader:
                 outputs = model(inputs.to(device))
                 preds = (outputs > 0.5).float()
+
+                # Overall accuracy
                 correct += (preds == labels).sum().item()
                 total += labels.numel()
+
+                # Per-class accuracy
+                for i in range(num_classes):  # Loop over each functional group
+                    # Accuracy components
+                    class_correct[i] += (preds[:, i] == labels[:, i]).sum().item()
+                    class_total[i] += labels.shape[0]
+            
+                    # TP, FP, FN for F1
+                    class_tp[i] += ((preds[:, i] == 1) & (labels[:, i] == 1)).sum().item()
+                    class_fp[i] += ((preds[:, i] == 1) & (labels[:, i] == 0)).sum().item()
+                    class_fn[i] += ((preds[:, i] == 0) & (labels[:, i] == 1)).sum().item()
         
         accuracy = 100 * correct / total
         print(f'Epoch [{epoch+1}/{num_epochs}], Validation Accuracy: {accuracy:.2f}%')
         
+        class_names = ["Alcohol", "Aromatic", "Aldehyde"]
+        for i in range(num_classes):
+            precision = class_tp[i] / (class_tp[i] + class_fp[i]) if (class_tp[i] + class_fp[i]) > 0 else 0
+            recall = class_tp[i] / (class_tp[i] + class_fn[i]) if (class_tp[i] + class_fn[i]) > 0 else 0
+            f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+            print(f'{class_names[i]}:')
+            print(f'  Accuracy: {100 * class_correct[i] / class_total[i]:.2f}%')
+            print(f'  F1: {100 * f1:.2f}%')
+
+        # Macro-average F1 (average of per-class F1)
+        macro_f1 = sum([
+            2 * (class_tp[i] / (class_tp[i] + class_fp[i])) * (class_tp[i] / (class_tp[i] + class_fn[i])) / 
+            (class_tp[i] / (class_tp[i] + class_fp[i]) + class_tp[i] / (class_tp[i] + class_fn[i])) 
+            if (class_tp[i] + class_fp[i]) > 0 and (class_tp[i] + class_fn[i]) > 0 else 0
+            for i in range(num_classes)
+        ]) / num_classes
+        print(f'\nMacro-average F1: {100 * macro_f1:.2f}%')
+
+        # Micro-average F1 (global TP/FP/FN)
+        global_tp = sum(class_tp)
+        global_fp = sum(class_fp)
+        global_fn = sum(class_fn)
+        micro_precision = global_tp / (global_tp + global_fp) if (global_tp + global_fp) > 0 else 0
+        micro_recall = global_tp / (global_tp + global_fn) if (global_tp + global_fn) > 0 else 0
+        micro_f1 = 2 * (micro_precision * micro_recall) / (micro_precision + micro_recall) if (micro_precision + micro_recall) > 0 else 0
+        print(f'Micro-average F1: {100 * micro_f1:.2f}%')
+
         # Save best model
         if accuracy > best_accuracy:
             best_accuracy = accuracy
