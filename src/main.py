@@ -13,8 +13,6 @@ import time
 
 
 def main():
-    start = time.time()
-
     # load samples
     samples = load_samples("data/public")
 
@@ -23,6 +21,7 @@ def main():
 
     # CNN
     num_samples = len(samples)
+    print(samples[0].labels)
     num_classes = len(samples[0].labels) 
 
     train_dataset = CustomArrayDataset(samples[:int(num_samples * 0.8)]) # 80% for training

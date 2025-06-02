@@ -6,102 +6,99 @@ from data_handling.func_group_identif import FunctionalGroupIdentifier
 # for printing
 from tqdm import tqdm
 from rich import print as rprint
+import time
 
 # for optimizations
-import concurrent.futures
 import os
+import multiprocessing as mp
 
 from config import FUNCTIONAL_GROUP_SMARTS
     
 
-def calculate_max_workers():
-    cpu_count = os.cpu_count() or 1
-    # For I/O-heavy tasks with light CPU
-    return min(32, cpu_count * 4)
-
 
 def load_samples(datafolder):
-    func_group_id = FunctionalGroupIdentifier(FUNCTIONAL_GROUP_SMARTS)
-
+    # Obtain metadata
     with open(f"{datafolder}/meta_data.json", "rb") as f:
-        compounds = orjson.loads(f.read())
+        metadata = orjson.loads(f.read())
 
-    # Precompute all unique SMILES labels
-    smiles_labels = {}
-    unique_smiles = set()
+    # Read out metadata
+    paths, smiles, path_to_smiles = read_metadata(metadata, datafolder)
 
-    # First pass: Collect all unique SMILES
-    attachments = []
-    for compound in compounds:
-        if smiles := compound.get("cano_smiles"):
-            for dataset in compound.get("datasets", []):
-                for attachment in dataset.get("attacments", []):
-                    identifier = attachment["identifier"].split("/", 1)[1]
-                    attachments.append((smiles, identifier))
-                    unique_smiles.add(smiles)
+    # Compute functional groups
+    smiles_to_functional_group = compute_functional_groups(smiles) # SMILES -> LABEL_VEC
 
+    # Read IR spectra data
+    samples = read_spectra_samples(paths, path_to_smiles, smiles_to_functional_group)
 
-    # Precompute labels with progress bar
-    with tqdm(total=len(unique_smiles), desc="Precomputing labels", colour="yellow") as pbar:
-        for smiles in unique_smiles:
-            if label_vec := func_group_id.encode(smiles):
-                smiles_labels[smiles] = label_vec
-            pbar.update(1)
-
-     # Parallel loading
-    samples = []
-    max_workers = calculate_max_workers()
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        # Create futures
-        future_to_id = {}
-        for smiles, identifier in attachments:
-            future = executor.submit(load_sample, datafolder, identifier)
-            future_to_id[future] = (smiles, identifier)
-
-        # Process results with single progress bar
-        with tqdm(total=len(attachments), desc="Loading samples", colour="yellow") as pbar:
-            for future in concurrent.futures.as_completed(future_to_id):
-                smiles, identifier = future_to_id[future]
-                try:
-                    sample = future.result()
-                    if sample and (label_vec := smiles_labels.get(smiles)):
-                        sample.labels = label_vec
-                        samples.append(sample)
-                except Exception as e:
-                    rprint(f"[red]Error processing {identifier}[/red]: {e}")
-                finally:
-                    pbar.update(1)  # Ensure progress bar updates
-    rprint(f"[bold green]Loaded {len(samples)}/{len(attachments)} valid samples with labels.[/bold green]")
     return samples
 
 
-# load a sample from a file name (JCAMP file)
-def load_sample(datafolder, identifier):
-    path = f"{datafolder}/samples/{identifier}"
-    try:
-        sample = SpectraSample(path)
-        if sample.skip: # skip if encountered error while reading data
-            return None 
-        return sample
-    except Exception as e:
-        print(f"Error in {identifier}: {e}")
-        return None
+def read_metadata(metadata, datafolder):
+    # Precompute all SMILES labels
+    paths = [] # PATHS TO FILES 
+    smiles = [] # SMILES
+    path_to_smiles = {} # PATH -> SMILES
 
-def load_first_sample(datafolder):
-    # Load the JSON metadata
-    with open(f"{datafolder}/meta_data.json", "rb") as f:
-        compounds = orjson.loads(f.read())
-    
-    # Find the first available filename
-    for compound in compounds:
+    # Read out metadata
+    for compound in metadata:
+        smile = compound.get("cano_smiles")
+        if not smile:
+            continue
         for dataset in compound.get("datasets", []):
             for attachment in dataset.get("attacments", []):
-                try:
-                    identifier = attachment["identifier"].split("/", 1)[1]
-                    path = f"{datafolder}/samples/{identifier}"
-                    return SpectraSample(path)
-                except Exception as e:
-                    print(f"Error loading sample {identifier}: {e}")
-                    continue
-    
-    return None  # Return None if no samples were found
+                identifier = attachment["identifier"].split("/", 1)[1]
+                path = f"{datafolder}/samples/{identifier}"
+                paths.append(path)
+                smiles.append(smile)
+                path_to_smiles[path] = smile
+    return paths, smiles, path_to_smiles
+
+
+def compute_functional_groups(smiles):
+    func_group_identifier = FunctionalGroupIdentifier(FUNCTIONAL_GROUP_SMARTS)
+    smiles_labels = {}
+
+    start_time = time.time()
+    for smile in tqdm(smiles, desc="Encoding SMILES", colour="yellow"):
+        label_vec = func_group_identifier.encode(smile)
+        if label_vec is not None:
+            smiles_labels[smile] = label_vec
+    label_time = time.time() - start_time
+    rprint(f"[cyan]Functional groups computed in {label_time:.2f}s[/cyan]")
+    return smiles_labels
+
+def read_spectra_samples(paths, path_to_smiles, smiles_to_functional_group):
+    # Parallel loading of spectra samples
+    start_time = time.time()
+    samples = []
+    with mp.Pool(processes=calculate_max_workers()) as pool:
+        # Create a progress bar that updates as we get results
+        for result in tqdm(pool.imap_unordered(load_sample_parallel, paths), total=len(paths), desc="Loading samples", colour="yellow"):
+            if not result:
+                continue
+            sample, path = result
+            
+            smile = path_to_smiles.get(path)
+            if not smile:
+                continue
+
+            label_vec = smiles_to_functional_group.get(smile)
+            if not label_vec:
+                continue
+            sample.labels = label_vec
+
+            samples.append(sample)
+    load_time = time.time() - start_time
+    rate = len(paths) / load_time if load_time > 0 else 0
+    rprint(f"[bold green]Loaded {len(samples)}/{len(paths)} samples at {rate:.0f} samples/s[/bold green]")
+    return samples
+
+def calculate_max_workers():
+    cpu_count = os.cpu_count() or 1
+    # For I/O-heavy tasks with light CPU
+    return min(32, cpu_count * 2)
+
+# Parallel file loader
+def load_sample_parallel(path):
+    sample = SpectraSample(path)
+    return (sample, path) if not sample.skip else None

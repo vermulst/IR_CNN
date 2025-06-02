@@ -17,12 +17,13 @@ class FunctionalGroupIdentifier:
             return None
         try:
             if smiles in self.mol_cache:
-                return self.mol_cache[smiles]
-            mol = Chem.MolFromSmiles(smiles) 
-            if mol is None:
-                print(f"Invalid SMILES: {smiles}")
-                return None
-            self.mol_cache[smiles] = mol
+                mol = self.mol_cache[smiles]
+            else:
+                mol = Chem.MolFromSmiles(smiles)
+                if mol is None:
+                    print(f"Invalid SMILES: {smiles}")
+                    return None
+                self.mol_cache[smiles] = mol
             return [
                 int(bool(mol.GetSubstructMatches(self.smarts_mols[name])))
                 for name in self.group_names
