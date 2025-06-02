@@ -95,8 +95,7 @@ def read_spectra_samples(paths, path_to_smiles, smiles_to_functional_group):
 
 def calculate_max_workers():
     cpu_count = os.cpu_count() or 1
-    # For I/O-heavy tasks with light CPU
-    return min(32, cpu_count * 2)
+    return min(32, int(cpu_count / 2))
 
 # Parallel file loader
 def load_sample_parallel(path):
