@@ -9,6 +9,8 @@ from cnn.CNN import BasicCNN1D
 from cnn.CDataset import CustomArrayDataset
 from torch.utils.data import DataLoader
 
+from config import FUNCTIONAL_GROUP_SMARTS
+
 import time
 
 
@@ -69,11 +71,11 @@ def main():
             correct = total = 0
 
             # Per-class metrics
-            class_correct = [0, 0, 0]  # Correct predictions per class
-            class_total = [0, 0, 0]     # Total samples per class
-            class_tp = [0, 0, 0]        # True positives per class
-            class_fp = [0, 0, 0]        # False positives per class
-            class_fn = [0, 0, 0]        # False negatives per class
+            class_correct = [0, 0, 0, 0, 0]  # Correct predictions per class
+            class_total = [0, 0, 0, 0, 0]     # Total samples per class
+            class_tp = [0, 0, 0, 0, 0]        # True positives per class
+            class_fp = [0, 0, 0, 0, 0]        # False positives per class
+            class_fn = [0, 0, 0, 0, 0]        # False negatives per class
 
             for inputs, labels in test_loader:
                 outputs = model(inputs.to(device))
@@ -97,7 +99,7 @@ def main():
         accuracy = 100 * correct / total
         print(f'Epoch [{epoch+1}/{num_epochs}], Validation Accuracy: {accuracy:.2f}%')
         
-        class_names = ["Alcohol", "Aromatic", "Aldehyde"]
+        class_names = list(FUNCTIONAL_GROUP_SMARTS.keys())
         for i in range(num_classes):
             precision = class_tp[i] / (class_tp[i] + class_fp[i]) if (class_tp[i] + class_fp[i]) > 0 else 0
             recall = class_tp[i] / (class_tp[i] + class_fn[i]) if (class_tp[i] + class_fn[i]) > 0 else 0
@@ -113,6 +115,7 @@ def main():
             if (class_tp[i] + class_fp[i]) > 0 and (class_tp[i] + class_fn[i]) > 0 else 0
             for i in range(num_classes)
         ]) / num_classes
+        
         print(f'\nMacro-average F1: {100 * macro_f1:.2f}%')
 
         # Micro-average F1 (global TP/FP/FN)
