@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class BasicCNN1D(nn.Module):
-    def __init__(self, input_length, num_classes=15):
+    def __init__(self, input_length, num_classes=3):
         super(BasicCNN1D, self).__init__()
         
         # Convolutional layers (adapted for 1D data)

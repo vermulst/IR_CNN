@@ -19,7 +19,7 @@ def main():
     samples = load_samples("data/public")
 
     # preprocess
-    samples = process_samples(samples)
+    process_samples(samples)
 
     end = time.time()
     print(f"Total execution time: {end - start:.2f} seconds")

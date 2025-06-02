@@ -12,18 +12,24 @@ from config import (
 )
 
 def process_samples(samples):
+    samples_length_pre = len(samples)
+
     # process first sample with visualization steps
     process_with_plot(samples[0])
 
     # Process the rest and filter empty samples
-    processed_samples = []
-    for sample in samples:
+    write_index = 0
+    for read_index in range(len(samples)):
+        sample = samples[read_index]
         process(sample)
-        if len(sample.y) == INTERPOLATION_N_POINTS:  # Only keep samples with non-empty y arrays
-            processed_samples.append(sample)
+        if len(sample.y) != INTERPOLATION_N_POINTS:  # Remove samples with not enough Y values
+            samples[write_index] = sample
+            write_idx += 1
 
-    print(f"Finished processing. Kept {len(processed_samples)}/{len(samples)} samples")
-    return processed_samples  # Return the filtered list
+    # delete everything past last sample
+    del samples[write_idx:]
+
+    print(f"Finished processing. Kept {samples_length_pre}/{len(samples)} samples")
 
 def process_with_plot(sample):
 
