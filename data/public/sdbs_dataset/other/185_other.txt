@@ -1,0 +1,3 @@
+Formula: C15H16N2O
+Molecular Weight: 240.3
+Name: (+-)-N-benzyl-alpha-methyl-N-nitrosobenzylamine

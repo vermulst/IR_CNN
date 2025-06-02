@@ -1,0 +1,3 @@
+Formula: C10H14O4
+Molecular Weight: 198.2
+Name: diallyl succinate

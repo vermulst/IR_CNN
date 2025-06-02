@@ -1,0 +1,3 @@
+Formula: C20H39NO4
+Molecular Weight: 357.5
+Name: 2-hydroxyethyl 2-lauramidohexanoate

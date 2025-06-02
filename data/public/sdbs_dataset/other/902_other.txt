@@ -1,0 +1,3 @@
+Formula: C7H16
+Molecular Weight: 100.2
+Name: 2,3-dimethylpentane

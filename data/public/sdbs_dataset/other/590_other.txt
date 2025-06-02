@@ -1,0 +1,3 @@
+Formula: C13H16ClNO4
+Molecular Weight: 285.7
+Name: trimethyl(1-naphthyl)ammonium perchlorate

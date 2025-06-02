@@ -1,0 +1,3 @@
+Formula: C19H16
+Molecular Weight: 244.3
+Name: triphenylmethane

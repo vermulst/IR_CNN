@@ -1,0 +1,3 @@
+Formula: C7H8O6
+Molecular Weight: 188.1
+Name: 3-butene-1,2,3-tricarboxylic acid

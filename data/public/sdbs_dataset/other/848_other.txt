@@ -1,0 +1,3 @@
+Formula: C10H20O2
+Molecular Weight: 172.3
+Name: 2-ethylhexyl acetate

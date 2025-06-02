@@ -1,0 +1,3 @@
+Formula: C16H13N3O2
+Molecular Weight: 279.3
+Name: 6-(2-phenyl-5-imidazolyl)-1,3-benzodioxol-5-amine

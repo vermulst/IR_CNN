@@ -1,0 +1,3 @@
+Formula: C8H7NO3
+Molecular Weight: 165.1
+Name: 4'-nitroacetophenone

@@ -1,0 +1,3 @@
+Formula: C4H9NO2
+Molecular Weight: 103.1
+Name: ethyl N-methylcarbamate

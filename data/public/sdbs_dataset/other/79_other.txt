@@ -1,0 +1,3 @@
+Formula: C22H46
+Molecular Weight: 310.6
+Name: docosane

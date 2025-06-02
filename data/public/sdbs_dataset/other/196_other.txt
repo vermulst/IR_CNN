@@ -1,0 +1,3 @@
+Formula: C10H22
+Molecular Weight: 142.3
+Name: 3-ethyl-3-methylheptane

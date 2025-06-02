@@ -1,0 +1,3 @@
+Formula: C7H7ClO
+Molecular Weight: 142.6
+Name: p-chloroanisole

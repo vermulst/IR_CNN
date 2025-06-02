@@ -1,0 +1,3 @@
+Formula: C2H4Cl2
+Molecular Weight: 99.0
+Name: 1,2-dichloroethane

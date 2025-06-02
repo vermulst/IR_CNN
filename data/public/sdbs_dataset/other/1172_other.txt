@@ -1,0 +1,3 @@
+Formula: C10H10O4
+Molecular Weight: 194.2
+Name: dimethyl terephthalate

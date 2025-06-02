@@ -1,0 +1,3 @@
+Formula: C21H36
+Molecular Weight: 288.5
+Name: pentadecylbenzene

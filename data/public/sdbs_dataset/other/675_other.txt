@@ -1,0 +1,3 @@
+Formula: C7H7Cl
+Molecular Weight: 126.6
+Name: m-chlorotoluene

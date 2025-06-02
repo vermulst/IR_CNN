@@ -1,0 +1,3 @@
+Formula: C16H33NO
+Molecular Weight: 255.4
+Name: N,N-diethyldodecanamide

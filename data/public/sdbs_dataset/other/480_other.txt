@@ -1,0 +1,3 @@
+Formula: C4H5Cl3O2
+Molecular Weight: 191.4
+Name: ethyl trichloroacetate

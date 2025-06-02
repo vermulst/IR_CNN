@@ -1,0 +1,3 @@
+Formula: C20H20O3
+Molecular Weight: 308.4
+Name: p-phenylphenacyl 2,2-dimethylcyclopropanecarboxylate

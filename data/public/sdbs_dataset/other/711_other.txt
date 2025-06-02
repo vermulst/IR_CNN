@@ -1,0 +1,3 @@
+Formula: C7H15N
+Molecular Weight: 113.2
+Name: n-methylcyclohexylamine

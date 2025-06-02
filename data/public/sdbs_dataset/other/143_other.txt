@@ -1,0 +1,3 @@
+Formula: C8H7NO4S
+Molecular Weight: 213.2
+Name: methyl 5-nitro-2-thiopheneacrylate

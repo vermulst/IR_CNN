@@ -1,0 +1,3 @@
+Formula: C8H9NO
+Molecular Weight: 135.2
+Name: acetanilide

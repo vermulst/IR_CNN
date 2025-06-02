@@ -1,0 +1,3 @@
+Formula: C15H24
+Molecular Weight: 204.3
+Name: 1,3,5-triisopropylbenzene

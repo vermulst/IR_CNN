@@ -1,0 +1,3 @@
+Formula: C25H22Cl3N3O4S3
+Molecular Weight: 631.0
+Name: 2,2,2-trichloroethyl 2-(2-benzothiazolyl)dithio-alpha-isopropenyl-4-oxo-3-phenylacetamido-1-azetidineacetate

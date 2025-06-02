@@ -1,0 +1,3 @@
+Formula: C14H22
+Molecular Weight: 190.3
+Name: octylbenzene

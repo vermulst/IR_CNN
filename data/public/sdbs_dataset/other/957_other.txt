@@ -1,0 +1,3 @@
+Formula: C15H10O6
+Molecular Weight: 286.2
+Name: 2-(3,4-dihydroxyphenyl)-3,7-dihydroxy-4H-chromen-4-one

@@ -1,0 +1,3 @@
+Formula: C26H19N3O2
+Molecular Weight: 405.4
+Name: 2-(p-acetamidobenzylideneamino)-4,5-diphenyl-3-furonitrile

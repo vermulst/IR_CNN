@@ -1,0 +1,3 @@
+Formula: C18H19Cl3N2O5S
+Molecular Weight: 481.8
+Name: 2,2,2-trichloroethyl 3,3-dimethyl-7-oxo-6-phenylacetamido-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate 4-oxide

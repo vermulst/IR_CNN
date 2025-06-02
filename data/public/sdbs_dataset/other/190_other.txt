@@ -1,0 +1,3 @@
+Formula: C5H5NO2
+Molecular Weight: 111.1
+Name: 2,3-pyridinediol

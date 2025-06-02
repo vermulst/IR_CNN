@@ -1,0 +1,3 @@
+Formula: C14H18
+Molecular Weight: 186.3
+Name: 1-phenyl-1-octyne

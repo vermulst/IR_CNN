@@ -1,0 +1,3 @@
+Formula: C4H10O2
+Molecular Weight: 90.1
+Name: 1,3-butanediol

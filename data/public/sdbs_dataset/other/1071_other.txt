@@ -1,0 +1,3 @@
+Formula: C4H6O6
+Molecular Weight: 150.1
+Name: D-(-)-tartaric acid

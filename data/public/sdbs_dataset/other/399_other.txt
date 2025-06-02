@@ -1,0 +1,3 @@
+Formula: C5H6N2O
+Molecular Weight: 110.1
+Name: 1-acetylimidazole

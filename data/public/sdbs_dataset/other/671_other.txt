@@ -1,0 +1,3 @@
+Formula: C7H5NO
+Molecular Weight: 119.1
+Name: phenyl isocyanate

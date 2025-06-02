@@ -1,0 +1,3 @@
+Formula: C6H5BrO
+Molecular Weight: 173.0
+Name: p-bromophenol

@@ -1,0 +1,3 @@
+Formula: CHCl3
+Molecular Weight: 119.4
+Name: chloroform

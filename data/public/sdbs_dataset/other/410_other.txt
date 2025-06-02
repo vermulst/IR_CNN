@@ -1,0 +1,3 @@
+Formula: C24H23N3O5S3
+Molecular Weight: 529.7
+Name: methyl 2-(2-benzothiazolyl)dithio-alpha-isopropenyl-4-oxo-3-phenoxyacetamido-1-azetidineacetate

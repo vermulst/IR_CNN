@@ -1,0 +1,3 @@
+Formula: C18H16N6O4
+Molecular Weight: 380.4
+Name: diethyl 1-(8-azido-1-naphthyl)-1H-1,2,3-triazole-4,5-dicarboxylate

@@ -1,0 +1,3 @@
+Formula: C19H32
+Molecular Weight: 260.4
+Name: tridecylbenzene

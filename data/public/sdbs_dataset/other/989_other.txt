@@ -1,0 +1,3 @@
+Formula: C6H13N 1/3H3O4P
+Molecular Weight: 99.2
+Name: tris(cyclohexylammonium) phosphate

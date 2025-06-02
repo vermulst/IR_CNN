@@ -1,0 +1,3 @@
+Formula: C16H20O4
+Molecular Weight: 276.3
+Name: trans-1-tert-butyl-2-butenyl hydrogen phthalate

@@ -1,0 +1,3 @@
+Formula: C7H6O2
+Molecular Weight: 122.1
+Name: benzoic acid

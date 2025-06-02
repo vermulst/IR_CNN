@@ -1,0 +1,3 @@
+Formula: C4H8O4
+Molecular Weight: 120.1
+Name: 2,3-dihydroxy-2-methylpropionic acid

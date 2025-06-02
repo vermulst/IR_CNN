@@ -1,0 +1,3 @@
+Formula: C12H9NO2
+Molecular Weight: 199.2
+Name: 4-nitrobiphenyl

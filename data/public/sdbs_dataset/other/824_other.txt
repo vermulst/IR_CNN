@@ -1,0 +1,3 @@
+Formula: C10H8BrNO2
+Molecular Weight: 254.1
+Name: N-(2-bromoethyl)phthalimide

@@ -1,0 +1,3 @@
+Formula: C34H42N6O8
+Molecular Weight: 662.7
+Name: 1,1'-(1,8-naphthylene)bis(1H-1,2,3-triazole-4,5-dicarboxylic acid) tetra-tert-butyl ester

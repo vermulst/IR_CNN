@@ -1,0 +1,3 @@
+Formula: C30H62
+Molecular Weight: 422.8
+Name: 2,6,10,15,19,23-hexamethyltetracosane

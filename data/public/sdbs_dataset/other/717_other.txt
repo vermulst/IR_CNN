@@ -1,0 +1,3 @@
+Formula: C8H7N
+Molecular Weight: 117.1
+Name: indole

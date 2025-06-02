@@ -1,0 +1,3 @@
+Formula: C8H10O2
+Molecular Weight: 138.2
+Name: p-dimethoxybenzene

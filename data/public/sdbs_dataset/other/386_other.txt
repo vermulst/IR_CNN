@@ -1,0 +1,3 @@
+Formula: C10H14N2Na2O8 2H2O
+Molecular Weight: 336.2
+Name: disodium ethylenediaminetetraacetate

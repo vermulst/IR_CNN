@@ -1,0 +1,3 @@
+Formula: C13H16
+Molecular Weight: 172.3
+Name: 1-phenyl-1-heptyne

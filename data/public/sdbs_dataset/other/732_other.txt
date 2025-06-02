@@ -1,0 +1,3 @@
+Formula: C8H10O
+Molecular Weight: 122.2
+Name: alpha-methylbenzyl alcohol

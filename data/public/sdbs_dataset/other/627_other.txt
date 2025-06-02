@@ -1,0 +1,3 @@
+Formula: C18H21NO
+Molecular Weight: 267.4
+Name: p-butyl-N-(p-methoxybenzylidene)aniline

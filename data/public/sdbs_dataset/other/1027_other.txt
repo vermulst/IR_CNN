@@ -1,0 +1,3 @@
+Formula: C51H96O19
+Molecular Weight: 1013.3
+Name: polyethylene glycol mono-p-nonylphenyl ether

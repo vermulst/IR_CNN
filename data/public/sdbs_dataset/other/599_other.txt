@@ -1,0 +1,3 @@
+Formula: C14H17DN2O3
+Molecular Weight: 263.3
+Name: (2,4-dimethoxyphenyl)morpholinoacetonitrile-2-d

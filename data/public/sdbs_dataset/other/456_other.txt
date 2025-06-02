@@ -1,0 +1,3 @@
+Formula: C29H47ClO2
+Molecular Weight: 463.1
+Name: 5-cholesten-3beta-yl chloroacetate

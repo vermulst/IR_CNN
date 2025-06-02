@@ -1,0 +1,3 @@
+Formula: C8H18O
+Molecular Weight: 130.2
+Name: 2-ethyl-1-hexanol

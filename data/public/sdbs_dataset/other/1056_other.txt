@@ -1,0 +1,3 @@
+Formula: C3H7NO3
+Molecular Weight: 105.1
+Name: L-serine

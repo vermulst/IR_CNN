@@ -1,0 +1,3 @@
+Formula: C8H14O2
+Molecular Weight: 142.2
+Name: tert-butyl crotonate

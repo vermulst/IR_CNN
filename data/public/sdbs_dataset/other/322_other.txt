@@ -1,0 +1,3 @@
+Formula: C3H7ClO2
+Molecular Weight: 110.5
+Name: 3-chloro-1,2-propanediol

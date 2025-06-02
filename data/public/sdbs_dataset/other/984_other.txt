@@ -1,0 +1,3 @@
+Formula: C20H32O6
+Molecular Weight: 368.5
+Name: 2,3-epoxy-1,1,4,12-tetramethylperhydro-7,8a-ethanobenz(f)azulene-4,9,10,10a,12-pentol

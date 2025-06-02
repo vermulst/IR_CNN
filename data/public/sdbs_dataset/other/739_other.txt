@@ -1,0 +1,3 @@
+Formula: C20H14O4
+Molecular Weight: 318.3
+Name: diphenyl phthalate

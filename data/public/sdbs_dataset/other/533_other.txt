@@ -1,0 +1,3 @@
+Formula: C5H11Br
+Molecular Weight: 151.0
+Name: 1-bromo-3-methylbutane

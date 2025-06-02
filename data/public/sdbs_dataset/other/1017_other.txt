@@ -1,0 +1,3 @@
+Formula: C7H6O4
+Molecular Weight: 154.1
+Name: 2,3-dihydroxybenzoic acid

@@ -1,0 +1,3 @@
+Formula: C6H2Br4
+Molecular Weight: 393.7
+Name: 1,2,4,5-tetrabromobenzene

@@ -1,0 +1,3 @@
+Formula: C5H12O2S
+Molecular Weight: 136.2
+Name: isobutyl methanesulfinate

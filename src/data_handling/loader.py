@@ -30,7 +30,10 @@ func_group_id = FunctionalGroupIdentifier(func_grp_smarts)
 def load_sample(datafolder, identifier):
     path = f"{datafolder}/samples/{identifier}"
     try:
-        return SpectraSample(path)
+        sample = SpectraSample(path)
+        if sample.skip: # skip if encountered error while reading data
+            return None 
+        return sample
     except Exception as e:
         print(f"Error in {identifier}: {e}")
         return None
@@ -42,6 +45,7 @@ def load_samples(datafolder):
 
     samples = []
     valid_count = 0
+    total_count = 0
     
     for compound in compounds:
         if not (smiles := compound.get("cano_smiles")):
@@ -55,6 +59,7 @@ def load_samples(datafolder):
         )
         
         for attachment in attachments:
+            total_count +=1
             try:
                 identifier = attachment["identifier"].split("/", 1)[1]
                 if (sample := load_sample(datafolder, identifier)) and \
@@ -67,7 +72,7 @@ def load_samples(datafolder):
                 print(f"Skipping {identifier}: {str(e)}")
                 continue
 
-    print(f"Loaded {valid_count}/{len(samples)} valid samples with labels.")
+    print(f"Loaded {valid_count}/{total_count} valid samples with labels.")
     return samples
 
 def load_first_sample(datafolder):

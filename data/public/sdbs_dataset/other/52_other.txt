@@ -1,0 +1,3 @@
+Formula: C5H6OS
+Molecular Weight: 114.2
+Name: 2-(hydroxymethyl)thiophene

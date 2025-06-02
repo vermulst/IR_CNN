@@ -1,0 +1,3 @@
+Formula: C32H66S
+Molecular Weight: 482.9
+Name: dihexadecyl sulfide

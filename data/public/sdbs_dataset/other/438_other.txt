@@ -1,0 +1,3 @@
+Formula: C21H23NO3
+Molecular Weight: 337.4
+Name: butyl p-(p-methoxybenzylideneamino)cinnamate

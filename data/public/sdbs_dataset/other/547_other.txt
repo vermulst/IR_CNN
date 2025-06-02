@@ -1,0 +1,3 @@
+Formula: C6H6N2O2
+Molecular Weight: 138.1
+Name: methyl 2-pyrimidinecarboxylate

@@ -1,0 +1,3 @@
+Formula: C10H8O
+Molecular Weight: 144.2
+Name: 1-naphthol

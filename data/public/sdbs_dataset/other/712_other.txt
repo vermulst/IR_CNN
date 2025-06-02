@@ -1,0 +1,3 @@
+Formula: C7H16O2
+Molecular Weight: 132.2
+Name: 2,2-diethyl-1,3-propanediol

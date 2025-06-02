@@ -1,0 +1,3 @@
+Formula: CH2Cl2
+Molecular Weight: 84.9
+Name: dichloromethane

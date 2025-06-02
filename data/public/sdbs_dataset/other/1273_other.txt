@@ -1,0 +1,3 @@
+Formula: C21H42O4
+Molecular Weight: 358.5
+Name: alpha-monostearin

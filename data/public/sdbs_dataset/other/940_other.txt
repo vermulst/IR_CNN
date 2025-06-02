@@ -1,0 +1,3 @@
+Formula: C5H8O3
+Molecular Weight: 116.1
+Name: 2-hydroxyethyl acrylate

@@ -1,0 +1,3 @@
+Formula: C7H5FO2
+Molecular Weight: 140.1
+Name: o-fluorobenzoic acid

@@ -1,0 +1,3 @@
+Formula: C8H6O3
+Molecular Weight: 150.1
+Name: terephthalaldehydic acid

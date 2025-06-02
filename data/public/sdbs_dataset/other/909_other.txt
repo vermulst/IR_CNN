@@ -1,0 +1,3 @@
+Formula: C30H60O2
+Molecular Weight: 452.8
+Name: triacontanoic acid

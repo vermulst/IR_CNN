@@ -1,0 +1,3 @@
+Formula: C21H24ClN3O8
+Molecular Weight: 481.9
+Name: 4,5-bis(isopropoxycarbonyl)-3-methyl-1-(1-naphthyl)-1H-1,2,3-triazolium perchlorate

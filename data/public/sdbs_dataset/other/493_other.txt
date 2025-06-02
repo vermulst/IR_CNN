@@ -1,0 +1,3 @@
+Formula: C4H8Br2
+Molecular Weight: 215.9
+Name: 1,2-dibromobutane

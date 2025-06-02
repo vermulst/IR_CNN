@@ -1,0 +1,3 @@
+Formula: C7H5NO3
+Molecular Weight: 151.1
+Name: m-nitrobenzaldehyde

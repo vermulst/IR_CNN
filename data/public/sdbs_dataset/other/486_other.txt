@@ -1,0 +1,3 @@
+Formula: C4H6O3
+Molecular Weight: 102.1
+Name: propylene carbonate

@@ -1,0 +1,3 @@
+Formula: C10H9N
+Molecular Weight: 143.2
+Name: 1-naphthylamine

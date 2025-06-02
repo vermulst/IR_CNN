@@ -1,0 +1,3 @@
+Formula: C5H11NaO3S
+Molecular Weight: 174.2
+Name: sodium 1-pentanesulfonate

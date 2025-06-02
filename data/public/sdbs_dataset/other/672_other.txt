@@ -1,0 +1,3 @@
+Formula: C7H6O
+Molecular Weight: 106.1
+Name: benzaldehyde

@@ -1,0 +1,3 @@
+Formula: C10H20Br2
+Molecular Weight: 300.1
+Name: 1,10-dibromodecane

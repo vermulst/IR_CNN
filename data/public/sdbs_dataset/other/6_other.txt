@@ -1,0 +1,3 @@
+Formula: C21H17NO
+Molecular Weight: 299.4
+Name: trans-2,4,5-triphenyl-3-oxazoline

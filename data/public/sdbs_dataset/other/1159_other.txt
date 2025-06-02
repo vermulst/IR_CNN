@@ -1,0 +1,3 @@
+Formula: C8H6O4
+Molecular Weight: 166.1
+Name: isophthalic acid

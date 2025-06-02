@@ -1,0 +1,3 @@
+Formula: C10H12N4O6 (H2O)
+Molecular Weight: 284.2
+Name: xanthosine

@@ -1,0 +1,3 @@
+Formula: CH4N2O HNO3
+Molecular Weight: 60.1
+Name: urea nitrate

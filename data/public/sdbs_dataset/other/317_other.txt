@@ -1,0 +1,3 @@
+Formula: C3H6Br2
+Molecular Weight: 201.9
+Name: 1,2-dibromopropane

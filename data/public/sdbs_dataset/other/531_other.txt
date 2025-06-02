@@ -1,0 +1,3 @@
+Formula: C5H5NOS
+Molecular Weight: 127.2
+Name: 2-mercaptopyridine N-oxide

@@ -1,0 +1,3 @@
+Formula: C4H9NO3
+Molecular Weight: 119.1
+Name: L-threonine

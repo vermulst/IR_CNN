@@ -1,0 +1,3 @@
+Formula: C3H8O
+Molecular Weight: 60.1
+Name: 1-propanol

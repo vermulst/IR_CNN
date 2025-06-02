@@ -1,0 +1,3 @@
+Formula: C8H11NO
+Molecular Weight: 137.2
+Name: 3-pyridinepropanol

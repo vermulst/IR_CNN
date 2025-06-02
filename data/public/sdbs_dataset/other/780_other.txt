@@ -1,0 +1,3 @@
+Formula: C24H30O4
+Molecular Weight: 382.5
+Name: dibenzyl sebacate

@@ -1,0 +1,3 @@
+Formula: C8H7ClO3
+Molecular Weight: 186.6
+Name: 2-chloro-3',4'-dihydroxyacetophenone

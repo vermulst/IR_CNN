@@ -1,0 +1,3 @@
+Formula: C29H42O9
+Molecular Weight: 534.6
+Name: 4,8,12-triacetoxy-10,10a-isopropylidenedioxy-1,1,4,12-tetramethyl-2-oxoperhydro-7,8a-ethanobenz(f)azulene

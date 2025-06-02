@@ -1,0 +1,3 @@
+Formula: C2H5NO
+Molecular Weight: 59.1
+Name: N-methylformamide

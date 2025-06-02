@@ -1,0 +1,3 @@
+Formula: C4H8O
+Molecular Weight: 72.1
+Name: 2-butanone

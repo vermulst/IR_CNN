@@ -1,0 +1,3 @@
+Formula: C6H8O7
+Molecular Weight: 192.1
+Name: citric acid (anhydrous)

@@ -1,0 +1,3 @@
+Formula: C7H10ClN3O
+Molecular Weight: 187.6
+Name: 1-(carbazoylmethyl)pyridinium chloride

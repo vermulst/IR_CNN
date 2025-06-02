@@ -1,0 +1,3 @@
+Formula: C6H6O3
+Molecular Weight: 126.1
+Name: methyl 2-furoate

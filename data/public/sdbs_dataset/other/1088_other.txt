@@ -1,0 +1,3 @@
+Formula: C5H5N5O HCl
+Molecular Weight: 151.1
+Name: guanine hydrochloride

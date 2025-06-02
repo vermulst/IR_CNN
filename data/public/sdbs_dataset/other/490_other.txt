@@ -1,0 +1,3 @@
+Formula: C4H7N
+Molecular Weight: 69.1
+Name: isobutyronitrile

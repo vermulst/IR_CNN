@@ -1,0 +1,3 @@
+Formula: C19H36O2
+Molecular Weight: 296.5
+Name: cis-8-(2-octylcyclopropyl)octanoic acid

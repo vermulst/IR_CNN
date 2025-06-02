@@ -1,0 +1,3 @@
+Formula: C14H26
+Molecular Weight: 194.3
+Name: 1,13-tetradecadiene

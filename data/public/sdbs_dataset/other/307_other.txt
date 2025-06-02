@@ -1,0 +1,3 @@
+Formula: C2H5ClO2S
+Molecular Weight: 128.6
+Name: ethanesulfonyl chloride

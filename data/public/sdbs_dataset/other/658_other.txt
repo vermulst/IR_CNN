@@ -1,0 +1,3 @@
+Formula: C23H23N3O5S
+Molecular Weight: 453.5
+Name: 4-ethoxycarbonyl-3-methyl-1-(1-naphthyl)-1H-1,2,3-triazolium p-toluenesulfonate

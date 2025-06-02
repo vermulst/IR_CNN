@@ -1,0 +1,3 @@
+Formula: C6H14N2O2 HCl
+Molecular Weight: 146.2
+Name: DL-lysine monohydrochloride

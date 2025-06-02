@@ -1,0 +1,3 @@
+Formula: C10H17N
+Molecular Weight: 151.2
+Name: 2-aminotricyclo[3.3.1.1[3,7]]decane

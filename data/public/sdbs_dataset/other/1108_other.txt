@@ -1,0 +1,3 @@
+Formula: C5H12N2O
+Molecular Weight: 116.2
+Name: 1,3-diethylurea

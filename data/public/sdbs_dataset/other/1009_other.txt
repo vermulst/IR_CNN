@@ -1,0 +1,3 @@
+Formula: C7H5Br3O
+Molecular Weight: 344.8
+Name: 2,6-dibromo-4-(bromomethyl)phenol

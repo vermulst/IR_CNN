@@ -1,0 +1,3 @@
+Formula: C7H5ClO
+Molecular Weight: 140.6
+Name: m-chlorobenzaldehyde

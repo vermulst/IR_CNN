@@ -1,0 +1,3 @@
+Formula: C14H18O4
+Molecular Weight: 250.3
+Name: diisopropyl phthalate

@@ -1,0 +1,3 @@
+Formula: C23H26N2O4 C14H16O4
+Molecular Weight: 394.5
+Name: trans-1-ethyl-2-butenyl hydrogen phthalate brucine salt

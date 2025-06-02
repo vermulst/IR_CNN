@@ -1,0 +1,3 @@
+Formula: C8H18S
+Molecular Weight: 146.3
+Name: 1-octanethiol

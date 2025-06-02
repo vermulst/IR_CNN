@@ -1,0 +1,3 @@
+Formula: C4H4O4
+Molecular Weight: 116.1
+Name: maleic acid

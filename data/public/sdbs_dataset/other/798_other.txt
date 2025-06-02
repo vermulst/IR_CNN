@@ -1,0 +1,3 @@
+Formula: C8H19N
+Molecular Weight: 129.2
+Name: 1,1,3,3-tetramethylbutylamine

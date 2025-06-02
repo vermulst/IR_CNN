@@ -1,0 +1,3 @@
+Formula: C8H7BrO2S
+Molecular Weight: 247.1
+Name: methyl 5-bromo-2-thiopheneacrylate

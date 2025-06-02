@@ -1,0 +1,3 @@
+Formula: C14H20O2
+Molecular Weight: 220.3
+Name: p-heptyloxybenzaldehyde

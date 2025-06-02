@@ -1,0 +1,3 @@
+Formula: C12H15NO3S
+Molecular Weight: 253.3
+Name: N-acetyl-S-benzyl-DL-cysteine

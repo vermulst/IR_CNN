@@ -1,0 +1,3 @@
+Formula: C4H3ClN2
+Molecular Weight: 114.5
+Name: 2-chloropyrimidine

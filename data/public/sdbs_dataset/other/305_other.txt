@@ -1,0 +1,3 @@
+Formula: C2H4O
+Molecular Weight: 44.1
+Name: acetaldehyde

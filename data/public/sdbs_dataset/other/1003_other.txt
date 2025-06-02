@@ -1,0 +1,3 @@
+Formula: C7H7ClNNaO2S 3H2O
+Molecular Weight: 227.6
+Name: N-chloro-p-toluenesulfonamide sodium salt

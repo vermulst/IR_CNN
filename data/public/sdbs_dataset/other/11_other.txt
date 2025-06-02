@@ -1,0 +1,3 @@
+Formula: C13H11ClO
+Molecular Weight: 218.7
+Name: benzyl p-chlorophenyl ether

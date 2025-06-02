@@ -1,0 +1,3 @@
+Formula: C21H40O4
+Molecular Weight: 356.5
+Name: 2,3-dihydroxypropyl oleate

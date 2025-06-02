@@ -1,0 +1,3 @@
+Formula: C10F18
+Molecular Weight: 462.1
+Name: perfluorodecalin

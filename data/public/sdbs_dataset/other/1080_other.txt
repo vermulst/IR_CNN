@@ -1,0 +1,3 @@
+Formula: C5H4N4O
+Molecular Weight: 136.1
+Name: hypoxanthine

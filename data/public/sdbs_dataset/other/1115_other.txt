@@ -1,0 +1,3 @@
+Formula: C6H3Cl2NO3
+Molecular Weight: 208.0
+Name: 2,6-dichloro-4-nitrophenol

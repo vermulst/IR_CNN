@@ -1,0 +1,3 @@
+Formula: C14H24O2
+Molecular Weight: 224.3
+Name: (-)-3-p-menthyl crotonate

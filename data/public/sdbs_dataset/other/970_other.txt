@@ -1,0 +1,3 @@
+Formula: C12H16N2O6
+Molecular Weight: 284.3
+Name: 5'-O-acetylthymidine

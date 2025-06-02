@@ -1,0 +1,3 @@
+Formula: C14H18O6
+Molecular Weight: 282.3
+Name: bis(2-methoxyethyl) phthalate

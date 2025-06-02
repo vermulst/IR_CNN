@@ -1,0 +1,3 @@
+Formula: C7H14O
+Molecular Weight: 114.2
+Name: trans-2-methylcyclohexanol

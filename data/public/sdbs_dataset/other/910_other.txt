@@ -1,0 +1,3 @@
+Formula: C4H6ClNO3
+Molecular Weight: 151.5
+Name: (chloroacetamido)acetic acid

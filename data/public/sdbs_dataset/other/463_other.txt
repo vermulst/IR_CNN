@@ -1,0 +1,3 @@
+Formula: C19H20O6
+Molecular Weight: 344.4
+Name: butyl 4-(4'-methoxyphenoxycarbonyl)phenyl carbonate

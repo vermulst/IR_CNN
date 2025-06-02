@@ -1,0 +1,3 @@
+Formula: C3H8O2
+Molecular Weight: 76.1
+Name: ethylene glycol monomethyl ether

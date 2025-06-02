@@ -1,0 +1,3 @@
+Formula: C4H6O4S
+Molecular Weight: 150.2
+Name: mercaptosuccinic acid

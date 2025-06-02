@@ -1,0 +1,3 @@
+Formula: C7H14O2
+Molecular Weight: 130.2
+Name: methyl hexanoate

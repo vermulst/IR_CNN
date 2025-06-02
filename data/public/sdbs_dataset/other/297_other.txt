@@ -1,0 +1,3 @@
+Formula: C8H14
+Molecular Weight: 110.2
+Name: 1,7-octadiene

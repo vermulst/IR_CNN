@@ -1,0 +1,3 @@
+Formula: C8H8OS
+Molecular Weight: 152.2
+Name: 4-(2-thienyl)-3-buten-2-one

@@ -1,0 +1,3 @@
+Formula: C4H8N2O3
+Molecular Weight: 132.1
+Name: glycylglycine

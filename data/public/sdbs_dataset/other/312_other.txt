@@ -1,0 +1,3 @@
+Formula: C3H2ClN
+Molecular Weight: 87.5
+Name: 2-chloroacrylonitrile

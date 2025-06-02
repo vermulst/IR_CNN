@@ -1,0 +1,3 @@
+Formula: C3H7NO
+Molecular Weight: 73.1
+Name: acetone oxime

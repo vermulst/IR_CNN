@@ -1,0 +1,3 @@
+Formula: C5H7NO2
+Molecular Weight: 113.1
+Name: ethyl cyanoacetate

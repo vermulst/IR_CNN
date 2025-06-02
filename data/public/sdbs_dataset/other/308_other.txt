@@ -1,0 +1,3 @@
+Formula: C2H5I
+Molecular Weight: 156.0
+Name: iodoethane

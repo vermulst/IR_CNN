@@ -1,0 +1,3 @@
+Formula: C15H12N6O2
+Molecular Weight: 308.3
+Name: ethyl 1-(8-azido-1-naphthyl)-1H-1,2,3-triazole-4-carboxylate

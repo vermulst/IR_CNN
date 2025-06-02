@@ -1,0 +1,3 @@
+Formula: C11H8N2O2S
+Molecular Weight: 232.3
+Name: 2-mesyl-4-quinolinecarbonitrile

@@ -1,0 +1,3 @@
+Formula: C14H14O4
+Molecular Weight: 246.3
+Name: diallyl phthalate

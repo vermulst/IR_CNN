@@ -1,0 +1,3 @@
+Formula: C35H60O3
+Molecular Weight: 528.8
+Name: 5-cholesten-3beta-yl heptyl carbonate

@@ -1,0 +1,3 @@
+Formula: C6H6O2
+Molecular Weight: 110.1
+Name: pyrocatechol

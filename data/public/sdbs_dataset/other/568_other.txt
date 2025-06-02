@@ -1,0 +1,3 @@
+Formula: C6H10
+Molecular Weight: 82.1
+Name: 1-hexyne

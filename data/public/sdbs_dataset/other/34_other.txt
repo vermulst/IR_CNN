@@ -1,0 +1,3 @@
+Formula: C12H19NO
+Molecular Weight: 193.3
+Name: 1-(1-hydroxyiminoethyl)tricyclo[3.3.1.1[3,7]]decane

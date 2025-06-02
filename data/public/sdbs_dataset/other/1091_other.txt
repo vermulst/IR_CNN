@@ -1,0 +1,3 @@
+Formula: C5H6O3
+Molecular Weight: 114.1
+Name: glutaric anhydride

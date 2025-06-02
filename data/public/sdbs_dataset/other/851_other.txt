@@ -1,0 +1,3 @@
+Formula: C11H10BrNO2
+Molecular Weight: 268.1
+Name: N-(3-bromopropyl)phthalimide

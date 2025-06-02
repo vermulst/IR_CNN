@@ -1,0 +1,3 @@
+Formula: C10H15NO2
+Molecular Weight: 181.2
+Name: 3,4-dimethoxyphenethylamine

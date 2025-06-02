@@ -1,0 +1,3 @@
+Formula: C20H38O2
+Molecular Weight: 310.5
+Name: methyl cis-8-(2-octylcyclopropyl)octanoate

@@ -1,0 +1,3 @@
+Formula: C37H64O3
+Molecular Weight: 556.9
+Name: 5-cholesten-3beta-yl nonyl carbonate

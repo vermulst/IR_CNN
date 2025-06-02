@@ -1,0 +1,3 @@
+Formula: C13H18O2
+Molecular Weight: 206.3
+Name: p-hexyloxybenzaldehyde

@@ -1,0 +1,3 @@
+Formula: C15H13NO
+Molecular Weight: 223.3
+Name: 3,5-diphenyl-2-isoxazoline

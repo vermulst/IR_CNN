@@ -1,0 +1,3 @@
+Formula: C3H3N
+Molecular Weight: 53.1
+Name: acrylonitrile

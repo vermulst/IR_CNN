@@ -1,0 +1,3 @@
+Formula: C20H18O
+Molecular Weight: 274.3
+Name: 2,6-dibenzylidenecyclohexanone

@@ -1,0 +1,3 @@
+Formula: C12H16Cl4
+Molecular Weight: 302.0
+Name: 1,3-bis(dichloromethyl)tricyclo[3.3.1.1[3,7]]decane

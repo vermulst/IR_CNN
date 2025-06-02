@@ -1,0 +1,3 @@
+Formula: C18H33NaO2
+Molecular Weight: 304.4
+Name: sodium oleate

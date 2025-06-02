@@ -1,0 +1,3 @@
+Formula: C7H5NaO3
+Molecular Weight: 160.1
+Name: sodium m-hydroxybenzoate

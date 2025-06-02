@@ -1,0 +1,3 @@
+Formula: C14H10
+Molecular Weight: 178.2
+Name: phenanthrene

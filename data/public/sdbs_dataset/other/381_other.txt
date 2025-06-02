@@ -1,0 +1,3 @@
+Formula: C4H4O2
+Molecular Weight: 84.1
+Name: methyl propiolate

@@ -1,0 +1,3 @@
+Formula: C2H6O
+Molecular Weight: 46.1
+Name: ethyl alcohol

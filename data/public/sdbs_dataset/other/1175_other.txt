@@ -1,0 +1,3 @@
+Formula: C10H14
+Molecular Weight: 134.2
+Name: sec-butylbenzene

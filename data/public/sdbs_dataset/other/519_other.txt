@@ -1,0 +1,3 @@
+Formula: C5H5NO
+Molecular Weight: 95.1
+Name: 2-pyridone

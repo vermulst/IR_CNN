@@ -1,0 +1,3 @@
+Formula: C2H3Br3
+Molecular Weight: 266.7
+Name: 1,1,2-tribromoethane

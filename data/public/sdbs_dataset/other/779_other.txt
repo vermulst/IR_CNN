@@ -1,0 +1,3 @@
+Formula: C24H20BNa
+Molecular Weight: 342.2
+Name: sodium tetraphenylborate

@@ -1,0 +1,3 @@
+Formula: C18H34O2
+Molecular Weight: 282.5
+Name: oleic acid

@@ -1,0 +1,3 @@
+Formula: C3H10N2
+Molecular Weight: 74.1
+Name: propylenediamine

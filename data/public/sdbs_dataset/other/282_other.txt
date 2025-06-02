@@ -1,0 +1,3 @@
+Formula: C30H50
+Molecular Weight: 410.7
+Name: 2,6,10,15,19,23-hexamethyl-2,6,10,14,18,22-tetracosahexaene

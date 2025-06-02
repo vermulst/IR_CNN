@@ -1,0 +1,3 @@
+Formula: C16H22O11 H2O
+Molecular Weight: 390.3
+Name: (1S-(1alpha,4aalpha,7beta,7aalpha))-1-(beta-D-glucopyranosyloxy)-7-hydroxy-7-hydroxymethyl-1,4a,7,7a-tetrahydrocyclopenta(c)pyran-4-carboxylic acid
