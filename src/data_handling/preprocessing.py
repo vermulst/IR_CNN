@@ -30,7 +30,7 @@ def get_target_region():
         np.linspace(min_x, max_x, int(INTERPOLATION_N_POINTS * ((max_x - min_x) / total_length)))
         for min_x, max_x in REGIONS
     ]
-    # Optional fix to ensure total points matches INTERPOLATION_N_POINTS exactly:
+    # Fix to ensure total points matches INTERPOLATION_N_POINTS exactly:
     total_allocated = sum(len(r) for r in regions)
     if total_allocated < INTERPOLATION_N_POINTS:
         # Add extra points to the last region
@@ -42,6 +42,7 @@ def get_target_region():
 
 COMMON_SMOOTH_PENALTY = get_smooth_penalty(INTERPOLATION_N_POINTS, BASELINE_SMOOTHNESS)
 TARGET_X = get_target_region()
+
 
 def preprocess_samples(samples):
     samples_length_pre = len(samples)
@@ -89,18 +90,18 @@ def preprocess_with_plot(sample):
     fig, axs = get_subplots()
 
     plot_sample(sample, axs, 0, "Original")
+    
+    # Interpolate to fixed length
+    interpolate_spectrum(sample)
+    plot_sample(sample, axs, 2, "Interpolated")
 
     # Crop to fingerprint region
-    crop_spectrum(sample, REGIONS)
+    crop_spectrum(sample, REGIONS, True)
     plot_sample(sample, axs, 1, "Cropped")
 
     # Check for empty spectrum
     if (len(sample.x) == 0):
         return fig, axs
-    
-    # Interpolate to fixed length
-    interpolate_spectrum(sample)
-    plot_sample(sample, axs, 2, "Interpolated")
 
     # Baseline correction
     correct_baseline(sample, smoothness = BASELINE_SMOOTHNESS, asymmetry = BASELINE_ASMMETRY, max_iterations = BASELINE_MAX_ITERATIONS)
@@ -117,15 +118,15 @@ def preprocess_with_plot(sample):
     return fig, axs
 
 def preprocess_sample(sample):
+    # Interpolate to fixed length
+    interpolate_spectrum(sample)
+
     # Crop to fingerprint region
     crop_spectrum(sample, REGIONS)
 
     # Check for empty spectrum
     if (len(sample.x) == 0):
         return
-    
-    # Interpolate to fixed length
-    interpolate_spectrum(sample)
 
     # Baseline correction
     #correct_baseline(sample, smoothness = BASELINE_SMOOTHNESS, asymmetry = BASELINE_ASMMETRY, max_iterations = BASELINE_MAX_ITERATIONS)
@@ -136,8 +137,12 @@ def preprocess_sample(sample):
     # Normalize intensities
     normalize_spectrum(sample)
 
+def interpolate_spectrum(sample):
+    f = interp1d(sample.x, sample.y, kind='linear', bounds_error=False, fill_value=0)
+    sample.x = TARGET_X
+    sample.y = f(TARGET_X)
 
-def crop_spectrum(sample, regions):
+def crop_spectrum(sample, regions, verbal=False):
     x_segments = []
     y_segments = []
 
@@ -149,11 +154,6 @@ def crop_spectrum(sample, regions):
 
     sample.x = np.concatenate(x_segments)
     sample.y = np.concatenate(y_segments)
-
-def interpolate_spectrum(sample):
-    f = interp1d(sample.x, sample.y, kind='linear', bounds_error=False, fill_value=0)
-    sample.x = TARGET_X
-    sample.y = f(TARGET_X)
 
 
 def correct_baseline(sample, smoothness, asymmetry, max_iterations):
