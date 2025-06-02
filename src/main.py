@@ -18,6 +18,7 @@ def main():
 
     # preprocess
     preprocess_samples(samples)
+    print(len(samples))
 
     # CNN
     num_samples = len(samples)

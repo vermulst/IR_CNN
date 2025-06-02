@@ -4,14 +4,26 @@ from scipy.interpolate import interp1d
 from scipy.signal import savgol_filter
 from scipy import sparse
 from scipy.sparse.linalg import spsolve
+
+# for printing
 from tqdm import tqdm
 from rich import print as rprint
+
+# for optimizing
+import os
+import multiprocessing as mp
+import copy
+
 
 from config import (
     CROP_MIN_X, CROP_MAX_X, INTERPOLATION_N_POINTS,
     SMOOTHING_WINDOW_LENGTH, SMOOTHING_POLYORDER,
     BASELINE_SMOOTHNESS, BASELINE_ASMMETRY, BASELINE_MAX_ITERATIONS
 )
+
+def calculate_max_workers():
+    cpu_count = os.cpu_count() or 1
+    return min(32, int(cpu_count / 2))
 
 def get_smooth_penalty(length, smoothness):
     D = sparse.diags([1, -2, 1], [0, -1, -2], shape=(length, length - 2))
@@ -23,22 +35,44 @@ TARGET_X = np.linspace(CROP_MIN_X, CROP_MAX_X, INTERPOLATION_N_POINTS)
 def preprocess_samples(samples):
     samples_length_pre = len(samples)
 
-    pbar = tqdm(total=samples_length_pre, desc="Preprocessing samples", colour="yellow")
-
+    # check for empty samples
+    if samples_length_pre == 0:
+        rprint("[bold red]No samples to process![/bold red]")
+        return
+    
     # process first sample with visualization steps
     preprocess_with_plot(samples[0])
 
-    # Process the rest and filter empty samples
-    for sample in samples:
-        preprocess_sample(sample)
-        pbar.update(1)
-
+    # preprocess samples in parallel
+    with mp.Pool(calculate_max_workers()) as pool:
+        processed = []
+        for result in tqdm(pool.imap_unordered(process_wrapper, enumerate(samples[1:], start=1)),
+                          total=len(samples) - 1,
+                          desc="Processing samples",
+                          colour="yellow"):
+            if result is not None:
+                idx, processed_sample = result
+                samples[idx] = processed_sample
+                processed.append(idx)
+            
     # delete invalid samples
-    samples[:] = [s for s in samples if len(s.y) == INTERPOLATION_N_POINTS]
-
-    pbar.close()
+    valid_samples = [samples[0]]  # Keep plotted sample
+    valid_samples.extend(samples[i] for i in sorted(processed) if i > 0)  # Add parallel-processed
+    samples[:] = valid_samples
 
     rprint(f"[bold green]Preprocessed {len(samples)}/{samples_length_pre} valid samples.[/bold green]")
+
+def process_wrapper(args):
+    idx, sample = args
+    try:
+        # Create a copy to work on
+        sample_copy = copy.deepcopy(sample)
+        preprocess_sample(sample_copy)
+        if len(sample_copy.y) == INTERPOLATION_N_POINTS:
+            return (idx, sample_copy)
+    except Exception:
+        pass
+    return None
 
 def preprocess_with_plot(sample):
     fig, axs = get_subplots()
