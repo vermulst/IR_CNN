@@ -19,17 +19,11 @@ def get_smooth_penalty(length, smoothness):
 
 COMMON_SMOOTH_PENALTY = get_smooth_penalty(INTERPOLATION_N_POINTS, BASELINE_SMOOTHNESS)
 TARGET_X = np.linspace(CROP_MIN_X, CROP_MAX_X, INTERPOLATION_N_POINTS)
-SPECTRUM_MASK = None
 
 def preprocess_samples(samples):
     samples_length_pre = len(samples)
 
     pbar = tqdm(total=samples_length_pre, desc="Preprocessing samples", colour="yellow")
-
-    # initialize the crop mask
-    global SPECTRUM_MASK
-    x0 = samples[0].x
-    SPECTRUM_MASK = (x0 >= CROP_MIN_X) & (x0 <= CROP_MAX_X)
 
     # process first sample with visualization steps
     preprocess_with_plot(samples[0])

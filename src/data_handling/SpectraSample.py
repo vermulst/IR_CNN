@@ -5,7 +5,6 @@ from jcamp import jcamp_readfile
 
 class SpectraSample():
     def __init__(self, path, params=False):
-
         # Value that keeps track of whether there was an error with reading the sample so it can be skipped in later steps
         self.skip = True 
 
