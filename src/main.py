@@ -21,6 +21,23 @@ def main():
     # preprocess
     preprocess_samples(samples)
 
+
+    # Print class distribution for ALL samples
+    class_names = list(FUNCTIONAL_GROUP_SMARTS.keys())
+    num_classes = len(class_names)
+    class_counts = [0] * num_classes  # Track positives per class
+    
+    for sample in samples:
+        labels = sample.labels  # Assuming labels is a list/array of 0s and 1s
+        for i in range(num_classes):
+            if labels[i] == 1:
+                class_counts[i] += 1
+    
+    print("\nClass distribution (actual positives) in FULL dataset:")
+    for i, name in enumerate(class_names):
+        print(f"{name}: {class_counts[i]} ({(100 * class_counts[i] / len(samples)):.1f}%)")
+
+
     # CNN
     num_samples = len(samples)
     num_classes = len(samples[0].labels) 
@@ -49,7 +66,7 @@ def main():
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
     
     # Training parameters
-    num_epochs = 10
+    num_epochs = 100
     best_accuracy = 0.0
 
     # Training loop
@@ -95,6 +112,7 @@ def main():
                     class_tp[i] += ((preds[:, i] == 1) & (labels[:, i] == 1)).sum().item()
                     class_fp[i] += ((preds[:, i] == 1) & (labels[:, i] == 0)).sum().item()
                     class_fn[i] += ((preds[:, i] == 0) & (labels[:, i] == 1)).sum().item()
+
         
         accuracy = 100 * correct / total
         print(f'Epoch [{epoch+1}/{num_epochs}], Validation Accuracy: {accuracy:.2f}%')
