@@ -118,26 +118,18 @@ def main():
         print(f'Epoch [{epoch+1}/{num_epochs}], Validation Accuracy: {accuracy:.2f}%')
         
         class_names = list(FUNCTIONAL_GROUP_SMARTS.keys())
+        f1_scores = []
         for i in range(num_classes):
-            # avoid division by 0
-            if (class_tp[i] == 0) and (class_fp[i] == 0 or class_fn[i] == 0):
-                continue
-
             precision = class_tp[i] / (class_tp[i] + class_fp[i]) if (class_tp[i] + class_fp[i]) > 0 else 0
             recall = class_tp[i] / (class_tp[i] + class_fn[i]) if (class_tp[i] + class_fn[i]) > 0 else 0
             f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+            f1_scores.append(f1)
             print(f'{class_names[i]}:')
             print(f'  Accuracy: {100 * class_correct[i] / class_total[i]:.2f}%')
             print(f'  F1: {100 * f1:.2f}%')
 
         # Macro-average F1 (average of per-class F1)
-        macro_f1 = sum([
-            2 * (class_tp[i] / (class_tp[i] + class_fp[i])) * (class_tp[i] / (class_tp[i] + class_fn[i])) / 
-            (class_tp[i] / (class_tp[i] + class_fp[i]) + class_tp[i] / (class_tp[i] + class_fn[i])) 
-            if (class_tp[i] + class_fp[i]) > 0 and (class_tp[i] + class_fn[i]) > 0 else 0
-            for i in range(num_classes)
-        ]) / num_classes
-        
+        macro_f1 = sum(f1_scores) / len(f1_scores) if f1_scores else 0
         print(f'\nMacro-average F1: {100 * macro_f1:.2f}%')
 
         # Micro-average F1 (global TP/FP/FN)
