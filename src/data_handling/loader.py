@@ -1,6 +1,8 @@
 import orjson
 from data_handling.SpectraSample import SpectraSample
 from data_handling.func_group_identif import FunctionalGroupIdentifier
+from tqdm import tqdm
+from rich import print as rprint
 
 func_grp_smarts = {
     #'alkane': '[CX4;H0,H1,H2,H4]',
@@ -17,10 +19,10 @@ func_grp_smarts = {
     'aldehydes': '[CX3H1](=O)[#6]',
     #'carboxylic acids': '[CX3](=O)[OX2H1]',
     #'ether': '[OD2]([#6;!$(C=O)])([#6;!$(C=O)])',
-    # 'ether': '[OD2]([#6])([#6])',
+    #'ether': '[OD2]([#6])([#6])',
     #'acyl halides': '[CX3](=[OX1])[F,Cl,Br,I]',
     #'amides': '[NX3][CX3](=[OX1])[#6]',
-    # 'amides': '[NX3][CX3](=[OX1])'
+    #'amides': '[NX3][CX3](=[OX1])',
     #'nitro': '[$([NX3](=O)=O),$([NX3+](=O)[O-])][!#8]'
 }
 func_group_id = FunctionalGroupIdentifier(func_grp_smarts)
@@ -43,36 +45,29 @@ def load_samples(datafolder):
     with open(f"{datafolder}/meta_data.json", "rb") as f:
         compounds = orjson.loads(f.read())
 
-    samples = []
-    valid_count = 0
-    total_count = 0
-    
-    for compound in compounds:
-        if not (smiles := compound.get("cano_smiles")):
-            continue  # skip compounds without SMILES early
-            
-        # Process attachments in compound scope to preserve SMILES context
-        attachments = (
-            attachment
-            for dataset in compound.get("datasets", [])
-            for attachment in dataset.get("attacments", [])
-        )
-        
-        for attachment in attachments:
-            total_count +=1
-            try:
-                identifier = attachment["identifier"].split("/", 1)[1]
-                if (sample := load_sample(datafolder, identifier)) and \
-                   (label_vec := func_group_id.encode(smiles)):
-                    sample.labels = label_vec
-                    #print(f" - id: {identifier}, smiles: {smiles}, fg: {label_vec}")
-                    samples.append(sample)
-                    valid_count += 1
-            except Exception as e:
-                print(f"Skipping {identifier}: {str(e)}")
-                continue
 
-    print(f"Loaded {valid_count}/{total_count} valid samples with labels.")
+    attachments = [
+        (compound.get("cano_smiles"), attachment["identifier"].split("/", 1)[1])
+        for compound in compounds if compound.get("cano_smiles")
+        for dataset in compound.get("datasets", [])
+        for attachment in dataset.get("attacments", [])
+    ]
+
+    samples = []
+    pbar = tqdm(total=len(attachments), desc="Loading samples", colour="yellow")
+
+    for smiles, identifier in attachments:
+        try:
+            sample = load_sample(datafolder, identifier)
+            label_vec = func_group_id.encode(smiles)
+            if (sample is not None) and (label_vec is not None):
+                sample.labels = label_vec
+                samples.append(sample)
+        except Exception as e:
+            rprint(f"[red]Error in {identifier}[/red]: {e}")
+        pbar.update(1)
+    pbar.close()
+    rprint(f"[bold green]Loaded {len(samples)}/{len(attachments)} valid samples with labels.[/bold green]")
     return samples
 
 def load_first_sample(datafolder):

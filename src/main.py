@@ -1,5 +1,5 @@
 from data_handling.loader import load_samples
-from data_handling.preprocessing import process_samples
+from data_handling.preprocessing import preprocess_samples
 from data_handling.visualizer import plot_show
 
 import torch
@@ -19,34 +19,30 @@ def main():
     samples = load_samples("data/public")
 
     # preprocess
-    process_samples(samples)
+    preprocess_samples(samples)
 
     end = time.time()
     print(f"Total execution time: {end - start:.2f} seconds")
 
-    print(samples[0].labels)
+    # CNN
 
     num_samples = len(samples)
-    input_length = max(len(s.y) for s in samples)  # Use maximum length
-    print(f"Using input length: {input_length}")
-
-    min_length = min(len(s.y) for s in samples)
-    print(f"Minimum spectrum length: {min_length}")
-
-    num_classes = len(samples[0].labels)  # Should be 15
+    num_classes = len(samples[0].labels) 
 
     train_dataset = CustomArrayDataset(samples[:int(num_samples * 0.8)]) # 80% for training
     test_dataset = CustomArrayDataset(samples[int(num_samples * 0.8):])  # 20% for testing
-    
-    # Check tensor shapes in dataset
-    sample_input, sample_label = train_dataset[0]
-    print(f"Sample input shape: {sample_input.shape}")
-    print(f"Sample label shape: {sample_label.shape}")
 
     batch_size = 32
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
+    # printing CNN info
+    input_length = max(len(s.y) for s in samples)  # Use maximum length
+    print(f"Using input length: {input_length}")
+
+    sample_input, sample_label = train_dataset[0]
+    print(f"Sample input shape: {sample_input.shape}")
+    print(f"Sample label shape: {sample_label.shape}")
     print(f"Number of training batches: {len(train_loader)}")
     print(f"Number of testing batches: {len(test_loader)}")
 
@@ -80,7 +76,7 @@ def main():
             for inputs, labels in test_loader:
                 outputs = model(inputs.to(device))
                 preds = (outputs > 0.5).float()
-                correct += (preds == labels.to(device)).sum().item()
+                correct += (preds == labels).sum().item()
                 total += labels.numel()
         
         accuracy = 100 * correct / total
@@ -92,10 +88,6 @@ def main():
             torch.save(model.state_dict(), 'best_model.pth')
     
     print(f'Training complete. Best validation accuracy: {best_accuracy:.2f}%')
-
-    #CNN
-    #cnn = BasicCNN1D(input_length=len(samples), num_classes=10)
-    #cnn.train()
 
 
 if __name__ == "__main__":

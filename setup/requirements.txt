@@ -19,3 +19,5 @@ opencv-python
 pubchempy
 cirpy
 SciDataTool
+tqdm
+rich
