@@ -51,7 +51,8 @@ def preprocess_with_plot(sample):
         return fig, axs
     
     # Interpolate to fixed length
-    interpolate_spectrum(sample, n_points = INTERPOLATION_N_POINTS)
+    target_x = np.linspace(CROP_MIN_X, CROP_MAX_X, INTERPOLATION_N_POINTS)
+    interpolate_spectrum(sample, target_x)
     plot_sample(sample, axs, 2, "Interpolated")
 
     # Baseline correction
@@ -77,7 +78,8 @@ def preprocess_sample(sample):
         return
     
     # Interpolate to fixed length
-    interpolate_spectrum(sample, n_points = INTERPOLATION_N_POINTS)
+    target_x = np.linspace(CROP_MIN_X, CROP_MAX_X, INTERPOLATION_N_POINTS)
+    interpolate_spectrum(sample, target_x)
 
     # Baseline correction
     correct_baseline(sample, smoothness = BASELINE_SMOOTHNESS, asymmetry = BASELINE_ASMMETRY, max_iterations = BASELINE_MAX_ITERATIONS)
@@ -95,10 +97,10 @@ def crop_spectrum(sample, min_x, max_x):
     sample.y = sample.y[mask]
 
 
-def interpolate_spectrum(sample, n_points):
-    f = interp1d(sample.x, sample.y, kind='linear')
-    sample.x = np.linspace(min(sample.x), max(sample.x), n_points)
-    sample.y = f(sample.x)
+def interpolate_spectrum(sample, target_x):
+    f = interp1d(sample.x, sample.y, kind='linear', bounds_error=False, fill_value=0)
+    sample.x = target_x
+    sample.y = f(target_x)
 
 
 def correct_baseline(sample, smoothness, asymmetry, max_iterations):

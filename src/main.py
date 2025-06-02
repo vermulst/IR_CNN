@@ -21,11 +21,7 @@ def main():
     # preprocess
     preprocess_samples(samples)
 
-    end = time.time()
-    print(f"Total execution time: {end - start:.2f} seconds")
-
     # CNN
-
     num_samples = len(samples)
     num_classes = len(samples[0].labels) 
 
