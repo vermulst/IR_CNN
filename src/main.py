@@ -18,11 +18,9 @@ def main():
 
     # preprocess
     preprocess_samples(samples)
-    print(len(samples))
 
     # CNN
     num_samples = len(samples)
-    print(samples[0].labels)
     num_classes = len(samples[0].labels) 
 
     train_dataset = CustomArrayDataset(samples[:int(num_samples * 0.8)]) # 80% for training

@@ -13,8 +13,6 @@ import os
 import multiprocessing as mp
 
 from config import FUNCTIONAL_GROUP_SMARTS
-    
-
 
 def load_samples(datafolder):
     # Obtain metadata
@@ -66,6 +64,7 @@ def compute_functional_groups(smiles):
     label_time = time.time() - start_time
     rprint(f"[cyan]Functional groups computed in {label_time:.2f}s[/cyan]")
     return smiles_labels
+
 
 def read_spectra_samples(paths, path_to_smiles, smiles_to_functional_group):
     # Parallel loading of spectra samples

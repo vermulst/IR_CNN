@@ -4,6 +4,11 @@ from scipy.interpolate import interp1d
 from scipy.signal import savgol_filter
 from scipy import sparse
 from scipy.sparse.linalg import spsolve
+from config import (
+    REGIONS, INTERPOLATION_N_POINTS,
+    SMOOTHING_WINDOW_LENGTH, SMOOTHING_POLYORDER,
+    BASELINE_SMOOTHNESS, BASELINE_ASMMETRY, BASELINE_MAX_ITERATIONS
+)
 
 # for printing
 from tqdm import tqdm
@@ -15,22 +20,28 @@ import multiprocessing as mp
 import copy
 
 
-from config import (
-    CROP_MIN_X, CROP_MAX_X, INTERPOLATION_N_POINTS,
-    SMOOTHING_WINDOW_LENGTH, SMOOTHING_POLYORDER,
-    BASELINE_SMOOTHNESS, BASELINE_ASMMETRY, BASELINE_MAX_ITERATIONS
-)
-
-def calculate_max_workers():
-    cpu_count = os.cpu_count() or 1
-    return min(32, int(cpu_count / 2))
-
 def get_smooth_penalty(length, smoothness):
     D = sparse.diags([1, -2, 1], [0, -1, -2], shape=(length, length - 2))
     return smoothness * D.dot(D.transpose())
 
+def get_target_region():
+    total_length = sum([end - start for start, end in REGIONS])
+    regions = [
+        np.linspace(min_x, max_x, int(INTERPOLATION_N_POINTS * ((max_x - min_x) / total_length)))
+        for min_x, max_x in REGIONS
+    ]
+    # Optional fix to ensure total points matches INTERPOLATION_N_POINTS exactly:
+    total_allocated = sum(len(r) for r in regions)
+    if total_allocated < INTERPOLATION_N_POINTS:
+        # Add extra points to the last region
+        last_region = regions[-1]
+        extra_points = INTERPOLATION_N_POINTS - total_allocated
+        regions[-1] = np.linspace(last_region[0], last_region[-1], len(last_region) + extra_points)
+
+    return np.concatenate(regions)
+
 COMMON_SMOOTH_PENALTY = get_smooth_penalty(INTERPOLATION_N_POINTS, BASELINE_SMOOTHNESS)
-TARGET_X = np.linspace(CROP_MIN_X, CROP_MAX_X, INTERPOLATION_N_POINTS)
+TARGET_X = get_target_region()
 
 def preprocess_samples(samples):
     samples_length_pre = len(samples)
@@ -80,7 +91,7 @@ def preprocess_with_plot(sample):
     plot_sample(sample, axs, 0, "Original")
 
     # Crop to fingerprint region
-    crop_spectrum(sample, CROP_MIN_X, CROP_MAX_X)
+    crop_spectrum(sample, REGIONS)
     plot_sample(sample, axs, 1, "Cropped")
 
     # Check for empty spectrum
@@ -107,7 +118,7 @@ def preprocess_with_plot(sample):
 
 def preprocess_sample(sample):
     # Crop to fingerprint region
-    crop_spectrum(sample, CROP_MIN_X, CROP_MAX_X)
+    crop_spectrum(sample, REGIONS)
 
     # Check for empty spectrum
     if (len(sample.x) == 0):
@@ -117,21 +128,27 @@ def preprocess_sample(sample):
     interpolate_spectrum(sample)
 
     # Baseline correction
-    correct_baseline(sample, smoothness = BASELINE_SMOOTHNESS, asymmetry = BASELINE_ASMMETRY, max_iterations = BASELINE_MAX_ITERATIONS)
+    #correct_baseline(sample, smoothness = BASELINE_SMOOTHNESS, asymmetry = BASELINE_ASMMETRY, max_iterations = BASELINE_MAX_ITERATIONS)
     
     # Smooth the spectrum (for taking out noise)
-    smooth_spectrum(sample, window_length = SMOOTHING_WINDOW_LENGTH, polyorder = SMOOTHING_POLYORDER)
+    #smooth_spectrum(sample, window_length = SMOOTHING_WINDOW_LENGTH, polyorder = SMOOTHING_POLYORDER)
 
     # Normalize intensities
     normalize_spectrum(sample)
 
 
-def crop_spectrum(sample, min_x, max_x):
-    left = np.searchsorted(sample.x, min_x, side='left')
-    right = np.searchsorted(sample.x, max_x, side='right')
-    sample.x = sample.x[left:right]
-    sample.y = sample.y[left:right]
+def crop_spectrum(sample, regions):
+    x_segments = []
+    y_segments = []
 
+    for min_x, max_x in regions:
+        left = np.searchsorted(sample.x, min_x, side='left')
+        right = np.searchsorted(sample.x, max_x, side='right')
+        x_segments.append(sample.x[left:right])
+        y_segments.append(sample.y[left:right])
+
+    sample.x = np.concatenate(x_segments)
+    sample.y = np.concatenate(y_segments)
 
 def interpolate_spectrum(sample):
     f = interp1d(sample.x, sample.y, kind='linear', bounds_error=False, fill_value=0)
@@ -180,3 +197,7 @@ def normalize_spectrum(sample):
         sample.y = np.array([]) # set y array to empty so sample is skipped
     else:
         sample.y = (sample.y - np.min(sample.y)) / range_y
+
+def calculate_max_workers():
+    cpu_count = os.cpu_count() or 1
+    return min(32, int(cpu_count / 2))
