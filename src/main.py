@@ -12,6 +12,7 @@ from torch.utils.data import DataLoader
 from config import FUNCTIONAL_GROUP_SMARTS
 
 import time
+import random
 
 
 def main():
@@ -27,12 +28,23 @@ def main():
     num_classes = len(class_names)
     class_counts = [0] * num_classes  # Track positives per class
     
+    removed_samples = []
     for sample in samples:
         labels = sample.labels  # Assuming labels is a list/array of 0s and 1s
+        if (labels[1] == 1):
+            is_pure_aromatic = (labels[1] == 1) and sum(labels) == 1
+            if (is_pure_aromatic):
+                if random.randrange(8) != 1:
+                    removed_samples.append(sample)
+    
+    print(f"Removed {len(removed_samples)} samples")
+    samples = [s for s in samples if s not in removed_samples]
+    
+    for sample in samples:
+        labels = sample.labels
         for i in range(num_classes):
             if labels[i] == 1:
                 class_counts[i] += 1
-    
     print("\nClass distribution (actual positives) in FULL dataset:")
     for i, name in enumerate(class_names):
         print(f"{name}: {class_counts[i]} ({(100 * class_counts[i] / len(samples)):.1f}%)")
@@ -67,7 +79,7 @@ def main():
     
     # Training parameters
     num_epochs = 100
-    best_accuracy = 0.0
+    best_macro_f1 = 0.0
 
     # Training loop
     for epoch in range(num_epochs):
@@ -88,11 +100,11 @@ def main():
             correct = total = 0
 
             # Per-class metrics
-            class_correct = [0, 0, 0, 0, 0]  # Correct predictions per class
-            class_total = [0, 0, 0, 0, 0]     # Total samples per class
-            class_tp = [0, 0, 0, 0, 0]        # True positives per class
-            class_fp = [0, 0, 0, 0, 0]        # False positives per class
-            class_fn = [0, 0, 0, 0, 0]        # False negatives per class
+            class_correct = [0] * num_classes  # Correct predictions per class
+            class_total = [0] * num_classes    # Total samples per class
+            class_tp = [0] * num_classes        # True positives per class
+            class_fp = [0] * num_classes      # False positives per class
+            class_fn = [0] * num_classes      # False negatives per class
 
             for inputs, labels in test_loader:
                 outputs = model(inputs.to(device))
@@ -142,8 +154,8 @@ def main():
         print(f'Micro-average F1: {100 * micro_f1:.2f}%')
 
         # Save best model
-        if accuracy > best_accuracy:
-            best_accuracy = accuracy
+        if macro_f1 > best_macro_f1:
+            best_macro_f1 = macro_f1
             torch.save(model.state_dict(), 'best_model.pth')
     
     print(f'Training complete. Best validation accuracy: {best_accuracy:.2f}%')
