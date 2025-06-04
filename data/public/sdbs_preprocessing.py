@@ -16,7 +16,7 @@ import cirpy
 from pubchempy import get_compounds
 
 # List of compound names
-#compound_names = ['phenyl isocyanate', 'p-nitroanisole', '4-ethylpyridine']
+compound_names = ['phenyl isocyanate', 'p-nitroanisole', '4-ethylpyridine']
 
 # Function to convert name to SMILES
 def name_to_smiles(name):
@@ -258,6 +258,8 @@ def get_sdbs(fg_list):
             print('Error')
 """
 
+from csv_to_jcamp import csv_to_jcamp
+
 def get_sdbs():
     print('Start SDBS processing')
     for file in os.listdir(sdbs_png_path):
@@ -265,18 +267,15 @@ def get_sdbs():
             if 'KBr' in file or 'liquid' in file or 'nujol' in file:
                 if not file.startswith('.'):
                     original_image = cv2.imread(os.path.join(sdbs_png_path, file), 0)
-                    print('a')
                     if original_image is None:
                         print(f"Failed to read image: {file}")
                         continue
                     height, width = original_image.shape
-                    print('b')
                     print(f"{file}: width={width}, height={height}")
                     if width != 715:
                         print(f"Skipping {file}: width is not 715")
                         continue
                     sdbs_id = file.split('_')[0]
-                    print('c')
                     other_path = os.path.join(sdbs_other_path, sdbs_id + '_other.txt')
                     if not os.path.exists(other_path):
                         print(f"Missing metadata: {other_path}")
@@ -284,7 +283,6 @@ def get_sdbs():
                     with open(other_path) as f:
                         other_file = f.readlines()
                     compound_name = None
-                    print('d')
                     for line in other_file:
                         match = re.match('Name: (.*)', line)
                         if match:
@@ -293,7 +291,6 @@ def get_sdbs():
                     if not compound_name:
                         print(f"No name found in {other_path}")
                         continue
-                    print('e')
                     # --- Spectrum extraction/interpolation logic here ---
                     # Replace the next two lines with your actual spectrum extraction code
                     # For example, x = np.linspace(4000, 400, 600); y = ... (interpolated spectrum)
@@ -310,6 +307,23 @@ def get_sdbs():
                         for xi, yi in zip(x, y):
                             writer.writerow([xi, yi])
                     print(f"Saved {csv_filename}")
+
+                    # WRITE JCAMP
+                    csv_to_jcamp(
+                    csv_path=f"{save_path}/{safe_name}.csv", 
+                    jcamp_path=f"{save_path}/{safe_name}.jdx",
+                    title="CHS-424",
+                    origin="Your Name",
+                    sampling_procedure="Diamant-ATR",
+                    values_per_line=1  # Number of Y values per line (6 in your example)
+                    )
+
+
+                    # ADD TO CONFIG
+                    smiles = name_to_smiles(compound_name)
+                    print(smiles)
+                    
+
 
         #except Exception as e:
         #    print(f"Error processing {file}: {e}")

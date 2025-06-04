@@ -30,6 +30,22 @@ def load_samples(datafolder):
 
     return samples
 
+def load_sample(path):
+    # Obtain metadata
+    with open(f"{path}/meta_data.json", "rb") as f:
+        metadata = orjson.loads(f.read())
+
+    # Read out metadata
+    paths, smiles, path_to_smiles = read_metadata(metadata, datafolder)
+
+    # Compute functional groups
+    smiles_to_functional_group = compute_functional_groups(smiles) # SMILES -> LABEL_VEC
+
+    # Read IR spectra data
+    samples = read_spectra_samples(paths, path_to_smiles, smiles_to_functional_group)
+
+    return samples
+
 
 def read_metadata(metadata, datafolder):
     # Precompute all SMILES labels
