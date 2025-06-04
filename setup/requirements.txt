@@ -21,3 +21,4 @@ cirpy
 SciDataTool
 tqdm
 rich
+pubchempy

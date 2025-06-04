@@ -19,16 +19,26 @@ from pubchempy import get_compounds
 compound_names = ['phenyl isocyanate', 'p-nitroanisole', '4-ethylpyridine']
 
 # Function to convert name to SMILES
+"""
 def name_to_smiles(name):
+    
+"""
+def name_to_smiles(name):
+    """
+    Convert a chemical compound name to its SMILES string using CIRpy.
+    Returns the SMILES string or None if not found.
+    """
     try:
         compounds = get_compounds(name, 'name')
         if compounds:
+            
             return compounds[0].isomeric_smiles
         else:
-            return None
+            smiles = cirpy.resolve(name, 'smiles')
+            return smiles
     except Exception as e:
         return None
-
+    
 # Convert and print
 for name in compound_names:
     smiles = name_to_smiles(name)
