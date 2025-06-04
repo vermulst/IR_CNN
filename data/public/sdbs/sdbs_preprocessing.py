@@ -323,6 +323,8 @@ def get_sdbs():
                     smiles = name_to_smiles(compound_name)
                     print(smiles)
 
+                    
+
 
                     
 
