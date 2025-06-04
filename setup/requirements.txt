@@ -1,24 +1,31 @@
-jcamp
+### CORE DEPS
 numpy
+scikit-learn  # depends on numpy
+
+### MAIN PACKAGES
+jcamp
 matplotlib
-orjson
 pandas
-beautifulsoup4
-requests
-selenium
-soupsieve
-webdriver-manager
-PyAutoGUI
 torch
-torchaudio
 torchvision
-BaselineRemoval
-scikit-learn
 rdkit
-opencv-python
+BaselineRemoval
+
+### SMILES
 pubchempy
 cirpy
-SciDataTool
+py2opsin
+
+### WEB
+requests
+selenium
+beautifulsoup4
+soupsieve
+webdriver-manager
+
+### UTILITIES
+orjson
 tqdm
 rich
-pubchempy
+PyAutoGUI
+opencv-python

@@ -86,15 +86,15 @@ def csv_to_jcamp(csv_path, jcamp_path, title="Sample Spectrum", origin="Python S
 
 # Example usage:
 
-from sdbs_preprocessing import name_to_smiles
+# from sdbs_preprocessing import name_to_smiles
 
 
-smiles = name_to_smiles("2-furoic acid")
-csv_to_jcamp(
-    csv_path="./data/public/sdbs/processed_dataset/2-furoic acid.csv", 
-    jcamp_path="output.jdx",
-    title="CHS-424",
-    origin="Your Name",
-    sampling_procedure="Diamant-ATR",
-    values_per_line=1  # Number of Y values per line (6 in your example)
-)
+# smiles = name_to_smiles("2-furoic acid")
+# csv_to_jcamp(
+#     csv_path="./data/public/sdbs/processed_dataset/2-furoic acid.csv", 
+#     jcamp_path="output.jdx",
+#     title="CHS-424",
+#     origin="Your Name",
+#     sampling_procedure="Diamant-ATR",
+#     values_per_line=1  # Number of Y values per line (6 in your example)
+# )

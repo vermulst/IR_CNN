@@ -1,0 +1,20 @@
+[
+  {
+    "smiles": "O1C(=CC=C1)C(=O)O",
+    "filename": "2-furoic acid.jdx",
+    "compound_name": "2-furoic acid",
+    "sdbs_id": "1"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C1=NOC(C1)C1=CC=CC=C1",
+    "filename": "3,5-diphenyl-2-isoxazoline.jdx",
+    "compound_name": "3,5-diphenyl-2-isoxazoline",
+    "sdbs_id": "5"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)[C@@H]1O[C@H](C(=N1)C1=CC=CC=C1)C1=CC=CC=C1",
+    "filename": "trans-2,4,5-triphenyl-3-oxazoline.jdx",
+    "compound_name": "trans-2,4,5-triphenyl-3-oxazoline",
+    "sdbs_id": "6"
+  }
+]

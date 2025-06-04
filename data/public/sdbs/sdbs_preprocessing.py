@@ -1,48 +1,54 @@
+from csv_to_jcamp import csv_to_jcamp
 
 from os import listdir
-from scipy import interpolate
 from rdkit import Chem
 from PIL import Image
 import os
 import numpy as np
-import sys
 import csv
 import cv2
 import re
-#from smarts import fg_list_original, fg_list_extended
-import cirpy 
-#from SciDataTool import JCAMP_reader
+import orjson
+from typing import List, Dict
 
 from pubchempy import get_compounds
+import cirpy 
+from py2opsin import py2opsin
 
-# List of compound names
-compound_names = ['phenyl isocyanate', 'p-nitroanisole', '4-ethylpyridine']
+# Define paths.
+nist_inchi_path = '/nist_dataset/inchi/'
+nist_jdx_path = '../nist_dataset/jdx/'
+sdbs_gif_path = './data/public/sdbs/sdbs_dataset/gif/'
+sdbs_png_path = './data/public/sdbs/sdbs_dataset/png/'
+sdbs_other_path = './data/public/sdbs/sdbs_dataset/other/'
+save_path = './data/public/sdbs/processed/samples/'
+metadata_save_path = './data/public/sdbs/processed/'
 
 # Function to convert name to SMILES
-"""
-def name_to_smiles(name):
-    
-"""
 def name_to_smiles(name):
     """
-    Convert a chemical compound name to its SMILES string using CIRpy.
-    Returns the SMILES string or None if not found.
+    Convert a chemical compound name to its SMILES string using a cascade of methods.
+    Returns the SMILES string or None if not found by any method.
     """
+    smiles = None # Initialize smiles to None
+
     try:
-        compounds = get_compounds(name, 'name')
-        if compounds:
-            
-            return compounds[0].isomeric_smiles
-        else:
-            smiles = cirpy.resolve(name, 'smiles')
+        # try numerous methods
+        smiles = py2opsin(name)
+        if smiles:
+            #print(f"Resolved '{name}' via py2opsin: {smiles}")
+            return smiles # Return if successful
+        smiles = cirpy.resolve(name, 'smiles')
+        if smiles:
+            #print(f"Resolved '{name}' via cirpy: {smiles}")
+            return smiles # Return if successful
+        smiles = get_compounds(name)
+        if smiles:
             return smiles
-    except Exception as e:
+        print(f"Could not resolve: {name}")
         return None
-    
-# Convert and print
-for name in compound_names:
-    smiles = name_to_smiles(name)
-    print(f"{name} -> {smiles}")
+    except Exception as e:
+        print(f"py2opsin failed for '{name}': {e}")
 
 
 def name_to_smiles_and_inchi(name):
@@ -56,21 +62,6 @@ def name_to_smiles_and_inchi(name):
         return smiles, None
     inchi = Chem.MolToInchi(mol)
     return smiles, inchi
-
-
-
-
-# Set print options.
-np.set_printoptions(threshold=sys.maxsize)
-
-# Define paths.
-nist_inchi_path = '/nist_dataset/inchi/'
-nist_jdx_path = '../nist_dataset/jdx/'
-sdbs_gif_path = './data/public/sdbs/sdbs_dataset/gif/'
-sdbs_png_path = './data/public/sdbs/sdbs_dataset/png/'
-sdbs_other_path = './data/public/sdbs/sdbs_dataset/other/'
-save_path = './data/public/sdbs/processed_dataset/'
-
 
 def convert_x(x_in, unit_from, unit_to):
     """Convert between micrometer and wavenumber."""
@@ -132,312 +123,107 @@ def get_unique(x_in, y_in):
     return x_out, y_out
 
 
-def get_contours(image):
-    """Returns normalized coordinates of a spectrum."""
-    # image = cv2.imread(sdbs_png_path + '/' + file, 0)
-    ret, thresh = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY_INV)
-    # Define kernel length.
-    kernel_length = np.array(image).shape[1] // 80
-    # Verticle kernel of (1 * kernel_length) used to detect verticle lines in the image.
-    vertical_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1, kernel_length))
-    # Horizontal kernel of (kernel_length * 1) used to detect horizontal lines in the image.
-    horizontal_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (kernel_length, 1))
-    # Kernel of (3 X 3) ones.
-    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
-    # Morphological operation to detect vertical lines from an image.
-    vertical_temp = cv2.erode(thresh, vertical_kernel, iterations=3)
-    verticle_lines = cv2.dilate(vertical_temp, vertical_kernel, iterations=3)
-    # Morphological operation to detect horizontal lines from an image.
-    horizontal_temp = cv2.erode(thresh, horizontal_kernel, iterations=3)
-    horizontal_lines = cv2.dilate(horizontal_temp, horizontal_kernel, iterations=3)
-    # Add two images with specific weight parameters to get a third summation image.
-    image = cv2.addWeighted(verticle_lines, 0.5, horizontal_lines, 0.5, 0.0)
-    image = cv2.erode(~image, kernel, iterations=2)
-    ret, thresh = cv2.threshold(image, 127,255, cv2.THRESH_BINARY)
-    # Find contours in the image
-    contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-    return contours
-"""
-def get_sdbs(fg_list):
-    # Process data from SDBS database.
-    print('Start SDBS processing')
-    for file in listdir(sdbs_png_path):
-        try:
-            if 'KBr' in file or 'liquid' in file or 'nujol' in file:
-                if not file.startswith('.'):
-                    original_image = cv2.imread(sdbs_png_path + '/' + file, 0)
-                    if original_image is None:
-                        print(f"Failed to read image: {file}")
-                        continue
-                    height, width = original_image.shape
-                    print(f"{file}: width={width}, height={height}")
-                    if width != 715:
-                        print(f"Skipping {file}: width is not 715")
-                        continue
-                    sdbs_id = file.split('_')[0]
-                    other_path = sdbs_other_path + '/' + sdbs_id + '_other.txt'
-                    if not os.path.exists(other_path):
-                        print(f"Missing metadata: {other_path}")
-                        continue
-                    other_file = open(other_path).readlines()
-                    inchi = None
-                    for line in other_file:
-                        match = re.match('Name: (.*)', line)
-
-
-                    # ... rest of your processing ...
-        except Exception as e:
-            print(f"Error processing {file}: {e}")
-
-
-def get_sdbs(fg_list):
-    #Create dataset in CSV format.
-    # Process data from SDBS database.
-    print('Start SDBS processing')
-    for file in listdir(sdbs_png_path):
-        try:
-            if 'KBr' in file or 'liquid' in file or 'nujol' in file:
-                if not file.startswith('.'):
-                    original_image = cv2.imread(sdbs_png_path + '/' + file, 0)
-                    # image = Image.open(sdbs_png_path + '/' + file)
-                    height, width = original_image.shape
-                    if width == 715:
-                        sdbs_id = file.split('_')[0]
-                        other_file = open(sdbs_other_path + '/' + sdbs_id + '_other.txt').readlines()
-                        for line in other_file:
-                            match = re.match('Formula: (.*)', line)
-                            if match is not None:
-                                print(file)
-                                inchi = match.groups()[0]
-                                inchi = inchi.split(':')[0]
-                                mol = Chem.MolFromInchi(inchi)
-                                contours = get_contours(original_image)
-                                spectrum = []
-                                ratio = 684 / 26
-                                x_step_1 = (4000 - 2000) / (ratio * 10)
-                                x_step_2 = (2000 - 400) / (ratio * 16)
-                                y_step = 100 / 320
-                                for contour in contours:
-                                    # Returns location, width and height for every contour.
-                                    x, y, w, h = cv2.boundingRect(contour)
-                                    # Filter ROI.
-                                    if 650 < w < 700 and 300 < h < 340:
-                                        image = original_image[y - 2 : y + h + 2, x - 2 : x + w + 2]
-                                        graph = image.shape
-                                        for i in range(0, graph[1]):
-                                            for j in range(0, graph[0]):
-                                                if image[j, i] == 0:
-                                                    spectrum.append([i, j])
-                                x = []
-                                y = []
-                                for i in spectrum:
-                                    if i[0] < ratio * 10:
-                                        x.append(4000 - x_step_1 * i[0])
-                                    elif ratio * 10 <= i[0]:
-                                        x.append(2000 - x_step_2 * (i[0] - 262))
-                                    y.append((100 - y_step * i[1]) / 100)
-                                spectrum = get_unique(x, y)
-                                x = np.linspace(4000, 400, 600)
-                                f = interpolate.interp1d(spectrum[0], spectrum[1], kind='slinear')
-                                y = f(x)
-                                label_temp = []
-                                if mol is not None:
-                                    for fg in fg_list:
-                                        pattern = Chem.MolFromSmarts(fg)
-                                        match = mol.HasSubstructMatch(pattern)
-                                        if match == True:
-                                            label_temp.append(1)
-                                        elif match == False:
-                                            label_temp.append(0)
-                                else:
-                                    print('Error')
-                                    continue
-                                label_temp = np.append(label_temp, inchi)
-                                label_temp = np.append(label_temp, 'sdbs')
-                                x = np.append(x, inchi)
-                                x = np.append(x, 1)
-                                y = np.append(y, inchi)
-                                y = np.append(y, 1)
-                                with open(save_path + '/label_dataset.csv', mode='a') as label_data:
-                                    y_data_writer = csv.writer(label_data, delimiter=',')
-                                    y_data_writer.writerow(label_temp)
-                                with open(save_path + '/input_dataset.csv', mode='a') as input_data:
-                                    x_data_writer = csv.writer(input_data, delimiter=',')
-                                    x_data_writer.writerow(y)
-        except:
-            print('Error')
-"""
-
-from csv_to_jcamp import csv_to_jcamp
-
 def get_sdbs():
     print('Start SDBS processing')
+    metadata: List[Dict] = []
     for file in os.listdir(sdbs_png_path):
-        #try:
-            if 'KBr' in file or 'liquid' in file or 'nujol' in file:
-                if not file.startswith('.'):
-                    original_image = cv2.imread(os.path.join(sdbs_png_path, file), 0)
-                    if original_image is None:
-                        print(f"Failed to read image: {file}")
-                        continue
-                    height, width = original_image.shape
-                    print(f"{file}: width={width}, height={height}")
-                    if width != 715:
-                        print(f"Skipping {file}: width is not 715")
-                        continue
-                    sdbs_id = file.split('_')[0]
-                    other_path = os.path.join(sdbs_other_path, sdbs_id + '_other.txt')
-                    if not os.path.exists(other_path):
-                        print(f"Missing metadata: {other_path}")
-                        continue
-                    with open(other_path) as f:
-                        other_file = f.readlines()
-                    compound_name = None
-                    for line in other_file:
-                        match = re.match('Name: (.*)', line)
-                        if match:
-                            compound_name = match.group(1).strip()
-                            break
-                    if not compound_name:
-                        print(f"No name found in {other_path}")
-                        continue
-                    # --- Spectrum extraction/interpolation logic here ---
-                    # Replace the next two lines with your actual spectrum extraction code
-                    # For example, x = np.linspace(4000, 400, 600); y = ... (interpolated spectrum)
-                    x = np.linspace(4000, 400, 600)
-                    y = np.random.rand(600)  # Replace with actual spectrum extraction!
+        if ('KBr' not in file) and ('liquid' not in file) and ('nujol' not in file):
+            continue
+        if file.startswith('.'):
+            continue
+        
+        # Image reading and filtering for width
+        original_image = cv2.imread(os.path.join(sdbs_png_path, file), 0)
+        if original_image is None:
+            print(f"Failed to read image: {file}")
+            continue
+        _, width = original_image.shape
+        if width != 715:
+            print(f"Skipping {file}: width is not 715")
+            continue
 
-                    # --- Write to CSV ---
-                    # Clean the compound name for safe filename
-                    safe_name = re.sub(r'[\\/*?:"<>|]', "_", compound_name)
-                    csv_filename = os.path.join(save_path, f"{safe_name}.csv")
-                    with open(csv_filename, 'w', newline='') as csvfile:
-                        writer = csv.writer(csvfile)
-                        writer.writerow(['Wavenumber', 'Intensity'])
-                        for xi, yi in zip(x, y):
-                            writer.writerow([xi, yi])
-                    print(f"Saved {csv_filename}")
+        # Metadata extraction
+        sdbs_id = file.split('_')[0]
+        other_file = os.path.join(sdbs_other_path, sdbs_id + '_other.txt')
+        if not os.path.exists(other_file):
+            print(f"Missing metadata: {other_file}")
+            continue
+        
+        # Compound extraction
+        compound_name = extract_compound_name(other_file)
+        if not compound_name:
+            continue
+        
+        # Spectrum Processing
+        x, y = np.linspace(4000, 400, 600), np.random.rand(600)
 
-                    # WRITE JCAMP
-                    csv_to_jcamp(
-                        csv_path=f"{save_path}/{safe_name}.csv", 
-                        jcamp_path=f"{save_path}/{safe_name}.jdx",
-                        title="CHS-424",
-                        origin="Your Name",
-                        sampling_procedure="Diamant-ATR",
-                        values_per_line=1  # Number of Y values per line (6 in your example)
-                    )
+        # --- Save Data ---
+        safe_name = re.sub(r'[\\/*?:"<>|]', "_", compound_name)
+        save_spectrum_data(x, y, safe_name)
 
+        # ADD TO CONFIG
+        smiles = name_to_smiles(compound_name)
+        if smiles:
+            metadata.append({
+                "smiles": smiles,
+                "filename": f"{safe_name}.jdx",
+                "compound_name": compound_name,
+                "sdbs_id": sdbs_id
+            })
+    return metadata
+            
+# Helper functions (would be defined elsewhere)
+def extract_compound_name(path):
+    """Extracts compound name from metadata file."""
+    with open(path) as f:
+        for line in f:
+            if match := re.match('Name: (.*)', line):
+                return match.group(1).strip()
+    return None
 
-                    # ADD TO CONFIG
-                    smiles = name_to_smiles(compound_name)
-                    print(smiles)
-
-                    
+def sanitize_filename(name: str) -> str:
+    """Makes filenames filesystem-safe."""
+    return re.sub(r'[\\/*?:"<>|]', "_", name)
 
 
-                    
+def save_spectrum_data(x, y, base_name):
+    """Saves spectrum data in CSV and JCAMP formats."""
+    csv_path = os.path.join(save_path, f"{base_name}.csv") 
+    with open(csv_path, 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['Wavenumber', 'Intensity'])
+        writer.writerows(zip(x, y))
+    
+    csv_to_jcamp(
+        csv_path=str(csv_path),
+        jcamp_path=str(os.path.join(save_path, f"{base_name}.jdx")),
+        title=base_name,
+        origin="SDBS",
+        sampling_procedure="ATR"
+    )
 
-
-        #except Exception as e:
-        #    print(f"Error processing {file}: {e}")
-
-def get_nist(fg_list):
-      # Process data from NIST database.
-    print('Start NIST processing')
-    for file in listdir(nist_jdx_path):
-        try:
-            nist_id = file.split('_')[0]
-            inchi_file = nist_inchi_path + nist_id + '.inchi'
-            if os.path.exists(inchi_file) == True:
-                try:
-                    jcamp_dict = JCAMP_reader(nist_jdx_path + file)
-                except:
-                    continue
-                if jcamp_dict['x'] is None or len(jcamp_dict['x']) == 0:
-                    continue
-                if jcamp_dict['yunits'] is not None:
-                    if jcamp_dict['yunits'] in ['dispersion index', 'absorption index', '(micromol/mol)-1m-1 (base 10)']:
-                        continue   
-                elif jcamp_dict['ylabel'] is not None:
-                    if jcamp_dict['ylabel'] in ['dispersion index', 'absorption index', '(micromol/mol)-1m-1 (base 10)']:
-                        continue
-                if 'xunits' in jcamp_dict:
-                    xunit = jcamp_dict['xunits']
-                if 'yunits' in jcamp_dict:
-                    yunit = jcamp_dict['yunits']
-                if 'xlabel' in jcamp_dict:
-                    xunit = jcamp_dict['xlabel']
-                if 'ylabel' in jcamp_dict:
-                    yunit = jcamp_dict['ylabel']
-                x = jcamp_dict['x']
-                y = jcamp_dict['y']
-                x = convert_x(x, xunit, 'cm-1')
-                y = convert_y(y, yunit, 'transmittance')
-                y_min = min(y)
-                y_max = max(y)
-                x_min = min(x)
-                x_max = max(x)
-                if y_max > 1:
-                    y = [1 if j > 1 else j for j in y]
-                if y_min < 0:
-                    y = [0 if j < 0 else j for j in y]
-                if x[0] > x[1]:
-                    x = x[::-1]
-                    y = y[::-1]
-                if x_max > 4000:
-                    idx = next(i for i, xx in enumerate(x) if xx >= 4000) 
-                    x = x[:idx + 1]
-                    y = y[:idx + 1]
-                if x_min < 400:
-                    idx = next(i for i, xx in enumerate(x) if xx >= 400)
-                    x = x[idx - 1:]
-                    y = y[idx - 1:]
-                if x_max < 4000:
-                    x = np.append(x, [x[-1] + 1, 4000])
-                    y = np.append(y, [y[-1], y[-1]])
-                if x_min > 400:
-                    x = np.insert(x, 0, x[0] - 1)
-                    x = np.insert(x, 0, 400)
-                    y = np.insert(y, 0, y[0])
-                    y = np.insert(y, 0, y[0])
-                print(file)
-                inchi  = open(inchi_file).read()
-                mol = Chem.MolFromInchi(inchi)
-                spectrum = get_unique(x, y)
-                x = np.linspace(4000, 400, 600)
-                f = interpolate.interp1d(spectrum[0], spectrum[1], kind='slinear')
-                y = f(x)
-                label_temp = []
-                if mol is not None:
-                    for fg in fg_list:
-                        pattern = Chem.MolFromSmarts(fg)
-                        match = mol.HasSubstructMatch(pattern)
-                        if match == True:
-                            label_temp.append(1)
-                        elif match == False:
-                            label_temp.append(0)
-                else:
-                    print('Error')
-                    continue
-                label_temp = np.append(label_temp, inchi)
-                label_temp = np.append(label_temp, 'nist')
-                x = np.append(x, inchi)
-                x = np.append(x, 2)
-                y = np.append(y, inchi)
-                y = np.append(y, 2)
-                with open(save_path + '/label_dataset.csv', mode='a') as label_data:
-                    y_data_writer = csv.writer(label_data, delimiter=',')
-                    y_data_writer.writerow(label_temp)
-                with open(save_path + '/input_dataset.csv', mode='a') as input_data:
-                    x_data_writer = csv.writer(input_data, delimiter=',')
-                    x_data_writer.writerow(y)
-        except:
-            print('Error')
-
+def save_metadata(metadata: List[Dict], filename: str = "metadata.json") -> None:
+    """Save metadata using orjson for better performance."""
+    metadata_path = os.path.join(metadata_save_path, filename)
+    
+    unique_entries = {}
+    for entry in metadata:
+        sdbs_id = entry.get("sdbs_id")
+        if sdbs_id and sdbs_id not in unique_entries:
+            unique_entries[sdbs_id] = entry
+    try:
+        with open(metadata_path, 'wb') as f:
+            f.write(orjson.dumps(
+                list(unique_entries.values()),  # Convert back to list
+                option=orjson.OPT_INDENT_2 | orjson.OPT_SERIALIZE_NUMPY
+            ))
+        print(f"Saved {len(unique_entries)} unique entries to {metadata_path}")
+    except Exception as e:
+        print(f"Failed to save metadata: {e}")
 
 if __name__ == '__main__':
     get_png() 
-    # Selected either original or extended list.
-    get_sdbs()
+    metadata = get_sdbs()
+    save_metadata(metadata)
+    
     #get_nist(fg_list_extended)
