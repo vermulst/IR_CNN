@@ -56,10 +56,10 @@ np.set_printoptions(threshold=sys.maxsize)
 # Define paths.
 nist_inchi_path = '/nist_dataset/inchi/'
 nist_jdx_path = '../nist_dataset/jdx/'
-sdbs_gif_path = './data/public/sdbs_dataset/gif/'
-sdbs_png_path = './data/public/sdbs_dataset/png/'
-sdbs_other_path = './data/public/sdbs_dataset/other/'
-save_path = './data/public/processed_dataset/'
+sdbs_gif_path = './data/public/sdbs/sdbs_dataset/gif/'
+sdbs_png_path = './data/public/sdbs/sdbs_dataset/png/'
+sdbs_other_path = './data/public/sdbs/sdbs_dataset/other/'
+save_path = './data/public/sdbs/processed_dataset/'
 
 
 def convert_x(x_in, unit_from, unit_to):
@@ -310,18 +310,20 @@ def get_sdbs():
 
                     # WRITE JCAMP
                     csv_to_jcamp(
-                    csv_path=f"{save_path}/{safe_name}.csv", 
-                    jcamp_path=f"{save_path}/{safe_name}.jdx",
-                    title="CHS-424",
-                    origin="Your Name",
-                    sampling_procedure="Diamant-ATR",
-                    values_per_line=1  # Number of Y values per line (6 in your example)
+                        csv_path=f"{save_path}/{safe_name}.csv", 
+                        jcamp_path=f"{save_path}/{safe_name}.jdx",
+                        title="CHS-424",
+                        origin="Your Name",
+                        sampling_procedure="Diamant-ATR",
+                        values_per_line=1  # Number of Y values per line (6 in your example)
                     )
 
 
                     # ADD TO CONFIG
                     smiles = name_to_smiles(compound_name)
                     print(smiles)
+
+
                     
 
 

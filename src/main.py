@@ -17,7 +17,7 @@ import random
 
 def main():
     # load samples
-    samples = load_samples("data/public")
+    samples = load_samples("data/public/chemotion")
 
     
 
