@@ -14,66 +14,66 @@ import multiprocessing as mp
 
 from config import FUNCTIONAL_GROUP_SMARTS
 
-def load_samples(datafolder):
+def load_samples(datafolder, dataset_type):
     # Obtain metadata
-    with open(f"{datafolder}/meta_data.json", "rb") as f:
+    with open(f"{datafolder}/metadata.json", "rb") as f:
         metadata = orjson.loads(f.read())
 
     # Read out metadata
-    paths, smiles, path_to_smiles = read_metadata(metadata, datafolder)
+    paths, smiles, path_to_smiles = read_metadata(metadata, datafolder, dataset_type)
 
     # Compute functional groups
-    smiles_to_functional_group = compute_functional_groups(smiles) # SMILES -> LABEL_VEC
+    smiles_to_functional_group = compute_functional_groups(smiles, dataset_type) # SMILES -> LABEL_VEC
 
     # Read IR spectra data
-    samples = read_spectra_samples(paths, path_to_smiles, smiles_to_functional_group)
-
-    return samples
-
-def load_sample(path):
-    # Obtain metadata
-    with open(f"{path}/meta_data.json", "rb") as f:
-        metadata = orjson.loads(f.read())
-
-    # Read out metadata
-    paths, smiles, path_to_smiles = read_metadata(metadata, datafolder)
-
-    # Compute functional groups
-    smiles_to_functional_group = compute_functional_groups(smiles) # SMILES -> LABEL_VEC
-
-    # Read IR spectra data
-    samples = read_spectra_samples(paths, path_to_smiles, smiles_to_functional_group)
+    samples = read_spectra_samples(paths, path_to_smiles, smiles_to_functional_group, dataset_type)
 
     return samples
 
 
-def read_metadata(metadata, datafolder):
+def read_metadata(metadata, datafolder, dataset_type):
     # Precompute all SMILES labels
     paths = [] # PATHS TO FILES 
     smiles = [] # SMILES
     path_to_smiles = {} # PATH -> SMILES
 
     # Read out metadata
-    for compound in metadata:
-        smile = compound.get("cano_smiles")
-        if not smile:
-            continue
-        for dataset in compound.get("datasets", []):
-            for attachment in dataset.get("attacments", []):
-                identifier = attachment["identifier"].split("/", 1)[1]
-                path = f"{datafolder}/samples/{identifier}"
-                paths.append(path)
-                smiles.append(smile)
-                path_to_smiles[path] = smile
+    for _ in metadata:
+        if (dataset_type == "chemotion"):
+            compound = _
+            smile = compound.get("cano_smiles")
+            if not smile:
+                continue
+            for dataset in compound.get("datasets", []):
+                for attachment in dataset.get("attacments", []):
+                    identifier = attachment["identifier"].split("/", 1)[1]
+                    path = f"{datafolder}/samples/{identifier}"
+                    paths.append(path)
+                    smiles.append(smile)
+                    path_to_smiles[path] = smile
+        elif (dataset_type == "sdbs"):
+            entry = _
+            if not all(key in entry for key in ['smiles', 'filename', 'compound_name', 'sdbs_id']):
+                raise ValueError(f"Missing required fields in compound: {entry}")
+            
+            filename = entry["filename"]
+            path = f"{datafolder}/samples/{filename}"
+            smile = entry["smiles"]
+
+            paths.append(path)
+            smiles.append(smile)
+            path_to_smiles[path] = smile
+            
+
     return paths, smiles, path_to_smiles
 
 
-def compute_functional_groups(smiles):
+def compute_functional_groups(smiles, dataset_type):
     func_group_identifier = FunctionalGroupIdentifier(FUNCTIONAL_GROUP_SMARTS)
     smiles_labels = {}
 
     start_time = time.time()
-    for smile in tqdm(smiles, desc="Encoding SMILES", colour="yellow"):
+    for smile in tqdm(smiles, desc=f"Computing functional groups from: {dataset_type}", colour="yellow"):
         label_vec = func_group_identifier.encode(smile)
         if label_vec is not None:
             smiles_labels[smile] = label_vec
@@ -82,13 +82,13 @@ def compute_functional_groups(smiles):
     return smiles_labels
 
 
-def read_spectra_samples(paths, path_to_smiles, smiles_to_functional_group):
+def read_spectra_samples(paths, path_to_smiles, smiles_to_functional_group, dataset_type):
     # Parallel loading of spectra samples
     start_time = time.time()
     samples = []
     with mp.Pool(processes=calculate_max_workers()) as pool:
         # Create a progress bar that updates as we get results
-        for result in tqdm(pool.imap_unordered(load_sample_parallel, paths), total=len(paths), desc="Loading samples", colour="yellow"):
+        for result in tqdm(pool.imap_unordered(load_sample_parallel, paths), total=len(paths), desc=f"Loading samples from: {dataset_type}", colour="yellow"):
             if not result:
                 continue
             sample, path = result

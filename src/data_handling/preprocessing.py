@@ -53,13 +53,13 @@ def preprocess_samples(samples):
         return
     
     # process first sample with visualization steps
-    preprocess_with_plot(samples[0])
+    #preprocess_with_plot(samples[0])
 
     # preprocess samples in parallel
     with mp.Pool(calculate_max_workers()) as pool:
         processed = []
-        for result in tqdm(pool.imap_unordered(process_wrapper, enumerate(samples[1:], start=1)),
-                          total=len(samples) - 1,
+        for result in tqdm(pool.imap_unordered(process_wrapper, enumerate(samples)),
+                          total=len(samples),
                           desc="Processing samples",
                           colour="yellow"):
             if result is not None:

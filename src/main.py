@@ -17,14 +17,12 @@ import random
 
 def main():
     # load samples
-    samples = load_samples("data/public/chemotion")
-
-    
-
+    samples_chemotion = load_samples("data/public/chemotion", "chemotion")
+    samples_sdbs = load_samples("data/public/sdbs/processed", "sdbs")
+    samples = samples_chemotion + samples_sdbs
 
     # preprocess
     preprocess_samples(samples)
-
 
     # Print class distribution for ALL samples
     class_names = list(FUNCTIONAL_GROUP_SMARTS.keys())
