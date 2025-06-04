@@ -73,7 +73,7 @@ def compute_functional_groups(smiles, dataset_type):
     smiles_labels = {}
 
     start_time = time.time()
-    for smile in tqdm(smiles, desc=f"Computing functional groups from: {dataset_type}", colour="yellow"):
+    for smile in tqdm(smiles, desc=f"Encoding SMILES: {dataset_type}", colour="yellow"):
         label_vec = func_group_identifier.encode(smile)
         if label_vec is not None:
             smiles_labels[smile] = label_vec
