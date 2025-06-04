@@ -91,7 +91,7 @@ from sdbs_preprocessing import name_to_smiles
 
 smiles = name_to_smiles("2-furoic acid")
 csv_to_jcamp(
-    csv_path="./data/public/processed_dataset/2-furoic acid.csv", 
+    csv_path="./data/public/sdbs/processed_dataset/2-furoic acid.csv", 
     jcamp_path="output.jdx",
     title="CHS-424",
     origin="Your Name",
