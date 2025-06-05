@@ -42,7 +42,7 @@ def name_to_smiles(name):
         if smiles:
             #print(f"Resolved '{name}' via cirpy: {smiles}")
             return smiles # Return if successful
-        smiles = get_compounds(name)
+        smiles = get_compounds(name)[0].isomeric_smiles
         if smiles:
             return smiles
         print(f"Could not resolve: {name}")
@@ -65,7 +65,7 @@ def name_to_smiles_and_inchi(name):
 
 def convert_x(x_in, unit_from, unit_to):
     """Convert between micrometer and wavenumber."""
-    if unit_to == 'micrometers' and x_out == 'MICROMETERS':
+    if unit_to == 'micrometers' and unit_from == 'MICROMETERS':
         x_out = x_in
         return x_out
     elif unit_to == 'cm-1' and unit_from in ['1/CM', 'cm-1', '1/cm', 'Wavenumbers (cm-1)']:
@@ -91,7 +91,7 @@ def convert_y(y_in, unit_from, unit_to):
         y_out = np.array([1 / 10 ** j for j in y_in])
         return y_out
     elif unit_to == 'absorbance' and unit_from in ['% Transmission', 'TRANSMITTANCE', 'Transmittance']:
-        y_out = np.array([np.log10(1 / j) for j in y_in])
+        y_out = np.array([np.log10(1 / max(j, 1e-10)) for j in y_in])
         return y_out
 
 
@@ -112,14 +112,11 @@ def get_png():
 
 def get_unique(x_in, y_in):
     """Removes duplicates in x and takes smallest y value for each x value."""
-    x_out = sorted(list(set(x_in)), reverse=True)
-    y_out = []
-    for i in x_out:
-        y_temp = []
-        for ii, j in zip(x_in, y_in):
-            if i == ii:
-                y_temp.append(j)
-        y_out.append(min(y_temp))
+    temp = {}
+    for x_val, y_val in zip(x_in, y_in):
+        temp[x_val] = min(temp.get(x_val, float('inf')), y_val)
+    x_out = sorted(temp.keys(), reverse=True)
+    y_out = [temp[x] for x in x_out]
     return x_out, y_out
 
 
@@ -155,7 +152,11 @@ def get_sdbs():
             continue
         
         # Spectrum Processing
-        x, y = np.linspace(4000, 400, 600), np.random.rand(600)
+        # --- Spectrum extraction/interpolation logic here ---
+        # Replace the next two lines with your actual spectrum extraction code
+        # For example, x = np.linspace(4000, 400, 600); y = ... (interpolated spectrum)
+        x = np.linspace(4000, 400, 600)
+        y = np.random.rand(600)  # Replace with actual spectrum extraction!
 
         # --- Save Data ---
         safe_name = re.sub(r'[\\/*?:"<>|]', "_", compound_name)

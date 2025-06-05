@@ -29,17 +29,17 @@ def main():
     num_classes = len(class_names)
     class_counts = [0] * num_classes  # Track positives per class
     
-    removed_samples = []
-    for sample in samples:
-        labels = sample.labels  # Assuming labels is a list/array of 0s and 1s
-        if (labels[1] == 1):
-            is_pure_aromatic = (labels[1] == 1) and sum(labels) == 1
-            if (is_pure_aromatic):
-                if random.randrange(8) != 1:
-                    removed_samples.append(sample)
+    # removed_samples = []
+    # for sample in samples:
+    #     labels = sample.labels  # Assuming labels is a list/array of 0s and 1s
+    #     if (labels[1] == 1):
+    #         is_pure_aromatic = (labels[1] == 1) and sum(labels) == 1
+    #         if (is_pure_aromatic):
+    #             if random.randrange(8) != 1:
+    #                 removed_samples.append(sample)
     
-    print(f"Removed {len(removed_samples)} samples")
-    samples = [s for s in samples if s not in removed_samples]
+    # print(f"Removed {len(removed_samples)} samples")
+    # samples = [s for s in samples if s not in removed_samples]
     
     for sample in samples:
         labels = sample.labels

@@ -1,9 +1,4071 @@
 [
   {
+    "smiles": "C1(=CC(=CC=C1)C(=O)O)C",
+    "filename": "m-toluic acid.jdx",
+    "compound_name": "m-toluic acid",
+    "sdbs_id": "1000"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C=1C=C(C(C(=O)O)=CC1)C(=O)O",
+    "filename": "4-nitrophthalic acid.jdx",
+    "compound_name": "4-nitrophthalic acid",
+    "sdbs_id": "1001"
+  },
+  {
+    "smiles": "BrC=1C(=C(C(=C(C1C(=O)O)C(=O)O)Br)Br)Br",
+    "filename": "tetrabromophthalic acid.jdx",
+    "compound_name": "tetrabromophthalic acid",
+    "sdbs_id": "1002"
+  },
+  {
+    "smiles": "[Na].ClNS(=O)(=O)C1=CC=C(C)C=C1",
+    "filename": "N-chloro-p-toluenesulfonamide sodium salt.jdx",
+    "compound_name": "N-chloro-p-toluenesulfonamide sodium salt",
+    "sdbs_id": "1003"
+  },
+  {
+    "smiles": "C(C)C1(C(NC(NC1=O)=O)=O)CC.[Na]",
+    "filename": "sodium 5,5-diethylbarbiturate.jdx",
+    "compound_name": "sodium 5,5-diethylbarbiturate",
+    "sdbs_id": "1005"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C=1C=C2C(C(=O)OC2=O)=CC1",
+    "filename": "4-nitrophthalic anhydride.jdx",
+    "compound_name": "4-nitrophthalic anhydride",
+    "sdbs_id": "1006"
+  },
+  {
+    "smiles": "[C@@H]12[C@@H](CC=CC1)C(=O)OC2=O",
+    "filename": "cis-4-cyclohexene-1,2-dicarboxylic anhydride.jdx",
+    "compound_name": "cis-4-cyclohexene-1,2-dicarboxylic anhydride",
+    "sdbs_id": "1007"
+  },
+  {
+    "smiles": "OC1=CC=C(C=C1)C(C)=O",
+    "filename": "4'-hydroxyacetophenone.jdx",
+    "compound_name": "4'-hydroxyacetophenone",
+    "sdbs_id": "1008"
+  },
+  {
+    "smiles": "BrC1=C(C(=CC(=C1)CBr)Br)O",
+    "filename": "2,6-dibromo-4-(bromomethyl)phenol.jdx",
+    "compound_name": "2,6-dibromo-4-(bromomethyl)phenol",
+    "sdbs_id": "1009"
+  },
+  {
+    "smiles": "C(C1=CC=C(C=O)C=C1)(=O)O",
+    "filename": "terephthalaldehydic acid.jdx",
+    "compound_name": "terephthalaldehydic acid",
+    "sdbs_id": "1010"
+  },
+  {
+    "smiles": "C(C1=CC(O)=C(O)C(O)=C1)(=O)OC",
+    "filename": "methyl gallate.jdx",
+    "compound_name": "methyl gallate",
+    "sdbs_id": "1011"
+  },
+  {
+    "smiles": "BrC1=CC=C(C(=O)OC)C=C1",
+    "filename": "methyl p-bromobenzoate.jdx",
+    "compound_name": "methyl p-bromobenzoate",
+    "sdbs_id": "1012"
+  },
+  {
+    "smiles": "ClCC(=O)C1=CC(=C(C=C1)O)O",
+    "filename": "2-chloro-3',4'-dihydroxyacetophenone.jdx",
+    "compound_name": "2-chloro-3',4'-dihydroxyacetophenone",
+    "sdbs_id": "1013"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C1=CC=C(C=C1)C(C)=O",
+    "filename": "4'-nitroacetophenone.jdx",
+    "compound_name": "4'-nitroacetophenone",
+    "sdbs_id": "1014"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)(=O)NC(=S)N",
+    "filename": "benzoylthiourea.jdx",
+    "compound_name": "benzoylthiourea",
+    "sdbs_id": "1015"
+  },
+  {
+    "smiles": "OC=1C=C(C=CC1)C(C)=O",
+    "filename": "3'-hydroxyacetophenone.jdx",
+    "compound_name": "3'-hydroxyacetophenone",
+    "sdbs_id": "1016"
+  },
+  {
+    "smiles": "OC1=C(C(=O)O)C=CC=C1O",
+    "filename": "2,3-dihydroxybenzoic acid.jdx",
+    "compound_name": "2,3-dihydroxybenzoic acid",
+    "sdbs_id": "1017"
+  },
+  {
+    "smiles": "BrC(C1=CC=C(C=C1)C(Br)Br)Br",
+    "filename": "alpha,alpha,alpha',alpha'-tetrabromo-p-xylene.jdx",
+    "compound_name": "alpha,alpha,alpha',alpha'-tetrabromo-p-xylene",
+    "sdbs_id": "1018"
+  },
+  {
+    "smiles": "NC=1C=C(C=CC1)C(C)=O",
+    "filename": "3'-aminoacetophenone.jdx",
+    "compound_name": "3'-aminoacetophenone",
+    "sdbs_id": "1019"
+  },
+  {
+    "smiles": "C1(=CC(=C(C=C1)S(=O)(=O)O)C)C",
+    "filename": "m-xylene-4-sulfonic acid.jdx",
+    "compound_name": "m-xylene-4-sulfonic acid",
+    "sdbs_id": "1020"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C=1C=C(C=CC1)C(C)=O",
+    "filename": "3'-nitroacetophenone.jdx",
+    "compound_name": "3'-nitroacetophenone",
+    "sdbs_id": "1021"
+  },
+  {
+    "smiles": "C(CCCCCCCC)C1=CC=C(C=C1)OCCOCCOCCOCCOCCO",
+    "filename": "pentaethylene glycol mono-p-nonylphenyl ether.jdx",
+    "compound_name": "pentaethylene glycol mono-p-nonylphenyl ether",
+    "sdbs_id": "1022"
+  },
+  {
+    "smiles": "C(CCCCCCCC)C1=CC=C(C=C1)OCCOCCO",
+    "filename": "diethylene glycol mono-p-nonylphenyl ether.jdx",
+    "compound_name": "diethylene glycol mono-p-nonylphenyl ether",
+    "sdbs_id": "1023"
+  },
+  {
+    "smiles": "C=1(C(=CC=CC1)C)C",
+    "filename": "o-xylene.jdx",
+    "compound_name": "o-xylene",
+    "sdbs_id": "1028"
+  },
+  {
+    "smiles": "C(C)(=O)OC1CCCCC1",
+    "filename": "cyclohexyl acetate.jdx",
+    "compound_name": "cyclohexyl acetate",
+    "sdbs_id": "102"
+  },
+  {
+    "smiles": "CC(CC(C)=O)=O",
+    "filename": "2,4-pentanedione.jdx",
+    "compound_name": "2,4-pentanedione",
+    "sdbs_id": "1030"
+  },
+  {
+    "smiles": "C1(=CC(=CC=C1)C)C",
+    "filename": "m-xylene.jdx",
+    "compound_name": "m-xylene",
+    "sdbs_id": "1032"
+  },
+  {
+    "smiles": "C(CC)(=O)O",
+    "filename": "propionic acid.jdx",
+    "compound_name": "propionic acid",
+    "sdbs_id": "1033"
+  },
+  {
+    "smiles": "C(C)(=O)OC(C)=O",
+    "filename": "acetic anhydride.jdx",
+    "compound_name": "acetic anhydride",
+    "sdbs_id": "1034"
+  },
+  {
+    "smiles": "C(CCCCCCC\\C=C/CCCCCCCC)(=O)O",
+    "filename": "oleic acid.jdx",
+    "compound_name": "oleic acid",
+    "sdbs_id": "1035"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)=C(C(=O)OCC)C(=O)OCC",
+    "filename": "diethyl benzylidenemalonate.jdx",
+    "compound_name": "diethyl benzylidenemalonate",
+    "sdbs_id": "1036"
+  },
+  {
+    "smiles": "C(CCCCCCC\\C=C/C\\C=C/C\\C=C/CC)(=O)OC",
+    "filename": "methyl cis,cis,cis-9,12,15-octadecatrienoate.jdx",
+    "compound_name": "methyl cis,cis,cis-9,12,15-octadecatrienoate",
+    "sdbs_id": "1037"
+  },
+  {
+    "smiles": "C(C=1C(C(=O)OCC=C)=CC=CC1)(=O)OCC=C",
+    "filename": "diallyl phthalate.jdx",
+    "compound_name": "diallyl phthalate",
+    "sdbs_id": "1038"
+  },
+  {
+    "smiles": "C(CC)(=O)OC=C",
+    "filename": "vinyl propionate.jdx",
+    "compound_name": "vinyl propionate",
+    "sdbs_id": "1039"
+  },
+  {
+    "smiles": "C(I)(I)I",
+    "filename": "iodoform.jdx",
+    "compound_name": "iodoform",
+    "sdbs_id": "1040"
+  },
+  {
+    "smiles": "[N+](=O)(O)[O-].NC(=O)N",
+    "filename": "urea nitrate.jdx",
+    "compound_name": "urea nitrate",
+    "sdbs_id": "1041"
+  },
+  {
+    "smiles": "Cl.NC(=N)N",
+    "filename": "guanidine hydrochloride.jdx",
+    "compound_name": "guanidine hydrochloride",
+    "sdbs_id": "1042"
+  },
+  {
+    "smiles": "Cl.NNC(=S)N",
+    "filename": "thiosemicarbazide hydrochloride.jdx",
+    "compound_name": "thiosemicarbazide hydrochloride",
+    "sdbs_id": "1043"
+  },
+  {
+    "smiles": "[Cl-].C(NN)(=O)C[N+]1=CC=CC=C1",
+    "filename": "1-(carbazoylmethyl)pyridinium chloride.jdx",
+    "compound_name": "1-(carbazoylmethyl)pyridinium chloride",
+    "sdbs_id": "1044"
+  },
+  {
+    "smiles": "BrCCCl",
+    "filename": "1-bromo-2-chloroethane.jdx",
+    "compound_name": "1-bromo-2-chloroethane",
+    "sdbs_id": "1045"
+  },
+  {
+    "smiles": "BrCCO",
+    "filename": "2-bromoethanol.jdx",
+    "compound_name": "2-bromoethanol",
+    "sdbs_id": "1046"
+  },
+  {
+    "smiles": "CNC=O",
+    "filename": "N-methylformamide.jdx",
+    "compound_name": "N-methylformamide",
+    "sdbs_id": "1047"
+  },
+  {
+    "smiles": "ClC(C(Cl)(Cl)Cl)(Cl)Cl",
+    "filename": "hexachloroethane.jdx",
+    "compound_name": "hexachloroethane",
+    "sdbs_id": "1048"
+  },
+  {
+    "smiles": "NC(=O)NNC(N)=O",
+    "filename": "biurea.jdx",
+    "compound_name": "biurea",
+    "sdbs_id": "1049"
+  },
+  {
+    "smiles": "N1C=NC=C1",
+    "filename": "imidazole.jdx",
+    "compound_name": "imidazole",
+    "sdbs_id": "1051"
+  },
+  {
+    "smiles": "N1C(=O)NC(=O)C1",
+    "filename": "hydantoin.jdx",
+    "compound_name": "hydantoin",
+    "sdbs_id": "1052"
+  },
+  {
+    "smiles": "OCC(O)C=O",
+    "filename": "DL-glyceraldehyde.jdx",
+    "compound_name": "DL-glyceraldehyde",
+    "sdbs_id": "1053"
+  },
+  {
+    "smiles": "NCCC(=O)O",
+    "filename": "beta-alanine.jdx",
+    "compound_name": "beta-alanine",
+    "sdbs_id": "1054"
+  },
+  {
+    "smiles": "N[C@@H](C)C(=O)O",
+    "filename": "L-alanine.jdx",
+    "compound_name": "L-alanine",
+    "sdbs_id": "1055"
+  },
+  {
+    "smiles": "N[C@@H](CO)C(=O)O",
+    "filename": "L-serine.jdx",
+    "compound_name": "L-serine",
+    "sdbs_id": "1056"
+  },
+  {
+    "smiles": "N[C@@H](CS)C(=O)O",
+    "filename": "L-cysteine.jdx",
+    "compound_name": "L-cysteine",
+    "sdbs_id": "1057"
+  },
+  {
+    "smiles": "C(C)NC(=O)N",
+    "filename": "ethylurea.jdx",
+    "compound_name": "ethylurea",
+    "sdbs_id": "1058"
+  },
+  {
+    "smiles": "CNC(=S)NC",
+    "filename": "1,3-dimethylthiourea.jdx",
+    "compound_name": "1,3-dimethylthiourea",
+    "sdbs_id": "1059"
+  },
+  {
+    "smiles": "N1C(=O)NC(=O)C(=O)C1=O",
+    "filename": "alloxan.jdx",
+    "compound_name": "alloxan",
+    "sdbs_id": "1060"
+  },
+  {
+    "smiles": "N1C(=S)NC(=O)CC1=O.[Na]",
+    "filename": "sodium 2-thiobarbiturate.jdx",
+    "compound_name": "sodium 2-thiobarbiturate",
+    "sdbs_id": "1061"
+  },
+  {
+    "smiles": "N1C(=O)NC(=O)C=C1",
+    "filename": "uracil.jdx",
+    "compound_name": "uracil",
+    "sdbs_id": "1062"
+  },
+  {
+    "smiles": "N1C(=S)NC(=O)CC1=O",
+    "filename": "2-thiobarbituric acid.jdx",
+    "compound_name": "2-thiobarbituric acid",
+    "sdbs_id": "1063"
+  },
+  {
+    "smiles": "C(C(O)CC(=O)[O-])(=O)[O-].[Na+].[Na+]",
+    "filename": "disodium DL-malate.jdx",
+    "compound_name": "disodium DL-malate",
+    "sdbs_id": "1064"
+  },
+  {
+    "smiles": "C(\\C=C/C(=O)O)(=O)O",
+    "filename": "maleic acid.jdx",
+    "compound_name": "maleic acid",
+    "sdbs_id": "1065"
+  },
+  {
+    "smiles": "N1C(=O)N=C(N)C=C1",
+    "filename": "cytosine.jdx",
+    "compound_name": "cytosine",
+    "sdbs_id": "1066"
+  },
+  {
+    "smiles": "C(\\C=C\\C)(=O)O",
+    "filename": "crotonic acid.jdx",
+    "compound_name": "crotonic acid",
+    "sdbs_id": "1067"
+  },
+  {
+    "smiles": "C(C(=O)[O-])(=O)OC",
+    "filename": "methyl oxalate.jdx",
+    "compound_name": "methyl oxalate",
+    "sdbs_id": "1068"
+  },
+  {
+    "smiles": "O[C@@H](CC(O)=O)C(O)=O",
+    "filename": "L-(-)-malic acid.jdx",
+    "compound_name": "L-(-)-malic acid",
+    "sdbs_id": "1069"
+  },
+  {
+    "smiles": "C(COCC(=O)O)(=O)O",
+    "filename": "diglycolic acid.jdx",
+    "compound_name": "diglycolic acid",
+    "sdbs_id": "1070"
+  },
+  {
+    "smiles": "C([C@@H](O)[C@H](O)C(=O)O)(=O)O",
+    "filename": "D-(-)-tartaric acid.jdx",
+    "compound_name": "D-(-)-tartaric acid",
+    "sdbs_id": "1071"
+  },
+  {
+    "smiles": "OC(C(=O)O)(CO)C",
+    "filename": "2,3-dihydroxy-2-methylpropionic acid.jdx",
+    "compound_name": "2,3-dihydroxy-2-methylpropionic acid",
+    "sdbs_id": "1073"
+  },
+  {
+    "smiles": "IC=1C=C(C[C@H](N)C(=O)O)C=C(C1O)I",
+    "filename": "3,5-diiodo-L-tyrosine.jdx",
+    "compound_name": "3,5-diiodo-L-tyrosine",
+    "sdbs_id": "1074"
+  },
+  {
+    "smiles": "NCCCC(=O)O",
+    "filename": "4-amino-n-butyric acid.jdx",
+    "compound_name": "4-amino-n-butyric acid",
+    "sdbs_id": "1075"
+  },
+  {
+    "smiles": "NC(C(=O)O)CC",
+    "filename": "DL-2-amino-n-butyric acid.jdx",
+    "compound_name": "DL-2-amino-n-butyric acid",
+    "sdbs_id": "1076"
+  },
+  {
+    "smiles": "CC(N)(C)C(=O)O",
+    "filename": "2-methylalanine.jdx",
+    "compound_name": "2-methylalanine",
+    "sdbs_id": "1077"
+  },
+  {
+    "smiles": "CC(N)CC(O)=O",
+    "filename": "DL-3-amino-n-butyric acid.jdx",
+    "compound_name": "DL-3-amino-n-butyric acid",
+    "sdbs_id": "1078"
+  },
+  {
+    "smiles": "N[C@@H]([C@H](O)C)C(=O)O",
+    "filename": "L-threonine.jdx",
+    "compound_name": "L-threonine",
+    "sdbs_id": "1079"
+  },
+  {
+    "smiles": "N1C=NC=2N=CNC2C1=O",
+    "filename": "hypoxanthine.jdx",
+    "compound_name": "hypoxanthine",
+    "sdbs_id": "1080"
+  },
+  {
+    "smiles": "N1C(=O)NC=2N=CNC2C1=O",
+    "filename": "xanthine.jdx",
+    "compound_name": "xanthine",
+    "sdbs_id": "1081"
+  },
+  {
+    "smiles": "N1C(=O)NC=2NC(=O)NC2C1=O",
+    "filename": "uric acid.jdx",
+    "compound_name": "uric acid",
+    "sdbs_id": "1082"
+  },
+  {
+    "smiles": "N1=CC(=CC=C1)O",
+    "filename": "3-pyridinol.jdx",
+    "compound_name": "3-pyridinol",
+    "sdbs_id": "1083"
+  },
+  {
+    "smiles": "N1=C(C=NC=C1)C(=O)N",
+    "filename": "pyrazinecarboxamide.jdx",
+    "compound_name": "pyrazinecarboxamide",
+    "sdbs_id": "1084"
+  },
+  {
+    "smiles": "N1=CN=C2N=CNC2=C1N",
+    "filename": "adenine.jdx",
+    "compound_name": "adenine",
+    "sdbs_id": "1085"
+  },
+  {
+    "smiles": "N1C(N)=NC=2N=CNC2C1=O",
+    "filename": "guanine.jdx",
+    "compound_name": "guanine",
+    "sdbs_id": "1086"
+  },
+  {
+    "smiles": "O1C=CC=C1C(=O)C(O)C1=CC=CO1",
+    "filename": "2,2'-furoin.jdx",
+    "compound_name": "2,2'-furoin",
+    "sdbs_id": "1087"
+  },
+  {
+    "smiles": "Cl.N1C(N)=NC=2N=CNC2C1=O",
+    "filename": "guanine hydrochloride.jdx",
+    "compound_name": "guanine hydrochloride",
+    "sdbs_id": "1088"
+  },
+  {
+    "smiles": "N1C(=O)NC(=O)C(C)=C1",
+    "filename": "thymine.jdx",
+    "compound_name": "thymine",
+    "sdbs_id": "1089"
+  },
+  {
+    "smiles": "C1(CCCC(=O)O1)=O",
+    "filename": "glutaric anhydride.jdx",
+    "compound_name": "glutaric anhydride",
+    "sdbs_id": "1091"
+  },
+  {
+    "smiles": "O=C(C(=O)O)CCC(=O)O",
+    "filename": "2-oxoglutaric acid.jdx",
+    "compound_name": "2-oxoglutaric acid",
+    "sdbs_id": "1092"
+  },
+  {
+    "smiles": "Cl.NC1=NC(NC=C1C)=O",
+    "filename": "4-amino-5-methyl-2(1H)-pyrimidinone hydrochloride.jdx",
+    "compound_name": "4-amino-5-methyl-2(1H)-pyrimidinone hydrochloride",
+    "sdbs_id": "1093"
+  },
+  {
+    "smiles": "C(CCCC(=O)O)(=O)O",
+    "filename": "glutaric acid.jdx",
+    "compound_name": "glutaric acid",
+    "sdbs_id": "1094"
+  },
+  {
+    "smiles": "N1[C@@H](CCC1)C(=O)O",
+    "filename": "L-proline.jdx",
+    "compound_name": "L-proline",
+    "sdbs_id": "1095"
+  },
+  {
+    "smiles": "O[C@@H]1C[C@H](NC1)C(=O)O",
+    "filename": "trans-4-hydroxy-L-proline.jdx",
+    "compound_name": "trans-4-hydroxy-L-proline",
+    "sdbs_id": "1096"
+  },
+  {
+    "smiles": "N[C@@H](CCC(=O)O)C(=O)O",
+    "filename": "L-glutamic acid.jdx",
+    "compound_name": "L-glutamic acid",
+    "sdbs_id": "1097"
+  },
+  {
+    "smiles": "NC(CCC(N)=O)C(=O)O",
+    "filename": "DL-glutamine.jdx",
+    "compound_name": "DL-glutamine",
+    "sdbs_id": "1098"
+  },
+  {
+    "smiles": "N[C@@H](CCC(N)=O)C(=O)O",
+    "filename": "L-glutamine.jdx",
+    "compound_name": "L-glutamine",
+    "sdbs_id": "1099"
+  },
+  {
+    "smiles": "O=C[C@H](O)[C@@H](O)[C@H](O)CO",
+    "filename": "D-xylose.jdx",
+    "compound_name": "D-xylose",
+    "sdbs_id": "1100"
+  },
+  {
+    "smiles": "O=C[C@H](O)[C@H](O)[C@H](O)CO",
+    "filename": "D-ribose.jdx",
+    "compound_name": "D-ribose",
+    "sdbs_id": "1101"
+  },
+  {
+    "smiles": "Cl.Cl.N1C=NC(=C1)CCN",
+    "filename": "2-(4-imidazolyl)ethylamine dihydrochloride.jdx",
+    "compound_name": "2-(4-imidazolyl)ethylamine dihydrochloride",
+    "sdbs_id": "1103"
+  },
+  {
+    "smiles": "NC(C(C)C)C(=O)O",
+    "filename": "DL-valine.jdx",
+    "compound_name": "DL-valine",
+    "sdbs_id": "1104"
+  },
+  {
+    "smiles": "N[C@@H](C(C)C)C(=O)O",
+    "filename": "L-valine.jdx",
+    "compound_name": "L-valine",
+    "sdbs_id": "1105"
+  },
+  {
+    "smiles": "NC(CCC)C(=O)O",
+    "filename": "DL-norvaline.jdx",
+    "compound_name": "DL-norvaline",
+    "sdbs_id": "1106"
+  },
+  {
+    "smiles": "N[C@@H](CCSC)C(=O)O",
+    "filename": "L-methionine.jdx",
+    "compound_name": "L-methionine",
+    "sdbs_id": "1107"
+  },
+  {
+    "smiles": "C(C)NC(=O)NCC",
+    "filename": "1,3-diethylurea.jdx",
+    "compound_name": "1,3-diethylurea",
+    "sdbs_id": "1108"
+  },
+  {
+    "smiles": "C(C)NC(=S)NCC",
+    "filename": "1,3-diethyl-2-thiourea.jdx",
+    "compound_name": "1,3-diethyl-2-thiourea",
+    "sdbs_id": "1109"
+  },
+  {
+    "smiles": "Br.NC(CCCN)C(=O)O",
+    "filename": "DL-ornithine hydrobromide.jdx",
+    "compound_name": "DL-ornithine hydrobromide",
+    "sdbs_id": "1110"
+  },
+  {
+    "smiles": "Cl.N[C@@H](CCCN)C(=O)O",
+    "filename": "L-ornithine hydrochloride.jdx",
+    "compound_name": "L-ornithine hydrochloride",
+    "sdbs_id": "1111"
+  },
+  {
+    "smiles": "Cl.NC(CCCN)C(=O)O",
+    "filename": "DL-ornithine hydrochloride.jdx",
+    "compound_name": "DL-ornithine hydrochloride",
+    "sdbs_id": "1112"
+  },
+  {
+    "smiles": "BrC1=C(C=C(C(=C1)Br)Br)Br",
+    "filename": "1,2,4,5-tetrabromobenzene.jdx",
+    "compound_name": "1,2,4,5-tetrabromobenzene",
+    "sdbs_id": "1113"
+  },
+  {
+    "smiles": "ClC1=C(C=C(C(=C1)Cl)Cl)Cl",
+    "filename": "1,2,4,5-tetrachlorobenzene.jdx",
+    "compound_name": "1,2,4,5-tetrachlorobenzene",
+    "sdbs_id": "1114"
+  },
+  {
+    "smiles": "ClC1=C(C(=CC(=C1)[N+](=O)[O-])Cl)O",
+    "filename": "2,6-dichloro-4-nitrophenol.jdx",
+    "compound_name": "2,6-dichloro-4-nitrophenol",
+    "sdbs_id": "1115"
+  },
+  {
+    "smiles": "IC1=CC=C(C=C1)[N+](=O)[O-]",
+    "filename": "p-iodonitrobenzene.jdx",
+    "compound_name": "p-iodonitrobenzene",
+    "sdbs_id": "1116"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C1=CC(=CC=C1)[N+](=O)[O-]",
+    "filename": "m-dinitrobenzene.jdx",
+    "compound_name": "m-dinitrobenzene",
+    "sdbs_id": "1117"
+  },
+  {
+    "smiles": "ClC1=CC=C(C=C1)O",
+    "filename": "p-chlorophenol.jdx",
+    "compound_name": "p-chlorophenol",
+    "sdbs_id": "1118"
+  },
+  {
+    "smiles": "ClC1=C(C=CC=C1)O",
+    "filename": "o-chlorophenol.jdx",
+    "compound_name": "o-chlorophenol",
+    "sdbs_id": "1119"
+  },
+  {
+    "smiles": "S(=O)(=O)(O)[O-].[K+]",
+    "filename": "potassium hydrogen sulfate.jdx",
+    "compound_name": "potassium hydrogen sulfate",
+    "sdbs_id": "111"
+  },
+  {
+    "smiles": "ClC=1C=C(C=CC1)O",
+    "filename": "m-chlorophenol.jdx",
+    "compound_name": "m-chlorophenol",
+    "sdbs_id": "1120"
+  },
+  {
+    "smiles": "BrC1=C(C=CC=C1)O",
+    "filename": "o-bromophenol.jdx",
+    "compound_name": "o-bromophenol",
+    "sdbs_id": "1121"
+  },
+  {
+    "smiles": "BrC1=CC=C(C=C1)O",
+    "filename": "p-bromophenol.jdx",
+    "compound_name": "p-bromophenol",
+    "sdbs_id": "1122"
+  },
+  {
+    "smiles": "BrC=1C=C(C=CC1)O",
+    "filename": "m-bromophenol.jdx",
+    "compound_name": "m-bromophenol",
+    "sdbs_id": "1123"
+  },
+  {
+    "smiles": "IC=1C=C(C=CC1)O",
+    "filename": "m-iodophenol.jdx",
+    "compound_name": "m-iodophenol",
+    "sdbs_id": "1125"
+  },
+  {
+    "smiles": "IC1=C(C=CC=C1)O",
+    "filename": "o-iodophenol.jdx",
+    "compound_name": "o-iodophenol",
+    "sdbs_id": "1126"
+  },
+  {
+    "smiles": "BrC1=C(N)C=CC=C1",
+    "filename": "o-bromoaniline.jdx",
+    "compound_name": "o-bromoaniline",
+    "sdbs_id": "1127"
+  },
+  {
+    "smiles": "C1(O)=CC=C(O)C=C1",
+    "filename": "hydroquinone.jdx",
+    "compound_name": "hydroquinone",
+    "sdbs_id": "1128"
+  },
+  {
+    "smiles": "S(=O)(=O)([O-])[O-].[NH4+].[NH4+]",
+    "filename": "ammonium sulfate.jdx",
+    "compound_name": "ammonium sulfate",
+    "sdbs_id": "112"
+  },
+  {
+    "smiles": "Cl.[N+](=O)([O-])C1=C(C=CC=C1)NN",
+    "filename": "(o-nitrophenyl)hydrazine monohydrochloride.jdx",
+    "compound_name": "(o-nitrophenyl)hydrazine monohydrochloride",
+    "sdbs_id": "1130"
+  },
+  {
+    "smiles": "C1(=CC=C(C=C1)N)N",
+    "filename": "p-phenylenediamine.jdx",
+    "compound_name": "p-phenylenediamine",
+    "sdbs_id": "1131"
+  },
+  {
+    "smiles": "C(\\C=C\\C(=O)OC)(=O)OC",
+    "filename": "dimethyl fumarate.jdx",
+    "compound_name": "dimethyl fumarate",
+    "sdbs_id": "1132"
+  },
+  {
+    "smiles": "N[C@@H](CC1=CNC=N1)C(=O)O",
+    "filename": "L-histidine.jdx",
+    "compound_name": "L-histidine",
+    "sdbs_id": "1133"
+  },
+  {
+    "smiles": "C([C@@H](C(=O)O)N)SSC[C@@H](C(=O)O)N",
+    "filename": "L-cystine.jdx",
+    "compound_name": "L-cystine",
+    "sdbs_id": "1134"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C=1NC(=CN1)C=1C(=CC2=C(OCO2)C1)N",
+    "filename": "6-(2-phenyl-5-imidazolyl)-1,3-benzodioxol-5-amine.jdx",
+    "compound_name": "6-(2-phenyl-5-imidazolyl)-1,3-benzodioxol-5-amine",
+    "sdbs_id": "1135"
+  },
+  {
+    "smiles": "OC1[C@@H](O)[C@@H](O)[C@H](O)[C@H](O1)CO",
+    "filename": "D-mannopyranose.jdx",
+    "compound_name": "D-mannopyranose",
+    "sdbs_id": "1137"
+  },
+  {
+    "smiles": "OCC(=O)[C@@H](O)[C@H](O)[C@H](O)CO",
+    "filename": "D-fructose.jdx",
+    "compound_name": "D-fructose",
+    "sdbs_id": "1139"
+  },
+  {
+    "smiles": "NC(CCCC)C(=O)O",
+    "filename": "DL-norleucine.jdx",
+    "compound_name": "DL-norleucine",
+    "sdbs_id": "1140"
+  },
+  {
+    "smiles": "N[C@@H]([C@@H](C)CC)C(=O)O",
+    "filename": "L-isoleucine.jdx",
+    "compound_name": "L-isoleucine",
+    "sdbs_id": "1141"
+  },
+  {
+    "smiles": "N[C@@H](CC(C)C)C(=O)O",
+    "filename": "L-leucine.jdx",
+    "compound_name": "L-leucine",
+    "sdbs_id": "1142"
+  },
+  {
+    "smiles": "N[C@@H](CCCNC(N)=N)C(=O)O",
+    "filename": "L-arginine.jdx",
+    "compound_name": "L-arginine",
+    "sdbs_id": "1143"
+  },
+  {
+    "smiles": "C(C)C(CO)(CO)CO",
+    "filename": "2-ethyl-2-hydroxymethyl-1,3-propanediol.jdx",
+    "compound_name": "2-ethyl-2-hydroxymethyl-1,3-propanediol",
+    "sdbs_id": "1144"
+  },
+  {
+    "smiles": "Cl.NC(CCCCN)C(=O)O",
+    "filename": "DL-lysine monohydrochloride.jdx",
+    "compound_name": "DL-lysine monohydrochloride",
+    "sdbs_id": "1145"
+  },
+  {
+    "smiles": "C(CC)NCCC",
+    "filename": "dipropylamine.jdx",
+    "compound_name": "dipropylamine",
+    "sdbs_id": "1146"
+  },
+  {
+    "smiles": "ClC1=C(C(=C(C(=C1Cl)Cl)Cl)Cl)Cl",
+    "filename": "hexachlorobenzene.jdx",
+    "compound_name": "hexachlorobenzene",
+    "sdbs_id": "1147"
+  },
+  {
+    "smiles": "FC1=C(C(=O)O)C=CC=C1",
+    "filename": "o-fluorobenzoic acid.jdx",
+    "compound_name": "o-fluorobenzoic acid",
+    "sdbs_id": "1148"
+  },
+  {
+    "smiles": "C(C=1C(O)=CC=CC1)(=O)O",
+    "filename": "salicylic acid.jdx",
+    "compound_name": "salicylic acid",
+    "sdbs_id": "1149"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C=1C=C(C)C=CC1",
+    "filename": "m-nitrotoluene.jdx",
+    "compound_name": "m-nitrotoluene",
+    "sdbs_id": "1151"
+  },
+  {
+    "smiles": "NC1=CC=C(C(=O)O)C=C1",
+    "filename": "p-aminobenzoic acid.jdx",
+    "compound_name": "p-aminobenzoic acid",
+    "sdbs_id": "1152"
+  },
+  {
+    "smiles": "NC=1C=C(C(=O)O)C=CC1",
+    "filename": "m-aminobenzoic acid.jdx",
+    "compound_name": "m-aminobenzoic acid",
+    "sdbs_id": "1153"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)OC",
+    "filename": "anisole.jdx",
+    "compound_name": "anisole",
+    "sdbs_id": "1154"
+  },
+  {
+    "smiles": "NC1=CC(=CC=C1)C",
+    "filename": "m-toluidine.jdx",
+    "compound_name": "m-toluidine",
+    "sdbs_id": "1156"
+  },
+  {
+    "smiles": "C1(C=2C(C(N1)=O)=CC=CC2)=O",
+    "filename": "phthalimide.jdx",
+    "compound_name": "phthalimide",
+    "sdbs_id": "1157"
+  },
+  {
+    "smiles": "C1(=O)OCC2=CC=CC=C12",
+    "filename": "phthalide.jdx",
+    "compound_name": "phthalide",
+    "sdbs_id": "1158"
+  },
+  {
+    "smiles": "C(C1=CC(C(=O)O)=CC=C1)(=O)O",
+    "filename": "isophthalic acid.jdx",
+    "compound_name": "isophthalic acid",
+    "sdbs_id": "1159"
+  },
+  {
+    "smiles": "C(\\C=C\\C=C\\C)(=O)O",
+    "filename": "trans,trans-2,4-hexadienoic acid.jdx",
+    "compound_name": "trans,trans-2,4-hexadienoic acid",
+    "sdbs_id": "115"
+  },
+  {
+    "smiles": "COC1=CC=C(C=C1)OC",
+    "filename": "p-dimethoxybenzene.jdx",
+    "compound_name": "p-dimethoxybenzene",
+    "sdbs_id": "1160"
+  },
+  {
+    "smiles": "[Na+].OCS(=O)[O-]",
+    "filename": "hydroxymethanesulfinic acid sodium salt.jdx",
+    "compound_name": "hydroxymethanesulfinic acid sodium salt",
+    "sdbs_id": "1162"
+  },
+  {
+    "smiles": "NC1=CC=C(C(NCC(=O)O)=O)C=C1",
+    "filename": "p-aminohippuric acid.jdx",
+    "compound_name": "p-aminohippuric acid",
+    "sdbs_id": "1163"
+  },
+  {
+    "smiles": "COC1=CC=C(C=C1)C(C)=O",
+    "filename": "4'-methoxyacetophenone.jdx",
+    "compound_name": "4'-methoxyacetophenone",
+    "sdbs_id": "1164"
+  },
+  {
+    "smiles": "N[C@@H](CC1=CC=CC=C1)C(=O)O",
+    "filename": "L-phenylalanine.jdx",
+    "compound_name": "L-phenylalanine",
+    "sdbs_id": "1165"
+  },
+  {
+    "smiles": "N[C@@H](CC1=CC=C(C=C1)O)C(=O)O",
+    "filename": "L-tyrosine.jdx",
+    "compound_name": "L-tyrosine",
+    "sdbs_id": "1166"
+  },
+  {
+    "smiles": "[C@@H]1([C@H](O)[C@H](O)[C@@H](CO)O1)N1C(=O)NC(=O)C=C1",
+    "filename": "uridine.jdx",
+    "compound_name": "uridine",
+    "sdbs_id": "1167"
+  },
+  {
+    "smiles": "[C@@H]1([C@H](O)[C@H](O)[C@@H](CO)O1)N1C(=O)N=C(N)C=C1",
+    "filename": "cytidine.jdx",
+    "compound_name": "cytidine",
+    "sdbs_id": "1168"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C1=CC=CC2=CC=CC(=C12)[N+](=O)[O-]",
+    "filename": "1,8-dinitronaphthalene.jdx",
+    "compound_name": "1,8-dinitronaphthalene",
+    "sdbs_id": "1169"
+  },
+  {
+    "smiles": "C1=C(C=CC2=CC=CC=C12)N",
+    "filename": "2-naphthylamine.jdx",
+    "compound_name": "2-naphthylamine",
+    "sdbs_id": "1170"
+  },
+  {
+    "smiles": "C1(=CC=CC2=CC=CC=C12)N",
+    "filename": "1-naphthylamine.jdx",
+    "compound_name": "1-naphthylamine",
+    "sdbs_id": "1171"
+  },
+  {
+    "smiles": "C(C1=CC=C(C(=O)OC)C=C1)(=O)OC",
+    "filename": "dimethyl terephthalate.jdx",
+    "compound_name": "dimethyl terephthalate",
+    "sdbs_id": "1172"
+  },
+  {
+    "smiles": "[C@@H]1([C@H](O)[C@H](O)[C@@H](CO)O1)N1C=NC=2C(O)=NC=NC12",
+    "filename": "inosine.jdx",
+    "compound_name": "inosine",
+    "sdbs_id": "1173"
+  },
+  {
+    "smiles": "[C@@H]1([C@H](O)[C@H](O)[C@@H](CO)O1)N1C=NC=2C(=O)NC(=O)NC12",
+    "filename": "xanthosine.jdx",
+    "compound_name": "xanthosine",
+    "sdbs_id": "1174"
+  },
+  {
+    "smiles": "C(C)(CC)C1=CC=CC=C1",
+    "filename": "sec-butylbenzene.jdx",
+    "compound_name": "sec-butylbenzene",
+    "sdbs_id": "1175"
+  },
+  {
+    "smiles": "C1(=CC=C(C=C1)C)C(C)C",
+    "filename": "p-cymene.jdx",
+    "compound_name": "p-cymene",
+    "sdbs_id": "1176"
+  },
+  {
+    "smiles": "C(C)(C)(C)C1=CC=CC=C1",
+    "filename": "tert-butylbenzene.jdx",
+    "compound_name": "tert-butylbenzene",
+    "sdbs_id": "1177"
+  },
+  {
+    "smiles": "[C@@H]1(C[C@H](O)[C@@H](CO)O1)N1C(=O)NC(=O)C(C)=C1",
+    "filename": "thymidine.jdx",
+    "compound_name": "thymidine",
+    "sdbs_id": "1178"
+  },
+  {
+    "smiles": "N[C@@H](CC1=CNC2=CC=CC=C12)C(=O)O",
+    "filename": "L-tryptophan.jdx",
+    "compound_name": "L-tryptophan",
+    "sdbs_id": "1179"
+  },
+  {
+    "smiles": "C1=CC=CC=2OC3=C(C21)C=CC=C3",
+    "filename": "dibenzofuran.jdx",
+    "compound_name": "dibenzofuran",
+    "sdbs_id": "1180"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C1=CC=C(C=C1)C1=CC=CC=C1",
+    "filename": "4-nitrobiphenyl.jdx",
+    "compound_name": "4-nitrobiphenyl",
+    "sdbs_id": "1181"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C1=CC=CC=C1",
+    "filename": "biphenyl.jdx",
+    "compound_name": "biphenyl",
+    "sdbs_id": "1182"
+  },
+  {
+    "smiles": "OC1[C@H](O)[C@@H](O)[C@@H](O)[C@H](O1)CO",
+    "filename": "D-galactopyranose.jdx",
+    "compound_name": "D-galactopyranose",
+    "sdbs_id": "1183"
+  },
+  {
+    "smiles": "CC1=C(C(=C(C(=C1C)C)C)C)C",
+    "filename": "hexamethylbenzene.jdx",
+    "compound_name": "hexamethylbenzene",
+    "sdbs_id": "1184"
+  },
+  {
+    "smiles": "N1C(=CC=C1)C=O",
+    "filename": "2-pyrrolecarbaldehyde.jdx",
+    "compound_name": "2-pyrrolecarbaldehyde",
+    "sdbs_id": "1187"
+  },
+  {
+    "smiles": "C1(C=2C(C(N1CCC(=O)O)=O)=CC=CC2)=O",
+    "filename": "3-phthalimidopropionic acid.jdx",
+    "compound_name": "3-phthalimidopropionic acid",
+    "sdbs_id": "118"
+  },
+  {
+    "smiles": "C1=CC=CC=2OC3=CC=CC=C3C(C12)=O",
+    "filename": "xanthone.jdx",
+    "compound_name": "xanthone",
+    "sdbs_id": "1191"
+  },
+  {
+    "smiles": "C1=CC=CC=2OC3=CC=CC=C3CC12",
+    "filename": "xanthene.jdx",
+    "compound_name": "xanthene",
+    "sdbs_id": "1192"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)NC(=O)NC1=CC=CC=C1",
+    "filename": "1,3-diphenylurea.jdx",
+    "compound_name": "1,3-diphenylurea",
+    "sdbs_id": "1193"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)NC(=S)NC1=CC=CC=C1",
+    "filename": "1,3-diphenylthiourea.jdx",
+    "compound_name": "1,3-diphenylthiourea",
+    "sdbs_id": "1194"
+  },
+  {
+    "smiles": "C1=CC=CC2=CC3=CC=CC=C3C=C12",
+    "filename": "anthracene.jdx",
+    "compound_name": "anthracene",
+    "sdbs_id": "1195"
+  },
+  {
+    "smiles": "C(C)(C)(C)C1=CC(=CC(=C1O)C(C)(C)C)C",
+    "filename": "2,6-di-tert-butyl-p-cresol.jdx",
+    "compound_name": "2,6-di-tert-butyl-p-cresol",
+    "sdbs_id": "1196"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C1=CC(=CC=C1)C1=CC=CC=C1",
+    "filename": "m-terphenyl.jdx",
+    "compound_name": "m-terphenyl",
+    "sdbs_id": "1197"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C=1C(=CC=CC1)C1=CC=CC=C1",
+    "filename": "o-terphenyl.jdx",
+    "compound_name": "o-terphenyl",
+    "sdbs_id": "1198"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C1=CC=C(C=C1)C1=CC=CC=C1",
+    "filename": "p-terphenyl.jdx",
+    "compound_name": "p-terphenyl",
+    "sdbs_id": "1199"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCCCCCCC)(=O)OC",
+    "filename": "methyl heptadecanoate.jdx",
+    "compound_name": "methyl heptadecanoate",
+    "sdbs_id": "119"
+  },
+  {
+    "smiles": "ClC1=CC=C(C=C1)OCC1=CC=CC=C1",
+    "filename": "benzyl p-chlorophenyl ether.jdx",
+    "compound_name": "benzyl p-chlorophenyl ether",
+    "sdbs_id": "11"
+  },
+  {
+    "smiles": "OCC1OC(OCC2OC(OC3(CO)OC(CO)C(O)C3O)C(O)C(O)C2O)C(O)C(O)C1O",
+    "filename": "D-(+)-raffinose.jdx",
+    "compound_name": "D-(+)-raffinose",
+    "sdbs_id": "1200"
+  },
+  {
+    "smiles": "C(CCCCCCC\\C=C\\CCCCCCCC)(=O)O",
+    "filename": "elaidic acid.jdx",
+    "compound_name": "elaidic acid",
+    "sdbs_id": "1201"
+  },
+  {
+    "smiles": "C(CC[C@@H](C(=O)O)NC(=O)C1=CC=C(NCC2=CN=C3N=C(N)NC(=O)C3=N2)C=C1)(=O)O",
+    "filename": "folic acid.jdx",
+    "compound_name": "folic acid",
+    "sdbs_id": "1202"
+  },
+  {
+    "smiles": "S(=O)(=O)([O-])[O-].[Cd+2]",
+    "filename": "cadmium sulfate.jdx",
+    "compound_name": "cadmium sulfate",
+    "sdbs_id": "1203"
+  },
+  {
+    "smiles": "ClCC(=O)OC",
+    "filename": "methyl chloroacetate.jdx",
+    "compound_name": "methyl chloroacetate",
+    "sdbs_id": "1204"
+  },
+  {
+    "smiles": "NCC(=O)NCC(=O)O",
+    "filename": "glycylglycine.jdx",
+    "compound_name": "glycylglycine",
+    "sdbs_id": "1205"
+  },
+  {
+    "smiles": "C1(=CC=CC2=CC=CC=C12)O",
+    "filename": "1-naphthol.jdx",
+    "compound_name": "1-naphthol",
+    "sdbs_id": "1206"
+  },
+  {
+    "smiles": "CN1C(N(C(C2=CC=CC=C12)=O)C)=O",
+    "filename": "1,3-dimethyl-2,4(1H,3H)-quinazolinedione.jdx",
+    "compound_name": "1,3-dimethyl-2,4(1H,3H)-quinazolinedione",
+    "sdbs_id": "1207"
+  },
+  {
+    "smiles": "C(=O)OC",
+    "filename": "methyl formate.jdx",
+    "compound_name": "methyl formate",
+    "sdbs_id": "1208"
+  },
+  {
+    "smiles": "OCCO.OC(=O)c1ccc(cc1)C(O)=O",
+    "filename": "poly(ethylene terephthalate).jdx",
+    "compound_name": "poly(ethylene terephthalate)",
+    "sdbs_id": "120"
+  },
+  {
+    "smiles": "CC(C=C)O",
+    "filename": "3-buten-2-ol.jdx",
+    "compound_name": "3-buten-2-ol",
+    "sdbs_id": "1211"
+  },
+  {
+    "smiles": "COCOC",
+    "filename": "formaldehyde dimethyl acetal.jdx",
+    "compound_name": "formaldehyde dimethyl acetal",
+    "sdbs_id": "1213"
+  },
+  {
+    "smiles": "COCC#N",
+    "filename": "methoxyacetonitrile.jdx",
+    "compound_name": "methoxyacetonitrile",
+    "sdbs_id": "1214"
+  },
+  {
+    "smiles": "CNCCO",
+    "filename": "2-(methylamino)ethanol.jdx",
+    "compound_name": "2-(methylamino)ethanol",
+    "sdbs_id": "1215"
+  },
+  {
+    "smiles": "C(=O)OCC",
+    "filename": "ethyl formate.jdx",
+    "compound_name": "ethyl formate",
+    "sdbs_id": "1216"
+  },
+  {
+    "smiles": "ClCC(CCl)O",
+    "filename": "1,3-dichloro-2-propanol.jdx",
+    "compound_name": "1,3-dichloro-2-propanol",
+    "sdbs_id": "1217"
+  },
+  {
+    "smiles": "C(C)(=O)OCCCl",
+    "filename": "2-chloroethyl acetate.jdx",
+    "compound_name": "2-chloroethyl acetate",
+    "sdbs_id": "1219"
+  },
+  {
+    "smiles": "C(C=C)(=O)OC",
+    "filename": "methyl acrylate.jdx",
+    "compound_name": "methyl acrylate",
+    "sdbs_id": "1220"
+  },
+  {
+    "smiles": "BrCC(=O)OCC",
+    "filename": "ethyl bromoacetate.jdx",
+    "compound_name": "ethyl bromoacetate",
+    "sdbs_id": "1221"
+  },
+  {
+    "smiles": "C(C(=C)C)(=O)O",
+    "filename": "methacrylic acid.jdx",
+    "compound_name": "methacrylic acid",
+    "sdbs_id": "1222"
+  },
+  {
+    "smiles": "C(CCC)#N",
+    "filename": "butyronitrile.jdx",
+    "compound_name": "butyronitrile",
+    "sdbs_id": "1223"
+  },
+  {
+    "smiles": "C(C(C)C)(=O)O",
+    "filename": "isobutyric acid.jdx",
+    "compound_name": "isobutyric acid",
+    "sdbs_id": "1224"
+  },
+  {
+    "smiles": "BrCCCC",
+    "filename": "1-bromobutane.jdx",
+    "compound_name": "1-bromobutane",
+    "sdbs_id": "1225"
+  },
+  {
+    "smiles": "C(CC)(=O)OC",
+    "filename": "methyl propionate.jdx",
+    "compound_name": "methyl propionate",
+    "sdbs_id": "1226"
+  },
+  {
+    "smiles": "C(CCC)(=O)O",
+    "filename": "butyric acid.jdx",
+    "compound_name": "butyric acid",
+    "sdbs_id": "1227"
+  },
+  {
+    "smiles": "C(C)(CC)N",
+    "filename": "sec-butylamine.jdx",
+    "compound_name": "sec-butylamine",
+    "sdbs_id": "1228"
+  },
+  {
+    "smiles": "OC(C#N)(C)C",
+    "filename": "2-hydroxy-2-methylpropionitrile.jdx",
+    "compound_name": "2-hydroxy-2-methylpropionitrile",
+    "sdbs_id": "1229"
+  },
+  {
+    "smiles": "ClC1=CC=2C(C3=CC=CC=C3C(C2C=C1)=O)=O",
+    "filename": "2-chloroanthraquinone.jdx",
+    "compound_name": "2-chloroanthraquinone",
+    "sdbs_id": "122"
+  },
+  {
+    "smiles": "O1COCCC1",
+    "filename": "1,3-dioxane.jdx",
+    "compound_name": "1,3-dioxane",
+    "sdbs_id": "1231"
+  },
+  {
+    "smiles": "COC(C)OC",
+    "filename": "acetaldehyde dimethyl acetal.jdx",
+    "compound_name": "acetaldehyde dimethyl acetal",
+    "sdbs_id": "1232"
+  },
+  {
+    "smiles": "ClC(C)(C)C",
+    "filename": "2-chloro-2-methylpropane.jdx",
+    "compound_name": "2-chloro-2-methylpropane",
+    "sdbs_id": "1233"
+  },
+  {
+    "smiles": "C(C)(C)(C)N",
+    "filename": "tert-butylamine.jdx",
+    "compound_name": "tert-butylamine",
+    "sdbs_id": "1234"
+  },
+  {
+    "smiles": "C1CCCC1",
+    "filename": "cyclopentane.jdx",
+    "compound_name": "cyclopentane",
+    "sdbs_id": "1235"
+  },
+  {
+    "smiles": "O(CCO)CCO",
+    "filename": "2,2'-oxydiethanol.jdx",
+    "compound_name": "2,2'-oxydiethanol",
+    "sdbs_id": "1236"
+  },
+  {
+    "smiles": "C(C(C)C)(=O)OC",
+    "filename": "methyl isobutyrate.jdx",
+    "compound_name": "methyl isobutyrate",
+    "sdbs_id": "1237"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C1=CC=C2C=CC=NC2=C1",
+    "filename": "7-nitroquinoline.jdx",
+    "compound_name": "7-nitroquinoline",
+    "sdbs_id": "1238"
+  },
+  {
+    "smiles": "C1=CC=CC=2C(C3=CC=CC=C3C(C12)=O)=O",
+    "filename": "anthraquinone.jdx",
+    "compound_name": "anthraquinone",
+    "sdbs_id": "123"
+  },
+  {
+    "smiles": "C(CCCC)C1=CC=CC=C1",
+    "filename": "pentylbenzene.jdx",
+    "compound_name": "pentylbenzene",
+    "sdbs_id": "1240"
+  },
+  {
+    "smiles": "C(CCCCC)C1=CC=CC=C1",
+    "filename": "hexylbenzene.jdx",
+    "compound_name": "hexylbenzene",
+    "sdbs_id": "1241"
+  },
+  {
+    "smiles": "C(CCCCCC)C1=CC=CC=C1",
+    "filename": "heptylbenzene.jdx",
+    "compound_name": "heptylbenzene",
+    "sdbs_id": "1242"
+  },
+  {
+    "smiles": "C(CCCCCCC)C1=CC=CC=C1",
+    "filename": "octylbenzene.jdx",
+    "compound_name": "octylbenzene",
+    "sdbs_id": "1243"
+  },
+  {
+    "smiles": "C(CCCCCCCC)C1=CC=CC=C1",
+    "filename": "nonylbenzene.jdx",
+    "compound_name": "nonylbenzene",
+    "sdbs_id": "1244"
+  },
+  {
+    "smiles": "C(CCCCCCCCC)C1=CC=CC=C1",
+    "filename": "decylbenzene.jdx",
+    "compound_name": "decylbenzene",
+    "sdbs_id": "1245"
+  },
+  {
+    "smiles": "C(CCCCCCCCCC)C1=CC=CC=C1",
+    "filename": "undecylbenzene.jdx",
+    "compound_name": "undecylbenzene",
+    "sdbs_id": "1246"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCCC)C1=CC=CC=C1",
+    "filename": "tridecylbenzene.jdx",
+    "compound_name": "tridecylbenzene",
+    "sdbs_id": "1247"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCCCC)C1=CC=CC=C1",
+    "filename": "tetradecylbenzene.jdx",
+    "compound_name": "tetradecylbenzene",
+    "sdbs_id": "1248"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCCCCC)C1=CC=CC=C1",
+    "filename": "pentadecylbenzene.jdx",
+    "compound_name": "pentadecylbenzene",
+    "sdbs_id": "1249"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCCCCCCC)C1=CC=CC=C1",
+    "filename": "heptadecylbenzene.jdx",
+    "compound_name": "heptadecylbenzene",
+    "sdbs_id": "1250"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCCCCCCCC)(=O)OCC(COC(CCCCCCCCCCCCCCCCC)=O)OC(CCCCCCCCCCCCCCCCC)=O",
+    "filename": "1,2,3-propanetriyl tristearate.jdx",
+    "compound_name": "1,2,3-propanetriyl tristearate",
+    "sdbs_id": "1251"
+  },
+  {
+    "smiles": "CC(C)(CCC(C)C)C",
+    "filename": "2,2,5-trimethylhexane.jdx",
+    "compound_name": "2,2,5-trimethylhexane",
+    "sdbs_id": "1252"
+  },
+  {
+    "smiles": "CCCCCCCCCCCCCCCCC",
+    "filename": "n-heptadecane.jdx",
+    "compound_name": "n-heptadecane",
+    "sdbs_id": "1253"
+  },
+  {
+    "smiles": "C(C)(C)C=1C=C(C)C=C(C1)C(C)C",
+    "filename": "3,5-diisopropyltoluene.jdx",
+    "compound_name": "3,5-diisopropyltoluene",
+    "sdbs_id": "1254"
+  },
+  {
+    "smiles": "C(C)(C)C1=CC=C(C=C1)C(C)C",
+    "filename": "p-diisopropylbenzene.jdx",
+    "compound_name": "p-diisopropylbenzene",
+    "sdbs_id": "1255"
+  },
+  {
+    "smiles": "C(C)(C)C1=CC(=CC(=C1)C(C)C)C(C)C",
+    "filename": "1,3,5-triisopropylbenzene.jdx",
+    "compound_name": "1,3,5-triisopropylbenzene",
+    "sdbs_id": "1256"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)CC1=CC=CC=C1",
+    "filename": "diphenylmethane.jdx",
+    "compound_name": "diphenylmethane",
+    "sdbs_id": "1257"
+  },
+  {
+    "smiles": "S(=O)(=O)(O)O.NC(=N)N",
+    "filename": "guanidine sulfate.jdx",
+    "compound_name": "guanidine sulfate",
+    "sdbs_id": "1258"
+  },
+  {
+    "smiles": "C(CNC(=O)C1=CC=CC=C1)(=O)[O-].[Na+]",
+    "filename": "sodium hippurate.jdx",
+    "compound_name": "sodium hippurate",
+    "sdbs_id": "1259"
+  },
+  {
+    "smiles": "O=Cc1ccc2OCOc2c1",
+    "filename": "piperonal.jdx",
+    "compound_name": "piperonal",
+    "sdbs_id": "1261"
+  },
+  {
+    "smiles": "C(C(C)(C)C)#N",
+    "filename": "pivalonitrile.jdx",
+    "compound_name": "pivalonitrile",
+    "sdbs_id": "1262"
+  },
+  {
+    "smiles": "C(C)(C)C1CCCCC1",
+    "filename": "isopropylcyclohexane.jdx",
+    "compound_name": "isopropylcyclohexane",
+    "sdbs_id": "1263"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)CCC1=CC=CC=C1",
+    "filename": "bibenzyl.jdx",
+    "compound_name": "bibenzyl",
+    "sdbs_id": "1264"
+  },
+  {
+    "smiles": "C1(CCCCC1)C1=CC=CC=C1",
+    "filename": "cyclohexylbenzene.jdx",
+    "compound_name": "cyclohexylbenzene",
+    "sdbs_id": "1265"
+  },
+  {
+    "smiles": "C1=CC=CC=2C3=CC=CC=C3C3=CC=CC=C3C12",
+    "filename": "triphenylene.jdx",
+    "compound_name": "triphenylene",
+    "sdbs_id": "1266"
+  },
+  {
+    "smiles": "C(CO)(=O)O",
+    "filename": "glycolic acid.jdx",
+    "compound_name": "glycolic acid",
+    "sdbs_id": "1267"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C(C1=CC=CC=C1)C1=CC=CC=C1",
+    "filename": "triphenylmethane.jdx",
+    "compound_name": "triphenylmethane",
+    "sdbs_id": "1268"
+  },
+  {
+    "smiles": "C(CCCC)C1CCCCC1",
+    "filename": "pentylcyclohexane.jdx",
+    "compound_name": "pentylcyclohexane",
+    "sdbs_id": "1269"
+  },
+  {
+    "smiles": "C(CCCCC)C1CCCCC1",
+    "filename": "hexylcyclohexane.jdx",
+    "compound_name": "hexylcyclohexane",
+    "sdbs_id": "1270"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCC)C1CCCCC1",
+    "filename": "dodecylcyclohexane.jdx",
+    "compound_name": "dodecylcyclohexane",
+    "sdbs_id": "1271"
+  },
+  {
+    "smiles": "BrC1=CC=C(N)C=C1",
+    "filename": "p-bromoaniline.jdx",
+    "compound_name": "p-bromoaniline",
+    "sdbs_id": "1272"
+  },
+  {
+    "smiles": "CCCCCCCCCCCCCCCCCC(=O)OCC(O)CO",
+    "filename": "alpha-monostearin.jdx",
+    "compound_name": "alpha-monostearin",
+    "sdbs_id": "1273"
+  },
+  {
+    "smiles": "ClC1=C(C=C)C=CC=C1",
+    "filename": "o-chlorostyrene.jdx",
+    "compound_name": "o-chlorostyrene",
+    "sdbs_id": "1274"
+  },
+  {
+    "smiles": "C(C=C)C(C(=O)OCC)C(=O)OCC",
+    "filename": "diethyl allylmalonate.jdx",
+    "compound_name": "diethyl allylmalonate",
+    "sdbs_id": "1275"
+  },
+  {
+    "smiles": "ClCC(=O)OCC=C",
+    "filename": "allyl chloroacetate.jdx",
+    "compound_name": "allyl chloroacetate",
+    "sdbs_id": "1276"
+  },
+  {
+    "smiles": "ClCCCCCl",
+    "filename": "1,4-dichlorobutane.jdx",
+    "compound_name": "1,4-dichlorobutane",
+    "sdbs_id": "1277"
+  },
+  {
+    "smiles": "C(C)(=O)Cl",
+    "filename": "acetyl chloride.jdx",
+    "compound_name": "acetyl chloride",
+    "sdbs_id": "1278"
+  },
+  {
+    "smiles": "C(C)(=O)OC(C)CC",
+    "filename": "sec-butyl acetate.jdx",
+    "compound_name": "sec-butyl acetate",
+    "sdbs_id": "1279"
+  },
+  {
+    "smiles": "ClCCCl",
+    "filename": "1,2-dichloroethane.jdx",
+    "compound_name": "1,2-dichloroethane",
+    "sdbs_id": "1280"
+  },
+  {
+    "smiles": "ClC(C=C)CCl",
+    "filename": "3,4-dichloro-1-butene.jdx",
+    "compound_name": "3,4-dichloro-1-butene",
+    "sdbs_id": "1281"
+  },
+  {
+    "smiles": "C(C)NC1=CC=CC=C1",
+    "filename": "N-ethylaniline.jdx",
+    "compound_name": "N-ethylaniline",
+    "sdbs_id": "1282"
+  },
+  {
+    "smiles": "C(C=C)#N",
+    "filename": "acrylonitrile.jdx",
+    "compound_name": "acrylonitrile",
+    "sdbs_id": "1283"
+  },
+  {
+    "smiles": "ClCCOCCCl",
+    "filename": "bis(2-chloroethyl) ether.jdx",
+    "compound_name": "bis(2-chloroethyl) ether",
+    "sdbs_id": "1284"
+  },
+  {
+    "smiles": "ClC1=CC=C(C=O)C=C1",
+    "filename": "p-chlorobenzaldehyde.jdx",
+    "compound_name": "p-chlorobenzaldehyde",
+    "sdbs_id": "1285"
+  },
+  {
+    "smiles": "CN(C1=CC=CC=C1)C=O",
+    "filename": "N-methylformanilide.jdx",
+    "compound_name": "N-methylformanilide",
+    "sdbs_id": "1286"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C=1C=C(C=O)C=CC1",
+    "filename": "m-nitrobenzaldehyde.jdx",
+    "compound_name": "m-nitrobenzaldehyde",
+    "sdbs_id": "1287"
+  },
+  {
+    "smiles": "C(C)N(CC)CC",
+    "filename": "triethylamine.jdx",
+    "compound_name": "triethylamine",
+    "sdbs_id": "1288"
+  },
+  {
+    "smiles": "COC(C)(C)OC",
+    "filename": "acetone dimethyl acetal.jdx",
+    "compound_name": "acetone dimethyl acetal",
+    "sdbs_id": "1291"
+  },
+  {
+    "smiles": "COC1=C(C=O)C=CC(=C1)OC",
+    "filename": "2,4-dimethoxybenzaldehyde.jdx",
+    "compound_name": "2,4-dimethoxybenzaldehyde",
+    "sdbs_id": "1292"
+  },
+  {
+    "smiles": "C(C1=CC=C(C=C1)OC)=O",
+    "filename": "p-anisaldehyde.jdx",
+    "compound_name": "p-anisaldehyde",
+    "sdbs_id": "1293"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)(=O)C1=CC=CC=C1",
+    "filename": "benzophenone.jdx",
+    "compound_name": "benzophenone",
+    "sdbs_id": "1294"
+  },
+  {
+    "smiles": "ClC=1C=C(C=O)C=CC1",
+    "filename": "m-chlorobenzaldehyde.jdx",
+    "compound_name": "m-chlorobenzaldehyde",
+    "sdbs_id": "1295"
+  },
+  {
+    "smiles": "BrC1=CC=C(C=O)C=C1",
+    "filename": "p-bromobenzaldehyde.jdx",
+    "compound_name": "p-bromobenzaldehyde",
+    "sdbs_id": "1296"
+  },
+  {
+    "smiles": "BrCCCCCCCCCCBr",
+    "filename": "1,10-dibromodecane.jdx",
+    "compound_name": "1,10-dibromodecane",
+    "sdbs_id": "1297"
+  },
+  {
+    "smiles": "NCCO",
+    "filename": "2-aminoethanol.jdx",
+    "compound_name": "2-aminoethanol",
+    "sdbs_id": "1298"
+  },
+  {
+    "smiles": "C(C)(=O)OC=C",
+    "filename": "vinyl acetate.jdx",
+    "compound_name": "vinyl acetate",
+    "sdbs_id": "1299"
+  },
+  {
+    "smiles": "C(CCCCC)C=1C2=CC=CC=C2C=C2C=CC=CC12",
+    "filename": "9-hexylanthracene.jdx",
+    "compound_name": "9-hexylanthracene",
+    "sdbs_id": "129"
+  },
+  {
+    "smiles": "C(=O)OCCC",
+    "filename": "propyl formate.jdx",
+    "compound_name": "propyl formate",
+    "sdbs_id": "1301"
+  },
+  {
+    "smiles": "C(=O)OCCCCCC",
+    "filename": "hexyl formate.jdx",
+    "compound_name": "hexyl formate",
+    "sdbs_id": "1302"
+  },
+  {
+    "smiles": "C(CCCCC)O",
+    "filename": "hexyl alcohol.jdx",
+    "compound_name": "hexyl alcohol",
+    "sdbs_id": "1303"
+  },
+  {
+    "smiles": "C1CCC[C@@H]2CCCC[C@@H]12",
+    "filename": "trans-decalin.jdx",
+    "compound_name": "trans-decalin",
+    "sdbs_id": "1304"
+  },
+  {
+    "smiles": "CC(C)=CC=C(C)C",
+    "filename": "2,5-dimethyl-2,4-hexadiene.jdx",
+    "compound_name": "2,5-dimethyl-2,4-hexadiene",
+    "sdbs_id": "1305"
+  },
+  {
+    "smiles": "C(#N)CC(=O)OCC",
+    "filename": "ethyl cyanoacetate.jdx",
+    "compound_name": "ethyl cyanoacetate",
+    "sdbs_id": "1306"
+  },
+  {
+    "smiles": "BrC(Br)Br",
+    "filename": "tribromomethane.jdx",
+    "compound_name": "tribromomethane",
+    "sdbs_id": "1307"
+  },
+  {
+    "smiles": "C12C(CCCC1)O2",
+    "filename": "1,2-epoxycyclohexane.jdx",
+    "compound_name": "1,2-epoxycyclohexane",
+    "sdbs_id": "1308"
+  },
+  {
+    "smiles": "O1C(=CC=C1)C=O",
+    "filename": "2-furaldehyde.jdx",
+    "compound_name": "2-furaldehyde",
+    "sdbs_id": "1309"
+  },
+  {
+    "smiles": "FC1(C(C(C(C2(C(C(C(C(C12F)(F)F)(F)F)(F)F)(F)F)F)(F)F)(F)F)(F)F)F",
+    "filename": "perfluorodecalin.jdx",
+    "compound_name": "perfluorodecalin",
+    "sdbs_id": "130"
+  },
+  {
+    "smiles": "C(C1=CC=CO1)O",
+    "filename": "furfuryl alcohol.jdx",
+    "compound_name": "furfuryl alcohol",
+    "sdbs_id": "1310"
+  },
+  {
+    "smiles": "COCCO",
+    "filename": "ethylene glycol monomethyl ether.jdx",
+    "compound_name": "ethylene glycol monomethyl ether",
+    "sdbs_id": "1311"
+  },
+  {
+    "smiles": "BrC(C)C",
+    "filename": "2-bromopropane.jdx",
+    "compound_name": "2-bromopropane",
+    "sdbs_id": "1312"
+  },
+  {
+    "smiles": "O1C=CC=C1",
+    "filename": "furan.jdx",
+    "compound_name": "furan",
+    "sdbs_id": "1313"
+  },
+  {
+    "smiles": "C(#N)CC(=O)OC",
+    "filename": "methyl cyanoacetate.jdx",
+    "compound_name": "methyl cyanoacetate",
+    "sdbs_id": "1314"
+  },
+  {
+    "smiles": "C(C(=C)C)(=O)OCC",
+    "filename": "ethyl methacrylate.jdx",
+    "compound_name": "ethyl methacrylate",
+    "sdbs_id": "1316"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)OC1=CC=CC=C1",
+    "filename": "diphenyl ether.jdx",
+    "compound_name": "diphenyl ether",
+    "sdbs_id": "1317"
+  },
+  {
+    "smiles": "C(=O)(OCC)[C@H](O)[C@@H](O)C(=O)OCC",
+    "filename": "diethyl L-tartrate.jdx",
+    "compound_name": "diethyl L-tartrate",
+    "sdbs_id": "1318"
+  },
+  {
+    "smiles": "C1(CO1)C1=CC=CC=C1",
+    "filename": "(1,2-epoxyethyl)benzene.jdx",
+    "compound_name": "(1,2-epoxyethyl)benzene",
+    "sdbs_id": "1319"
+  },
+  {
+    "smiles": "CSC=1C(C=CC(C1)=O)=O",
+    "filename": "2-methylthio-1,4-benzoquinone.jdx",
+    "compound_name": "2-methylthio-1,4-benzoquinone",
+    "sdbs_id": "131"
+  },
+  {
+    "smiles": "CC1OC(OC(O1)C)C",
+    "filename": "2,4,6-trimethyl-1,3,5-trioxane.jdx",
+    "compound_name": "2,4,6-trimethyl-1,3,5-trioxane",
+    "sdbs_id": "1320"
+  },
+  {
+    "smiles": "ClC(Cl)(Cl)Cl",
+    "filename": "tetrachloromethane.jdx",
+    "compound_name": "tetrachloromethane",
+    "sdbs_id": "1321"
+  },
+  {
+    "smiles": "BrCC(=O)OC",
+    "filename": "methyl bromoacetate.jdx",
+    "compound_name": "methyl bromoacetate",
+    "sdbs_id": "1322"
+  },
+  {
+    "smiles": "C(CCC)(=O)OC(CCC)=O",
+    "filename": "butyric anhydride.jdx",
+    "compound_name": "butyric anhydride",
+    "sdbs_id": "1323"
+  },
+  {
+    "smiles": "C(C)(C)C1=CC=C(C=O)C=C1",
+    "filename": "p-isopropylbenzaldehyde.jdx",
+    "compound_name": "p-isopropylbenzaldehyde",
+    "sdbs_id": "1324"
+  },
+  {
+    "smiles": "C1(CCCO1)=O",
+    "filename": "gamma-butyrolactone.jdx",
+    "compound_name": "gamma-butyrolactone",
+    "sdbs_id": "1325"
+  },
+  {
+    "smiles": "Cl.NO",
+    "filename": "hydroxylamine hydrochloride.jdx",
+    "compound_name": "hydroxylamine hydrochloride",
+    "sdbs_id": "1326"
+  },
+  {
+    "smiles": "N12CCN(CC1)CC2",
+    "filename": "1,4-diazabicyclo[2.2.2]octane.jdx",
+    "compound_name": "1,4-diazabicyclo[2.2.2]octane",
+    "sdbs_id": "1327"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)N",
+    "filename": "benzylamine.jdx",
+    "compound_name": "benzylamine",
+    "sdbs_id": "132"
+  },
+  {
+    "smiles": "NC1=NC2=NC=C(N=C2C(=N1)O)O",
+    "filename": "2-amino-4,6-pteridinediol.jdx",
+    "compound_name": "2-amino-4,6-pteridinediol",
+    "sdbs_id": "133"
+  },
+  {
+    "smiles": "C(CCCCCCCCCC)C=1C2=CC=CC=C2C=C2C=CC=CC12",
+    "filename": "9-undecylanthracene.jdx",
+    "compound_name": "9-undecylanthracene",
+    "sdbs_id": "136"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C(CC(=O)O)C",
+    "filename": "3-phenylbutyric acid.jdx",
+    "compound_name": "3-phenylbutyric acid",
+    "sdbs_id": "137"
+  },
+  {
+    "smiles": "C(C)(=O)OC1CC(CCC1C(C)C)C",
+    "filename": "(-)-3-p-menthyl acetate.jdx",
+    "compound_name": "(-)-3-p-menthyl acetate",
+    "sdbs_id": "139"
+  },
+  {
+    "smiles": "C1(=CC=C(C=C1)OCC1=CC=CC=C1)C",
+    "filename": "benzyl p-tolyl ether.jdx",
+    "compound_name": "benzyl p-tolyl ether",
+    "sdbs_id": "13"
+  },
+  {
+    "smiles": "[C@@H]1([C@@H](CCC1)C(=O)OC)C(=O)OC",
+    "filename": "dimethyl (+-)-trans-1,2-cyclopentanedicarboxylate.jdx",
+    "compound_name": "dimethyl (+-)-trans-1,2-cyclopentanedicarboxylate",
+    "sdbs_id": "140"
+  },
+  {
+    "smiles": "COC1=CC=C(C=C2N=C(OC2=O)C2=CC=CC=C2)C=C1",
+    "filename": "4-(p-methoxybenzylidene)-2-phenyl-2-oxazolin-5-one.jdx",
+    "compound_name": "4-(p-methoxybenzylidene)-2-phenyl-2-oxazolin-5-one",
+    "sdbs_id": "141"
+  },
+  {
+    "smiles": "C(C)(=O)N1C=NC(=C1)C=C1N=C(OC1=O)C1=CC=CC=C1",
+    "filename": "4-(1-acetyl-4-imidazolylmethylidene)-2-phenyl-2-oxazolin-5-one.jdx",
+    "compound_name": "4-(1-acetyl-4-imidazolylmethylidene)-2-phenyl-2-oxazolin-5-one",
+    "sdbs_id": "142"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C1=CC=C(S1)C=CC(=O)OC",
+    "filename": "methyl 5-nitro-2-thiopheneacrylate.jdx",
+    "compound_name": "methyl 5-nitro-2-thiopheneacrylate",
+    "sdbs_id": "143"
+  },
+  {
+    "smiles": "BrC1=CC=C(S1)C=CC(=O)OC",
+    "filename": "methyl 5-bromo-2-thiopheneacrylate.jdx",
+    "compound_name": "methyl 5-bromo-2-thiopheneacrylate",
+    "sdbs_id": "144"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C1=CC=C(S1)C=CC(=O)O",
+    "filename": "5-nitro-2-thiopheneacrylic acid.jdx",
+    "compound_name": "5-nitro-2-thiopheneacrylic acid",
+    "sdbs_id": "145"
+  },
+  {
+    "smiles": "ClC1=CC=C(S1)C=CC(=O)O",
+    "filename": "5-chloro-2-thiopheneacrylic acid.jdx",
+    "compound_name": "5-chloro-2-thiopheneacrylic acid",
+    "sdbs_id": "146"
+  },
+  {
+    "smiles": "BrC1=CC=C(S1)C=CC(=O)O",
+    "filename": "5-bromo-2-thiopheneacrylic acid.jdx",
+    "compound_name": "5-bromo-2-thiopheneacrylic acid",
+    "sdbs_id": "147"
+  },
+  {
+    "smiles": "C(\\C=C\\C)(=O)OC(C)(C)C",
+    "filename": "tert-butyl crotonate.jdx",
+    "compound_name": "tert-butyl crotonate",
+    "sdbs_id": "149"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)P(CCP(C1=CC=CC=C1)C1=CC=CC=C1)C1=CC=CC=C1",
+    "filename": "1,2-bis(diphenylphosphino)ethane.jdx",
+    "compound_name": "1,2-bis(diphenylphosphino)ethane",
+    "sdbs_id": "14"
+  },
+  {
+    "smiles": "[C@@H]1([C@@H](CCC1)C(=O)O)C(=O)O",
+    "filename": "trans-(+-)-1,2-cyclopentanedicarboxylic acid.jdx",
+    "compound_name": "trans-(+-)-1,2-cyclopentanedicarboxylic acid",
+    "sdbs_id": "150"
+  },
+  {
+    "smiles": "[C@@H]1([C@@H](CC1)C(=O)O)C(=O)O",
+    "filename": "(+-)-trans-1,2-cyclobutanedicarboxylic acid.jdx",
+    "compound_name": "(+-)-trans-1,2-cyclobutanedicarboxylic acid",
+    "sdbs_id": "152"
+  },
+  {
+    "smiles": "CC1=CC=C(S1)C=NO",
+    "filename": "5-methyl-2-thiophenecarbaldehyde oxime.jdx",
+    "compound_name": "5-methyl-2-thiophenecarbaldehyde oxime",
+    "sdbs_id": "153"
+  },
+  {
+    "smiles": "BrC=1SC(=CC1)C",
+    "filename": "2-bromo-5-methylthiophene.jdx",
+    "compound_name": "2-bromo-5-methylthiophene",
+    "sdbs_id": "155"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C=1SC=CC1",
+    "filename": "2-nitrothiophene.jdx",
+    "compound_name": "2-nitrothiophene",
+    "sdbs_id": "156"
+  },
+  {
+    "smiles": "CC(C)CCCCCCCCCC",
+    "filename": "2-methyldodecane.jdx",
+    "compound_name": "2-methyldodecane",
+    "sdbs_id": "159"
+  },
+  {
+    "smiles": "C(C)(=O)OC1=C(C=C(C=C1)C=O)Br",
+    "filename": "2-bromo-4-formylphenyl acetate.jdx",
+    "compound_name": "2-bromo-4-formylphenyl acetate",
+    "sdbs_id": "15"
+  },
+  {
+    "smiles": "C(CCCCCC)C1CCCCC1",
+    "filename": "heptylcyclohexane.jdx",
+    "compound_name": "heptylcyclohexane",
+    "sdbs_id": "160"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)C1CCNCC1",
+    "filename": "4-benzylpiperidine.jdx",
+    "compound_name": "4-benzylpiperidine",
+    "sdbs_id": "161"
+  },
+  {
+    "smiles": "Cl\\C=C/C",
+    "filename": "cis-1-chloropropene.jdx",
+    "compound_name": "cis-1-chloropropene",
+    "sdbs_id": "162"
+  },
+  {
+    "smiles": "ClC1=C2C=CC(=NC2=CC=C1)C#N",
+    "filename": "5-chloro-2-quinolinecarbonitrile.jdx",
+    "compound_name": "5-chloro-2-quinolinecarbonitrile",
+    "sdbs_id": "163"
+  },
+  {
+    "smiles": "CC1=NC(=C(C(=C1C1=CC=CC=C1)C1=CC=CC=C1)C1=CC=CC=C1)C1=CC=CC=C1",
+    "filename": "2-methyl-3,4,5,6-tetraphenylpyridine.jdx",
+    "compound_name": "2-methyl-3,4,5,6-tetraphenylpyridine",
+    "sdbs_id": "164"
+  },
+  {
+    "smiles": "OC[C@@H]1O[C@@H](OC2=C(Oc3cc(O)cc(O)c3C2=O)c4ccc(O)c(O)c4)[C@H](O)[C@H]1O",
+    "filename": "avicularin.jdx",
+    "compound_name": "avicularin",
+    "sdbs_id": "165"
+  },
+  {
+    "smiles": "CC1(C(C1)C(=O)OCC(=O)C1=CC=C(C=C1)C1=CC=CC=C1)C",
+    "filename": "p-phenylphenacyl 2,2-dimethylcyclopropanecarboxylate.jdx",
+    "compound_name": "p-phenylphenacyl 2,2-dimethylcyclopropanecarboxylate",
+    "sdbs_id": "168"
+  },
+  {
+    "smiles": "C(\\C=C\\C1=CC=CC=C1)(=O)OC1CC(CCC1C(C)C)C",
+    "filename": "(-)-3-p-menthyl trans-cinnamate.jdx",
+    "compound_name": "(-)-3-p-menthyl trans-cinnamate",
+    "sdbs_id": "169"
+  },
+  {
+    "smiles": "CNC(=O)OC=1C=C(C(=O)O)C=CC1",
+    "filename": "m-(methylcarbamoyloxy)benzoic acid.jdx",
+    "compound_name": "m-(methylcarbamoyloxy)benzoic acid",
+    "sdbs_id": "16"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)(=O)NC(C(=O)O)CC1=CC=C(C=C1)OC",
+    "filename": "DL-2-benzoylamino-3-(p-methoxyphenyl)propionic acid.jdx",
+    "compound_name": "DL-2-benzoylamino-3-(p-methoxyphenyl)propionic acid",
+    "sdbs_id": "170"
+  },
+  {
+    "smiles": "OC(CC(=O)OC1CC(CCC1C(C)C)C)C",
+    "filename": "(-)-3-p-menthyl 3-hydroxybutyrate.jdx",
+    "compound_name": "(-)-3-p-menthyl 3-hydroxybutyrate",
+    "sdbs_id": "171"
+  },
+  {
+    "smiles": "C(\\C=C\\C)(=O)OC1CC(CCC1C(C)C)C",
+    "filename": "(-)-3-p-menthyl crotonate.jdx",
+    "compound_name": "(-)-3-p-menthyl crotonate",
+    "sdbs_id": "172"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)CCC(=O)OCC",
+    "filename": "ethyl 3-phenylpropionate.jdx",
+    "compound_name": "ethyl 3-phenylpropionate",
+    "sdbs_id": "178"
+  },
+  {
+    "smiles": "CNC(=O)OC=1C=C(C(=O)OC)C=CC1",
+    "filename": "methyl m-(methylcarbamoyloxy)benzoate.jdx",
+    "compound_name": "methyl m-(methylcarbamoyloxy)benzoate",
+    "sdbs_id": "17"
+  },
+  {
+    "smiles": "C(CC)N(C(C1=CC=CC=C1)=O)CCC",
+    "filename": "N,N-dipropylbenzamide.jdx",
+    "compound_name": "N,N-dipropylbenzamide",
+    "sdbs_id": "182"
+  },
+  {
+    "smiles": "CC(CCC(=O)OCC)CC1=CC=CC=C1",
+    "filename": "(+-)-ethyl 4-methyl-5-phenylvalerate.jdx",
+    "compound_name": "(+-)-ethyl 4-methyl-5-phenylvalerate",
+    "sdbs_id": "184"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)N(N=O)C(C1=CC=CC=C1)C",
+    "filename": "(+-)-N-benzyl-alpha-methyl-N-nitrosobenzylamine.jdx",
+    "compound_name": "(+-)-N-benzyl-alpha-methyl-N-nitrosobenzylamine",
+    "sdbs_id": "185"
+  },
+  {
+    "smiles": "ClCC(=O)Cl",
+    "filename": "chloroacetyl chloride.jdx",
+    "compound_name": "chloroacetyl chloride",
+    "sdbs_id": "187"
+  },
+  {
+    "smiles": "COC1=CC=C(C=C1)OCC1=CC=CC=C1",
+    "filename": "benzyl p-methoxyphenyl ether.jdx",
+    "compound_name": "benzyl p-methoxyphenyl ether",
+    "sdbs_id": "18"
+  },
+  {
+    "smiles": "N1=C(C(=CC=C1)O)O",
+    "filename": "2,3-pyridinediol.jdx",
+    "compound_name": "2,3-pyridinediol",
+    "sdbs_id": "190"
+  },
+  {
+    "smiles": "C(C)C(CC)=CCC",
+    "filename": "3-ethyl-3-hexene.jdx",
+    "compound_name": "3-ethyl-3-hexene",
+    "sdbs_id": "191"
+  },
+  {
+    "smiles": "C(C)C(CCC)CCC",
+    "filename": "4-ethylheptane.jdx",
+    "compound_name": "4-ethylheptane",
+    "sdbs_id": "192"
+  },
+  {
+    "smiles": "C(C)C(CC)C(CC)CC",
+    "filename": "3,4-diethylhexane.jdx",
+    "compound_name": "3,4-diethylhexane",
+    "sdbs_id": "193"
+  },
+  {
+    "smiles": "CC(CC)CCC(CC)C",
+    "filename": "3,6-dimethyloctane.jdx",
+    "compound_name": "3,6-dimethyloctane",
+    "sdbs_id": "194"
+  },
+  {
+    "smiles": "CC(CCC)(CCCC)C",
+    "filename": "4,4-dimethyloctane.jdx",
+    "compound_name": "4,4-dimethyloctane",
+    "sdbs_id": "195"
+  },
+  {
+    "smiles": "C(C)C(CC)(CCCC)C",
+    "filename": "3-ethyl-3-methylheptane.jdx",
+    "compound_name": "3-ethyl-3-methylheptane",
+    "sdbs_id": "196"
+  },
+  {
+    "smiles": "CC(C)CCCCCCC",
+    "filename": "2-methylnonane.jdx",
+    "compound_name": "2-methylnonane",
+    "sdbs_id": "197"
+  },
+  {
+    "smiles": "CC(CC)CCCCCC",
+    "filename": "3-methylnonane.jdx",
+    "compound_name": "3-methylnonane",
+    "sdbs_id": "198"
+  },
+  {
+    "smiles": "CC(CCC)CCCCC",
+    "filename": "4-methylnonane.jdx",
+    "compound_name": "4-methylnonane",
+    "sdbs_id": "199"
+  },
+  {
+    "smiles": "C(C)(=O)OC1=C(C=C(/C=C/C(=O)O)C=C1)OC",
+    "filename": "trans-4-acetoxy-3-methoxycinnamic acid.jdx",
+    "compound_name": "trans-4-acetoxy-3-methoxycinnamic acid",
+    "sdbs_id": "19"
+  },
+  {
     "smiles": "O1C(=CC=C1)C(=O)O",
     "filename": "2-furoic acid.jdx",
     "compound_name": "2-furoic acid",
     "sdbs_id": "1"
+  },
+  {
+    "smiles": "CC(CCCC)CCCC",
+    "filename": "5-methylnonane.jdx",
+    "compound_name": "5-methylnonane",
+    "sdbs_id": "200"
+  },
+  {
+    "smiles": "CC(C)(C(CC)CC)C",
+    "filename": "2,2-dimethyl-3-ethylpentane.jdx",
+    "compound_name": "2,2-dimethyl-3-ethylpentane",
+    "sdbs_id": "201"
+  },
+  {
+    "smiles": "CC(=C)CCC(C)C",
+    "filename": "2,5-dimethyl-1-hexene.jdx",
+    "compound_name": "2,5-dimethyl-1-hexene",
+    "sdbs_id": "202"
+  },
+  {
+    "smiles": "CC(=C)CC(CC)C",
+    "filename": "2,4-dimethyl-1-hexene.jdx",
+    "compound_name": "2,4-dimethyl-1-hexene",
+    "sdbs_id": "203"
+  },
+  {
+    "smiles": "C\\C(=C/C)\\C(C)C",
+    "filename": "(E)-3,4-dimethyl-2-pentene.jdx",
+    "compound_name": "(E)-3,4-dimethyl-2-pentene",
+    "sdbs_id": "205"
+  },
+  {
+    "smiles": "C/C(=C/C)/C(C)C",
+    "filename": "(Z)-3,4-dimethyl-2-pentene.jdx",
+    "compound_name": "(Z)-3,4-dimethyl-2-pentene",
+    "sdbs_id": "206"
+  },
+  {
+    "smiles": "CC(/C=C/C)C",
+    "filename": "trans-4-methyl-2-pentene.jdx",
+    "compound_name": "trans-4-methyl-2-pentene",
+    "sdbs_id": "207"
+  },
+  {
+    "smiles": "CC(\\C=C/C)C",
+    "filename": "cis-4-methyl-2-pentene.jdx",
+    "compound_name": "cis-4-methyl-2-pentene",
+    "sdbs_id": "208"
+  },
+  {
+    "smiles": "CC(=C)CC\\C=C\\C",
+    "filename": "trans-2-methyl-1,5-heptadiene.jdx",
+    "compound_name": "trans-2-methyl-1,5-heptadiene",
+    "sdbs_id": "209"
+  },
+  {
+    "smiles": "CC1(C)CC[C@@]2(CC[C@]3(C)C(=CC[C@@H]4[C@@]5(C)CC[C@H](O)[C@@](C)(CO)[C@@H]5CC[C@@]34C)[C@@H]2C1)C(O)=O",
+    "filename": "(3beta,4alpha)-3,23-dihydroxyolean-12-en-28-oic acid.jdx",
+    "compound_name": "(3beta,4alpha)-3,23-dihydroxyolean-12-en-28-oic acid",
+    "sdbs_id": "20"
+  },
+  {
+    "smiles": "C=CCCCCCCCC=C",
+    "filename": "1,10-undecadiene.jdx",
+    "compound_name": "1,10-undecadiene",
+    "sdbs_id": "210"
+  },
+  {
+    "smiles": "C=CCCC=C",
+    "filename": "1,5-hexadiene.jdx",
+    "compound_name": "1,5-hexadiene",
+    "sdbs_id": "211"
+  },
+  {
+    "smiles": "CC(CC=C)C",
+    "filename": "4-methyl-1-pentene.jdx",
+    "compound_name": "4-methyl-1-pentene",
+    "sdbs_id": "212"
+  },
+  {
+    "smiles": "C=CC\\C=C\\C",
+    "filename": "trans-1,4-hexadiene.jdx",
+    "compound_name": "trans-1,4-hexadiene",
+    "sdbs_id": "213"
+  },
+  {
+    "smiles": "C\\C=C\\C=C\\C",
+    "filename": "trans,trans-2,4-hexadiene.jdx",
+    "compound_name": "trans,trans-2,4-hexadiene",
+    "sdbs_id": "214"
+  },
+  {
+    "smiles": "CC(C)(C(C(C)C)C)C",
+    "filename": "2,2,3,4-tetramethylpentane.jdx",
+    "compound_name": "2,2,3,4-tetramethylpentane",
+    "sdbs_id": "215"
+  },
+  {
+    "smiles": "CC(C)C(C(C)C)(C)C",
+    "filename": "2,3,3,4-tetramethylpentane.jdx",
+    "compound_name": "2,3,3,4-tetramethylpentane",
+    "sdbs_id": "216"
+  },
+  {
+    "smiles": "CCC\\C=C/CCCC",
+    "filename": "cis-4-nonene.jdx",
+    "compound_name": "cis-4-nonene",
+    "sdbs_id": "218"
+  },
+  {
+    "smiles": "CC(C=C)(CCC)C",
+    "filename": "3,3-dimethyl-1-hexene.jdx",
+    "compound_name": "3,3-dimethyl-1-hexene",
+    "sdbs_id": "219"
+  },
+  {
+    "smiles": "CS(=O)(=O)OC1C2CC3CC(C(C1C3)=O)C2",
+    "filename": "4-oxo-2-adamantyl methanesulfonate.jdx",
+    "compound_name": "4-oxo-2-adamantyl methanesulfonate",
+    "sdbs_id": "21"
+  },
+  {
+    "smiles": "CC(C=C)(C)C",
+    "filename": "3,3-dimethyl-1-butene.jdx",
+    "compound_name": "3,3-dimethyl-1-butene",
+    "sdbs_id": "222"
+  },
+  {
+    "smiles": "CC(C)CCCC(CCCC(CCCCC(CCCC(CCCC(C)C)C)C)C)C",
+    "filename": "2,6,10,15,19,23-hexamethyltetracosane.jdx",
+    "compound_name": "2,6,10,15,19,23-hexamethyltetracosane",
+    "sdbs_id": "223"
+  },
+  {
+    "smiles": "C(C)C(C(C)C)C(C)C",
+    "filename": "3-ethyl-2,4-dimethylpentane.jdx",
+    "compound_name": "3-ethyl-2,4-dimethylpentane",
+    "sdbs_id": "224"
+  },
+  {
+    "smiles": "CC(=C)CCC",
+    "filename": "2-methyl-1-pentene.jdx",
+    "compound_name": "2-methyl-1-pentene",
+    "sdbs_id": "225"
+  },
+  {
+    "smiles": "C=C\\C=C\\C",
+    "filename": "trans-1,3-pentadiene.jdx",
+    "compound_name": "trans-1,3-pentadiene",
+    "sdbs_id": "227"
+  },
+  {
+    "smiles": "C12CC3NC(C(CC(C1)C3)C2)=O",
+    "filename": "4-azatricyclo[4.3.1.1[3,8]]undecan-5-one.jdx",
+    "compound_name": "4-azatricyclo[4.3.1.1[3,8]]undecan-5-one",
+    "sdbs_id": "23"
+  },
+  {
+    "smiles": "C12C(C3CC(CC(C1)C3)C2)=NO",
+    "filename": "tricyclo[3.3.1.1[3,7]]decan-2-one oxime.jdx",
+    "compound_name": "tricyclo[3.3.1.1[3,7]]decan-2-one oxime",
+    "sdbs_id": "24"
+  },
+  {
+    "smiles": "ClC1=CC=C(C=C1)C1=CC=CC=C1",
+    "filename": "4-chlorobiphenyl.jdx",
+    "compound_name": "4-chlorobiphenyl",
+    "sdbs_id": "254"
+  },
+  {
+    "smiles": "C(C#CCCC)O",
+    "filename": "2-hexyn-1-ol.jdx",
+    "compound_name": "2-hexyn-1-ol",
+    "sdbs_id": "256"
+  },
+  {
+    "smiles": "CC(CC#CC)O",
+    "filename": "4-hexyn-2-ol.jdx",
+    "compound_name": "4-hexyn-2-ol",
+    "sdbs_id": "257"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C#CCC",
+    "filename": "1-phenyl-1-butyne.jdx",
+    "compound_name": "1-phenyl-1-butyne",
+    "sdbs_id": "258"
+  },
+  {
+    "smiles": "C#CC(CC)O",
+    "filename": "1-pentyn-3-ol.jdx",
+    "compound_name": "1-pentyn-3-ol",
+    "sdbs_id": "259"
+  },
+  {
+    "smiles": "C12C(C3CC(CC(C1)C3)C2)O",
+    "filename": "tricyclo[3.3.1.1[3,7]]decan-2-ol.jdx",
+    "compound_name": "tricyclo[3.3.1.1[3,7]]decan-2-ol",
+    "sdbs_id": "25"
+  },
+  {
+    "smiles": "C(C#CCO)O",
+    "filename": "2-butyne-1,4-diol.jdx",
+    "compound_name": "2-butyne-1,4-diol",
+    "sdbs_id": "260"
+  },
+  {
+    "smiles": "C(C#CC)O",
+    "filename": "2-butyn-1-ol.jdx",
+    "compound_name": "2-butyn-1-ol",
+    "sdbs_id": "261"
+  },
+  {
+    "smiles": "CC(C#C)O",
+    "filename": "3-butyn-2-ol.jdx",
+    "compound_name": "3-butyn-2-ol",
+    "sdbs_id": "262"
+  },
+  {
+    "smiles": "CC#CC",
+    "filename": "2-butyne.jdx",
+    "compound_name": "2-butyne",
+    "sdbs_id": "263"
+  },
+  {
+    "smiles": "CC(C)(CC(CC(CC(C)(C)C)C)(C)C)C",
+    "filename": "2,2,4,4,6,8,8-heptamethylnonane.jdx",
+    "compound_name": "2,2,4,4,6,8,8-heptamethylnonane",
+    "sdbs_id": "264"
+  },
+  {
+    "smiles": "CCC\\C=C\\CCCC",
+    "filename": "trans-4-nonene.jdx",
+    "compound_name": "trans-4-nonene",
+    "sdbs_id": "265"
+  },
+  {
+    "smiles": "C\\C=C/CCCCCC",
+    "filename": "cis-2-nonene.jdx",
+    "compound_name": "cis-2-nonene",
+    "sdbs_id": "266"
+  },
+  {
+    "smiles": "CC(=C)CCCCCC",
+    "filename": "2-methyl-1-octene.jdx",
+    "compound_name": "2-methyl-1-octene",
+    "sdbs_id": "267"
+  },
+  {
+    "smiles": "OC(=O)C1CC2CCCC(C2)C1",
+    "filename": "endo-bicyclo[3.3.1]nonan-3-carboxylic acid.jdx",
+    "compound_name": "endo-bicyclo[3.3.1]nonan-3-carboxylic acid",
+    "sdbs_id": "26"
+  },
+  {
+    "smiles": "CC(C)\\C=C\\CC(C)C",
+    "filename": "trans-2,6-dimethyl-3-heptene.jdx",
+    "compound_name": "trans-2,6-dimethyl-3-heptene",
+    "sdbs_id": "270"
+  },
+  {
+    "smiles": "CC(=C)CCCC(C)C",
+    "filename": "2,6-dimethyl-1-heptene.jdx",
+    "compound_name": "2,6-dimethyl-1-heptene",
+    "sdbs_id": "271"
+  },
+  {
+    "smiles": "CC(=C)CC(CCC)C",
+    "filename": "2,4-dimethyl-1-heptene.jdx",
+    "compound_name": "2,4-dimethyl-1-heptene",
+    "sdbs_id": "272"
+  },
+  {
+    "smiles": "CC(C)(\\C=C\\CCC)C",
+    "filename": "trans-2,2-dimethyl-3-heptene.jdx",
+    "compound_name": "trans-2,2-dimethyl-3-heptene",
+    "sdbs_id": "273"
+  },
+  {
+    "smiles": "C(C)C(=C)CCCC",
+    "filename": "2-ethyl-1-hexene.jdx",
+    "compound_name": "2-ethyl-1-hexene",
+    "sdbs_id": "274"
+  },
+  {
+    "smiles": "C=CCCCC",
+    "filename": "1-hexene.jdx",
+    "compound_name": "1-hexene",
+    "sdbs_id": "275"
+  },
+  {
+    "smiles": "CC(=C)CC(CC)(C)C",
+    "filename": "2,4,4-trimethyl-1-hexene.jdx",
+    "compound_name": "2,4,4-trimethyl-1-hexene",
+    "sdbs_id": "276"
+  },
+  {
+    "smiles": "CCC\\C=C/CCC",
+    "filename": "cis-4-octene.jdx",
+    "compound_name": "cis-4-octene",
+    "sdbs_id": "277"
+  },
+  {
+    "smiles": "CCC\\C=C\\CCC",
+    "filename": "trans-4-octene.jdx",
+    "compound_name": "trans-4-octene",
+    "sdbs_id": "278"
+  },
+  {
+    "smiles": "CC\\C=C/CCCC",
+    "filename": "cis-3-octene.jdx",
+    "compound_name": "cis-3-octene",
+    "sdbs_id": "279"
+  },
+  {
+    "smiles": "NC1C2CC3CC(CC1C3)C2",
+    "filename": "2-aminotricyclo[3.3.1.1[3,7]]decane.jdx",
+    "compound_name": "2-aminotricyclo[3.3.1.1[3,7]]decane",
+    "sdbs_id": "27"
+  },
+  {
+    "smiles": "C\\C=C/CCCCC",
+    "filename": "cis-2-octene.jdx",
+    "compound_name": "cis-2-octene",
+    "sdbs_id": "280"
+  },
+  {
+    "smiles": "C\\C=C\\CCCCC",
+    "filename": "trans-2-octene.jdx",
+    "compound_name": "trans-2-octene",
+    "sdbs_id": "281"
+  },
+  {
+    "smiles": "CC(C)=CCCC(=CCCC(=CCCC=C(CCC=C(CCC=C(C)C)C)C)C)C",
+    "filename": "2,6,10,15,19,23-hexamethyl-2,6,10,14,18,22-tetracosahexaene.jdx",
+    "compound_name": "2,6,10,15,19,23-hexamethyl-2,6,10,14,18,22-tetracosahexaene",
+    "sdbs_id": "282"
+  },
+  {
+    "smiles": "CC(CCO)CC(C)(C)C",
+    "filename": "3,5,5-trimethyl-1-hexanol.jdx",
+    "compound_name": "3,5,5-trimethyl-1-hexanol",
+    "sdbs_id": "283"
+  },
+  {
+    "smiles": "C=C\\C=C/C",
+    "filename": "cis-1,3-pentadiene.jdx",
+    "compound_name": "cis-1,3-pentadiene",
+    "sdbs_id": "284"
+  },
+  {
+    "smiles": "C\\C=C\\CCCCCC",
+    "filename": "trans-2-nonene.jdx",
+    "compound_name": "trans-2-nonene",
+    "sdbs_id": "285"
+  },
+  {
+    "smiles": "CC\\C=C/CCCCC",
+    "filename": "cis-3-nonene.jdx",
+    "compound_name": "cis-3-nonene",
+    "sdbs_id": "286"
+  },
+  {
+    "smiles": "CC\\C=C\\CCCCC",
+    "filename": "trans-3-nonene.jdx",
+    "compound_name": "trans-3-nonene",
+    "sdbs_id": "287"
+  },
+  {
+    "smiles": "CC(C)(CC(C)(C)C)C",
+    "filename": "2,2,4,4-tetramethylpentane.jdx",
+    "compound_name": "2,2,4,4-tetramethylpentane",
+    "sdbs_id": "288"
+  },
+  {
+    "smiles": "C12(CC3CC(CC(C1)C3)C2)C(=O)O",
+    "filename": "tricyclo[3.3.1.1[3,7]]decane-1-carboxylic acid.jdx",
+    "compound_name": "tricyclo[3.3.1.1[3,7]]decane-1-carboxylic acid",
+    "sdbs_id": "28"
+  },
+  {
+    "smiles": "CC(=C)CCC=C",
+    "filename": "2-methyl-1,5-hexadiene.jdx",
+    "compound_name": "2-methyl-1,5-hexadiene",
+    "sdbs_id": "294"
+  },
+  {
+    "smiles": "CC(=CC=C)C",
+    "filename": "4-methyl-1,3-pentadiene.jdx",
+    "compound_name": "4-methyl-1,3-pentadiene",
+    "sdbs_id": "295"
+  },
+  {
+    "smiles": "CC(=C)CCC(=C)C",
+    "filename": "2,5-dimethyl-1,5-hexadiene.jdx",
+    "compound_name": "2,5-dimethyl-1,5-hexadiene",
+    "sdbs_id": "296"
+  },
+  {
+    "smiles": "C=CCCCCC=C",
+    "filename": "1,7-octadiene.jdx",
+    "compound_name": "1,7-octadiene",
+    "sdbs_id": "297"
+  },
+  {
+    "smiles": "C=CCCCCCC=C",
+    "filename": "1,8-nonadiene.jdx",
+    "compound_name": "1,8-nonadiene",
+    "sdbs_id": "298"
+  },
+  {
+    "smiles": "CC(C=C)CC(C)(C)C",
+    "filename": "3,5,5-trimethyl-1-hexene.jdx",
+    "compound_name": "3,5,5-trimethyl-1-hexene",
+    "sdbs_id": "299"
+  },
+  {
+    "smiles": "C12CC3C(CC(CC(C1)C3)C2)=NO",
+    "filename": "tricyclo[4.3.1.1[3,8]]undecane-4-one oxime.jdx",
+    "compound_name": "tricyclo[4.3.1.1[3,8]]undecane-4-one oxime",
+    "sdbs_id": "29"
+  },
+  {
+    "smiles": "CC(=C)C(=C)C",
+    "filename": "2,3-dimethyl-1,3-butadiene.jdx",
+    "compound_name": "2,3-dimethyl-1,3-butadiene",
+    "sdbs_id": "300"
+  },
+  {
+    "smiles": "C#CC(CCC)O",
+    "filename": "1-hexyn-3-ol.jdx",
+    "compound_name": "1-hexyn-3-ol",
+    "sdbs_id": "302"
+  },
+  {
+    "smiles": "ClC(CCl)Cl",
+    "filename": "1,1,2-trichloroethane.jdx",
+    "compound_name": "1,1,2-trichloroethane",
+    "sdbs_id": "303"
+  },
+  {
+    "smiles": "BrC(CBr)Br",
+    "filename": "1,1,2-tribromoethane.jdx",
+    "compound_name": "1,1,2-tribromoethane",
+    "sdbs_id": "304"
+  },
+  {
+    "smiles": "C(C)=O",
+    "filename": "acetaldehyde.jdx",
+    "compound_name": "acetaldehyde",
+    "sdbs_id": "305"
+  },
+  {
+    "smiles": "C(C)(=O)O",
+    "filename": "acetic acid.jdx",
+    "compound_name": "acetic acid",
+    "sdbs_id": "306"
+  },
+  {
+    "smiles": "C(C)S(=O)(=O)Cl",
+    "filename": "ethanesulfonyl chloride.jdx",
+    "compound_name": "ethanesulfonyl chloride",
+    "sdbs_id": "307"
+  },
+  {
+    "smiles": "ICC",
+    "filename": "iodoethane.jdx",
+    "compound_name": "iodoethane",
+    "sdbs_id": "308"
+  },
+  {
+    "smiles": "[N+](=O)([O-])CC",
+    "filename": "nitroethane.jdx",
+    "compound_name": "nitroethane",
+    "sdbs_id": "309"
+  },
+  {
+    "smiles": "S(=O)(=O)(OCC)OCC",
+    "filename": "diethyl sulfate.jdx",
+    "compound_name": "diethyl sulfate",
+    "sdbs_id": "310"
+  },
+  {
+    "smiles": "ClC(C#N)=C",
+    "filename": "2-chloroacrylonitrile.jdx",
+    "compound_name": "2-chloroacrylonitrile",
+    "sdbs_id": "312"
+  },
+  {
+    "smiles": "BrC(C(=O)O)CBr",
+    "filename": "2,3-dibromopropionic acid.jdx",
+    "compound_name": "2,3-dibromopropionic acid",
+    "sdbs_id": "313"
+  },
+  {
+    "smiles": "BrCC=C",
+    "filename": "3-bromo-1-propene.jdx",
+    "compound_name": "3-bromo-1-propene",
+    "sdbs_id": "315"
+  },
+  {
+    "smiles": "C(CC)#N",
+    "filename": "propionitrile.jdx",
+    "compound_name": "propionitrile",
+    "sdbs_id": "316"
+  },
+  {
+    "smiles": "BrCC(C)Br",
+    "filename": "1,2-dibromopropane.jdx",
+    "compound_name": "1,2-dibromopropane",
+    "sdbs_id": "317"
+  },
+  {
+    "smiles": "ClCC(C)Cl",
+    "filename": "1,2-dichloropropane.jdx",
+    "compound_name": "1,2-dichloropropane",
+    "sdbs_id": "318"
+  },
+  {
+    "smiles": "CC(=O)C",
+    "filename": "acetone.jdx",
+    "compound_name": "acetone",
+    "sdbs_id": "319"
+  },
+  {
+    "smiles": "ClC(C12CC3(CC(CC(C1)C3)C2)C(Cl)Cl)Cl",
+    "filename": "1,3-bis(dichloromethyl)tricyclo[3.3.1.1[3,7]]decane.jdx",
+    "compound_name": "1,3-bis(dichloromethyl)tricyclo[3.3.1.1[3,7]]decane",
+    "sdbs_id": "31"
+  },
+  {
+    "smiles": "C(C=C)O",
+    "filename": "allyl alcohol.jdx",
+    "compound_name": "allyl alcohol",
+    "sdbs_id": "320"
+  },
+  {
+    "smiles": "SCCC(=O)O",
+    "filename": "3-mercaptopropionic acid.jdx",
+    "compound_name": "3-mercaptopropionic acid",
+    "sdbs_id": "321"
+  },
+  {
+    "smiles": "ClCC(CO)O",
+    "filename": "3-chloro-1,2-propanediol.jdx",
+    "compound_name": "3-chloro-1,2-propanediol",
+    "sdbs_id": "322"
+  },
+  {
+    "smiles": "ICCC",
+    "filename": "1-iodopropane.jdx",
+    "compound_name": "1-iodopropane",
+    "sdbs_id": "323"
+  },
+  {
+    "smiles": "CN(C=O)C",
+    "filename": "N,N-dimethylformamide.jdx",
+    "compound_name": "N,N-dimethylformamide",
+    "sdbs_id": "324"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C(CC(=O)OC)C",
+    "filename": "methyl 3-phenylbutyrate.jdx",
+    "compound_name": "methyl 3-phenylbutyrate",
+    "sdbs_id": "327"
+  },
+  {
+    "smiles": "C(=C)(C)N1C=NC=2N=CNC(C12)=O",
+    "filename": "7-isopropenyl-1,7-dihydro-6H-purin-6-one.jdx",
+    "compound_name": "7-isopropenyl-1,7-dihydro-6H-purin-6-one",
+    "sdbs_id": "329"
+  },
+  {
+    "smiles": "BrCC12CC3(CC(CC(C1)C3)C2)C(=O)O",
+    "filename": "3-bromomethyltricyclo[3.3.1.1[3,7]]decane-1-carboxylic acid.jdx",
+    "compound_name": "3-bromomethyltricyclo[3.3.1.1[3,7]]decane-1-carboxylic acid",
+    "sdbs_id": "32"
+  },
+  {
+    "smiles": "CC1=CSC2=NC=3NC(NC(C3N21)=O)=O",
+    "filename": "6-methylthiazolo(2,3-f)purine-2,4(1H,3H)-dione.jdx",
+    "compound_name": "6-methylthiazolo(2,3-f)purine-2,4(1H,3H)-dione",
+    "sdbs_id": "330"
+  },
+  {
+    "smiles": "CN(C)C[C-]1C=CC=C1.[CH-]1C=CC=C1.[Fe+2]",
+    "filename": "(dimethylaminomethyl)ferrocene.jdx",
+    "compound_name": "(dimethylaminomethyl)ferrocene",
+    "sdbs_id": "332"
+  },
+  {
+    "smiles": "ClC1=C2C=CC=NC2=C2N=CC=CC2=C1",
+    "filename": "5-chloro-1,10-phenanthroline.jdx",
+    "compound_name": "5-chloro-1,10-phenanthroline",
+    "sdbs_id": "333"
+  },
+  {
+    "smiles": "BrC(C=O)(Br)Br",
+    "filename": "tribromoacetaldehyde.jdx",
+    "compound_name": "tribromoacetaldehyde",
+    "sdbs_id": "334"
+  },
+  {
+    "smiles": "N1=C(SC2=C1C1=CC=CC=C1C=C2)N",
+    "filename": "naphtho(1,2-d)thiazol-2-amine.jdx",
+    "compound_name": "naphtho(1,2-d)thiazol-2-amine",
+    "sdbs_id": "335"
+  },
+  {
+    "smiles": "CC(CC)CC(CCC)C",
+    "filename": "3,5-dimethyloctane.jdx",
+    "compound_name": "3,5-dimethyloctane",
+    "sdbs_id": "336"
+  },
+  {
+    "smiles": "CC(C(=O)OCC(CC)C)CC",
+    "filename": "2-methylbutyl 2-methylbutyrate.jdx",
+    "compound_name": "2-methylbutyl 2-methylbutyrate",
+    "sdbs_id": "337"
+  },
+  {
+    "smiles": "OC[C@H]1O[C@@H](OC2=C(Oc3cc(O)cc(O)c3C2=O)c4ccc(O)c(O)c4)[C@H](O)[C@@H](O)[C@H]1O",
+    "filename": "hyperin.jdx",
+    "compound_name": "hyperin",
+    "sdbs_id": "339"
+  },
+  {
+    "smiles": "C(C)(=O)NC12CC3CC(CC(C1)C3)C2",
+    "filename": "1-acetamidotricyclo[3.3.1.1[3,7]]decane.jdx",
+    "compound_name": "1-acetamidotricyclo[3.3.1.1[3,7]]decane",
+    "sdbs_id": "33"
+  },
+  {
+    "smiles": "CN(CCCN)C",
+    "filename": "N,N-dimethyltrimethylenediamine.jdx",
+    "compound_name": "N,N-dimethyltrimethylenediamine",
+    "sdbs_id": "346"
+  },
+  {
+    "smiles": "CC(=O)N[Si](C)(C)C",
+    "filename": "n-(trimethylsilyl)acetamide.jdx",
+    "compound_name": "n-(trimethylsilyl)acetamide",
+    "sdbs_id": "347"
+  },
+  {
+    "smiles": "C(CC(C)C)N",
+    "filename": "isopentylamine.jdx",
+    "compound_name": "isopentylamine",
+    "sdbs_id": "348"
+  },
+  {
+    "smiles": "ON=C(C)C12CC3CC(CC(C1)C3)C2",
+    "filename": "1-(1-hydroxyiminoethyl)tricyclo[3.3.1.1[3,7]]decane.jdx",
+    "compound_name": "1-(1-hydroxyiminoethyl)tricyclo[3.3.1.1[3,7]]decane",
+    "sdbs_id": "34"
+  },
+  {
+    "smiles": "C(CC(C)C)=O",
+    "filename": "isovaleraldehyde.jdx",
+    "compound_name": "isovaleraldehyde",
+    "sdbs_id": "350"
+  },
+  {
+    "smiles": "C1=CCCC1",
+    "filename": "cyclopentene.jdx",
+    "compound_name": "cyclopentene",
+    "sdbs_id": "351"
+  },
+  {
+    "smiles": "C(C)(=O)OC(C1=CC=C(S1)[N+](=O)[O-])OC(C)=O",
+    "filename": "5-nitro-2-thenylidene diacetate.jdx",
+    "compound_name": "5-nitro-2-thenylidene diacetate",
+    "sdbs_id": "352"
+  },
+  {
+    "smiles": "S1C(=CC=C1)C=CC(C)=O",
+    "filename": "4-(2-thienyl)-3-buten-2-one.jdx",
+    "compound_name": "4-(2-thienyl)-3-buten-2-one",
+    "sdbs_id": "353"
+  },
+  {
+    "smiles": "C(CCCCCCC)[C@@H]1[C@@H](C1)CCCCCCCC(=O)OC",
+    "filename": "methyl cis-8-(2-octylcyclopropyl)octanoate.jdx",
+    "compound_name": "methyl cis-8-(2-octylcyclopropyl)octanoate",
+    "sdbs_id": "358"
+  },
+  {
+    "smiles": "C(CCCCCCC)[C@@H]1[C@@H](C1)CCCCCCCC(=O)O",
+    "filename": "cis-8-(2-octylcyclopropyl)octanoic acid.jdx",
+    "compound_name": "cis-8-(2-octylcyclopropyl)octanoic acid",
+    "sdbs_id": "359"
+  },
+  {
+    "smiles": "C(C)(=O)NCC12CC3CC(CC(C1)C3)C2",
+    "filename": "1-(acetamidomethyl)tricyclo[3.3.1.1[3,7]]decane.jdx",
+    "compound_name": "1-(acetamidomethyl)tricyclo[3.3.1.1[3,7]]decane",
+    "sdbs_id": "35"
+  },
+  {
+    "smiles": "C(C)OC1C=CC=CC=C1",
+    "filename": "7-ethoxy-1,3,5-cycloheptatriene.jdx",
+    "compound_name": "7-ethoxy-1,3,5-cycloheptatriene",
+    "sdbs_id": "361"
+  },
+  {
+    "smiles": "CC1=C(C(=CC(=C1)C)C)C(C)=O",
+    "filename": "2',4',6'-trimethylacetophenone.jdx",
+    "compound_name": "2',4',6'-trimethylacetophenone",
+    "sdbs_id": "364"
+  },
+  {
+    "smiles": "S(=O)(=O)(C)C1=NC2=CC=CC=C2C(=C1)C#N",
+    "filename": "2-mesyl-4-quinolinecarbonitrile.jdx",
+    "compound_name": "2-mesyl-4-quinolinecarbonitrile",
+    "sdbs_id": "366"
+  },
+  {
+    "smiles": "ClC=1C=C2C=CC(=NC2=CC1)C#N",
+    "filename": "6-chloro-2-quinolinecarbonitrile.jdx",
+    "compound_name": "6-chloro-2-quinolinecarbonitrile",
+    "sdbs_id": "367"
+  },
+  {
+    "smiles": "FC1=CC=2C(C3=CC=CC=C3C(C2C=C1)=O)=O",
+    "filename": "2-fluoroanthraquinone.jdx",
+    "compound_name": "2-fluoroanthraquinone",
+    "sdbs_id": "369"
+  },
+  {
+    "smiles": "C(C)(=O)NC1(C2CC3CC(CC1C3)C2)C",
+    "filename": "2-acetamido-2-methyltricyclo[3.3.1.1[3,7]]decane.jdx",
+    "compound_name": "2-acetamido-2-methyltricyclo[3.3.1.1[3,7]]decane",
+    "sdbs_id": "36"
+  },
+  {
+    "smiles": "CC1S(CC(C1)C)(=O)=O",
+    "filename": "2,4-dimethyltetrahydrothiophene 1,1-dioxide.jdx",
+    "compound_name": "2,4-dimethyltetrahydrothiophene 1,1-dioxide",
+    "sdbs_id": "372"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)(=N)C=1C(C2=CC=CC=C2C(C1O)=O)=O",
+    "filename": "2-benzimidoyl-3-hydroxy-1,4-naphthoquinone.jdx",
+    "compound_name": "2-benzimidoyl-3-hydroxy-1,4-naphthoquinone",
+    "sdbs_id": "374"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C1=NOC2=C1C(C=1C=CC=CC1C2=O)=O",
+    "filename": "3-phenylnaphth(2,3-d)isoxazole-4,9-dione.jdx",
+    "compound_name": "3-phenylnaphth(2,3-d)isoxazole-4,9-dione",
+    "sdbs_id": "375"
+  },
+  {
+    "smiles": "ClC=1C=CC=C2C=CC=C(C12)C(=O)OC",
+    "filename": "methyl 8-chloro-1-naphthoate.jdx",
+    "compound_name": "methyl 8-chloro-1-naphthoate",
+    "sdbs_id": "376"
+  },
+  {
+    "smiles": "CC1=CC=C(C=C1)S(=O)(=O)OCC12CC3CC(CC(C1)C3)C2",
+    "filename": "(tricyclo[3.3.1.1[3,7]]decan-1-yl)methyl p-toluenesulfonate.jdx",
+    "compound_name": "(tricyclo[3.3.1.1[3,7]]decan-1-yl)methyl p-toluenesulfonate",
+    "sdbs_id": "37"
+  },
+  {
+    "smiles": "C(C#C)(=O)OC",
+    "filename": "methyl propiolate.jdx",
+    "compound_name": "methyl propiolate",
+    "sdbs_id": "381"
+  },
+  {
+    "smiles": "C1(C=CCC1)=O",
+    "filename": "2-cyclopenten-1-one.jdx",
+    "compound_name": "2-cyclopenten-1-one",
+    "sdbs_id": "382"
+  },
+  {
+    "smiles": "C(CCCC)#N",
+    "filename": "valeronitrile.jdx",
+    "compound_name": "valeronitrile",
+    "sdbs_id": "383"
+  },
+  {
+    "smiles": "C#CCCCCCC#C",
+    "filename": "1,8-nonadiyne.jdx",
+    "compound_name": "1,8-nonadiyne",
+    "sdbs_id": "384"
+  },
+  {
+    "smiles": "C(C(CCCCO)O)O",
+    "filename": "1,2,6-hexanetriol.jdx",
+    "compound_name": "1,2,6-hexanetriol",
+    "sdbs_id": "385"
+  },
+  {
+    "smiles": "C(CN(CC(=O)[O-])CC(=O)[O-])N(CC(=O)O)CC(=O)O.[Na+].[Na+]",
+    "filename": "disodium ethylenediaminetetraacetate.jdx",
+    "compound_name": "disodium ethylenediaminetetraacetate",
+    "sdbs_id": "386"
+  },
+  {
+    "smiles": "BrC1C2CC3CC(CC1C3)C2",
+    "filename": "2-bromotricyclo[3.3.1.1[3,7]]decane.jdx",
+    "compound_name": "2-bromotricyclo[3.3.1.1[3,7]]decane",
+    "sdbs_id": "387"
+  },
+  {
+    "smiles": "C(CCCCCCCC)C1CCCCC1",
+    "filename": "nonylcyclohexane.jdx",
+    "compound_name": "nonylcyclohexane",
+    "sdbs_id": "38"
+  },
+  {
+    "smiles": "C(CCC)OC1=CC=C(C=O)C=C1",
+    "filename": "p-butoxybenzaldehyde.jdx",
+    "compound_name": "p-butoxybenzaldehyde",
+    "sdbs_id": "390"
+  },
+  {
+    "smiles": "C(CCCC)OC1=CC=C(C=O)C=C1",
+    "filename": "p-pentyloxybenzaldehyde.jdx",
+    "compound_name": "p-pentyloxybenzaldehyde",
+    "sdbs_id": "392"
+  },
+  {
+    "smiles": "C12(CC3CC(CC(C1)C3)C2)CC(=O)O",
+    "filename": "tricyclo[3.3.1.1[3,7]]decane-1-acetic acid.jdx",
+    "compound_name": "tricyclo[3.3.1.1[3,7]]decane-1-acetic acid",
+    "sdbs_id": "394"
+  },
+  {
+    "smiles": "C12(CC3CC(CC(C1)C3)C2)C(=O)OCC",
+    "filename": "ethyl tricyclo[3.3.1.1[3,7]]decane-1-carboxylate.jdx",
+    "compound_name": "ethyl tricyclo[3.3.1.1[3,7]]decane-1-carboxylate",
+    "sdbs_id": "395"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCCCCCC)SCCCCCCCCCCCCCCCC",
+    "filename": "dihexadecyl sulfide.jdx",
+    "compound_name": "dihexadecyl sulfide",
+    "sdbs_id": "396"
+  },
+  {
+    "smiles": "C(CCCCCCC)C1CCCCC1",
+    "filename": "octylcyclohexane.jdx",
+    "compound_name": "octylcyclohexane",
+    "sdbs_id": "397"
+  },
+  {
+    "smiles": "C(C)(=O)N1C=NC=C1",
+    "filename": "1-acetylimidazole.jdx",
+    "compound_name": "1-acetylimidazole",
+    "sdbs_id": "399"
+  },
+  {
+    "smiles": "C(CCCCCCCCC)C1CCCCC1",
+    "filename": "decylcyclohexane.jdx",
+    "compound_name": "decylcyclohexane",
+    "sdbs_id": "39"
+  },
+  {
+    "smiles": "NC1=CC=C(C(C(=O)[O-])=C1)O.[Na+]",
+    "filename": "sodium 5-aminosalicylate.jdx",
+    "compound_name": "sodium 5-aminosalicylate",
+    "sdbs_id": "400"
+  },
+  {
+    "smiles": "C12C(C3CC(CC(C1)C3)C2)=O",
+    "filename": "tricyclo[3.3.1.1[3,7]]decan-2-one.jdx",
+    "compound_name": "tricyclo[3.3.1.1[3,7]]decan-2-one",
+    "sdbs_id": "403"
+  },
+  {
+    "smiles": "CC1(C(N2C(C(C2S1=O)NC(COC1=CC=CC=C1)=O)=O)C(=O)OC)C",
+    "filename": "methyl 3,3-dimethyl-7-oxo-6-phenoxyacetamido-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate 4-oxide.jdx",
+    "compound_name": "methyl 3,3-dimethyl-7-oxo-6-phenoxyacetamido-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate 4-oxide",
+    "sdbs_id": "404"
+  },
+  {
+    "smiles": "BrC1(C(N2C(C(C2SC1)NC(CC1=CC=CC=C1)=O)=O)C(=O)OCC(Cl)(Cl)Cl)C",
+    "filename": "2,2,2-trichloroethyl 3-bromo-3-methyl-8-oxo-7-phenylacetamido-5-thia-1-azabicyclo[4.2.0]octane-2-carboxylate.jdx",
+    "compound_name": "2,2,2-trichloroethyl 3-bromo-3-methyl-8-oxo-7-phenylacetamido-5-thia-1-azabicyclo[4.2.0]octane-2-carboxylate",
+    "sdbs_id": "405"
+  },
+  {
+    "smiles": "BrCC1(C(N2C(C(C2S1)NC(CC1=CC=CC=C1)=O)=O)C(=O)OCC(Cl)(Cl)Cl)C",
+    "filename": "2,2,2-trichloroethyl 3-bromomethyl-3-methyl-7-oxo-6-phenylacetamido-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate.jdx",
+    "compound_name": "2,2,2-trichloroethyl 3-bromomethyl-3-methyl-7-oxo-6-phenylacetamido-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",
+    "sdbs_id": "406"
+  },
+  {
+    "smiles": "ClCC1(C(N2C(C(C2S1)NC(CC1=CC=CC=C1)=O)=O)C(=O)OCC(Cl)(Cl)Cl)C",
+    "filename": "2,2,2-trichloroethyl 3-chloromethyl-3-methyl-7-oxo-6-phenylacetamido-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate.jdx",
+    "compound_name": "2,2,2-trichloroethyl 3-chloromethyl-3-methyl-7-oxo-6-phenylacetamido-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",
+    "sdbs_id": "407"
+  },
+  {
+    "smiles": "CC1(C(N2C(C(C2S1=O)NC(CC1=CC=CC=C1)=O)=O)C(=O)OCC(Cl)(Cl)Cl)C",
+    "filename": "2,2,2-trichloroethyl 3,3-dimethyl-7-oxo-6-phenylacetamido-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate 4-oxide.jdx",
+    "compound_name": "2,2,2-trichloroethyl 3,3-dimethyl-7-oxo-6-phenylacetamido-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate 4-oxide",
+    "sdbs_id": "408"
+  },
+  {
+    "smiles": "CC(=C)C(N1C(SSc2sc3ccccc3n2)C(NC(=O)COc4ccccc4)C1=O)C(O)=O",
+    "filename": "2-(2-benzothiazolyl)dithio-alpha-isopropenyl-4-oxo-3-phenoxyacetamido-1-azetidineacetic acid.jdx",
+    "compound_name": "2-(2-benzothiazolyl)dithio-alpha-isopropenyl-4-oxo-3-phenoxyacetamido-1-azetidineacetic acid",
+    "sdbs_id": "409"
+  },
+  {
+    "smiles": "C1=CC=CC=2C=3C=C4C(=CC3CC12)C=CC=C4",
+    "filename": "11H-benzo(b)fluorene.jdx",
+    "compound_name": "11H-benzo(b)fluorene",
+    "sdbs_id": "40"
+  },
+  {
+    "smiles": "COC(=O)C(N1C(SSc2sc3ccccc3n2)C(NC(=O)COc4ccccc4)C1=O)C(C)=C",
+    "filename": "methyl 2-(2-benzothiazolyl)dithio-alpha-isopropenyl-4-oxo-3-phenoxyacetamido-1-azetidineacetate.jdx",
+    "compound_name": "methyl 2-(2-benzothiazolyl)dithio-alpha-isopropenyl-4-oxo-3-phenoxyacetamido-1-azetidineacetate",
+    "sdbs_id": "410"
+  },
+  {
+    "smiles": "CC(=C)C(N1C(SSc2sc3ccccc3n2)C(NC(=O)Cc4ccccc4)C1=O)C(=O)OCC(Cl)(Cl)Cl",
+    "filename": "2,2,2-trichloroethyl 2-(2-benzothiazolyl)dithio-alpha-isopropenyl-4-oxo-3-phenylacetamido-1-azetidineacetate.jdx",
+    "compound_name": "2,2,2-trichloroethyl 2-(2-benzothiazolyl)dithio-alpha-isopropenyl-4-oxo-3-phenylacetamido-1-azetidineacetate",
+    "sdbs_id": "411"
+  },
+  {
+    "smiles": "C(C)OCCOCCO",
+    "filename": "2-(2-ethoxyethoxy)ethanol.jdx",
+    "compound_name": "2-(2-ethoxyethoxy)ethanol",
+    "sdbs_id": "416"
+  },
+  {
+    "smiles": "O(CC(C)O)CC(C)O",
+    "filename": "1,1'-oxydi(2-propanol).jdx",
+    "compound_name": "1,1'-oxydi(2-propanol)",
+    "sdbs_id": "417"
+  },
+  {
+    "smiles": "OC1=CC=C(C(=O)[O-])C=C1.[Na+]",
+    "filename": "sodium p-hydroxybenzoate.jdx",
+    "compound_name": "sodium p-hydroxybenzoate",
+    "sdbs_id": "418"
+  },
+  {
+    "smiles": "C#CCCCCC#C",
+    "filename": "1,7-octadiyne.jdx",
+    "compound_name": "1,7-octadiyne",
+    "sdbs_id": "419"
+  },
+  {
+    "smiles": "S1C(=NC=C1)NS(=O)(=O)C1=CC=C(NC(C=2C(C(=O)O)=CC=CC2)=O)C=C1",
+    "filename": "4'-((2-thiazolyl)sulfamoyl)phthalanilic acid.jdx",
+    "compound_name": "4'-((2-thiazolyl)sulfamoyl)phthalanilic acid",
+    "sdbs_id": "41"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)OCCO",
+    "filename": "2-(benzyloxy)ethanol.jdx",
+    "compound_name": "2-(benzyloxy)ethanol",
+    "sdbs_id": "420"
+  },
+  {
+    "smiles": "C(C)(=O)NC1=CC=C(C=NC=2OC(=C(C2C#N)C2=CC=CC=C2)C2=CC=CC=C2)C=C1",
+    "filename": "2-(p-acetamidobenzylideneamino)-4,5-diphenyl-3-furonitrile.jdx",
+    "compound_name": "2-(p-acetamidobenzylideneamino)-4,5-diphenyl-3-furonitrile",
+    "sdbs_id": "421"
+  },
+  {
+    "smiles": "C(C=1C(C(=O)OC)=CC=CC1)(=O)OC",
+    "filename": "dimethyl phthalate.jdx",
+    "compound_name": "dimethyl phthalate",
+    "sdbs_id": "423"
+  },
+  {
+    "smiles": "C(CC)OC1=CC=C(C=O)C=C1",
+    "filename": "p-propoxybenzaldehyde.jdx",
+    "compound_name": "p-propoxybenzaldehyde",
+    "sdbs_id": "424"
+  },
+  {
+    "smiles": "BrC12CC3CC(CC(C1)C3)C2",
+    "filename": "1-bromotricyclo[3.3.1.1[3,7]]decane.jdx",
+    "compound_name": "1-bromotricyclo[3.3.1.1[3,7]]decane",
+    "sdbs_id": "425"
+  },
+  {
+    "smiles": "CCCCCCCCCC",
+    "filename": "decane.jdx",
+    "compound_name": "decane",
+    "sdbs_id": "426"
+  },
+  {
+    "smiles": "CCCC(CCCCCCC)=O",
+    "filename": "4-undecanone.jdx",
+    "compound_name": "4-undecanone",
+    "sdbs_id": "427"
+  },
+  {
+    "smiles": "CCCCC(CCCCCC)=O",
+    "filename": "5-undecanone.jdx",
+    "compound_name": "5-undecanone",
+    "sdbs_id": "428"
+  },
+  {
+    "smiles": "C(C)(=O)[O-].C1(=CC=CC=C1)[Sn+](C1=CC=CC=C1)C1=CC=CC=C1",
+    "filename": "triphenyltin acetate.jdx",
+    "compound_name": "triphenyltin acetate",
+    "sdbs_id": "42"
+  },
+  {
+    "smiles": "C=CCCCCCCCCCCC=C",
+    "filename": "1,13-tetradecadiene.jdx",
+    "compound_name": "1,13-tetradecadiene",
+    "sdbs_id": "431"
+  },
+  {
+    "smiles": "OC(CC(=O)OCCCC)(CC(=O)OCCCC)C(=O)OCCCC",
+    "filename": "tributyl 2-hydroxy-1,2,3-propanetricarboxylate.jdx",
+    "compound_name": "tributyl 2-hydroxy-1,2,3-propanetricarboxylate",
+    "sdbs_id": "436"
+  },
+  {
+    "smiles": "COC1=CC=C(C=NC2=CC=C(C=CC(=O)OCCCC)C=C2)C=C1",
+    "filename": "butyl p-(p-methoxybenzylideneamino)cinnamate.jdx",
+    "compound_name": "butyl p-(p-methoxybenzylideneamino)cinnamate",
+    "sdbs_id": "438"
+  },
+  {
+    "smiles": "C(CCCCCC)OC(=O)OC1=CC=C(C(=O)OC2=CC=C(C=C2)OCC)C=C1",
+    "filename": "p-ethoxyphenyl p-(heptyloxycarbonyloxy)benzoate.jdx",
+    "compound_name": "p-ethoxyphenyl p-(heptyloxycarbonyloxy)benzoate",
+    "sdbs_id": "439"
+  },
+  {
+    "smiles": "O.O.CC(C)NCC(O)c1ccc(O)c(O)c1.CC(C)NCC(O)c2ccc(O)c(O)c2.O[S](O)(=O)=O",
+    "filename": "isoprenaline sulfate.jdx",
+    "compound_name": "isoprenaline sulfate",
+    "sdbs_id": "43"
+  },
+  {
+    "smiles": "COC1=C(C=CC(=C1)OC)C(C#N)N1CCOCC1",
+    "filename": "(2,4-dimethoxyphenyl)morpholinoacetonitrile.jdx",
+    "compound_name": "(2,4-dimethoxyphenyl)morpholinoacetonitrile",
+    "sdbs_id": "440"
+  },
+  {
+    "smiles": "C(\\C=C\\CC)(=O)OC1CC(CCC1C(C)C)C",
+    "filename": "3-p-menthyl trans-2-pentenoate.jdx",
+    "compound_name": "3-p-menthyl trans-2-pentenoate",
+    "sdbs_id": "441"
+  },
+  {
+    "smiles": "C(C=1C(C(=O)O)=CC=CC1)(=O)OC(\\C=C\\C)C(C)(C)C",
+    "filename": "trans-1-tert-butyl-2-butenyl hydrogen phthalate.jdx",
+    "compound_name": "trans-1-tert-butyl-2-butenyl hydrogen phthalate",
+    "sdbs_id": "442"
+  },
+  {
+    "smiles": "COC1=C(C=C2N=C(OC2=O)C2=CC=CC=C2)C=CC(=C1)OC",
+    "filename": "4-(2,4-dimethoxybenzylidene)-2-phenyl-2-oxazolin-5-one.jdx",
+    "compound_name": "4-(2,4-dimethoxybenzylidene)-2-phenyl-2-oxazolin-5-one",
+    "sdbs_id": "443"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)(=O)NC(C(=O)O)=CC1=C(C=C(C=C1)OC)OC",
+    "filename": "alpha-benzamido-2,4-dimethoxycinnamic acid.jdx",
+    "compound_name": "alpha-benzamido-2,4-dimethoxycinnamic acid",
+    "sdbs_id": "444"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)(=O)N[C@@H](CC1=C(C=C(C=C1)OC)OC)C(=O)O",
+    "filename": "N-benzoyl-2,4-dimethoxyphenylalanine.jdx",
+    "compound_name": "N-benzoyl-2,4-dimethoxyphenylalanine",
+    "sdbs_id": "445"
+  },
+  {
+    "smiles": "CN(C(C)=O)C",
+    "filename": "N,N-dimethylacetamide.jdx",
+    "compound_name": "N,N-dimethylacetamide",
+    "sdbs_id": "448"
+  },
+  {
+    "smiles": "CC1=CC=C(O1)C=CC(=O)O",
+    "filename": "5-methyl-2-furanacrylic acid.jdx",
+    "compound_name": "5-methyl-2-furanacrylic acid",
+    "sdbs_id": "44"
+  },
+  {
+    "smiles": "NCC12CC3CC(CC(C1)C3)C2",
+    "filename": "1-(aminomethyl)tricyclo[3.3.1.1[3,7]]decane.jdx",
+    "compound_name": "1-(aminomethyl)tricyclo[3.3.1.1[3,7]]decane",
+    "sdbs_id": "450"
+  },
+  {
+    "smiles": "C(CCCCC)OC1=CC=C(C(=O)O)C=C1",
+    "filename": "p-hexyloxybenzoic acid.jdx",
+    "compound_name": "p-hexyloxybenzoic acid",
+    "sdbs_id": "451"
+  },
+  {
+    "smiles": "C(C)(C)(CC)[C-]1C=CC=C1.[CH-]1C=CC=C1.[Fe+2]",
+    "filename": "tert-pentylferrocene.jdx",
+    "compound_name": "tert-pentylferrocene",
+    "sdbs_id": "452"
+  },
+  {
+    "smiles": "C1=CC=CC=2C1=C1C=C3C=CC=CC3=CC1=CC2",
+    "filename": "benz(a)anthracene.jdx",
+    "compound_name": "benz(a)anthracene",
+    "sdbs_id": "453"
+  },
+  {
+    "smiles": "C(CCCC)OC1=CC=C(C=NC2=CC=C(C#N)C=C2)C=C1",
+    "filename": "p-(p-pentyloxybenzylideneamino)benzonitrile.jdx",
+    "compound_name": "p-(p-pentyloxybenzylideneamino)benzonitrile",
+    "sdbs_id": "455"
+  },
+  {
+    "smiles": "ClCC(=O)O[C@@H]1CC2=CC[C@H]3[C@@H]4CC[C@H]([C@@H](CCCC(C)C)C)[C@]4(CC[C@@H]3[C@]2(CC1)C)C",
+    "filename": "5-cholesten-3beta-yl chloroacetate.jdx",
+    "compound_name": "5-cholesten-3beta-yl chloroacetate",
+    "sdbs_id": "456"
+  },
+  {
+    "smiles": "C(C)OC1=CC=C(C=O)C=C1",
+    "filename": "p-ethoxybenzaldehyde.jdx",
+    "compound_name": "p-ethoxybenzaldehyde",
+    "sdbs_id": "457"
+  },
+  {
+    "smiles": "OC1=C(CC(N)C(=O)O)C=CC=C1",
+    "filename": "2-hydroxy-DL-phenylalanine.jdx",
+    "compound_name": "2-hydroxy-DL-phenylalanine",
+    "sdbs_id": "458"
+  },
+  {
+    "smiles": "C(CCCCC)OC1=CC=C(C=O)C=C1",
+    "filename": "p-hexyloxybenzaldehyde.jdx",
+    "compound_name": "p-hexyloxybenzaldehyde",
+    "sdbs_id": "459"
+  },
+  {
+    "smiles": "C(CCC)NC1=CC=CC=C1",
+    "filename": "n-butylaniline.jdx",
+    "compound_name": "n-butylaniline",
+    "sdbs_id": "45"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C1=C(C(=O)O)C=C(C=C1)SSC=1C=CC(=C(C(=O)O)C1)[N+](=O)[O-]",
+    "filename": "5,5'-dithiobis(2-nitrobenzoic acid).jdx",
+    "compound_name": "5,5'-dithiobis(2-nitrobenzoic acid)",
+    "sdbs_id": "460"
+  },
+  {
+    "smiles": "C(CCCCCC)OC1=CC=C(C=O)C=C1",
+    "filename": "p-heptyloxybenzaldehyde.jdx",
+    "compound_name": "p-heptyloxybenzaldehyde",
+    "sdbs_id": "461"
+  },
+  {
+    "smiles": "C(CCC)NCCCCCCNCCCC",
+    "filename": "N,N'-dibutyl-1,6-hexanediamine.jdx",
+    "compound_name": "N,N'-dibutyl-1,6-hexanediamine",
+    "sdbs_id": "462"
+  },
+  {
+    "smiles": "CCCCC(CC)COC(=O)CCCCC(=O)OCC(CC)CCCC",
+    "filename": "di-2-ethylhexyl adipate.jdx",
+    "compound_name": "di-2-ethylhexyl adipate",
+    "sdbs_id": "464"
+  },
+  {
+    "smiles": "OC=1C=2N3C(=NC2N=C(N1)CO)SC=C3C",
+    "filename": "4-hydroxy-6-methylthiazolo(2,3-f)purine-methanol.jdx",
+    "compound_name": "4-hydroxy-6-methylthiazolo(2,3-f)purine-methanol",
+    "sdbs_id": "467"
+  },
+  {
+    "smiles": "CC(C)=NO",
+    "filename": "acetone oxime.jdx",
+    "compound_name": "acetone oxime",
+    "sdbs_id": "468"
+  },
+  {
+    "smiles": "C(C)[Si](CC)(CC)CC",
+    "filename": "tetraethylsilane.jdx",
+    "compound_name": "tetraethylsilane",
+    "sdbs_id": "469"
+  },
+  {
+    "smiles": "NCCNCCN",
+    "filename": "bis(2-aminoethyl)amine.jdx",
+    "compound_name": "bis(2-aminoethyl)amine",
+    "sdbs_id": "46"
+  },
+  {
+    "smiles": "C(N)(OCC)=O",
+    "filename": "ethyl carbamate.jdx",
+    "compound_name": "ethyl carbamate",
+    "sdbs_id": "470"
+  },
+  {
+    "smiles": "CN(C=1C=CC=C2C=CC=C(C12)N1N=NC(=C1C(=O)OCC)C(=O)OCC)C",
+    "filename": "diethyl 1-(8-dimethylamino-1-naphthyl)-1H-1,2,3-triazole-4,5-dicarboxylate.jdx",
+    "compound_name": "diethyl 1-(8-dimethylamino-1-naphthyl)-1H-1,2,3-triazole-4,5-dicarboxylate",
+    "sdbs_id": "471"
+  },
+  {
+    "smiles": "C(C(C)O)O",
+    "filename": "1,2-propanediol.jdx",
+    "compound_name": "1,2-propanediol",
+    "sdbs_id": "472"
+  },
+  {
+    "smiles": "ClC(=C(C(=C(Cl)Cl)Cl)Cl)Cl",
+    "filename": "hexachloro-1,3-butadiene.jdx",
+    "compound_name": "hexachloro-1,3-butadiene",
+    "sdbs_id": "473"
+  },
+  {
+    "smiles": "BrC=1SC(=CC1)Br",
+    "filename": "2,5-dibromothiophene.jdx",
+    "compound_name": "2,5-dibromothiophene",
+    "sdbs_id": "474"
+  },
+  {
+    "smiles": "C1(\\C=C/C(=O)O1)=O",
+    "filename": "maleic anhydride.jdx",
+    "compound_name": "maleic anhydride",
+    "sdbs_id": "475"
+  },
+  {
+    "smiles": "ClC=1SC=CC1",
+    "filename": "2-chlorothiophene.jdx",
+    "compound_name": "2-chlorothiophene",
+    "sdbs_id": "476"
+  },
+  {
+    "smiles": "C(\\C=C/C(=O)O)(=O)NN",
+    "filename": "maleic hydrazide.jdx",
+    "compound_name": "maleic hydrazide",
+    "sdbs_id": "477"
+  },
+  {
+    "smiles": "C1(CCC(=O)O1)=O",
+    "filename": "succinic anhydride.jdx",
+    "compound_name": "succinic anhydride",
+    "sdbs_id": "478"
+  },
+  {
+    "smiles": "S1C=CC=C1",
+    "filename": "thiophene.jdx",
+    "compound_name": "thiophene",
+    "sdbs_id": "479"
+  },
+  {
+    "smiles": "O1C(=CC=C1)C=CC(=O)OC",
+    "filename": "methyl 2-furanacrylate.jdx",
+    "compound_name": "methyl 2-furanacrylate",
+    "sdbs_id": "47"
+  },
+  {
+    "smiles": "ClC(C(=O)OCC)(Cl)Cl",
+    "filename": "ethyl trichloroacetate.jdx",
+    "compound_name": "ethyl trichloroacetate",
+    "sdbs_id": "480"
+  },
+  {
+    "smiles": "N1C=CC=C1",
+    "filename": "pyrrole.jdx",
+    "compound_name": "pyrrole",
+    "sdbs_id": "481"
+  },
+  {
+    "smiles": "C(CCCCCCCCC=C)(=O)O",
+    "filename": "10-undecenoic acid.jdx",
+    "compound_name": "10-undecenoic acid",
+    "sdbs_id": "482"
+  },
+  {
+    "smiles": "O1CC=CC1",
+    "filename": "2,5-dihydrofuran.jdx",
+    "compound_name": "2,5-dihydrofuran",
+    "sdbs_id": "484"
+  },
+  {
+    "smiles": "C1(OCC(C)O1)=O",
+    "filename": "propylene carbonate.jdx",
+    "compound_name": "propylene carbonate",
+    "sdbs_id": "486"
+  },
+  {
+    "smiles": "SC(C(=O)O)CC(=O)O",
+    "filename": "mercaptosuccinic acid.jdx",
+    "compound_name": "mercaptosuccinic acid",
+    "sdbs_id": "487"
+  },
+  {
+    "smiles": "C([C@H](O)[C@@H](O)C(=O)O)(=O)O",
+    "filename": "L-tartaric acid.jdx",
+    "compound_name": "L-tartaric acid",
+    "sdbs_id": "488"
+  },
+  {
+    "smiles": "BrC(C(=O)O)CC",
+    "filename": "2-bromobutyric acid.jdx",
+    "compound_name": "2-bromobutyric acid",
+    "sdbs_id": "489"
+  },
+  {
+    "smiles": "C(C)(=O)C1=CC=C(O1)C(=O)OC",
+    "filename": "methyl 5-acetyl-2-furoate.jdx",
+    "compound_name": "methyl 5-acetyl-2-furoate",
+    "sdbs_id": "48"
+  },
+  {
+    "smiles": "C(C(C)C)#N",
+    "filename": "isobutyronitrile.jdx",
+    "compound_name": "isobutyronitrile",
+    "sdbs_id": "490"
+  },
+  {
+    "smiles": "N1C(CCC1)=O",
+    "filename": "2-pyrrolidone.jdx",
+    "compound_name": "2-pyrrolidone",
+    "sdbs_id": "491"
+  },
+  {
+    "smiles": "C(C)(C(=O)C)=NO",
+    "filename": "biacetyl monooxime.jdx",
+    "compound_name": "biacetyl monooxime",
+    "sdbs_id": "492"
+  },
+  {
+    "smiles": "BrCC(CC)Br",
+    "filename": "1,2-dibromobutane.jdx",
+    "compound_name": "1,2-dibromobutane",
+    "sdbs_id": "493"
+  },
+  {
+    "smiles": "BrCC(C)(C)Br",
+    "filename": "1,2-dibromo-2-methylpropane.jdx",
+    "compound_name": "1,2-dibromo-2-methylpropane",
+    "sdbs_id": "494"
+  },
+  {
+    "smiles": "CC(C(=NO)C)=NO",
+    "filename": "dimethylglyoxime.jdx",
+    "compound_name": "dimethylglyoxime",
+    "sdbs_id": "495"
+  },
+  {
+    "smiles": "OC(C(C)=O)C",
+    "filename": "acetoin.jdx",
+    "compound_name": "acetoin",
+    "sdbs_id": "498"
+  },
+  {
+    "smiles": "CC1=CC=C(O1)C=CC(=O)OC",
+    "filename": "methyl 5-methyl-2-furanacrylate.jdx",
+    "compound_name": "methyl 5-methyl-2-furanacrylate",
+    "sdbs_id": "49"
+  },
+  {
+    "smiles": "BrC(C)CC",
+    "filename": "2-bromobutane.jdx",
+    "compound_name": "2-bromobutane",
+    "sdbs_id": "500"
+  },
+  {
+    "smiles": "BrC(C)(C)C",
+    "filename": "2-bromo-2-methylpropane.jdx",
+    "compound_name": "2-bromo-2-methylpropane",
+    "sdbs_id": "501"
+  },
+  {
+    "smiles": "N1CCCC1",
+    "filename": "pyrrolidine.jdx",
+    "compound_name": "pyrrolidine",
+    "sdbs_id": "503"
+  },
+  {
+    "smiles": "CNC(OCC)=O",
+    "filename": "ethyl N-methylcarbamate.jdx",
+    "compound_name": "ethyl N-methylcarbamate",
+    "sdbs_id": "504"
+  },
+  {
+    "smiles": "CN(C=1C=CC=C2C=CC=C(C12)N1N=NC(=C1)C(=O)OCC)C",
+    "filename": "ethyl 1-(8-dimethylamino-1-naphthyl)-1H-1,2,3-triazole-4-carboxylate.jdx",
+    "compound_name": "ethyl 1-(8-dimethylamino-1-naphthyl)-1H-1,2,3-triazole-4-carboxylate",
+    "sdbs_id": "505"
+  },
+  {
+    "smiles": "CC(CC)O",
+    "filename": "2-butanol.jdx",
+    "compound_name": "2-butanol",
+    "sdbs_id": "507"
+  },
+  {
+    "smiles": "CC(CO)C",
+    "filename": "2-methyl-1-propanol.jdx",
+    "compound_name": "2-methyl-1-propanol",
+    "sdbs_id": "508"
+  },
+  {
+    "smiles": "C(CC(C)O)O",
+    "filename": "1,3-butanediol.jdx",
+    "compound_name": "1,3-butanediol",
+    "sdbs_id": "509"
+  },
+  {
+    "smiles": "C(C)OCCO",
+    "filename": "ethylene glycol monoethyl ether.jdx",
+    "compound_name": "ethylene glycol monoethyl ether",
+    "sdbs_id": "510"
+  },
+  {
+    "smiles": "COCCCN",
+    "filename": "3-methoxypropylamine.jdx",
+    "compound_name": "3-methoxypropylamine",
+    "sdbs_id": "511"
+  },
+  {
+    "smiles": "C(C)NCC",
+    "filename": "diethylamine.jdx",
+    "compound_name": "diethylamine",
+    "sdbs_id": "513"
+  },
+  {
+    "smiles": "NC(CO)(C)C",
+    "filename": "2-amino-2-methyl-1-propanol.jdx",
+    "compound_name": "2-amino-2-methyl-1-propanol",
+    "sdbs_id": "514"
+  },
+  {
+    "smiles": "C1(\\C(\\C)=C/C(=O)O1)=O",
+    "filename": "citraconic anhydride.jdx",
+    "compound_name": "citraconic anhydride",
+    "sdbs_id": "516"
+  },
+  {
+    "smiles": "ClC=1N=NC(=CC1)OC",
+    "filename": "3-chloro-6-methoxypyridazine.jdx",
+    "compound_name": "3-chloro-6-methoxypyridazine",
+    "sdbs_id": "517"
+  },
+  {
+    "smiles": "N1=CC=CC=C1",
+    "filename": "pyridine.jdx",
+    "compound_name": "pyridine",
+    "sdbs_id": "518"
+  },
+  {
+    "smiles": "N1C(C=CC=C1)=O",
+    "filename": "2-pyridone.jdx",
+    "compound_name": "2-pyridone",
+    "sdbs_id": "519"
+  },
+  {
+    "smiles": "CC1=NC=CN=C1",
+    "filename": "2-methylpyrazine.jdx",
+    "compound_name": "2-methylpyrazine",
+    "sdbs_id": "520"
+  },
+  {
+    "smiles": "N1=C(C=CC=C1)N",
+    "filename": "2-pyridinamine.jdx",
+    "compound_name": "2-pyridinamine",
+    "sdbs_id": "521"
+  },
+  {
+    "smiles": "C=C1CCC1",
+    "filename": "methylenecyclobutane.jdx",
+    "compound_name": "methylenecyclobutane",
+    "sdbs_id": "522"
+  },
+  {
+    "smiles": "C1(=CC=CC2=CC=CC=C12)N1N=NC(=C1C(=O)OC(C)(C)C)C(=O)OC(C)(C)C",
+    "filename": "di-tert-butyl 1-(1-naphthyl)-1H-1,2,3-triazole-4,5-dicarboxylate.jdx",
+    "compound_name": "di-tert-butyl 1-(1-naphthyl)-1H-1,2,3-triazole-4,5-dicarboxylate",
+    "sdbs_id": "523"
+  },
+  {
+    "smiles": "C(C)OCCC#N",
+    "filename": "3-ethoxypropionitrile.jdx",
+    "compound_name": "3-ethoxypropionitrile",
+    "sdbs_id": "524"
+  },
+  {
+    "smiles": "C(C)(=O)NC=1C=CC=C2C=CC=C(C12)N1N=NC(=C1)C(=O)OCC",
+    "filename": "ethyl 1-(8-acetamido-1-naphthyl)-1H-1,2,3-triazole-4-carboxylate.jdx",
+    "compound_name": "ethyl 1-(8-acetamido-1-naphthyl)-1H-1,2,3-triazole-4-carboxylate",
+    "sdbs_id": "525"
+  },
+  {
+    "smiles": "C(C)N(C([S-])=S)CC.[Na+]",
+    "filename": "sodium N,N-diethyldithiocarbamate.jdx",
+    "compound_name": "sodium N,N-diethyldithiocarbamate",
+    "sdbs_id": "527"
+  },
+  {
+    "smiles": "CC(C(C)=O)C",
+    "filename": "3-methyl-2-butanone.jdx",
+    "compound_name": "3-methyl-2-butanone",
+    "sdbs_id": "528"
+  },
+  {
+    "smiles": "CCC(CC)=O",
+    "filename": "3-pentanone.jdx",
+    "compound_name": "3-pentanone",
+    "sdbs_id": "529"
+  },
+  {
+    "smiles": "OCC=1SC=CC1",
+    "filename": "2-(hydroxymethyl)thiophene.jdx",
+    "compound_name": "2-(hydroxymethyl)thiophene",
+    "sdbs_id": "52"
+  },
+  {
+    "smiles": "SC1=[N+](C=CC=C1)[O-]",
+    "filename": "2-mercaptopyridine N-oxide.jdx",
+    "compound_name": "2-mercaptopyridine N-oxide",
+    "sdbs_id": "531"
+  },
+  {
+    "smiles": "C(C)(=O)OC1=C(C(=O)O)C=CC=C1",
+    "filename": "o-acetoxybenzoic acid.jdx",
+    "compound_name": "o-acetoxybenzoic acid",
+    "sdbs_id": "532"
+  },
+  {
+    "smiles": "BrCCC(C)C",
+    "filename": "1-bromo-3-methylbutane.jdx",
+    "compound_name": "1-bromo-3-methylbutane",
+    "sdbs_id": "533"
+  },
+  {
+    "smiles": "ClC(C)(CC)C",
+    "filename": "2-chloro-2-methylbutane.jdx",
+    "compound_name": "2-chloro-2-methylbutane",
+    "sdbs_id": "534"
+  },
+  {
+    "smiles": "ClCCC(C)C",
+    "filename": "1-chloro-3-methylbutane.jdx",
+    "compound_name": "1-chloro-3-methylbutane",
+    "sdbs_id": "535"
+  },
+  {
+    "smiles": "ClCCCCC",
+    "filename": "1-chloropentane.jdx",
+    "compound_name": "1-chloropentane",
+    "sdbs_id": "536"
+  },
+  {
+    "smiles": "[Cl-].C[N+](C)(C)CC(O)=O",
+    "filename": "betaine hydrochloride.jdx",
+    "compound_name": "betaine hydrochloride",
+    "sdbs_id": "537"
+  },
+  {
+    "smiles": "CN(C=1C=CC=C2C=CC=C(C12)N1N=NC=C1C(=O)OCC)C",
+    "filename": "ethyl 1-(8-dimethylamino-1-naphthyl)-1H-1,2,3-triazole-5-carboxylate.jdx",
+    "compound_name": "ethyl 1-(8-dimethylamino-1-naphthyl)-1H-1,2,3-triazole-5-carboxylate",
+    "sdbs_id": "538"
+  },
+  {
+    "smiles": "CN(C(N(C)C)=O)C",
+    "filename": "tetramethylurea.jdx",
+    "compound_name": "tetramethylurea",
+    "sdbs_id": "539"
+  },
+  {
+    "smiles": "CC1=CC=C(S1)C=O",
+    "filename": "5-methyl-2-thiophenecarbaldehyde.jdx",
+    "compound_name": "5-methyl-2-thiophenecarbaldehyde",
+    "sdbs_id": "53"
+  },
+  {
+    "smiles": "CN(C(N(C)C)=S)C",
+    "filename": "tetramethylthiourea.jdx",
+    "compound_name": "tetramethylthiourea",
+    "sdbs_id": "540"
+  },
+  {
+    "smiles": "CC(CCO)C",
+    "filename": "3-methyl-1-butanol.jdx",
+    "compound_name": "3-methyl-1-butanol",
+    "sdbs_id": "541"
+  },
+  {
+    "smiles": "COC(CCO)C",
+    "filename": "3-methoxy-1-butanol.jdx",
+    "compound_name": "3-methoxy-1-butanol",
+    "sdbs_id": "542"
+  },
+  {
+    "smiles": "C(CCCCN)N",
+    "filename": "1,5-pentanediamine.jdx",
+    "compound_name": "1,5-pentanediamine",
+    "sdbs_id": "544"
+  },
+  {
+    "smiles": "BrC1=CC(=CC(=C1)Br)Br",
+    "filename": "1,3,5-tribromobenzene.jdx",
+    "compound_name": "1,3,5-tribromobenzene",
+    "sdbs_id": "545"
+  },
+  {
+    "smiles": "ClC1=C(C(=CC=C1)Cl)Cl",
+    "filename": "1,2,3-trichlorobenzene.jdx",
+    "compound_name": "1,2,3-trichlorobenzene",
+    "sdbs_id": "546"
+  },
+  {
+    "smiles": "ClC1=C(C=CC=C1)Cl",
+    "filename": "o-dichlorobenzene.jdx",
+    "compound_name": "o-dichlorobenzene",
+    "sdbs_id": "548"
+  },
+  {
+    "smiles": "C1(C=CC(C=C1)=O)=O",
+    "filename": "p-benzoquinone.jdx",
+    "compound_name": "p-benzoquinone",
+    "sdbs_id": "549"
+  },
+  {
+    "smiles": "BrC1=CC=CC=C1",
+    "filename": "bromobenzene.jdx",
+    "compound_name": "bromobenzene",
+    "sdbs_id": "550"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C1=CC=CC=C1",
+    "filename": "nitrobenzene.jdx",
+    "compound_name": "nitrobenzene",
+    "sdbs_id": "552"
+  },
+  {
+    "smiles": "C(C1=CN=CC=C1)(=O)N",
+    "filename": "nicotinamide.jdx",
+    "compound_name": "nicotinamide",
+    "sdbs_id": "553"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)O",
+    "filename": "phenol.jdx",
+    "compound_name": "phenol",
+    "sdbs_id": "554"
+  },
+  {
+    "smiles": "C=1(O)C(O)=CC=CC1",
+    "filename": "pyrocatechol.jdx",
+    "compound_name": "pyrocatechol",
+    "sdbs_id": "555"
+  },
+  {
+    "smiles": "O1C(=CC=C1)C(=O)OC",
+    "filename": "methyl 2-furoate.jdx",
+    "compound_name": "methyl 2-furoate",
+    "sdbs_id": "556"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)S(=O)(=O)O",
+    "filename": "benzenesulfonic acid.jdx",
+    "compound_name": "benzenesulfonic acid",
+    "sdbs_id": "557"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)S",
+    "filename": "benzenethiol.jdx",
+    "compound_name": "benzenethiol",
+    "sdbs_id": "558"
+  },
+  {
+    "smiles": "C1=CCC=CC1",
+    "filename": "1,4-cyclohexadiene.jdx",
+    "compound_name": "1,4-cyclohexadiene",
+    "sdbs_id": "559"
+  },
+  {
+    "smiles": "S1C=NC=C1",
+    "filename": "thiazole.jdx",
+    "compound_name": "thiazole",
+    "sdbs_id": "55"
+  },
+  {
+    "smiles": "C(CCCCC(=O)Cl)(=O)Cl",
+    "filename": "adipoyl dichloride.jdx",
+    "compound_name": "adipoyl dichloride",
+    "sdbs_id": "560"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)NN",
+    "filename": "phenylhydrazine.jdx",
+    "compound_name": "phenylhydrazine",
+    "sdbs_id": "561"
+  },
+  {
+    "smiles": "C(CCCCC#N)#N",
+    "filename": "adiponitrile.jdx",
+    "compound_name": "adiponitrile",
+    "sdbs_id": "562"
+  },
+  {
+    "smiles": "CN1C(N(C(C=C1)=O)C)=O",
+    "filename": "1,3-dimethyl-2,4(1H,3H)-pyrimidinedione.jdx",
+    "compound_name": "1,3-dimethyl-2,4(1H,3H)-pyrimidinedione",
+    "sdbs_id": "563"
+  },
+  {
+    "smiles": "N(=[N+]=[N-])C=1C=CC=C2C=CC=C(C12)N1N=NC(=C1C(=O)OCC)C(=O)OCC",
+    "filename": "diethyl 1-(8-azido-1-naphthyl)-1H-1,2,3-triazole-4,5-dicarboxylate.jdx",
+    "compound_name": "diethyl 1-(8-azido-1-naphthyl)-1H-1,2,3-triazole-4,5-dicarboxylate",
+    "sdbs_id": "564"
+  },
+  {
+    "smiles": "C(=C)N1C(CCC1)=O",
+    "filename": "1-vinyl-2-pyrrolidone.jdx",
+    "compound_name": "1-vinyl-2-pyrrolidone",
+    "sdbs_id": "566"
+  },
+  {
+    "smiles": "N(=[N+]=[N-])C=1C=CC=C2C=CC=C(C12)N1N=NC(=C1)C(=O)OCC",
+    "filename": "ethyl 1-(8-azido-1-naphthyl)-1H-1,2,3-triazole-4-carboxylate.jdx",
+    "compound_name": "ethyl 1-(8-azido-1-naphthyl)-1H-1,2,3-triazole-4-carboxylate",
+    "sdbs_id": "567"
+  },
+  {
+    "smiles": "C#CCCCC",
+    "filename": "1-hexyne.jdx",
+    "compound_name": "1-hexyne",
+    "sdbs_id": "568"
+  },
+  {
+    "smiles": "C1=CCCCC1",
+    "filename": "cyclohexene.jdx",
+    "compound_name": "cyclohexene",
+    "sdbs_id": "569"
+  },
+  {
+    "smiles": "C(CC#C)O",
+    "filename": "3-butyn-1-ol.jdx",
+    "compound_name": "3-butyn-1-ol",
+    "sdbs_id": "56"
+  },
+  {
+    "smiles": "OCN1C(=O)NC(=O)C1(C)C",
+    "filename": "1-hydroxymethyl-5,5-dimethylhydantoin.jdx",
+    "compound_name": "1-hydroxymethyl-5,5-dimethylhydantoin",
+    "sdbs_id": "570"
+  },
+  {
+    "smiles": "C1(CCCCC1)=O",
+    "filename": "cyclohexanone.jdx",
+    "compound_name": "cyclohexanone",
+    "sdbs_id": "571"
+  },
+  {
+    "smiles": "C(CC(=O)C)(=O)OCC",
+    "filename": "ethyl acetoacetate.jdx",
+    "compound_name": "ethyl acetoacetate",
+    "sdbs_id": "573"
+  },
+  {
+    "smiles": "C(CC)(=O)OC(CC)=O",
+    "filename": "propionic anhydride.jdx",
+    "compound_name": "propionic anhydride",
+    "sdbs_id": "574"
+  },
+  {
+    "smiles": "C(C(=O)OCC)(=O)OCC",
+    "filename": "diethyl oxalate.jdx",
+    "compound_name": "diethyl oxalate",
+    "sdbs_id": "575"
+  },
+  {
+    "smiles": "BrC1CCCCC1",
+    "filename": "bromocyclohexane.jdx",
+    "compound_name": "bromocyclohexane",
+    "sdbs_id": "576"
+  },
+  {
+    "smiles": "C1(CCCCCN1)=O",
+    "filename": "6-hexanelactam.jdx",
+    "compound_name": "6-hexanelactam",
+    "sdbs_id": "577"
+  },
+  {
+    "smiles": "CC1CCCC1",
+    "filename": "methylcyclopentane.jdx",
+    "compound_name": "methylcyclopentane",
+    "sdbs_id": "578"
+  },
+  {
+    "smiles": "N(=[N+]=[N-])C=1C=CC=C2C=CC=C(C12)N1N=NC=C1C(=O)OCC",
+    "filename": "ethyl 1-(8-azido-1-naphthyl)-1H-1,2,3-triazole-5-carboxylate.jdx",
+    "compound_name": "ethyl 1-(8-azido-1-naphthyl)-1H-1,2,3-triazole-5-carboxylate",
+    "sdbs_id": "579"
+  },
+  {
+    "smiles": "CC(CC(C)=O)C",
+    "filename": "4-methyl-2-pentanone.jdx",
+    "compound_name": "4-methyl-2-pentanone",
+    "sdbs_id": "580"
+  },
+  {
+    "smiles": "C1(CCCCC1)O",
+    "filename": "cyclohexanol.jdx",
+    "compound_name": "cyclohexanol",
+    "sdbs_id": "581"
+  },
+  {
+    "smiles": "C(CCCCC)(=O)O",
+    "filename": "hexanoic acid.jdx",
+    "compound_name": "hexanoic acid",
+    "sdbs_id": "582"
+  },
+  {
+    "smiles": "C(C)(=O)OC(C)(C)C",
+    "filename": "tert-butyl acetate.jdx",
+    "compound_name": "tert-butyl acetate",
+    "sdbs_id": "583"
+  },
+  {
+    "smiles": "[K+].CC1(C(N2C(C(C2S1)NC(CC1=CC=CC=C1)=O)=O)C(=O)[O-])C",
+    "filename": "3,3-dimethyl-7-oxo-6-phenylacetamido-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid potassium salt.jdx",
+    "compound_name": "3,3-dimethyl-7-oxo-6-phenylacetamido-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid potassium salt",
+    "sdbs_id": "584"
+  },
+  {
+    "smiles": "[Br-].C(C)OC(=O)C=1N(N[NH+](C1)C1=CC=CC2=CC=CC=C12)C",
+    "filename": "4-ethoxycarbonyl-3-methyl-1-(1-naphthyl)-1H-1,2,3-triazolium bromide.jdx",
+    "compound_name": "4-ethoxycarbonyl-3-methyl-1-(1-naphthyl)-1H-1,2,3-triazolium bromide",
+    "sdbs_id": "585"
+  },
+  {
+    "smiles": "ClC(C(O)P(OC)(OC)=O)(Cl)Cl",
+    "filename": "dimethyl (2,2,2-trichloro-1-hydroxyethyl)phosphonate.jdx",
+    "compound_name": "dimethyl (2,2,2-trichloro-1-hydroxyethyl)phosphonate",
+    "sdbs_id": "586"
+  },
+  {
+    "smiles": "ClC1=NC=CC=N1",
+    "filename": "2-chloropyrimidine.jdx",
+    "compound_name": "2-chloropyrimidine",
+    "sdbs_id": "588"
+  },
+  {
+    "smiles": "CN(C=1C=CC=C2C=CC=C(C12)N1N=NC(=C1)C(=O)O)C",
+    "filename": "1-(8-dimethylamino-1-naphthyl)-1H-1,2,3-triazole-4-carboxylic acid.jdx",
+    "compound_name": "1-(8-dimethylamino-1-naphthyl)-1H-1,2,3-triazole-4-carboxylic acid",
+    "sdbs_id": "589"
+  },
+  {
+    "smiles": "CC\\C=C\\CC",
+    "filename": "trans-3-hexene.jdx",
+    "compound_name": "trans-3-hexene",
+    "sdbs_id": "58"
+  },
+  {
+    "smiles": "Cl(=O)(=O)(=O)[O-].C[N+](C1=CC=CC2=CC=CC=C12)(C)C",
+    "filename": "trimethyl(1-naphthyl)ammonium perchlorate.jdx",
+    "compound_name": "trimethyl(1-naphthyl)ammonium perchlorate",
+    "sdbs_id": "590"
+  },
+  {
+    "smiles": "CC1CCNCC1",
+    "filename": "4-methylpiperidine.jdx",
+    "compound_name": "4-methylpiperidine",
+    "sdbs_id": "591"
+  },
+  {
+    "smiles": "C1(CCCCC1)N",
+    "filename": "cyclohexylamine.jdx",
+    "compound_name": "cyclohexylamine",
+    "sdbs_id": "592"
+  },
+  {
+    "smiles": "CC(C(C#N)([2H])N1CCOCC1)C",
+    "filename": "3-methyl-2-morpholinobutyronitrile-2-d.jdx",
+    "compound_name": "3-methyl-2-morpholinobutyronitrile-2-d",
+    "sdbs_id": "594"
+  },
+  {
+    "smiles": "ClC=1C=C(C=CC1)C(C#N)([2H])N1CCOCC1",
+    "filename": "(m-chlorophenyl)morpholinoacetonitrile-2-d.jdx",
+    "compound_name": "(m-chlorophenyl)morpholinoacetonitrile-2-d",
+    "sdbs_id": "596"
+  },
+  {
+    "smiles": "O1CCN(CC1)C(C#N)([2H])C1=CC=CC=C1",
+    "filename": "morpholinophenylacetonitrile-2-d.jdx",
+    "compound_name": "morpholinophenylacetonitrile-2-d",
+    "sdbs_id": "597"
+  },
+  {
+    "smiles": "COC1=C(C=CC(=C1)OC)C(C#N)([2H])N1CCOCC1",
+    "filename": "(2,4-dimethoxyphenyl)morpholinoacetonitrile-2-d.jdx",
+    "compound_name": "(2,4-dimethoxyphenyl)morpholinoacetonitrile-2-d",
+    "sdbs_id": "599"
   },
   {
     "smiles": "C1(=CC=CC=C1)C1=NOC(C1)C1=CC=CC=C1",
@@ -12,9 +4074,2103 @@
     "sdbs_id": "5"
   },
   {
+    "smiles": "COC1=C(C([2H])=C2N=C(OC2=O)C2=CC=CC=C2)C=CC(=C1)OC",
+    "filename": "4-(2,4-dimethoxybenzylidene-alpha-d)-2-phenyl-2-oxazoline-5-one.jdx",
+    "compound_name": "4-(2,4-dimethoxybenzylidene-alpha-d)-2-phenyl-2-oxazoline-5-one",
+    "sdbs_id": "601"
+  },
+  {
+    "smiles": "CS(=O)OCC",
+    "filename": "ethyl methanesulfinate.jdx",
+    "compound_name": "ethyl methanesulfinate",
+    "sdbs_id": "604"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C(=CC)C1=CC=CC=C1",
+    "filename": "1,1-diphenyl-1-propene.jdx",
+    "compound_name": "1,1-diphenyl-1-propene",
+    "sdbs_id": "605"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C(=CC(C)C1=CC=CC=C1)C1=CC=CC=C1",
+    "filename": "1,1,3-triphenyl-1-butene.jdx",
+    "compound_name": "1,1,3-triphenyl-1-butene",
+    "sdbs_id": "606"
+  },
+  {
+    "smiles": "BrC1=NC=CC=N1",
+    "filename": "2-bromopyrimidine.jdx",
+    "compound_name": "2-bromopyrimidine",
+    "sdbs_id": "608"
+  },
+  {
+    "smiles": "C(C)S(=O)(=O)[O-].[Na+]",
+    "filename": "sodium ethanesulfonate.jdx",
+    "compound_name": "sodium ethanesulfonate",
+    "sdbs_id": "609"
+  },
+  {
+    "smiles": "C(C)C(/C=C/C)CC",
+    "filename": "trans-4-ethyl-2-hexene.jdx",
+    "compound_name": "trans-4-ethyl-2-hexene",
+    "sdbs_id": "60"
+  },
+  {
+    "smiles": "C(CC)(=O)[O-].[Na+]",
+    "filename": "sodium propionate.jdx",
+    "compound_name": "sodium propionate",
+    "sdbs_id": "610"
+  },
+  {
+    "smiles": "C1(CCC1)(C(=O)O)C(=O)O",
+    "filename": "1,1-cyclobutanedicarboxylic acid.jdx",
+    "compound_name": "1,1-cyclobutanedicarboxylic acid",
+    "sdbs_id": "612"
+  },
+  {
+    "smiles": "[I-].OC(C[N+](C)(C)C)C",
+    "filename": "(2-hydroxypropyl)trimethylammonium iodide.jdx",
+    "compound_name": "(2-hydroxypropyl)trimethylammonium iodide",
+    "sdbs_id": "613"
+  },
+  {
+    "smiles": "C(CCCCCCCCC)S(=O)(=O)[O-].[Na+]",
+    "filename": "sodium 1-decanesulfonate.jdx",
+    "compound_name": "sodium 1-decanesulfonate",
+    "sdbs_id": "618"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C#CCCC",
+    "filename": "1-phenyl-1-pentyne.jdx",
+    "compound_name": "1-phenyl-1-pentyne",
+    "sdbs_id": "619"
+  },
+  {
+    "smiles": "CC(C)C(CCCCC)C",
+    "filename": "2,3-dimethyloctane.jdx",
+    "compound_name": "2,3-dimethyloctane",
+    "sdbs_id": "61"
+  },
+  {
+    "smiles": "C(CCCCCCCCCC)S(=O)(=O)[O-].[Na+]",
+    "filename": "sodium 1-undecanesulfonate.jdx",
+    "compound_name": "sodium 1-undecanesulfonate",
+    "sdbs_id": "620"
+  },
+  {
+    "smiles": "C(C)(=O)NC(CSCC1=CC=CC=C1)C(=O)O",
+    "filename": "N-acetyl-S-benzyl-DL-cysteine.jdx",
+    "compound_name": "N-acetyl-S-benzyl-DL-cysteine",
+    "sdbs_id": "621"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C=CC(=O)C=1SC=CC1",
+    "filename": "3-phenyl-1-(2-thienyl)-2-propen-1-one.jdx",
+    "compound_name": "3-phenyl-1-(2-thienyl)-2-propen-1-one",
+    "sdbs_id": "622"
+  },
+  {
+    "smiles": "S(=O)(=O)(C1=CC=C(C)C=C1)N[C@@H](CCCNC(N)=N)C(=O)O",
+    "filename": "N(2)-tosyl-L-arginine.jdx",
+    "compound_name": "N(2)-tosyl-L-arginine",
+    "sdbs_id": "623"
+  },
+  {
+    "smiles": "C(CCCCCCCC)C1=CC=C(C=C1)O",
+    "filename": "p-nonylphenol.jdx",
+    "compound_name": "p-nonylphenol",
+    "sdbs_id": "624"
+  },
+  {
+    "smiles": "C#CCCCCCCCCCCCCC",
+    "filename": "1-pentadecyne.jdx",
+    "compound_name": "1-pentadecyne",
+    "sdbs_id": "625"
+  },
+  {
+    "smiles": "COC(=O)OC1=CC=C(C(=O)OC2=CC=C(C=C2)OCC)C=C1",
+    "filename": "p-ethoxyphenyl p-(methoxycarbonyloxy)benzoate.jdx",
+    "compound_name": "p-ethoxyphenyl p-(methoxycarbonyloxy)benzoate",
+    "sdbs_id": "626"
+  },
+  {
+    "smiles": "C(CCC)C1=CC=C(N=CC2=CC=C(C=C2)OC)C=C1",
+    "filename": "p-butyl-N-(p-methoxybenzylidene)aniline.jdx",
+    "compound_name": "p-butyl-N-(p-methoxybenzylidene)aniline",
+    "sdbs_id": "627"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCCC)C1CCCCC1",
+    "filename": "tridecylcyclohexane.jdx",
+    "compound_name": "tridecylcyclohexane",
+    "sdbs_id": "628"
+  },
+  {
+    "smiles": "[Cl-].C1(=CC=C(C=C1)N1[NH2+]C(=NN1C1=CC=C(C=C1)C1=CC=CC=C1)C1=CC=C(C=C1)C1=CC=CC=C1)C1=CC=CC=C1",
+    "filename": "2,3,5-tri(4-biphenylyl)-2H-tetrazolium chloride.jdx",
+    "compound_name": "2,3,5-tri(4-biphenylyl)-2H-tetrazolium chloride",
+    "sdbs_id": "629"
+  },
+  {
+    "smiles": "CC(CC)(CCCCC)C",
+    "filename": "3,3-dimethyloctane.jdx",
+    "compound_name": "3,3-dimethyloctane",
+    "sdbs_id": "62"
+  },
+  {
+    "smiles": "[Cl-].C1(=CC=C(C=C1)N1[NH2+]C(=NN1C1=CC=C(C=C1)C1=CC=CC=C1)C1=CC=CC=C1)C1=CC=CC=C1",
+    "filename": "2,3-di(4-biphenylyl)-5-phenyl-2H-tetrazolium chloride.jdx",
+    "compound_name": "2,3-di(4-biphenylyl)-5-phenyl-2H-tetrazolium chloride",
+    "sdbs_id": "630"
+  },
+  {
+    "smiles": "FC=1C=C(C=CC1)O",
+    "filename": "m-fluorophenol.jdx",
+    "compound_name": "m-fluorophenol",
+    "sdbs_id": "631"
+  },
+  {
+    "smiles": "OC(CC(=O)O)(CC(=O)O)C",
+    "filename": "3-hydroxy-3-methylglutaric acid.jdx",
+    "compound_name": "3-hydroxy-3-methylglutaric acid",
+    "sdbs_id": "633"
+  },
+  {
+    "smiles": "FC=1C=C(C(=O)O)C=CC1",
+    "filename": "m-fluorobenzoic acid.jdx",
+    "compound_name": "m-fluorobenzoic acid",
+    "sdbs_id": "634"
+  },
+  {
+    "smiles": "C(C=1C(C(=O)[O-])=CC=CC1)(=O)O.[K+]",
+    "filename": "potassium hydrogen phthalate.jdx",
+    "compound_name": "potassium hydrogen phthalate",
+    "sdbs_id": "635"
+  },
+  {
+    "smiles": "N1=C(C=CC=C1)CCCO",
+    "filename": "2-pyridinepropanol.jdx",
+    "compound_name": "2-pyridinepropanol",
+    "sdbs_id": "636"
+  },
+  {
+    "smiles": "N1=CC(=CC=C1)CCCO",
+    "filename": "3-pyridinepropanol.jdx",
+    "compound_name": "3-pyridinepropanol",
+    "sdbs_id": "637"
+  },
+  {
+    "smiles": "N1=CC=C(C=C1)CCCO",
+    "filename": "4-pyridinepropanol.jdx",
+    "compound_name": "4-pyridinepropanol",
+    "sdbs_id": "638"
+  },
+  {
+    "smiles": "CC#CCCCCCCC",
+    "filename": "2-decyne.jdx",
+    "compound_name": "2-decyne",
+    "sdbs_id": "639"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C#CCCCC",
+    "filename": "1-phenyl-1-hexyne.jdx",
+    "compound_name": "1-phenyl-1-hexyne",
+    "sdbs_id": "640"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C#CCCCCC",
+    "filename": "1-phenyl-1-heptyne.jdx",
+    "compound_name": "1-phenyl-1-heptyne",
+    "sdbs_id": "641"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C#CCCCCCC",
+    "filename": "1-phenyl-1-octyne.jdx",
+    "compound_name": "1-phenyl-1-octyne",
+    "sdbs_id": "642"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C#CCCCCCCC",
+    "filename": "1-phenyl-1-nonyne.jdx",
+    "compound_name": "1-phenyl-1-nonyne",
+    "sdbs_id": "643"
+  },
+  {
+    "smiles": "C(CCCCCCCCC)OC1=CC=C(C=O)C=C1",
+    "filename": "p-decyloxybenzaldehyde.jdx",
+    "compound_name": "p-decyloxybenzaldehyde",
+    "sdbs_id": "644"
+  },
+  {
+    "smiles": "C#CCCCCCCCCCCCCCCC",
+    "filename": "1-heptadecyne.jdx",
+    "compound_name": "1-heptadecyne",
+    "sdbs_id": "645"
+  },
+  {
+    "smiles": "[Cl-].C1(=CC=CC=C1)N1[NH2+]C(=NN1C1=CC=CC=C1)C1=CC=CC=C1",
+    "filename": "2,3,5-triphenyl-2H-tetrazolium chloride.jdx",
+    "compound_name": "2,3,5-triphenyl-2H-tetrazolium chloride",
+    "sdbs_id": "646"
+  },
+  {
+    "smiles": "CC1NCCCC1",
+    "filename": "2-methylpiperidine.jdx",
+    "compound_name": "2-methylpiperidine",
+    "sdbs_id": "647"
+  },
+  {
+    "smiles": "C(C)N1CCOCC1",
+    "filename": "4-ethylmorpholine.jdx",
+    "compound_name": "4-ethylmorpholine",
+    "sdbs_id": "648"
+  },
+  {
+    "smiles": "Cl(=O)(=O)(=O)[O-].C(C)(C)OC(=O)C=1N(N[NH+](C1C(=O)OC(C)C)C1=CC=CC2=CC=CC=C12)C",
+    "filename": "4,5-bis(isopropoxycarbonyl)-3-methyl-1-(1-naphthyl)-1H-1,2,3-triazolium perchlorate.jdx",
+    "compound_name": "4,5-bis(isopropoxycarbonyl)-3-methyl-1-(1-naphthyl)-1H-1,2,3-triazolium perchlorate",
+    "sdbs_id": "649"
+  },
+  {
+    "smiles": "Cl(=O)(=O)(=O)[O-].CN(C=1C=CC=C2C=CC=C(C12)[NH+]1NN(C=C1)C)C",
+    "filename": "1-(8-dimethylamino-1-naphthyl)-3-methyl-1H-1,2,3-triazolium perchlorate.jdx",
+    "compound_name": "1-(8-dimethylamino-1-naphthyl)-3-methyl-1H-1,2,3-triazolium perchlorate",
+    "sdbs_id": "650"
+  },
+  {
+    "smiles": "C(C)C(C(=O)OCC(OC(C(CCCC)CC)=O)COC(C(CCCC)CC)=O)CCCC",
+    "filename": "glycerol tris(2-ethylhexanoate).jdx",
+    "compound_name": "glycerol tris(2-ethylhexanoate)",
+    "sdbs_id": "651"
+  },
+  {
+    "smiles": "CC(C)(CC)C",
+    "filename": "2,2-dimethylbutane.jdx",
+    "compound_name": "2,2-dimethylbutane",
+    "sdbs_id": "652"
+  },
+  {
+    "smiles": "CC(CC)CC",
+    "filename": "3-methylpentane.jdx",
+    "compound_name": "3-methylpentane",
+    "sdbs_id": "653"
+  },
+  {
+    "smiles": "CC(C)C(C)C",
+    "filename": "2,3-dimethylbutane.jdx",
+    "compound_name": "2,3-dimethylbutane",
+    "sdbs_id": "654"
+  },
+  {
+    "smiles": "CC(C)CCC",
+    "filename": "2-methylpentane.jdx",
+    "compound_name": "2-methylpentane",
+    "sdbs_id": "655"
+  },
+  {
+    "smiles": "C[C@@H]1NC[C@@H](NC1)C",
+    "filename": "cis-2,5-dimethylpiperazine.jdx",
+    "compound_name": "cis-2,5-dimethylpiperazine",
+    "sdbs_id": "656"
+  },
+  {
+    "smiles": "CC1NC(CNC1)C",
+    "filename": "2,6-dimethylpiperazine.jdx",
+    "compound_name": "2,6-dimethylpiperazine",
+    "sdbs_id": "657"
+  },
+  {
+    "smiles": "CC1=CC=C(C=C1)S(=O)(=O)[O-].C(C)OC(=O)C=1N(N[NH+](C1)C1=CC=CC2=CC=CC=C12)C",
+    "filename": "4-ethoxycarbonyl-3-methyl-1-(1-naphthyl)-1H-1,2,3-triazolium p-toluenesulfonate.jdx",
+    "compound_name": "4-ethoxycarbonyl-3-methyl-1-(1-naphthyl)-1H-1,2,3-triazolium p-toluenesulfonate",
+    "sdbs_id": "658"
+  },
+  {
+    "smiles": "C(C)(=O)OC\\C=C/COC(C)=O",
+    "filename": "cis-2-butenylene diacetate.jdx",
+    "compound_name": "cis-2-butenylene diacetate",
+    "sdbs_id": "659"
+  },
+  {
+    "smiles": "CC12C(C(C(CC1)C2)(C)C)=O",
+    "filename": "(-)-1,3,3-trimethyl-2-norbornanone.jdx",
+    "compound_name": "(-)-1,3,3-trimethyl-2-norbornanone",
+    "sdbs_id": "65"
+  },
+  {
+    "smiles": "CC(CC(C)O)C",
+    "filename": "4-methyl-2-pentanol.jdx",
+    "compound_name": "4-methyl-2-pentanol",
+    "sdbs_id": "660"
+  },
+  {
+    "smiles": "C(C)C(CO)CC",
+    "filename": "2-ethyl-1-butanol.jdx",
+    "compound_name": "2-ethyl-1-butanol",
+    "sdbs_id": "661"
+  },
+  {
+    "smiles": "C(CCC)OCCO",
+    "filename": "ethylene glycol monobutyl ether.jdx",
+    "compound_name": "ethylene glycol monobutyl ether",
+    "sdbs_id": "662"
+  },
+  {
+    "smiles": "C(C)OC(C)OCC",
+    "filename": "acetaldehyde diethyl acetal.jdx",
+    "compound_name": "acetaldehyde diethyl acetal",
+    "sdbs_id": "663"
+  },
+  {
+    "smiles": "C(CCCCC)N",
+    "filename": "hexylamine.jdx",
+    "compound_name": "hexylamine",
+    "sdbs_id": "664"
+  },
+  {
+    "smiles": "BrC1=CC=C(C#N)C=C1",
+    "filename": "p-bromobenzonitrile.jdx",
+    "compound_name": "p-bromobenzonitrile",
+    "sdbs_id": "666"
+  },
+  {
+    "smiles": "ClC1=C(C=O)C(=CC=C1)Cl",
+    "filename": "2,6-dichlorobenzaldehyde.jdx",
+    "compound_name": "2,6-dichlorobenzaldehyde",
+    "sdbs_id": "667"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)(=O)Cl",
+    "filename": "benzoyl chloride.jdx",
+    "compound_name": "benzoyl chloride",
+    "sdbs_id": "668"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)#N",
+    "filename": "benzonitrile.jdx",
+    "compound_name": "benzonitrile",
+    "sdbs_id": "669"
+  },
+  {
+    "smiles": "CC(C)(CCCCCC)C",
+    "filename": "2,2-dimethyloctane.jdx",
+    "compound_name": "2,2-dimethyloctane",
+    "sdbs_id": "66"
+  },
+  {
+    "smiles": "O1C=NC2=C1C=CC=C2",
+    "filename": "benzoxazole.jdx",
+    "compound_name": "benzoxazole",
+    "sdbs_id": "670"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)N=C=O",
+    "filename": "phenyl isocyanate.jdx",
+    "compound_name": "phenyl isocyanate",
+    "sdbs_id": "671"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)=O",
+    "filename": "benzaldehyde.jdx",
+    "compound_name": "benzaldehyde",
+    "sdbs_id": "672"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)(=O)O",
+    "filename": "benzoic acid.jdx",
+    "compound_name": "benzoic acid",
+    "sdbs_id": "673"
+  },
+  {
+    "smiles": "ClC1=C(C)C=CC=C1",
+    "filename": "o-chlorotoluene.jdx",
+    "compound_name": "o-chlorotoluene",
+    "sdbs_id": "674"
+  },
+  {
+    "smiles": "ClC=1C=C(C)C=CC1",
+    "filename": "m-chlorotoluene.jdx",
+    "compound_name": "m-chlorotoluene",
+    "sdbs_id": "675"
+  },
+  {
+    "smiles": "ClC1=CC=C(C)C=C1",
+    "filename": "p-chlorotoluene.jdx",
+    "compound_name": "p-chlorotoluene",
+    "sdbs_id": "676"
+  },
+  {
+    "smiles": "ClC1=CC=C(C=C1)OC",
+    "filename": "p-chloroanisole.jdx",
+    "compound_name": "p-chloroanisole",
+    "sdbs_id": "677"
+  },
+  {
+    "smiles": "ClC1=C(C=C(C=C1)O)C",
+    "filename": "4-chloro-3-methylphenol.jdx",
+    "compound_name": "4-chloro-3-methylphenol",
+    "sdbs_id": "678"
+  },
+  {
+    "smiles": "IC1=CC=C(C)C=C1",
+    "filename": "p-iodotoluene.jdx",
+    "compound_name": "p-iodotoluene",
+    "sdbs_id": "679"
+  },
+  {
+    "smiles": "IC1=CC=C(C=C1)OC",
+    "filename": "p-iodoanisole.jdx",
+    "compound_name": "p-iodoanisole",
+    "sdbs_id": "680"
+  },
+  {
+    "smiles": "C(C)(=O)C=1C=NC=CC1",
+    "filename": "3-acetylpyridine.jdx",
+    "compound_name": "3-acetylpyridine",
+    "sdbs_id": "681"
+  },
+  {
+    "smiles": "[N+](=O)([O-])C1=CC=C(C=C1)OC",
+    "filename": "p-nitroanisole.jdx",
+    "compound_name": "p-nitroanisole",
+    "sdbs_id": "682"
+  },
+  {
+    "smiles": "CN(C1=CC=CC=C1)N=O",
+    "filename": "N-methyl-N-nitrosoaniline.jdx",
+    "compound_name": "N-methyl-N-nitrosoaniline",
+    "sdbs_id": "683"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)O",
+    "filename": "benzyl alcohol.jdx",
+    "compound_name": "benzyl alcohol",
+    "sdbs_id": "685"
+  },
+  {
+    "smiles": "C1=C(C=CC=C1O)C",
+    "filename": "m-cresol.jdx",
+    "compound_name": "m-cresol",
+    "sdbs_id": "686"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)SC",
+    "filename": "thioanisole.jdx",
+    "compound_name": "thioanisole",
+    "sdbs_id": "687"
+  },
+  {
+    "smiles": "CC1=NC(=CC=C1)C",
+    "filename": "2,6-dimethylpyridine.jdx",
+    "compound_name": "2,6-dimethylpyridine",
+    "sdbs_id": "688"
+  },
+  {
+    "smiles": "C(C)C1=CC=NC=C1",
+    "filename": "4-ethylpyridine.jdx",
+    "compound_name": "4-ethylpyridine",
+    "sdbs_id": "689"
+  },
+  {
+    "smiles": "CC(C)CCCC(CC)C",
+    "filename": "2,6-dimethyloctane.jdx",
+    "compound_name": "2,6-dimethyloctane",
+    "sdbs_id": "68"
+  },
+  {
+    "smiles": "CC=1C=NC=C(C1)C",
+    "filename": "3,5-dimethylpyridine.jdx",
+    "compound_name": "3,5-dimethylpyridine",
+    "sdbs_id": "691"
+  },
+  {
+    "smiles": "CC=1C=NC=CC1C",
+    "filename": "3,4-dimethylpyridine.jdx",
+    "compound_name": "3,4-dimethylpyridine",
+    "sdbs_id": "692"
+  },
+  {
+    "smiles": "CC1=NC=C(C=C1)C",
+    "filename": "2,5-dimethylpyridine.jdx",
+    "compound_name": "2,5-dimethylpyridine",
+    "sdbs_id": "693"
+  },
+  {
+    "smiles": "CC1=NC=CC=C1C",
+    "filename": "2,3-dimethylpyridine.jdx",
+    "compound_name": "2,3-dimethylpyridine",
+    "sdbs_id": "694"
+  },
+  {
+    "smiles": "CC1=NC=CC(=C1)C",
+    "filename": "2,4-dimethylpyridine.jdx",
+    "compound_name": "2,4-dimethylpyridine",
+    "sdbs_id": "695"
+  },
+  {
+    "smiles": "CC1CC=CCC1",
+    "filename": "4-methylcyclohexene.jdx",
+    "compound_name": "4-methylcyclohexene",
+    "sdbs_id": "697"
+  },
+  {
+    "smiles": "C\\C=C/CCCC",
+    "filename": "cis-2-heptene.jdx",
+    "compound_name": "cis-2-heptene",
+    "sdbs_id": "698"
+  },
+  {
+    "smiles": "C\\C=C\\CCCC",
+    "filename": "trans-2-heptene.jdx",
+    "compound_name": "trans-2-heptene",
+    "sdbs_id": "699"
+  },
+  {
+    "smiles": "CC1=CC(=CC2=CC=CC=C12)C",
+    "filename": "1,3-dimethylnaphthalene.jdx",
+    "compound_name": "1,3-dimethylnaphthalene",
+    "sdbs_id": "69"
+  },
+  {
     "smiles": "C1(=CC=CC=C1)[C@@H]1O[C@H](C(=N1)C1=CC=CC=C1)C1=CC=CC=C1",
     "filename": "trans-2,4,5-triphenyl-3-oxazoline.jdx",
     "compound_name": "trans-2,4,5-triphenyl-3-oxazoline",
     "sdbs_id": "6"
+  },
+  {
+    "smiles": "CC1CCCCC1",
+    "filename": "methylcyclohexane.jdx",
+    "compound_name": "methylcyclohexane",
+    "sdbs_id": "700"
+  },
+  {
+    "smiles": "CCCC(CCC)=O",
+    "filename": "4-heptanone.jdx",
+    "compound_name": "4-heptanone",
+    "sdbs_id": "703"
+  },
+  {
+    "smiles": "CCC(CCCC)=O",
+    "filename": "3-heptanone.jdx",
+    "compound_name": "3-heptanone",
+    "sdbs_id": "704"
+  },
+  {
+    "smiles": "CC(CCCCC)=O",
+    "filename": "2-heptanone.jdx",
+    "compound_name": "2-heptanone",
+    "sdbs_id": "705"
+  },
+  {
+    "smiles": "C[C@H]1CC[C@H](CC1)O",
+    "filename": "cis-4-methylcyclohexanol.jdx",
+    "compound_name": "cis-4-methylcyclohexanol",
+    "sdbs_id": "706"
+  },
+  {
+    "smiles": "C[C@@H]1[C@@H](CCCC1)O",
+    "filename": "cis-2-methylcyclohexanol.jdx",
+    "compound_name": "cis-2-methylcyclohexanol",
+    "sdbs_id": "708"
+  },
+  {
+    "smiles": "C[C@H]1[C@@H](CCCC1)O",
+    "filename": "trans-2-methylcyclohexanol.jdx",
+    "compound_name": "trans-2-methylcyclohexanol",
+    "sdbs_id": "709"
+  },
+  {
+    "smiles": "CC(CCC=C)=O",
+    "filename": "5-hexen-2-one.jdx",
+    "compound_name": "5-hexen-2-one",
+    "sdbs_id": "70"
+  },
+  {
+    "smiles": "C(CCCCC)(=O)OC",
+    "filename": "methyl hexanoate.jdx",
+    "compound_name": "methyl hexanoate",
+    "sdbs_id": "710"
+  },
+  {
+    "smiles": "CNC1CCCCC1",
+    "filename": "n-methylcyclohexylamine.jdx",
+    "compound_name": "n-methylcyclohexylamine",
+    "sdbs_id": "711"
+  },
+  {
+    "smiles": "C(C)C(CO)(CO)CC",
+    "filename": "2,2-diethyl-1,3-propanediol.jdx",
+    "compound_name": "2,2-diethyl-1,3-propanediol",
+    "sdbs_id": "712"
+  },
+  {
+    "smiles": "C(OCC)(OCC)OCC",
+    "filename": "triethyl orthoformate.jdx",
+    "compound_name": "triethyl orthoformate",
+    "sdbs_id": "713"
+  },
+  {
+    "smiles": "C[Si](C)(C)C[Si](C)(C)C",
+    "filename": "bis(trimethylsilyl)methane.jdx",
+    "compound_name": "bis(trimethylsilyl)methane",
+    "sdbs_id": "714"
+  },
+  {
+    "smiles": "C1(C=2C(C(=O)O1)=CC=CC2)=O",
+    "filename": "phthalic anhydride.jdx",
+    "compound_name": "phthalic anhydride",
+    "sdbs_id": "715"
+  },
+  {
+    "smiles": "N1=CC=NC2=CC=CC=C12",
+    "filename": "quinoxaline.jdx",
+    "compound_name": "quinoxaline",
+    "sdbs_id": "716"
+  },
+  {
+    "smiles": "N1C=CC2=CC=CC=C12",
+    "filename": "indole.jdx",
+    "compound_name": "indole",
+    "sdbs_id": "717"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)CC#N",
+    "filename": "phenylacetonitrile.jdx",
+    "compound_name": "phenylacetonitrile",
+    "sdbs_id": "718"
+  },
+  {
+    "smiles": "CC=1SC2=C(N1)C=CC=C2",
+    "filename": "2-methylbenzothiazole.jdx",
+    "compound_name": "2-methylbenzothiazole",
+    "sdbs_id": "719"
+  },
+  {
+    "smiles": "C(C=CC1=CC=CC=C1)O",
+    "filename": "cinnamyl alcohol.jdx",
+    "compound_name": "cinnamyl alcohol",
+    "sdbs_id": "71"
+  },
+  {
+    "smiles": "BrC(CBr)C1=CC=CC=C1",
+    "filename": "(1,2-dibromoethyl)benzene.jdx",
+    "compound_name": "(1,2-dibromoethyl)benzene",
+    "sdbs_id": "720"
+  },
+  {
+    "smiles": "C(C)(=O)C1=CC=CC=C1",
+    "filename": "acetophenone.jdx",
+    "compound_name": "acetophenone",
+    "sdbs_id": "722"
+  },
+  {
+    "smiles": "C=1(C(=CC=CC1)O)C1=CC=CC=C1",
+    "filename": "biphenyl-2-ol.jdx",
+    "compound_name": "biphenyl-2-ol",
+    "sdbs_id": "723"
+  },
+  {
+    "smiles": "OC1=C(C=CC=C1)C(C)=O",
+    "filename": "2'-hydroxyacetophenone.jdx",
+    "compound_name": "2'-hydroxyacetophenone",
+    "sdbs_id": "724"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)(=O)OC",
+    "filename": "methyl benzoate.jdx",
+    "compound_name": "methyl benzoate",
+    "sdbs_id": "725"
+  },
+  {
+    "smiles": "O=CC1=CC(OC)=C(O)C=C1",
+    "filename": "vanillin.jdx",
+    "compound_name": "vanillin",
+    "sdbs_id": "726"
+  },
+  {
+    "smiles": "C(C=1C(O)=CC=CC1)(=O)OC",
+    "filename": "methyl salicylate.jdx",
+    "compound_name": "methyl salicylate",
+    "sdbs_id": "727"
+  },
+  {
+    "smiles": "Cl(=O)(=O)(=O)[O-].C(C)OC(=O)C=1N(N[NH+](C1)C1=CC=CC2=CC=CC=C12)C",
+    "filename": "4-ethoxycarbonyl-3-methyl-1-(1-naphthyl)-1H-1,2,3-triazolium perchlorate.jdx",
+    "compound_name": "4-ethoxycarbonyl-3-methyl-1-(1-naphthyl)-1H-1,2,3-triazolium perchlorate",
+    "sdbs_id": "728"
+  },
+  {
+    "smiles": "C(C)(=O)NC1=CC=CC=C1",
+    "filename": "acetanilide.jdx",
+    "compound_name": "acetanilide",
+    "sdbs_id": "729"
+  },
+  {
+    "smiles": "C(\\C=C\\C)=O",
+    "filename": "trans-2-butenal.jdx",
+    "compound_name": "trans-2-butenal",
+    "sdbs_id": "72"
+  },
+  {
+    "smiles": "ClC=1C(=CC(=C(N)C1)OC)OC",
+    "filename": "5-chloro-2,4-dimethoxyaniline.jdx",
+    "compound_name": "5-chloro-2,4-dimethoxyaniline",
+    "sdbs_id": "731"
+  },
+  {
+    "smiles": "CC(C1=CC=CC=C1)O",
+    "filename": "alpha-methylbenzyl alcohol.jdx",
+    "compound_name": "alpha-methylbenzyl alcohol",
+    "sdbs_id": "732"
+  },
+  {
+    "smiles": "C(C1=CC=C(C=C1)OC)O",
+    "filename": "p-anisyl alcohol.jdx",
+    "compound_name": "p-anisyl alcohol",
+    "sdbs_id": "733"
+  },
+  {
+    "smiles": "NC1=C(C(=CC=C1)C)C",
+    "filename": "2,3-xylidine.jdx",
+    "compound_name": "2,3-xylidine",
+    "sdbs_id": "735"
+  },
+  {
+    "smiles": "O(C1=CC=CC=C1)CC1OC1",
+    "filename": "2-(phenoxymethyl)oxirane.jdx",
+    "compound_name": "2-(phenoxymethyl)oxirane",
+    "sdbs_id": "736"
+  },
+  {
+    "smiles": "CC1(C(C(C1=O)(C)C)=O)C",
+    "filename": "2,2,4,4-tetramethyl-1,3-cyclobutanedione.jdx",
+    "compound_name": "2,2,4,4-tetramethyl-1,3-cyclobutanedione",
+    "sdbs_id": "738"
+  },
+  {
+    "smiles": "C(C=1C(C(=O)OC2=CC=CC=C2)=CC=CC1)(=O)OC1=CC=CC=C1",
+    "filename": "diphenyl phthalate.jdx",
+    "compound_name": "diphenyl phthalate",
+    "sdbs_id": "739"
+  },
+  {
+    "smiles": "ClC1=CC(=CC(=C1)Cl)Cl",
+    "filename": "1,3,5-trichlorobenzene.jdx",
+    "compound_name": "1,3,5-trichlorobenzene",
+    "sdbs_id": "73"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)=C1C(C(CCC1)=CC1=CC=CC=C1)=O",
+    "filename": "2,6-dibenzylidenecyclohexanone.jdx",
+    "compound_name": "2,6-dibenzylidenecyclohexanone",
+    "sdbs_id": "740"
+  },
+  {
+    "smiles": "C(CCCC)OC(=O)OC1=CC=C(C(=O)OC2=CC=C(C=C2)OCC)C=C1",
+    "filename": "p-ethoxyphenyl p-(pentyloxycarbonyloxy)benzoate.jdx",
+    "compound_name": "p-ethoxyphenyl p-(pentyloxycarbonyloxy)benzoate",
+    "sdbs_id": "741"
+  },
+  {
+    "smiles": "C(CCCCCCC\\C=C/CCCCCCCC)(=O)OCC(CO)O",
+    "filename": "2,3-dihydroxypropyl oleate.jdx",
+    "compound_name": "2,3-dihydroxypropyl oleate",
+    "sdbs_id": "742"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCCCCC)C1CCCCC1",
+    "filename": "pentadecylcyclohexane.jdx",
+    "compound_name": "pentadecylcyclohexane",
+    "sdbs_id": "743"
+  },
+  {
+    "smiles": "C(CCCCCCCCC#N)#N",
+    "filename": "sebaconitrile.jdx",
+    "compound_name": "sebaconitrile",
+    "sdbs_id": "744"
+  },
+  {
+    "smiles": "FC(C(=O)O)(F)F",
+    "filename": "trifluoroacetic acid.jdx",
+    "compound_name": "trifluoroacetic acid",
+    "sdbs_id": "746"
+  },
+  {
+    "smiles": "FC(C(=O)OC)(F)F",
+    "filename": "methyl trifluoroacetate.jdx",
+    "compound_name": "methyl trifluoroacetate",
+    "sdbs_id": "747"
+  },
+  {
+    "smiles": "O1C(OCCC1)=O",
+    "filename": "1,3-dioxan-2-one.jdx",
+    "compound_name": "1,3-dioxan-2-one",
+    "sdbs_id": "748"
+  },
+  {
+    "smiles": "S1(CCCC1)(=O)=O",
+    "filename": "tetrahydrothiophene 1,1-dioxide.jdx",
+    "compound_name": "tetrahydrothiophene 1,1-dioxide",
+    "sdbs_id": "749"
+  },
+  {
+    "smiles": "C(C#C)O",
+    "filename": "2-propyn-1-ol.jdx",
+    "compound_name": "2-propyn-1-ol",
+    "sdbs_id": "74"
+  },
+  {
+    "smiles": "C(C#C)(=O)OCC",
+    "filename": "ethyl propiolate.jdx",
+    "compound_name": "ethyl propiolate",
+    "sdbs_id": "750"
+  },
+  {
+    "smiles": "N[C@@H](CCC(=O)[O-])C(=O)O.[Na+]",
+    "filename": "sodium hydrogen L-glutamate.jdx",
+    "compound_name": "sodium hydrogen L-glutamate",
+    "sdbs_id": "751"
+  },
+  {
+    "smiles": "C(C=CC=CC)(=O)[O-].[K+]",
+    "filename": "potassium 2,4-hexadienoate.jdx",
+    "compound_name": "potassium 2,4-hexadienoate",
+    "sdbs_id": "752"
+  },
+  {
+    "smiles": "C(C=C)(=O)OCC(C)O",
+    "filename": "2-hydroxypropyl acrylate.jdx",
+    "compound_name": "2-hydroxypropyl acrylate",
+    "sdbs_id": "753"
+  },
+  {
+    "smiles": "O1CCN(CC1)CCS(=O)(=O)O",
+    "filename": "2-morpholinoethanesulfonic acid.jdx",
+    "compound_name": "2-morpholinoethanesulfonic acid",
+    "sdbs_id": "754"
+  },
+  {
+    "smiles": "OC=1C=C(C(=O)[O-])C=CC1.[Na+]",
+    "filename": "sodium m-hydroxybenzoate.jdx",
+    "compound_name": "sodium m-hydroxybenzoate",
+    "sdbs_id": "755"
+  },
+  {
+    "smiles": "C(CCCCCC)S(=O)(=O)[O-].[Na+]",
+    "filename": "sodium 1-heptanesulfonate.jdx",
+    "compound_name": "sodium 1-heptanesulfonate",
+    "sdbs_id": "757"
+  },
+  {
+    "smiles": "C1(=C(C=CC=C1)NC(=S)N)C",
+    "filename": "1-(o-tolyl)thiourea.jdx",
+    "compound_name": "1-(o-tolyl)thiourea",
+    "sdbs_id": "758"
+  },
+  {
+    "smiles": "C(C)(=O)OC(C(=C)C)OC(C)=O",
+    "filename": "2-methyl-2-propenylidene diacetate.jdx",
+    "compound_name": "2-methyl-2-propenylidene diacetate",
+    "sdbs_id": "759"
+  },
+  {
+    "smiles": "ClC1=C(C=C(C=C1)[N+](=O)[O-])[N+](=O)[O-]",
+    "filename": "1-chloro-2,4-dinitrobenzene.jdx",
+    "compound_name": "1-chloro-2,4-dinitrobenzene",
+    "sdbs_id": "75"
+  },
+  {
+    "smiles": "C(COCCOCCOCCO)O",
+    "filename": "3,6,9-trioxa-1,11-undecanediol.jdx",
+    "compound_name": "3,6,9-trioxa-1,11-undecanediol",
+    "sdbs_id": "760"
+  },
+  {
+    "smiles": "C(C)OC1=CC=C(C(=O)O)C=C1",
+    "filename": "p-ethoxybenzoic acid.jdx",
+    "compound_name": "p-ethoxybenzoic acid",
+    "sdbs_id": "761"
+  },
+  {
+    "smiles": "C(CCCCCCCC)S(=O)(=O)[O-].[Na+]",
+    "filename": "sodium 1-nonanesulfonate.jdx",
+    "compound_name": "sodium 1-nonanesulfonate",
+    "sdbs_id": "762"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCCCCCC)S(=O)(=O)[O-].[Na+]",
+    "filename": "sodium 1-hexadecanesulfonate.jdx",
+    "compound_name": "sodium 1-hexadecanesulfonate",
+    "sdbs_id": "769"
+  },
+  {
+    "smiles": "BrC(C1=CC(=CC=C1)C(Br)Br)Br",
+    "filename": "alpha,alpha,alpha',alpha'-tetrabromo-m-xylene.jdx",
+    "compound_name": "alpha,alpha,alpha',alpha'-tetrabromo-m-xylene",
+    "sdbs_id": "76"
+  },
+  {
+    "smiles": "C(CCCC)OC1=CC=C(C=C1)O",
+    "filename": "p-pentyloxyphenol.jdx",
+    "compound_name": "p-pentyloxyphenol",
+    "sdbs_id": "770"
+  },
+  {
+    "smiles": "OC1=CC=C(C=C1)N=NC1=CC=C(C=C1)S(=O)(=O)[O-].[Na+]",
+    "filename": "sodium p-(p-hydroxyphenylazo)benzenesulfonate.jdx",
+    "compound_name": "sodium p-(p-hydroxyphenylazo)benzenesulfonate",
+    "sdbs_id": "771"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCC)S(=O)(=O)[O-].[Na+]",
+    "filename": "sodium 1-dodecanesulfonate.jdx",
+    "compound_name": "sodium 1-dodecanesulfonate",
+    "sdbs_id": "772"
+  },
+  {
+    "smiles": "C(CCCCCC)OC1=CC=C(C(=O)O)C=C1",
+    "filename": "p-heptyloxybenzoic acid.jdx",
+    "compound_name": "p-heptyloxybenzoic acid",
+    "sdbs_id": "773"
+  },
+  {
+    "smiles": "C(CCCCCCC)OC1=CC=C(C(=O)O)C=C1",
+    "filename": "p-octyloxybenzoic acid.jdx",
+    "compound_name": "p-octyloxybenzoic acid",
+    "sdbs_id": "774"
+  },
+  {
+    "smiles": "C(CCCCCCC\\C=C/CCCCCCCC)(=O)[O-].[Na+]",
+    "filename": "sodium oleate.jdx",
+    "compound_name": "sodium oleate",
+    "sdbs_id": "775"
+  },
+  {
+    "smiles": "N1(CCCCC1)CCO",
+    "filename": "1-piperidineethanol.jdx",
+    "compound_name": "1-piperidineethanol",
+    "sdbs_id": "777"
+  },
+  {
+    "smiles": "Cl.[Cl-].C1(=CC=CC=C1)[As+](C1=CC=CC=C1)(C1=CC=CC=C1)C1=CC=CC=C1",
+    "filename": "tetraphenylarsonium chloride hydrochloride.jdx",
+    "compound_name": "tetraphenylarsonium chloride hydrochloride",
+    "sdbs_id": "778"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)[B-](C1=CC=CC=C1)(C1=CC=CC=C1)C1=CC=CC=C1.[Na+]",
+    "filename": "sodium tetraphenylborate.jdx",
+    "compound_name": "sodium tetraphenylborate",
+    "sdbs_id": "779"
+  },
+  {
+    "smiles": "C(C)SC#N",
+    "filename": "ethyl thiocyanate.jdx",
+    "compound_name": "ethyl thiocyanate",
+    "sdbs_id": "77"
+  },
+  {
+    "smiles": "C(CCCCCCCCC(=O)OCC1=CC=CC=C1)(=O)OCC1=CC=CC=C1",
+    "filename": "dibenzyl sebacate.jdx",
+    "compound_name": "dibenzyl sebacate",
+    "sdbs_id": "780"
+  },
+  {
+    "smiles": "CC1=CC=C(C=C1)S(=O)(=O)OCC",
+    "filename": "ethyl p-toluenesulfonate.jdx",
+    "compound_name": "ethyl p-toluenesulfonate",
+    "sdbs_id": "781"
+  },
+  {
+    "smiles": "[Cl-].C1(=C(C=CC=C1)N1N([NH2+]C(=N1)C1=CC=CC=C1)C1=CC=CC=C1)C1=CC=CC=C1",
+    "filename": "3-(p-biphenylyl)-2,5-diphenyl-2H-tetrazolium chloride.jdx",
+    "compound_name": "3-(p-biphenylyl)-2,5-diphenyl-2H-tetrazolium chloride",
+    "sdbs_id": "782"
+  },
+  {
+    "smiles": "C(CC)C1CCCC1",
+    "filename": "propylcyclopentane.jdx",
+    "compound_name": "propylcyclopentane",
+    "sdbs_id": "784"
+  },
+  {
+    "smiles": "ClC1=NC=CC(=N1)Cl",
+    "filename": "2,4-dichloropyrimidine.jdx",
+    "compound_name": "2,4-dichloropyrimidine",
+    "sdbs_id": "785"
+  },
+  {
+    "smiles": "C=CCCCCCC",
+    "filename": "1-octene.jdx",
+    "compound_name": "1-octene",
+    "sdbs_id": "788"
+  },
+  {
+    "smiles": "C(C)C(C(=O)O)CCCC",
+    "filename": "2-ethylhexanoic acid.jdx",
+    "compound_name": "2-ethylhexanoic acid",
+    "sdbs_id": "789"
+  },
+  {
+    "smiles": "C(C(CC(=O)OCC)C(=O)OCC)(C(=O)OCC)C(=O)OCC",
+    "filename": "tetraethyl 1,1,2,3-propanetetracarboxylate.jdx",
+    "compound_name": "tetraethyl 1,1,2,3-propanetetracarboxylate",
+    "sdbs_id": "78"
+  },
+  {
+    "smiles": "C(CCCCC)(=O)OCC",
+    "filename": "ethyl hexanoate.jdx",
+    "compound_name": "ethyl hexanoate",
+    "sdbs_id": "790"
+  },
+  {
+    "smiles": "C(C)C(CO)CCCC",
+    "filename": "2-ethyl-1-hexanol.jdx",
+    "compound_name": "2-ethyl-1-hexanol",
+    "sdbs_id": "792"
+  },
+  {
+    "smiles": "CC(CCCCCC)O",
+    "filename": "2-octanol.jdx",
+    "compound_name": "2-octanol",
+    "sdbs_id": "793"
+  },
+  {
+    "smiles": "CC(CO)(C(C(C)C)O)C",
+    "filename": "2,2,4-trimethyl-1,3-pentanediol.jdx",
+    "compound_name": "2,2,4-trimethyl-1,3-pentanediol",
+    "sdbs_id": "794"
+  },
+  {
+    "smiles": "C(C)C(CO)C(CCC)O",
+    "filename": "2-ethyl-1,3-hexanediol.jdx",
+    "compound_name": "2-ethyl-1,3-hexanediol",
+    "sdbs_id": "795"
+  },
+  {
+    "smiles": "C(CCCCCCC)S",
+    "filename": "1-octanethiol.jdx",
+    "compound_name": "1-octanethiol",
+    "sdbs_id": "796"
+  },
+  {
+    "smiles": "C(C(C)C)NCC(C)C",
+    "filename": "diisobutylamine.jdx",
+    "compound_name": "diisobutylamine",
+    "sdbs_id": "797"
+  },
+  {
+    "smiles": "CC(CC(C)(C)C)(C)N",
+    "filename": "1,1,3,3-tetramethylbutylamine.jdx",
+    "compound_name": "1,1,3,3-tetramethylbutylamine",
+    "sdbs_id": "798"
+  },
+  {
+    "smiles": "C(C)OC(C[SiH3])(OCC)OCC",
+    "filename": "triethoxyethylsilane.jdx",
+    "compound_name": "triethoxyethylsilane",
+    "sdbs_id": "799"
+  },
+  {
+    "smiles": "CCCCCCCCCCCCCCCCCCCCCC",
+    "filename": "docosane.jdx",
+    "compound_name": "docosane",
+    "sdbs_id": "79"
+  },
+  {
+    "smiles": "BrC=1C=NC2=CC=CC=C2C1",
+    "filename": "3-bromoquinoline.jdx",
+    "compound_name": "3-bromoquinoline",
+    "sdbs_id": "800"
+  },
+  {
+    "smiles": "CC1=C(C=C(C=C1)N=C=O)N=C=O",
+    "filename": "4-methyl-m-phenylene diisocyanate.jdx",
+    "compound_name": "4-methyl-m-phenylene diisocyanate",
+    "sdbs_id": "801"
+  },
+  {
+    "smiles": "O1C(=O)C=CC2=CC=CC=C12",
+    "filename": "coumarin.jdx",
+    "compound_name": "coumarin",
+    "sdbs_id": "802"
+  },
+  {
+    "smiles": "C1=NC=CC2=CC=CC=C12",
+    "filename": "isoquinoline.jdx",
+    "compound_name": "isoquinoline",
+    "sdbs_id": "803"
+  },
+  {
+    "smiles": "N1=CC=CC2=CC=CC=C12",
+    "filename": "quinoline.jdx",
+    "compound_name": "quinoline",
+    "sdbs_id": "804"
+  },
+  {
+    "smiles": "C(C1=CC(O)=C(O)C(O)=C1)(=O)O",
+    "filename": "gallic acid.jdx",
+    "compound_name": "gallic acid",
+    "sdbs_id": "806"
+  },
+  {
+    "smiles": "C1CCC2=CC=CC=C12",
+    "filename": "indan.jdx",
+    "compound_name": "indan",
+    "sdbs_id": "807"
+  },
+  {
+    "smiles": "C(CCC1=CC=CC=C1)=O",
+    "filename": "hydrocinnamaldehyde.jdx",
+    "compound_name": "hydrocinnamaldehyde",
+    "sdbs_id": "808"
+  },
+  {
+    "smiles": "C(CCC1=CC=CC=C1)(=O)O",
+    "filename": "hydrocinnamic acid.jdx",
+    "compound_name": "hydrocinnamic acid",
+    "sdbs_id": "809"
+  },
+  {
+    "smiles": "C(C)(=O)OCC1=CC=CC=C1",
+    "filename": "benzyl acetate.jdx",
+    "compound_name": "benzyl acetate",
+    "sdbs_id": "810"
+  },
+  {
+    "smiles": "COC=1C=C(C=O)C=C(C1)OC",
+    "filename": "3,5-dimethoxybenzaldehyde.jdx",
+    "compound_name": "3,5-dimethoxybenzaldehyde",
+    "sdbs_id": "811"
+  },
+  {
+    "smiles": "CN(C1=CC=C(C=O)C=C1)C",
+    "filename": "p-(dimethylamino)benzaldehyde.jdx",
+    "compound_name": "p-(dimethylamino)benzaldehyde",
+    "sdbs_id": "812"
+  },
+  {
+    "smiles": "CC(C1=CC=CC=C1)(C)O",
+    "filename": "alpha,alpha-dimethylbenzyl alcohol.jdx",
+    "compound_name": "alpha,alpha-dimethylbenzyl alcohol",
+    "sdbs_id": "815"
+  },
+  {
+    "smiles": "ClC(=O)CC(=O)OCC",
+    "filename": "ethyl (chloroformyl)acetate.jdx",
+    "compound_name": "ethyl (chloroformyl)acetate",
+    "sdbs_id": "816"
+  },
+  {
+    "smiles": "CC1=CC(CC(C1)(C)C)=O",
+    "filename": "3,5,5-trimethyl-2-cyclohexen-1-one.jdx",
+    "compound_name": "3,5,5-trimethyl-2-cyclohexen-1-one",
+    "sdbs_id": "817"
+  },
+  {
+    "smiles": "CC(C)CC(CC(C)C)=O",
+    "filename": "2,6-dimethyl-4-heptanone.jdx",
+    "compound_name": "2,6-dimethyl-4-heptanone",
+    "sdbs_id": "818"
+  },
+  {
+    "smiles": "C(CCCCCCCC)(=O)O",
+    "filename": "nonanoic acid.jdx",
+    "compound_name": "nonanoic acid",
+    "sdbs_id": "819"
+  },
+  {
+    "smiles": "B(OCCC)(OCCC)OCCC",
+    "filename": "tripropyl borate.jdx",
+    "compound_name": "tripropyl borate",
+    "sdbs_id": "821"
+  },
+  {
+    "smiles": "C1(C=CC(C2=CC=CC=C12)=O)=O",
+    "filename": "1,4-naphthoquinone.jdx",
+    "compound_name": "1,4-naphthoquinone",
+    "sdbs_id": "822"
+  },
+  {
+    "smiles": "C1=CC=C2C=CC=CC=C12",
+    "filename": "azulene.jdx",
+    "compound_name": "azulene",
+    "sdbs_id": "823"
+  },
+  {
+    "smiles": "BrCCN1C(C=2C(C1=O)=CC=CC2)=O",
+    "filename": "N-(2-bromoethyl)phthalimide.jdx",
+    "compound_name": "N-(2-bromoethyl)phthalimide",
+    "sdbs_id": "824"
+  },
+  {
+    "smiles": "BrCCCCCCCCCC",
+    "filename": "1-bromodecane.jdx",
+    "compound_name": "1-bromodecane",
+    "sdbs_id": "825"
+  },
+  {
+    "smiles": "C(CCC)(=O)C1=CC=CC=C1",
+    "filename": "butyrophenone.jdx",
+    "compound_name": "butyrophenone",
+    "sdbs_id": "826"
+  },
+  {
+    "smiles": "N1=CNC(C=C1)=O",
+    "filename": "4(3H)-pyrimidinone.jdx",
+    "compound_name": "4(3H)-pyrimidinone",
+    "sdbs_id": "827"
+  },
+  {
+    "smiles": "[C@@H]1([C@H](O)[C@H](O)[C@@H](CO)O1)N1C=NC=2C(N)=NC=NC12",
+    "filename": "adenosine.jdx",
+    "compound_name": "adenosine",
+    "sdbs_id": "828"
+  },
+  {
+    "smiles": "[C@@H]1([C@H](O)[C@H](O)[C@@H](CO)O1)N1C=NC=2C(=O)NC(N)=NC12",
+    "filename": "guanosine.jdx",
+    "compound_name": "guanosine",
+    "sdbs_id": "831"
+  },
+  {
+    "smiles": "C(C)N(C1=CC=CC=C1)CC",
+    "filename": "N,N-diethylaniline.jdx",
+    "compound_name": "N,N-diethylaniline",
+    "sdbs_id": "835"
+  },
+  {
+    "smiles": "C(C)C1=C(N)C(=CC=C1)CC",
+    "filename": "2,6-diethylaniline.jdx",
+    "compound_name": "2,6-diethylaniline",
+    "sdbs_id": "836"
+  },
+  {
+    "smiles": "COC=1C=C(CCN)C=CC1OC",
+    "filename": "3,4-dimethoxyphenethylamine.jdx",
+    "compound_name": "3,4-dimethoxyphenethylamine",
+    "sdbs_id": "837"
+  },
+  {
+    "smiles": "C[C@@H]1CCC(=C(C)C)C(=O)C1",
+    "filename": "pulegone.jdx",
+    "compound_name": "pulegone",
+    "sdbs_id": "839"
+  },
+  {
+    "smiles": "C(CCC(=O)OCC=C)(=O)OCC=C",
+    "filename": "diallyl succinate.jdx",
+    "compound_name": "diallyl succinate",
+    "sdbs_id": "83"
+  },
+  {
+    "smiles": "C(C(C(=C)C(=O)O)C(=O)O)C(=O)O",
+    "filename": "3-butene-1,2,3-tricarboxylic acid.jdx",
+    "compound_name": "3-butene-1,2,3-tricarboxylic acid",
+    "sdbs_id": "840"
+  },
+  {
+    "smiles": "CC(CC=O)CCC=C(C)C",
+    "filename": "3,7-dimethyl-6-octenal.jdx",
+    "compound_name": "3,7-dimethyl-6-octenal",
+    "sdbs_id": "841"
+  },
+  {
+    "smiles": "C1(CC(C(CC1)C(=C)C)O)C",
+    "filename": "8-p-menthen-3-ol.jdx",
+    "compound_name": "8-p-menthen-3-ol",
+    "sdbs_id": "842"
+  },
+  {
+    "smiles": "C(C)(C)(C)C1CCC(CC1)=O",
+    "filename": "4-tert-butylcyclohexanone.jdx",
+    "compound_name": "4-tert-butylcyclohexanone",
+    "sdbs_id": "843"
+  },
+  {
+    "smiles": "CC(C=C)(CCC=C(C)C)O",
+    "filename": "3,7-dimethyl-1,6-octadien-3-ol.jdx",
+    "compound_name": "3,7-dimethyl-1,6-octadien-3-ol",
+    "sdbs_id": "844"
+  },
+  {
+    "smiles": "C(CCC)C1CCCCC1",
+    "filename": "butylcyclohexane.jdx",
+    "compound_name": "butylcyclohexane",
+    "sdbs_id": "846"
+  },
+  {
+    "smiles": "C(C)(=O)OCC(CCCC)CC",
+    "filename": "2-ethylhexyl acetate.jdx",
+    "compound_name": "2-ethylhexyl acetate",
+    "sdbs_id": "848"
+  },
+  {
+    "smiles": "C(CCCCCCCCC)O",
+    "filename": "1-decanol.jdx",
+    "compound_name": "1-decanol",
+    "sdbs_id": "849"
+  },
+  {
+    "smiles": "C(=C)C1CC=CCC1",
+    "filename": "4-vinyl-1-cyclohexene.jdx",
+    "compound_name": "4-vinyl-1-cyclohexene",
+    "sdbs_id": "84"
+  },
+  {
+    "smiles": "BrCCCN1C(C=2C(C1=O)=CC=CC2)=O",
+    "filename": "N-(3-bromopropyl)phthalimide.jdx",
+    "compound_name": "N-(3-bromopropyl)phthalimide",
+    "sdbs_id": "851"
+  },
+  {
+    "smiles": "COC=1C=C2C=CC(=NC2=CC1)C",
+    "filename": "6-methoxy-2-methylquinoline.jdx",
+    "compound_name": "6-methoxy-2-methylquinoline",
+    "sdbs_id": "852"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)(=O)OCCCC",
+    "filename": "butyl benzoate.jdx",
+    "compound_name": "butyl benzoate",
+    "sdbs_id": "853"
+  },
+  {
+    "smiles": "C(C)(C)(C)C1=CC=C(C)C=C1",
+    "filename": "p-tert-butyltoluene.jdx",
+    "compound_name": "p-tert-butyltoluene",
+    "sdbs_id": "854"
+  },
+  {
+    "smiles": "CCCCCCCCCCC",
+    "filename": "undecane.jdx",
+    "compound_name": "undecane",
+    "sdbs_id": "856"
+  },
+  {
+    "smiles": "N(=NC1=CC=CC=C1)C1=CC=CC=C1",
+    "filename": "azobenzene.jdx",
+    "compound_name": "azobenzene",
+    "sdbs_id": "858"
+  },
+  {
+    "smiles": "C(C)C1=NC=CC=C1",
+    "filename": "2-ethylpyridine.jdx",
+    "compound_name": "2-ethylpyridine",
+    "sdbs_id": "85"
+  },
+  {
+    "smiles": "C(C)(C)C1=C(C(=CC=C1)C(C)C)O",
+    "filename": "2,6-diisopropylphenol.jdx",
+    "compound_name": "2,6-diisopropylphenol",
+    "sdbs_id": "862"
+  },
+  {
+    "smiles": "C1CC2=CC=CC3=CC=CC1=C23",
+    "filename": "acenaphthene.jdx",
+    "compound_name": "acenaphthene",
+    "sdbs_id": "863"
+  },
+  {
+    "smiles": "C1(CCCCC1)C1C(CCCC1)=O",
+    "filename": "2-cyclohexylcyclohexanone.jdx",
+    "compound_name": "2-cyclohexylcyclohexanone",
+    "sdbs_id": "864"
+  },
+  {
+    "smiles": "C(CCC(=O)OCCCC)(=O)OCCCC",
+    "filename": "dibutyl succinate.jdx",
+    "compound_name": "dibutyl succinate",
+    "sdbs_id": "865"
+  },
+  {
+    "smiles": "C(CCCCC)OCCCCCC",
+    "filename": "dihexyl ether.jdx",
+    "compound_name": "dihexyl ether",
+    "sdbs_id": "866"
+  },
+  {
+    "smiles": "B(OC(C)(C)C)(OC(C)(C)C)OC(C)(C)C",
+    "filename": "tri-tert-butyl borate.jdx",
+    "compound_name": "tri-tert-butyl borate",
+    "sdbs_id": "867"
+  },
+  {
+    "smiles": "C(CCC)N(CCCC)CCCC",
+    "filename": "tributylamine.jdx",
+    "compound_name": "tributylamine",
+    "sdbs_id": "868"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)(C1=CC=CC=C1)O",
+    "filename": "benzhydrol.jdx",
+    "compound_name": "benzhydrol",
+    "sdbs_id": "869"
+  },
+  {
+    "smiles": "C(CCCCCCC\\C=C/CCCCCCCC)(=O)OCCCC",
+    "filename": "butyl oleate.jdx",
+    "compound_name": "butyl oleate",
+    "sdbs_id": "86"
+  },
+  {
+    "smiles": "C1=CC=CC=2C3=CC=CC=C3C=CC12",
+    "filename": "phenanthrene.jdx",
+    "compound_name": "phenanthrene",
+    "sdbs_id": "870"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C(=O)C(=O)C1=CC=CC=C1",
+    "filename": "benzil.jdx",
+    "compound_name": "benzil",
+    "sdbs_id": "871"
+  },
+  {
+    "smiles": "C(C1=CC=CC=C1)SSCC1=CC=CC=C1",
+    "filename": "benzyl disulfide.jdx",
+    "compound_name": "benzyl disulfide",
+    "sdbs_id": "872"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C(CC(=O)C1=CC=CC=C1)=O",
+    "filename": "1,3-diphenyl-1,3-propanedione.jdx",
+    "compound_name": "1,3-diphenyl-1,3-propanedione",
+    "sdbs_id": "874"
+  },
+  {
+    "smiles": "CN(CC1=CC=CC=C1)CC1=CC=CC=C1",
+    "filename": "N-methyldibenzylamine.jdx",
+    "compound_name": "N-methyldibenzylamine",
+    "sdbs_id": "875"
+  },
+  {
+    "smiles": "C(CCC)(=O)OCC(OC(CCC)=O)COC(CCC)=O",
+    "filename": "glycerol tributyrate.jdx",
+    "compound_name": "glycerol tributyrate",
+    "sdbs_id": "876"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCCCC)(=O)OC",
+    "filename": "methyl myristate.jdx",
+    "compound_name": "methyl myristate",
+    "sdbs_id": "877"
+  },
+  {
+    "smiles": "C1=CC=C2C=CC3=CC=CC4=CC=C1C2=C34",
+    "filename": "pyrene.jdx",
+    "compound_name": "pyrene",
+    "sdbs_id": "878"
+  },
+  {
+    "smiles": "ClC(C(C1=CC=C(C=C1)OC)C1=CC=C(C=C1)OC)(Cl)Cl",
+    "filename": "1,1,1-trichloro-2,2-bis(p-methoxyphenyl)ethane.jdx",
+    "compound_name": "1,1,1-trichloro-2,2-bis(p-methoxyphenyl)ethane",
+    "sdbs_id": "879"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)C(C#C)O",
+    "filename": "1-phenyl-2-propyn-1-ol.jdx",
+    "compound_name": "1-phenyl-2-propyn-1-ol",
+    "sdbs_id": "87"
+  },
+  {
+    "smiles": "C(C)N(C(CCCCCCCCCCC)=O)CC",
+    "filename": "N,N-diethyldodecanamide.jdx",
+    "compound_name": "N,N-diethyldodecanamide",
+    "sdbs_id": "880"
+  },
+  {
+    "smiles": "CN(C1=CC=C(C(=S)C2=CC=C(C=C2)N(C)C)C=C1)C",
+    "filename": "4,4'-bis(dimethylamino)thiobenzophenone.jdx",
+    "compound_name": "4,4'-bis(dimethylamino)thiobenzophenone",
+    "sdbs_id": "881"
+  },
+  {
+    "smiles": "C[C@@]12C(CC[C@H]1[C@@H]1CCC3=CC(CC[C@]3(C)[C@H]1CC2)=O)=O",
+    "filename": "4-androstene-3,17-dione.jdx",
+    "compound_name": "4-androstene-3,17-dione",
+    "sdbs_id": "883"
+  },
+  {
+    "smiles": "C[C@]12CC[C@H]3[C@@H](CCC4=CC(=O)CC[C@]34C)[C@@H]1CC[C@@H]2O",
+    "filename": "testosterone.jdx",
+    "compound_name": "testosterone",
+    "sdbs_id": "884"
+  },
+  {
+    "smiles": "C(CCCCC)(=O)OC1=CC=C(C=C1)N=NC1=CC=C(C=C1)OCC",
+    "filename": "p-(p-ethoxyphenylazo)phenyl hexanoate.jdx",
+    "compound_name": "p-(p-ethoxyphenylazo)phenyl hexanoate",
+    "sdbs_id": "885"
+  },
+  {
+    "smiles": "CC(C1=CC[C@H]2[C@@H]3CCC4=CC(CC[C@]4(C)[C@H]3CC[C@]12C)=O)=O",
+    "filename": "4,16-pregnadien-3,20-dione.jdx",
+    "compound_name": "4,16-pregnadien-3,20-dione",
+    "sdbs_id": "886"
+  },
+  {
+    "smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+    "filename": "cholesterol.jdx",
+    "compound_name": "cholesterol",
+    "sdbs_id": "887"
+  },
+  {
+    "smiles": "CC(CC)=O",
+    "filename": "2-butanone.jdx",
+    "compound_name": "2-butanone",
+    "sdbs_id": "888"
+  },
+  {
+    "smiles": "C(C(C)N)N",
+    "filename": "propylenediamine.jdx",
+    "compound_name": "propylenediamine",
+    "sdbs_id": "88"
+  },
+  {
+    "smiles": "O1CCOCC1",
+    "filename": "1,4-dioxane.jdx",
+    "compound_name": "1,4-dioxane",
+    "sdbs_id": "890"
+  },
+  {
+    "smiles": "CC(C)CC(C)C",
+    "filename": "2,4-dimethylpentane.jdx",
+    "compound_name": "2,4-dimethylpentane",
+    "sdbs_id": "892"
+  },
+  {
+    "smiles": "CCCCCCCCC",
+    "filename": "nonane.jdx",
+    "compound_name": "nonane",
+    "sdbs_id": "895"
+  },
+  {
+    "smiles": "C(CC)C1=CC=CC=C1",
+    "filename": "propylbenzene.jdx",
+    "compound_name": "propylbenzene",
+    "sdbs_id": "896"
+  },
+  {
+    "smiles": "C1CCCCC1",
+    "filename": "cyclohexane.jdx",
+    "compound_name": "cyclohexane",
+    "sdbs_id": "897"
+  },
+  {
+    "smiles": "C1=CC=CC=C1",
+    "filename": "benzene.jdx",
+    "compound_name": "benzene",
+    "sdbs_id": "898"
+  },
+  {
+    "smiles": "C1(=CC=C(C=C1)C)C",
+    "filename": "p-xylene.jdx",
+    "compound_name": "p-xylene",
+    "sdbs_id": "899"
+  },
+  {
+    "smiles": "CC(C(=O)OCC)C(=O)C(=O)OCC",
+    "filename": "diethyl methyloxalacetate.jdx",
+    "compound_name": "diethyl methyloxalacetate",
+    "sdbs_id": "89"
+  },
+  {
+    "smiles": "C(\\C=C/C(=O)OCC)(=O)OCC",
+    "filename": "diethyl maleate.jdx",
+    "compound_name": "diethyl maleate",
+    "sdbs_id": "900"
+  },
+  {
+    "smiles": "C(C)Br",
+    "filename": "ethyl bromide.jdx",
+    "compound_name": "ethyl bromide",
+    "sdbs_id": "901"
+  },
+  {
+    "smiles": "CC(C)C(CC)C",
+    "filename": "2,3-dimethylpentane.jdx",
+    "compound_name": "2,3-dimethylpentane",
+    "sdbs_id": "902"
+  },
+  {
+    "smiles": "CC(C)(CCCC)C",
+    "filename": "2,2-dimethylhexane.jdx",
+    "compound_name": "2,2-dimethylhexane",
+    "sdbs_id": "903"
+  },
+  {
+    "smiles": "C(C)C(CC)CCC",
+    "filename": "3-ethylhexane.jdx",
+    "compound_name": "3-ethylhexane",
+    "sdbs_id": "904"
+  },
+  {
+    "smiles": "NC1=CC=CC=C1",
+    "filename": "aniline.jdx",
+    "compound_name": "aniline",
+    "sdbs_id": "905"
+  },
+  {
+    "smiles": "CC1=C(C(=CC=C1)C)C",
+    "filename": "1,2,3-trimethylbenzene.jdx",
+    "compound_name": "1,2,3-trimethylbenzene",
+    "sdbs_id": "906"
+  },
+  {
+    "smiles": "C1CCCC2=CC=CC=C12",
+    "filename": "tetralin.jdx",
+    "compound_name": "tetralin",
+    "sdbs_id": "907"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCCCCCC)(=O)O",
+    "filename": "hexadecanoic acid.jdx",
+    "compound_name": "hexadecanoic acid",
+    "sdbs_id": "908"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCCCCCCCCCCCCCCCCCCCC)(=O)O",
+    "filename": "triacontanoic acid.jdx",
+    "compound_name": "triacontanoic acid",
+    "sdbs_id": "909"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)S(=O)(=O)Cl",
+    "filename": "benzenesulfonyl chloride.jdx",
+    "compound_name": "benzenesulfonyl chloride",
+    "sdbs_id": "90"
+  },
+  {
+    "smiles": "ClCC(=O)NCC(=O)O",
+    "filename": "(chloroacetamido)acetic acid.jdx",
+    "compound_name": "(chloroacetamido)acetic acid",
+    "sdbs_id": "910"
+  },
+  {
+    "smiles": "CS(=O)OCC(C)C",
+    "filename": "isobutyl methanesulfinate.jdx",
+    "compound_name": "isobutyl methanesulfinate",
+    "sdbs_id": "912"
+  },
+  {
+    "smiles": "C(C)(=O)N1CCOCC1",
+    "filename": "4-acetylmorpholine.jdx",
+    "compound_name": "4-acetylmorpholine",
+    "sdbs_id": "914"
+  },
+  {
+    "smiles": "CS(=O)OCCC(C)C",
+    "filename": "isopentyl methanesulfinate.jdx",
+    "compound_name": "isopentyl methanesulfinate",
+    "sdbs_id": "915"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)[C@H]1[C@@H](C1)C(=O)O",
+    "filename": "trans-2-phenylcyclopropanecarboxylic acid.jdx",
+    "compound_name": "trans-2-phenylcyclopropanecarboxylic acid",
+    "sdbs_id": "917"
+  },
+  {
+    "smiles": "C=1(C(O)=CC=C(CC=C)C1)OC",
+    "filename": "eugenol.jdx",
+    "compound_name": "eugenol",
+    "sdbs_id": "91"
+  },
+  {
+    "smiles": "C(CCCCCCC)(=O)NCCCCCC(=O)OCCO",
+    "filename": "2-hydroxyethyl 6-octanamidohexanoate.jdx",
+    "compound_name": "2-hydroxyethyl 6-octanamidohexanoate",
+    "sdbs_id": "922"
+  },
+  {
+    "smiles": "C(CCCCCCC)(=O)NCCCCCC(=O)OCC(CO)O",
+    "filename": "2,3-dihydroxypropyl 6-octanamidohexanoate.jdx",
+    "compound_name": "2,3-dihydroxypropyl 6-octanamidohexanoate",
+    "sdbs_id": "924"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCC)(=O)NC(C(=O)OCCO)CCCC",
+    "filename": "2-hydroxyethyl 2-lauramidohexanoate.jdx",
+    "compound_name": "2-hydroxyethyl 2-lauramidohexanoate",
+    "sdbs_id": "925"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCC)(=O)NCCCCCC(=O)OCCO",
+    "filename": "2-hydroxyethyl 6-lauramidohexanoate.jdx",
+    "compound_name": "2-hydroxyethyl 6-lauramidohexanoate",
+    "sdbs_id": "926"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCC)(=O)NC(C(=O)OCC(CO)O)CCCC",
+    "filename": "2,3-dihydroxypropyl 2-lauramidohexanoate.jdx",
+    "compound_name": "2,3-dihydroxypropyl 2-lauramidohexanoate",
+    "sdbs_id": "927"
+  },
+  {
+    "smiles": "C(CCCCCCCCCCC)(=O)NCCCCCC(=O)OCC(CO)O",
+    "filename": "2,3-dihydroxypropyl 6-lauramidohexanoate.jdx",
+    "compound_name": "2,3-dihydroxypropyl 6-lauramidohexanoate",
+    "sdbs_id": "928"
+  },
+  {
+    "smiles": "ClCC(CCl)Cl",
+    "filename": "1,2,3-trichloropropane.jdx",
+    "compound_name": "1,2,3-trichloropropane",
+    "sdbs_id": "92"
+  },
+  {
+    "smiles": "C(=O)N",
+    "filename": "formamide.jdx",
+    "compound_name": "formamide",
+    "sdbs_id": "931"
+  },
+  {
+    "smiles": "Cl.CN",
+    "filename": "methylamine hydrochloride.jdx",
+    "compound_name": "methylamine hydrochloride",
+    "sdbs_id": "932"
+  },
+  {
+    "smiles": "C(C=O)(=O)[O-].[Na+]",
+    "filename": "sodium glyoxylate.jdx",
+    "compound_name": "sodium glyoxylate",
+    "sdbs_id": "933"
+  },
+  {
+    "smiles": "FC(C(C(=O)O)(F)F)(F)F",
+    "filename": "pentafluoropropionic acid.jdx",
+    "compound_name": "pentafluoropropionic acid",
+    "sdbs_id": "934"
+  },
+  {
+    "smiles": "FC(C(=O)OC(C(F)(F)F)=O)(F)F",
+    "filename": "trifluoroacetic anhydride.jdx",
+    "compound_name": "trifluoroacetic anhydride",
+    "sdbs_id": "935"
+  },
+  {
+    "smiles": "OC(C(=O)[O-])CC.[Na+]",
+    "filename": "sodium DL-2-hydroxybutyrate.jdx",
+    "compound_name": "sodium DL-2-hydroxybutyrate",
+    "sdbs_id": "937"
+  },
+  {
+    "smiles": "[N+]1(=CC=CC=C1)[O-]",
+    "filename": "pyridine 1-oxide.jdx",
+    "compound_name": "pyridine 1-oxide",
+    "sdbs_id": "938"
+  },
+  {
+    "smiles": "C(C)(=O)OC1=C(C=C(C=C1)CC=C)OC",
+    "filename": "4-allyl-2-methoxyphenyl acetate.jdx",
+    "compound_name": "4-allyl-2-methoxyphenyl acetate",
+    "sdbs_id": "93"
+  },
+  {
+    "smiles": "C(C=C)(=O)OCCO",
+    "filename": "2-hydroxyethyl acrylate.jdx",
+    "compound_name": "2-hydroxyethyl acrylate",
+    "sdbs_id": "940"
+  },
+  {
+    "smiles": "C(CCCCC)S(=O)(=O)[O-].[Na+]",
+    "filename": "sodium 1-hexanesulfonate.jdx",
+    "compound_name": "sodium 1-hexanesulfonate",
+    "sdbs_id": "941"
+  },
+  {
+    "smiles": "ClC1=CC2=C(N=C(N2)C)C=C1",
+    "filename": "5-chloro-2-methylbenzimidazole.jdx",
+    "compound_name": "5-chloro-2-methylbenzimidazole",
+    "sdbs_id": "943"
+  },
+  {
+    "smiles": "O1C(=CC=C1)C(=O)OCCC",
+    "filename": "propyl 2-furoate.jdx",
+    "compound_name": "propyl 2-furoate",
+    "sdbs_id": "944"
+  },
+  {
+    "smiles": "CC(CCC(C)=O)CCC",
+    "filename": "5-methyl-2-octanone.jdx",
+    "compound_name": "5-methyl-2-octanone",
+    "sdbs_id": "946"
+  },
+  {
+    "smiles": "C(C)OC(=O)OC1=CC=C(C(=O)O)C=C1",
+    "filename": "p-(ethoxycarbonyloxy)benzoic acid.jdx",
+    "compound_name": "p-(ethoxycarbonyloxy)benzoic acid",
+    "sdbs_id": "947"
+  },
+  {
+    "smiles": "C(CC)OC1=CC=C(C(=O)O)C=C1",
+    "filename": "p-propoxybenzoic acid.jdx",
+    "compound_name": "p-propoxybenzoic acid",
+    "sdbs_id": "948"
+  },
+  {
+    "smiles": "O1C(=CC=C1)C(=O)OCCC(C)C",
+    "filename": "isopentyl 2-furoate.jdx",
+    "compound_name": "isopentyl 2-furoate",
+    "sdbs_id": "949"
+  },
+  {
+    "smiles": "C(C)C1=C(C=CC=C1)[N+](=O)[O-]",
+    "filename": "o-ethylnitrobenzene.jdx",
+    "compound_name": "o-ethylnitrobenzene",
+    "sdbs_id": "94"
+  },
+  {
+    "smiles": "CC12CC3(CC(CC(C1)(C3)C)(C2)O)O",
+    "filename": "5,7-dimethyltricyclo[3.3.1.1[3,7]]decane-1,3-diol.jdx",
+    "compound_name": "5,7-dimethyltricyclo[3.3.1.1[3,7]]decane-1,3-diol",
+    "sdbs_id": "951"
+  },
+  {
+    "smiles": "[I-].C(CC)[N+](CCC)(CCC)CCC",
+    "filename": "tetrapropylammonium iodide.jdx",
+    "compound_name": "tetrapropylammonium iodide",
+    "sdbs_id": "952"
+  },
+  {
+    "smiles": "C(CCCCCC)OC1=CC=C(C=C1)[N+](=O)[O-]",
+    "filename": "p-(heptyloxy)nitrobenzene.jdx",
+    "compound_name": "p-(heptyloxy)nitrobenzene",
+    "sdbs_id": "953"
+  },
+  {
+    "smiles": "C(CCCCCC)OC1=CC=C(C=C1)O",
+    "filename": "p-(heptyloxy)phenol.jdx",
+    "compound_name": "p-(heptyloxy)phenol",
+    "sdbs_id": "954"
+  },
+  {
+    "smiles": "C(C=1C(C(=O)OC(C)C)=CC=CC1)(=O)OC(C)C",
+    "filename": "diisopropyl phthalate.jdx",
+    "compound_name": "diisopropyl phthalate",
+    "sdbs_id": "955"
+  },
+  {
+    "smiles": "C(CCCCCCC)OC1=CC=C(C=C1)O",
+    "filename": "p-(octyloxy)phenol.jdx",
+    "compound_name": "p-(octyloxy)phenol",
+    "sdbs_id": "956"
+  },
+  {
+    "smiles": "OC=1C=C(C=CC1O)C=1OC2=CC(=CC=C2C(C1O)=O)O",
+    "filename": "2-(3,4-dihydroxyphenyl)-3,7-dihydroxy-4H-chromen-4-one.jdx",
+    "compound_name": "2-(3,4-dihydroxyphenyl)-3,7-dihydroxy-4H-chromen-4-one",
+    "sdbs_id": "957"
+  },
+  {
+    "smiles": "C(CCC)(=O)OC(CC)(OC(CCC)=O)OC(CCC)=O",
+    "filename": "1,1,1-tri(butyryloxy)propane.jdx",
+    "compound_name": "1,1,1-tri(butyryloxy)propane",
+    "sdbs_id": "958"
+  },
+  {
+    "smiles": "N1CCC(CC1)CCCC1CCN(CC1)CCO",
+    "filename": "4-(3-(4-piperidyl)propyl)-1-piperidineethanol.jdx",
+    "compound_name": "4-(3-(4-piperidyl)propyl)-1-piperidineethanol",
+    "sdbs_id": "959"
+  },
+  {
+    "smiles": "CN(C1=CC=C(C=C1)C1=CC=C(N(C)C)C=C1)C",
+    "filename": "N,N,N',N'-tetramethylbenzidine.jdx",
+    "compound_name": "N,N,N',N'-tetramethylbenzidine",
+    "sdbs_id": "960"
+  },
+  {
+    "smiles": "C(CCCCCCCCCC)C1CCCCC1",
+    "filename": "undecylcyclohexane.jdx",
+    "compound_name": "undecylcyclohexane",
+    "sdbs_id": "961"
+  },
+  {
+    "smiles": "C(C)OC(=O)OC1=CC=C(C(=O)OC2=CC=C(C=C2)OCC)C=C1",
+    "filename": "p-ethoxyphenyl p-(ethoxycarbonyloxy)benzoate.jdx",
+    "compound_name": "p-ethoxyphenyl p-(ethoxycarbonyloxy)benzoate",
+    "sdbs_id": "962"
+  },
+  {
+    "smiles": "[K].CNC(=O)C1C(NC(NC1=O)=O)=O",
+    "filename": "5-methylcarbamoyl-2,4,6(1H,3H,5H)-pyrimidinetrione potassium salt.jdx",
+    "compound_name": "5-methylcarbamoyl-2,4,6(1H,3H,5H)-pyrimidinetrione potassium salt",
+    "sdbs_id": "963"
+  },
+  {
+    "smiles": "[C@@H]1([C@H](O)[C@@H](O)[C@H](O)[C@H](O1)CO)NC(=O)N",
+    "filename": "N-(beta-D-glucopyranosyl)urea.jdx",
+    "compound_name": "N-(beta-D-glucopyranosyl)urea",
+    "sdbs_id": "964"
+  },
+  {
+    "smiles": "OC1=C(C=NNC(=O)N)C=CC=C1C",
+    "filename": "2-hydroxy-3-methylbenzaldehyde semicarbazone.jdx",
+    "compound_name": "2-hydroxy-3-methylbenzaldehyde semicarbazone",
+    "sdbs_id": "965"
+  },
+  {
+    "smiles": "ClC(C1(C(CCCC1)=NNC(=O)N)C)Cl",
+    "filename": "2-dichloromethyl-2-methylcyclohexanone semicarbazone.jdx",
+    "compound_name": "2-dichloromethyl-2-methylcyclohexanone semicarbazone",
+    "sdbs_id": "966"
+  },
+  {
+    "smiles": "C(C)SC([C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO)SCC",
+    "filename": "glucose diethyl dithioacetal.jdx",
+    "compound_name": "glucose diethyl dithioacetal",
+    "sdbs_id": "967"
+  },
+  {
+    "smiles": "CC1=C(C=CC=2CCCCC12)O",
+    "filename": "1-methyl-5,6,7,8-tetrahydro-2-naphthol.jdx",
+    "compound_name": "1-methyl-5,6,7,8-tetrahydro-2-naphthol",
+    "sdbs_id": "968"
+  },
+  {
+    "smiles": "ClC(C1(C(C=CC2=CC=CC=C12)=O)C)Cl",
+    "filename": "1-dichloromethyl-1-methyl-2(1H)-naphthalenone.jdx",
+    "compound_name": "1-dichloromethyl-1-methyl-2(1H)-naphthalenone",
+    "sdbs_id": "969"
+  },
+  {
+    "smiles": "C(C)(=O)OC[C@@H]1[C@H](C[C@@H](O1)N1C(=O)NC(=O)C(C)=C1)O",
+    "filename": "5'-O-acetylthymidine.jdx",
+    "compound_name": "5'-O-acetylthymidine",
+    "sdbs_id": "970"
+  },
+  {
+    "smiles": "CC1=C(C(=CC=2CCCCC12)C)O",
+    "filename": "1,3-dimethyl-5,6,7,8-tetrahydro-2-naphthol.jdx",
+    "compound_name": "1,3-dimethyl-5,6,7,8-tetrahydro-2-naphthol",
+    "sdbs_id": "971"
+  },
+  {
+    "smiles": "O=C[C@H](O)[C@@H](O)[C@@H](O)[C@H](O)C(=O)[O-].[Ba+2].O=C[C@H](O)[C@@H](O)[C@@H](O)[C@H](O)C(=O)[O-]",
+    "filename": "barium D-galacturonate.jdx",
+    "compound_name": "barium D-galacturonate",
+    "sdbs_id": "972"
+  },
+  {
+    "smiles": "[C@@H]1([C@H](O)[C@@H](O)[C@H](O)[C@H](O1)CO)NC(=O)N[C@H]1[C@H](O)[C@@H](O)[C@H](O)[C@H](O1)CO",
+    "filename": "N,N'-bis(beta-D-glucopyranosyl)urea.jdx",
+    "compound_name": "N,N'-bis(beta-D-glucopyranosyl)urea",
+    "sdbs_id": "975"
+  },
+  {
+    "smiles": "C(C)(=O)O[C@H]1C(O[C@@H]([C@H]([C@@H]1OC(C)=O)OC(C)=O)COC(C)=O)NC(=O)N",
+    "filename": "N-(2,3,4,6-tetra-O-acetyl-D-glucopyranosyl)urea.jdx",
+    "compound_name": "N-(2,3,4,6-tetra-O-acetyl-D-glucopyranosyl)urea",
+    "sdbs_id": "978"
+  },
+  {
+    "smiles": "C1(=CC=CC=C1)NC(OC1=CC2=CC=CC=C2C=C1)=O",
+    "filename": "2-naphthyl phenylcarbamate.jdx",
+    "compound_name": "2-naphthyl phenylcarbamate",
+    "sdbs_id": "979"
+  },
+  {
+    "smiles": "C(C)(=O)NC(=O)N[C@H]1[C@H](OC(C)=O)[C@@H](OC(C)=O)[C@H](OC(C)=O)[C@H](O1)COC(C)=O",
+    "filename": "N-acetyl-N'-(2,3,4,6-tetra-O-acetyl-beta-D-glucopyranosyl)urea.jdx",
+    "compound_name": "N-acetyl-N'-(2,3,4,6-tetra-O-acetyl-beta-D-glucopyranosyl)urea",
+    "sdbs_id": "980"
+  },
+  {
+    "smiles": "C(CCCC)S(=O)(=O)[O-].[Na+]",
+    "filename": "sodium 1-pentanesulfonate.jdx",
+    "compound_name": "sodium 1-pentanesulfonate",
+    "sdbs_id": "982"
+  },
+  {
+    "smiles": "CC1(C2C(C3C(C4C5(CC(C13O)O)C(C(CC4)C(C5)(O)C)O)(O)C)O2)C",
+    "filename": "2,3-epoxy-1,1,4,12-tetramethylperhydro-7,8a-ethanobenz(f)azulene-4,8,10,10a,12-pentol.jdx",
+    "compound_name": "2,3-epoxy-1,1,4,12-tetramethylperhydro-7,8a-ethanobenz(f)azulene-4,8,10,10a,12-pentol",
+    "sdbs_id": "983"
+  },
+  {
+    "smiles": "CC1(C2C(C3C(C4C5(C(C(C13O)O)O)CC(CC4)C(C5)(O)C)(O)C)O2)C",
+    "filename": "2,3-epoxy-1,1,4,12-tetramethylperhydro-7,8a-ethanobenz(f)azulene-4,9,10,10a,12-pentol.jdx",
+    "compound_name": "2,3-epoxy-1,1,4,12-tetramethylperhydro-7,8a-ethanobenz(f)azulene-4,9,10,10a,12-pentol",
+    "sdbs_id": "984"
+  },
+  {
+    "smiles": "CC1(C(CC2C(C3C4(CC(C12O)O)C(C(CC3)C(C4)(O)C)O)(O)C)O)C",
+    "filename": "1,1,4,12-tetramethylperhydro-7,8a-ethanobenz(f)azulene-2,4,8,10,10a,12-hexol.jdx",
+    "compound_name": "1,1,4,12-tetramethylperhydro-7,8a-ethanobenz(f)azulene-2,4,8,10,10a,12-hexol",
+    "sdbs_id": "985"
+  },
+  {
+    "smiles": "C(C)(=O)OC1C(C23C(C(C4C5C(C(C14O)(C)C)O5)(C)O)CCC(C2)C(C3)(C)O)O",
+    "filename": "10-acetoxy-2,3-epoxy-4,9,10a,12-tetrahydroxy-1,1,4,12-tetramethylperhydro-7,8a-ethanobenz(f)azulene.jdx",
+    "compound_name": "10-acetoxy-2,3-epoxy-4,9,10a,12-tetrahydroxy-1,1,4,12-tetramethylperhydro-7,8a-ethanobenz(f)azulene",
+    "sdbs_id": "986"
+  },
+  {
+    "smiles": "C(C)(=O)OC1C2CCC3C(C4C5C(C(C4(C(CC31CC2(C)O)OC(C)=O)O)(C)C)O5)(C)O",
+    "filename": "8,10-diacetoxy-2,3-epoxy-4,10a,12-trihydroxy-1,1,4,12-tetramethylperhydro-7,8a-ethanobenz(f)azulene.jdx",
+    "compound_name": "8,10-diacetoxy-2,3-epoxy-4,10a,12-trihydroxy-1,1,4,12-tetramethylperhydro-7,8a-ethanobenz(f)azulene",
+    "sdbs_id": "987"
+  },
+  {
+    "smiles": "P(=O)([O-])([O-])[O-].C1(CCCCC1)[NH3+].C1(CCCCC1)[NH3+].C1(CCCCC1)[NH3+]",
+    "filename": "tris(cyclohexylammonium) phosphate.jdx",
+    "compound_name": "tris(cyclohexylammonium) phosphate",
+    "sdbs_id": "989"
+  },
+  {
+    "smiles": "NC1=CC=C(C=C1)C",
+    "filename": "p-toluidine.jdx",
+    "compound_name": "p-toluidine",
+    "sdbs_id": "990"
+  },
+  {
+    "smiles": "O=C(C(=O)[O-])CCC(=O)[O-].[Na+].[Na+]",
+    "filename": "disodium 2-oxoglutarate.jdx",
+    "compound_name": "disodium 2-oxoglutarate",
+    "sdbs_id": "991"
+  },
+  {
+    "smiles": "Cl.NC(CCCNC(N)=N)C(=O)O",
+    "filename": "DL-arginine hydrochloride.jdx",
+    "compound_name": "DL-arginine hydrochloride",
+    "sdbs_id": "992"
+  },
+  {
+    "smiles": "NCC(=O)N[C@@H](CC(N)=O)C(=O)O",
+    "filename": "glycyl-L-asparagine.jdx",
+    "compound_name": "glycyl-L-asparagine",
+    "sdbs_id": "993"
+  },
+  {
+    "smiles": "N[C@H](CC1=CC=CC=C1)C(=O)O",
+    "filename": "D-phenylalanine.jdx",
+    "compound_name": "D-phenylalanine",
+    "sdbs_id": "994"
+  },
+  {
+    "smiles": "NCC(=O)NC(C(C)C)C(=O)O",
+    "filename": "glycyl-DL-valine.jdx",
+    "compound_name": "glycyl-DL-valine",
+    "sdbs_id": "995"
+  },
+  {
+    "smiles": "Cl.Cl.NCCC[C@H](N)C(=O)O",
+    "filename": "5-amino-L-norvaline dihydrochloride.jdx",
+    "compound_name": "5-amino-L-norvaline dihydrochloride",
+    "sdbs_id": "997"
+  },
+  {
+    "smiles": "BrC=1C(=C(C(=C2C1C(=O)OC2=O)Br)Br)Br",
+    "filename": "tetrabromophthalic anhydride.jdx",
+    "compound_name": "tetrabromophthalic anhydride",
+    "sdbs_id": "998"
+  },
+  {
+    "smiles": "OCC(O)C(O)=O",
+    "filename": "DL-glyceric acid.jdx",
+    "compound_name": "DL-glyceric acid",
+    "sdbs_id": "999"
   }
 ]
