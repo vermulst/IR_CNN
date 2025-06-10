@@ -7,9 +7,9 @@ class BasicCNN1D(nn.Module):
         super(BasicCNN1D, self).__init__()
         
         # Convolutional layers (adapted for 1D data)
-        self.conv1 = nn.Conv1d(in_channels=1, out_channels=64, kernel_size=3, stride=1, padding=1)
-        self.conv2 = nn.Conv1d(in_channels=64, out_channels=128, kernel_size=3, stride=1, padding=1)
-        self.conv3 = nn.Conv1d(in_channels=128, out_channels=256, kernel_size=3, stride=1, padding=1)
+        self.conv1 = nn.Conv1d(in_channels=1, out_channels=64, kernel_size=11, stride=1, padding=1)
+        self.conv2 = nn.Conv1d(in_channels=64, out_channels=128, kernel_size=11, stride=1, padding=1)
+        self.conv3 = nn.Conv1d(in_channels=128, out_channels=256, kernel_size=11, stride=1, padding=1)
         self.pool = nn.MaxPool1d(2)
         
         # Calculate flattened dimension
