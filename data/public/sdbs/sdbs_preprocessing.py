@@ -110,6 +110,28 @@ def get_png():
             img.save(to_path, 'png')
 
 
+def extract_spectrum_from_png(path_to_png, x_min=400, x_max=4000, y_min=0, y_max=100, crop_box=None):
+    img = cv2.imread(path_to_png, cv2.IMREAD_GRAYSCALE)
+
+    if crop_box:
+        img = img[crop_box[1]:crop_box[3], crop_box[0]:crop_box[2]]
+    
+    _, binary = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY_INV)
+    height, width = binary.shape
+    curve_y = np.full(width, np.nan)
+
+    for x in range(width):
+        column = binary[:, x]
+        y_indices = np.where(column > 0)[0]
+        if y_indices.size > 0:
+            curve_y[x] = y_indices[-1]
+
+    wavenumbers = np.linspace(x_max, x_min, width)
+    intensities = y_max - ((curve_y / (height - 1)) * (y_max - y_min))
+
+    valid = ~np.isnan(curve_y)
+    return wavenumbers[valid], intensities[valid]
+
 def get_unique(x_in, y_in):
     """Removes duplicates in x and takes smallest y value for each x value."""
     temp = {}
@@ -151,12 +173,7 @@ def get_sdbs():
         if not compound_name:
             continue
         
-        # Spectrum Processing
-        # --- Spectrum extraction/interpolation logic here ---
-        # Replace the next two lines with your actual spectrum extraction code
-        # For example, x = np.linspace(4000, 400, 600); y = ... (interpolated spectrum)
-        x = np.linspace(4000, 400, 600)
-        y = np.random.rand(600)  # Replace with actual spectrum extraction!
+        x, y = extract_spectrum_from_png(os.path.join(sdbs_png_path, file), crop_box = (29, 96, 714, 417))
 
         # --- Save Data ---
         safe_name = re.sub(r'[\\/*?:"<>|]', "_", compound_name)

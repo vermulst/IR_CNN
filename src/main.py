@@ -18,8 +18,8 @@ import random
 def main():
     # load samples
     samples_chemotion = load_samples("data/public/chemotion", "chemotion")
-    samples_sdbs = load_samples("data/public/sdbs/processed", "sdbs")
-    samples = samples_chemotion + samples_sdbs
+    #samples_sdbs = load_samples("data/public/sdbs/processed", "sdbs")
+    samples = samples_chemotion
 
     # preprocess
     preprocess_samples(samples)
@@ -29,17 +29,19 @@ def main():
     num_classes = len(class_names)
     class_counts = [0] * num_classes  # Track positives per class
     
-    # removed_samples = []
-    # for sample in samples:
-    #     labels = sample.labels  # Assuming labels is a list/array of 0s and 1s
-    #     if (labels[1] == 1):
-    #         is_pure_aromatic = (labels[1] == 1) and sum(labels) == 1
-    #         if (is_pure_aromatic):
-    #             if random.randrange(8) != 1:
-    #                 removed_samples.append(sample)
+    removed_samples = []
+    for sample in samples:
+        labels = sample.labels  # Assuming labels is a list/array of 0s and 1s
+        nothingPresent = True
+        for i in range(len(labels)):
+            if (labels[i] == 1):
+                nothingPresent = False
+                break
+        if (nothingPresent):
+            removed_samples.append(sample)
     
-    # print(f"Removed {len(removed_samples)} samples")
-    # samples = [s for s in samples if s not in removed_samples]
+    print(f"Removed {len(removed_samples)} samples")
+    samples = [s for s in samples if s not in removed_samples]
     
     for sample in samples:
         labels = sample.labels
@@ -79,7 +81,7 @@ def main():
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
     
     # Training parameters
-    num_epochs = 100
+    num_epochs = 50
     best_macro_f1 = 0.0
 
     # Training loop
@@ -159,7 +161,7 @@ def main():
             best_macro_f1 = macro_f1
             torch.save(model.state_dict(), 'best_model.pth')
     
-    print(f'Training complete. Best validation accuracy: {best_accuracy:.2f}%')
+    print(f'Training complete. Best validation accuracy: {best_macro_f1:.2f}%')
 
 
 if __name__ == "__main__":
