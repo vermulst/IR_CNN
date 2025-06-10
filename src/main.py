@@ -19,8 +19,8 @@ def main():
     # load samples
     samples_chemotion = load_samples("data/public/chemotion", "chemotion")
     #samples_sdbs = load_samples("data/public/sdbs/processed", "sdbs")
-    samples_nist = load_samples("data/public/nist_dataset", "nist")
-    samples = samples_chemotion + samples_nist
+    #samples_nist = load_samples("data/public/nist_dataset", "nist")
+    samples = samples_chemotion# + samples_nist
 
     # preprocess
     preprocess_samples(samples)
@@ -39,10 +39,10 @@ def main():
                 nothingPresent = False
                 break
         if (nothingPresent):
-            removed_samples.append(sample)
+            removed_samples.append(id(sample))
     
     print(f"Removed {len(removed_samples)} samples")
-    samples = [s for s in samples if s not in removed_samples]
+    samples = [s for s in samples if id(s) not in removed_samples]
     
     for sample in samples:
         labels = sample.labels
