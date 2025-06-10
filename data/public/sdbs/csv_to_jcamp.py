@@ -75,8 +75,8 @@ def csv_to_jcamp(csv_path, jcamp_path, title="Sample Spectrum", origin="Python S
             # Add Y values for this line (up to values_per_line)
             for j in range(values_per_line):
                 if i + j < npoints:
-                    # Convert Y values to integers (multiply by large factor for precision)
-                    y_val = int(y[i + j] * 1e9)  # Scale factor like in your example
+                    # Convert Y values to integers
+                    y_val = int(y[i + j] * 1e9)  
                     line += f"+{y_val}"
             
             f.write(line + "\n")
