@@ -10,6 +10,7 @@ class SpectraSample:
     skip: bool = field(default=True, init=False)
     path: str = field(default="", init=False)
     labels: Optional[list] = field(default=None, init=False)
+    weight: float = field(default=1.0, init=False) 
 
     @classmethod
     def from_file(cls, path: str) -> 'SpectraSample':
@@ -47,7 +48,7 @@ class SpectraSample:
             print(f"[WARN] Missing x or y data in '{self.path}'")
             return False
         if len(x) == 0 or len(y) == 0:
-            print(f"[WARN] Empty arrays in '{self.path}'")
+        #   print(f"[WARN] Empty arrays in '{self.path}'")
             return False
         if len(x) != len(y):
             print(f"[WARN] Length mismatch ({len(x)} vs {len(y)}) in '{self.path}'")

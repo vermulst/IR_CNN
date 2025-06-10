@@ -15,4 +15,5 @@ class CustomArrayDataset(Dataset):
         # Convert spectrum to tensor [length] -> [1, length]
         input_tensor = torch.tensor(sample.y, dtype=torch.float32).unsqueeze(0)
         labels_tensor = torch.tensor(sample.labels, dtype=torch.float32)
-        return input_tensor, labels_tensor
+        weight = torch.tensor(sample.weight, dtype=torch.float32)
+        return input_tensor, labels_tensor, weight
