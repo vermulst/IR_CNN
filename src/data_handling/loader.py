@@ -63,6 +63,17 @@ def read_metadata(metadata, datafolder, dataset_type):
             paths.append(path)
             smiles.append(smile)
             path_to_smiles[path] = smile
+        elif (dataset_type == "nist"):
+            entry = _
+            if not all(key in entry for key in ['smiles', 'filename']):
+                raise ValueError(f"Missing required fields in compound: {entry}")
+            filename = entry["filename"]
+            path = f"{datafolder}/samples/{filename}"
+            smile = entry["smiles"]
+            
+            paths.append(path)
+            smiles.append(smile)
+            path_to_smiles[path] = smile
             
 
     return paths, smiles, path_to_smiles

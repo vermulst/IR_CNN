@@ -19,7 +19,8 @@ def main():
     # load samples
     samples_chemotion = load_samples("data/public/chemotion", "chemotion")
     #samples_sdbs = load_samples("data/public/sdbs/processed", "sdbs")
-    samples = samples_chemotion
+    samples_nist = load_samples("data/public/nist_dataset", "nist")
+    samples = samples_chemotion + samples_nist
 
     # preprocess
     preprocess_samples(samples)
