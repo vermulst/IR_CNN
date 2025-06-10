@@ -108,11 +108,26 @@ def read_spectra_samples(paths, path_to_smiles, smiles_to_functional_group, data
     rprint(f"[bold green]Loaded {len(samples)}/{len(paths)} samples at {rate:.0f} samples/s[/bold green]")
     return samples
 
+def read_spectra_samples_no_smiles(paths, dataset_type):
+    # Parallel loading of spectra samples
+    start_time = time.time()
+    samples = []
+    with mp.Pool(processes=calculate_max_workers()) as pool:
+        # Create a progress bar that updates as we get results
+        for result in tqdm(pool.imap_unordered(load_sample_parallel, paths), total=len(paths), desc=f"Loading samples from: {dataset_type}", colour="yellow"):
+            if not result:
+                continue
+            samples.append(result)
+    load_time = time.time() - start_time
+    rate = len(paths) / load_time if load_time > 0 else 0
+    rprint(f"[bold green]Loaded {len(samples)}/{len(paths)} samples at {rate:.0f} samples/s[/bold green]")
+    return samples
+
 def calculate_max_workers():
     cpu_count = os.cpu_count() or 1
     return min(32, int(cpu_count / 2))
 
 # Parallel file loader
 def load_sample_parallel(path):
-    sample = SpectraSample(path)
+    sample = SpectraSample.from_file(path)
     return (sample, path) if not sample.skip else None

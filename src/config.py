@@ -14,10 +14,10 @@ FUNCTIONAL_GROUP_SMARTS = {
     'alcohols': '[#6][OX2H]',
     #'amines': '[NX3;H2,H1;!$(NC=O)]',
     #'nitriles': '[NX1]#[CX2]',
-    'aromatics': '[$([cX3](:*):*),$([cX2+](:*):*)]',
+    #'aromatics': '[$([cX3](:*):*),$([cX2+](:*):*)]',
     #'alkyl halides': '[#6][F,Cl,Br,I]',
     #'esters': '[#6][CX3](=O)[OX2H0][#6]',
-    #'ketones': '[#6][CX3](=O)[#6]',
+    'ketones': '[#6][CX3](=O)[#6]',
     # Matches 1,4-benzoquinone: O=C1C=CC(=O)C=C1
     'hydroquinone': 'Oc1ccc(O)cc1',
     '2-methylhydroquinone': 'Cc1ccc(O)cc1O',

@@ -109,30 +109,28 @@ def get_png():
             to_path = sdbs_png_path + file_name + '.png'
             img.save(to_path, 'png')
 
+
 def extract_spectrum_from_png(path_to_png, x_min=400, x_max=4000, y_min=0, y_max=100, crop_box=None):
     img = cv2.imread(path_to_png, cv2.IMREAD_GRAYSCALE)
+
     if crop_box:
         img = img[crop_box[1]:crop_box[3], crop_box[0]:crop_box[2]]
+    
     _, binary = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY_INV)
     height, width = binary.shape
+    curve_y = np.full(width, np.nan)
 
-    curve_y = []
     for x in range(width):
-        col = binary[:, x]
-        ys = np.where(col > 0)[0]
-        if len(ys) > 0:
-            y = ys[-1]
-            curve_y.append(y)
-        else:
-            curve_y.append(np.nan)
+        column = binary[:, x]
+        y_indices = np.where(column > 0)[0]
+        if y_indices.size > 0:
+            curve_y[x] = y_indices[-1]
 
-    x_pixels = np.arange(width)
     wavenumbers = np.linspace(x_max, x_min, width)
-    intensities = y_max - (np.array(curve_y) / (height - 1) * (y_max - y_min))
+    intensities = y_max - ((curve_y / (height - 1)) * (y_max - y_min))
 
     valid = ~np.isnan(curve_y)
     return wavenumbers[valid], intensities[valid]
-
 
 def get_unique(x_in, y_in):
     """Removes duplicates in x and takes smallest y value for each x value."""
@@ -175,7 +173,8 @@ def get_sdbs():
         if not compound_name:
             continue
         
-        x, y = extract_spectrum_from_png(os.path.join(sdbs_png_path, file))
+        x, y = extract_spectrum_from_png(os.path.join(sdbs_png_path, file), crop_box = (29, 96, 714, 417))
+
         # --- Save Data ---
         safe_name = re.sub(r'[\\/*?:"<>|]', "_", compound_name)
         save_spectrum_data(x, y, safe_name)
