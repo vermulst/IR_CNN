@@ -19,7 +19,8 @@ def main():
     # load samples
     samples_chemotion = load_samples("data/public/chemotion", "chemotion")
     #samples_sdbs = load_samples("data/public/sdbs/processed", "sdbs")
-    samples = samples_chemotion
+    samples_nist = load_samples("data/public/nist_dataset", "nist")
+    samples = samples_chemotion + samples_nist
 
     # preprocess
     preprocess_samples(samples)
@@ -29,19 +30,9 @@ def main():
     num_classes = len(class_names)
     class_counts = [0] * num_classes  # Track positives per class
     
-    removed_samples = []
     for sample in samples:
-        labels = sample.labels  # Assuming labels is a list/array of 0s and 1s
-        nothingPresent = True
-        for i in range(len(labels)):
-            if (labels[i] == 1):
-                nothingPresent = False
-                break
-        if (nothingPresent):
-            removed_samples.append(sample)
-    
-    print(f"Removed {len(removed_samples)} samples")
-    samples = [s for s in samples if s not in removed_samples]
+        if not any(sample.labels):
+            sample.weight = 0.2
     
     for sample in samples:
         labels = sample.labels
@@ -68,7 +59,7 @@ def main():
     input_length = max(len(s.y) for s in samples)  # Use maximum length
     print(f"Using input length: {input_length}")
 
-    sample_input, sample_label = train_dataset[0]
+    sample_input, sample_label, sample_weight = train_dataset[0]
     print(f"Sample input shape: {sample_input.shape}")
     print(f"Sample label shape: {sample_label.shape}")
     print(f"Number of training batches: {len(train_loader)}")
@@ -89,11 +80,13 @@ def main():
         model.train()
         running_loss = 0.0
         
-        for inputs, labels in train_loader:
-            inputs, labels = inputs.to(device), labels.to(device)
+        for inputs, labels, weights in train_loader:
+            inputs, labels, weights = inputs.to(device), labels.to(device), weights.to(device)
             optimizer.zero_grad()
             outputs = model(inputs)
             loss = criterion(outputs, labels)
+            loss = loss * weights.unsqueeze(1)  # Broadcast weights across all labels
+            loss = loss.mean()
             loss.backward()
             optimizer.step()
         
@@ -109,7 +102,7 @@ def main():
             class_fp = [0] * num_classes      # False positives per class
             class_fn = [0] * num_classes      # False negatives per class
 
-            for inputs, labels in test_loader:
+            for inputs, labels, weights in test_loader:
                 outputs = model(inputs.to(device))
                 preds = (outputs > 0.5).float()
 
@@ -160,6 +153,19 @@ def main():
         if macro_f1 > best_macro_f1:
             best_macro_f1 = macro_f1
             torch.save(model.state_dict(), 'best_model.pth')
+            # Write model evaluation results to text file
+            with open("best_model.txt", "w") as f:
+                f.write(f"Epoch: {epoch+1}\n")
+                f.write(f"Validation Accuracy: {accuracy:.2f}%\n\n")
+                for i in range(num_classes):
+                    precision = class_tp[i] / (class_tp[i] + class_fp[i]) if (class_tp[i] + class_fp[i]) > 0 else 0
+                    recall = class_tp[i] / (class_tp[i] + class_fn[i]) if (class_tp[i] + class_fn[i]) > 0 else 0
+                    f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+                    f.write(f'{class_names[i]}:\n')
+                    f.write(f'  Accuracy: {100 * class_correct[i] / class_total[i]:.2f}%\n')
+                    f.write(f'  F1 Score: {100 * f1:.2f}%\n\n')
+                f.write(f'Macro-average F1: {100 * macro_f1:.2f}%\n')
+                f.write(f'Micro-average F1: {100 * micro_f1:.2f}%\n')
     
     print(f'Training complete. Best validation accuracy: {best_macro_f1:.2f}%')
 

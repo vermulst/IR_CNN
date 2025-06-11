@@ -21,6 +21,11 @@ class CustomArrayDataset(Dataset):
 
         # Convert the labels to a float tensor (e.g., for multi-label classification)
         labels_tensor = torch.tensor(sample.labels, dtype=torch.float32)
+<<<<<<< HEAD
 
         # Return a tuple of (input tensor, label tensor)
         return input_tensor, labels_tensor
+=======
+        weight = torch.tensor(sample.weight, dtype=torch.float32)
+        return input_tensor, labels_tensor, weight
+>>>>>>> c7aa17afb60b930db23a99a32aa3b39f18ba1c2f

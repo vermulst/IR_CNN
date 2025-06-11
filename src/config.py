@@ -19,8 +19,8 @@ FUNCTIONAL_GROUP_SMARTS = {
     #'esters': '[#6][CX3](=O)[OX2H0][#6]',
     'ketones': '[#6][CX3](=O)[#6]',
     # Matches 1,4-benzoquinone: O=C1C=CC(=O)C=C1
-    'hydroquinone': 'Oc1ccc(O)cc1',
-    '2-methylhydroquinone': 'Cc1ccc(O)cc1O',
+    #'hydroquinone': 'Oc1ccc(O)cc1',
+    #'2-methylhydroquinone': 'Cc1ccc(O)cc1O',
     'aldehydes': '[CX3H1](=O)[#6]',
     #'carboxylic acids': '[CX3](=O)[OX2H1]',
     #'ether': '[OD2]([#6;!$(C=O)])([#6;!$(C=O)])',
