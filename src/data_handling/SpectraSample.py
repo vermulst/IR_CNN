@@ -6,20 +6,12 @@ from typing import Optional
 # Data class to represent a spectrum sample with metadata and spectral data
 @dataclass(slots=True)
 class SpectraSample:
-<<<<<<< HEAD
-    x: Optional[np.ndarray] = field(default=None, init=False)       # Wavenumber or frequency values
-    y: Optional[np.ndarray] = field(default=None, init=False)       # Intensity or absorbance values
-    skip: bool = field(default=True, init=False)                    # Flag to indicate if sample should be skipped
-    path: str = field(default="", init=False)                       # Path to the JCAMP file
-    labels: Optional[list] = field(default=None, init=False)        # Optional labels for classification
-=======
     x: Optional[np.ndarray] = field(default=None, init=False)
     y: Optional[np.ndarray] = field(default=None, init=False)
     skip: bool = field(default=True, init=False)
     path: str = field(default="", init=False)
     labels: Optional[list] = field(default=None, init=False)
     weight: float = field(default=1.0, init=False) 
->>>>>>> c7aa17afb60b930db23a99a32aa3b39f18ba1c2f
 
     @classmethod
     def from_file(cls, path: str) -> 'SpectraSample':
