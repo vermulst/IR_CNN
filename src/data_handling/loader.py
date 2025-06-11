@@ -128,7 +128,8 @@ def read_spectra_samples_no_smiles(paths, dataset_type):
         for result in tqdm(pool.imap_unordered(load_sample_parallel, paths), total=len(paths), desc=f"Loading samples from: {dataset_type}", colour="yellow"):
             if not result:
                 continue
-            samples.append(result)
+            sample, _ = result
+            samples.append(sample)
     load_time = time.time() - start_time
     rate = len(paths) / load_time if load_time > 0 else 0
     rprint(f"[bold green]Loaded {len(samples)}/{len(paths)} samples at {rate:.0f} samples/s[/bold green]")
