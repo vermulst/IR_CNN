@@ -1,174 +1,36 @@
+### main.py
 from data_handling.loader import load_samples
 from data_handling.preprocessing import preprocess_samples
-from data_handling.visualizer import plot_show
 
-import torch
-import torch.nn as nn
-
-from cnn.CNN import BasicCNN1D
-from cnn.CDataset import CustomArrayDataset
-from torch.utils.data import DataLoader
-
+from cnn.trainer import train_model  # New trainer module
 from config import FUNCTIONAL_GROUP_SMARTS
 
-import time
-import random
-
-
 def main():
-    # load samples
+    # Load and preprocess samples
     samples_chemotion = load_samples("data/public/chemotion", "chemotion")
-    #samples_sdbs = load_samples("data/public/sdbs/processed", "sdbs")
     samples_nist = load_samples("data/public/nist_dataset", "nist")
     samples = samples_chemotion + samples_nist
-
-    # preprocess
     preprocess_samples(samples)
 
-    # Print class distribution for ALL samples
-    class_names = list(FUNCTIONAL_GROUP_SMARTS.keys())
-    num_classes = len(class_names)
-    class_counts = [0] * num_classes  # Track positives per class
-    
+    # Handle class weights
     for sample in samples:
         if not any(sample.labels):
             sample.weight = 0.2
-    
+
+    # Print class distribution
+    class_names = list(FUNCTIONAL_GROUP_SMARTS.keys())
+    class_counts = [0] * len(class_names)
     for sample in samples:
-        labels = sample.labels
-        for i in range(num_classes):
-            if labels[i] == 1:
+        for i, label in enumerate(sample.labels):
+            if label == 1:
                 class_counts[i] += 1
-    print("\nClass distribution (actual positives) in FULL dataset:")
+
+    print("\nClass distribution in dataset:")
     for i, name in enumerate(class_names):
         print(f"{name}: {class_counts[i]} ({(100 * class_counts[i] / len(samples)):.1f}%)")
 
-
-    # CNN
-    num_samples = len(samples)
-    num_classes = len(samples[0].labels) 
-
-    train_dataset = CustomArrayDataset(samples[:int(num_samples * 0.8)]) # 80% for training
-    test_dataset = CustomArrayDataset(samples[int(num_samples * 0.8):])  # 20% for testing
-
-    batch_size = 32
-    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
-
-    # printing CNN info
-    input_length = max(len(s.y) for s in samples)  # Use maximum length
-    print(f"Using input length: {input_length}")
-
-    sample_input, sample_label, sample_weight = train_dataset[0]
-    print(f"Sample input shape: {sample_input.shape}")
-    print(f"Sample label shape: {sample_label.shape}")
-    print(f"Number of training batches: {len(train_loader)}")
-    print(f"Number of testing batches: {len(test_loader)}")
-
-    # Initialize model, loss, and optimizer
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = BasicCNN1D(input_length=input_length, num_classes=num_classes).to(device)
-    criterion = nn.BCELoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
-    
-    # Training parameters
-    num_epochs = 50
-    best_macro_f1 = 0.0
-
-    # Training loop
-    for epoch in range(num_epochs):
-        model.train()
-        running_loss = 0.0
-        
-        for inputs, labels, weights in train_loader:
-            inputs, labels, weights = inputs.to(device), labels.to(device), weights.to(device)
-            optimizer.zero_grad()
-            outputs = model(inputs)
-            loss = criterion(outputs, labels)
-            loss = loss * weights.unsqueeze(1)  # Broadcast weights across all labels
-            loss = loss.mean()
-            loss.backward()
-            optimizer.step()
-        
-        # Validation after each epoch
-        model.eval()
-        with torch.no_grad():
-            correct = total = 0
-
-            # Per-class metrics
-            class_correct = [0] * num_classes  # Correct predictions per class
-            class_total = [0] * num_classes    # Total samples per class
-            class_tp = [0] * num_classes        # True positives per class
-            class_fp = [0] * num_classes      # False positives per class
-            class_fn = [0] * num_classes      # False negatives per class
-
-            for inputs, labels, weights in test_loader:
-                outputs = model(inputs.to(device))
-                preds = (outputs > 0.5).float()
-
-                # Overall accuracy
-                correct += (preds == labels).sum().item()
-                total += labels.numel()
-
-                # Per-class accuracy
-                for i in range(num_classes):  # Loop over each functional group
-                    # Accuracy components
-                    class_correct[i] += (preds[:, i] == labels[:, i]).sum().item()
-                    class_total[i] += labels.shape[0]
-            
-                    # TP, FP, FN for F1
-                    class_tp[i] += ((preds[:, i] == 1) & (labels[:, i] == 1)).sum().item()
-                    class_fp[i] += ((preds[:, i] == 1) & (labels[:, i] == 0)).sum().item()
-                    class_fn[i] += ((preds[:, i] == 0) & (labels[:, i] == 1)).sum().item()
-
-        
-        accuracy = 100 * correct / total
-        print(f'Epoch [{epoch+1}/{num_epochs}], Validation Accuracy: {accuracy:.2f}%')
-        
-        class_names = list(FUNCTIONAL_GROUP_SMARTS.keys())
-        f1_scores = []
-        for i in range(num_classes):
-            precision = class_tp[i] / (class_tp[i] + class_fp[i]) if (class_tp[i] + class_fp[i]) > 0 else 0
-            recall = class_tp[i] / (class_tp[i] + class_fn[i]) if (class_tp[i] + class_fn[i]) > 0 else 0
-            f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
-            f1_scores.append(f1)
-            print(f'{class_names[i]}:')
-            print(f'  Accuracy: {100 * class_correct[i] / class_total[i]:.2f}%')
-            print(f'  F1: {100 * f1:.2f}%')
-
-        # Macro-average F1 (average of per-class F1)
-        macro_f1 = sum(f1_scores) / len(f1_scores) if f1_scores else 0
-        print(f'\nMacro-average F1: {100 * macro_f1:.2f}%')
-
-        # Micro-average F1 (global TP/FP/FN)
-        global_tp = sum(class_tp)
-        global_fp = sum(class_fp)
-        global_fn = sum(class_fn)
-        micro_precision = global_tp / (global_tp + global_fp) if (global_tp + global_fp) > 0 else 0
-        micro_recall = global_tp / (global_tp + global_fn) if (global_tp + global_fn) > 0 else 0
-        micro_f1 = 2 * (micro_precision * micro_recall) / (micro_precision + micro_recall) if (micro_precision + micro_recall) > 0 else 0
-        print(f'Micro-average F1: {100 * micro_f1:.2f}%')
-
-        # Save best model
-        if macro_f1 > best_macro_f1:
-            best_macro_f1 = macro_f1
-            torch.save(model.state_dict(), 'best_model.pth')
-            # Write model evaluation results to text file
-            with open("best_model.txt", "w") as f:
-                f.write(f"Epoch: {epoch+1}\n")
-                f.write(f"Validation Accuracy: {accuracy:.2f}%\n\n")
-                for i in range(num_classes):
-                    precision = class_tp[i] / (class_tp[i] + class_fp[i]) if (class_tp[i] + class_fp[i]) > 0 else 0
-                    recall = class_tp[i] / (class_tp[i] + class_fn[i]) if (class_tp[i] + class_fn[i]) > 0 else 0
-                    f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
-                    f.write(f'{class_names[i]}:\n')
-                    f.write(f'  Accuracy: {100 * class_correct[i] / class_total[i]:.2f}%\n')
-                    f.write(f'  F1 Score: {100 * f1:.2f}%\n\n')
-                f.write(f'Macro-average F1: {100 * macro_f1:.2f}%\n')
-                f.write(f'Micro-average F1: {100 * micro_f1:.2f}%\n')
-    
-    print(f'Training complete. Best validation accuracy: {best_macro_f1:.2f}%')
-
+    # train and save model
+    train_model(samples, class_names)
 
 if __name__ == "__main__":
     main()

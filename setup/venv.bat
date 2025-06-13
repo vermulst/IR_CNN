@@ -18,9 +18,6 @@ IF NOT EXIST "%VENV_DIR%\Scripts\python.exe" (
 REM Activate the virtual environment
 CALL "%VENV_DIR%\Scripts\activate.bat"
 
-REM Install numpy first so it's available for building other packages
-pip install numpy
-
 REM Upgrade pip and install requirements
 python -m pip install --upgrade pip
 pip install -r "%SCRIPT_DIR%requirements.txt"

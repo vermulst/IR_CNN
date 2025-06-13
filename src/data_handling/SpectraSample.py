@@ -57,7 +57,7 @@ class SpectraSample:
         #   print(f"[WARN] Empty arrays in '{self.path}'")
             return False
         if len(x) != len(y):
-            print(f"[WARN] Length mismatch ({len(x)} vs {len(y)}) in '{self.path}'")
+        #   print(f"[WARN] Length mismatch ({len(x)} vs {len(y)}) in '{self.path}'")
             return False
 
         # Apply scaling factors and store as numpy arrays

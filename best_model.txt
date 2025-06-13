@@ -1,17 +1,5 @@
-Epoch: 28
-Validation Accuracy: 95.98%
-
-alcohols:
-  Accuracy: 93.01%
-  F1 Score: 81.80%
-
-ketones:
-  Accuracy: 95.51%
-  F1 Score: 66.89%
-
-aldehydes:
-  Accuracy: 99.42%
-  F1 Score: 80.60%
-
-Macro-average F1: 76.43%
-Micro-average F1: 78.05%
+Epoch: 24
+Macro F1: 77.43%
+alcohols: F1: 81.57%
+ketones: F1: 66.67%
+aldehydes: F1: 84.06%
