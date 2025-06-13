@@ -47,3 +47,9 @@ The SMILES name for the compound of the respective spectra is in the JSON metada
 Additionally since our goal is to determine the functional groups we can should convert the SMILES name in SMARTS format which makes it much easier to search for the present functional groups.
 
 From the meetings we concluded we would want to collect our own data, talking with the chemists of our group I concluded that the data would come in a .spc format. I tried to find code or a program online which extracted that relevant data but I didn’t manage to make this work. Although this is not necessary right now it could serve as an SSA in the future.
+
+
+### How to run
+- Run `setup/venv.bat` to start the virtual environment.
+- Run main.py to train the model (if altered).
+- Run test.py to test specific JCAMP files on the model.
