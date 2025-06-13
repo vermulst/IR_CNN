@@ -1,8 +1,7 @@
-### main.py
 from data_handling.loader import load_samples
 from data_handling.preprocessing import preprocess_samples
 
-from cnn.trainer import train_model  # New trainer module
+from cnn.trainer import train_model
 from config import FUNCTIONAL_GROUP_SMARTS
 
 def main():

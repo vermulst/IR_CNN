@@ -24,6 +24,7 @@ def get_smooth_penalty(length, smoothness):
     D = sparse.diags([1, -2, 1], [0, -1, -2], shape=(length, length - 2))
     return smoothness * D.dot(D.transpose())
 
+# For defining interpolation regions and uniform distribution
 def get_target_region():
     total_length = sum([end - start for start, end in REGIONS])
     regions = [
@@ -40,9 +41,9 @@ def get_target_region():
 
     return np.concatenate(regions)
 
+# Precomputed as global variables
 COMMON_SMOOTH_PENALTY = get_smooth_penalty(INTERPOLATION_N_POINTS, BASELINE_SMOOTHNESS)
 TARGET_X = get_target_region()
-
 
 def preprocess_samples(samples):
     samples_length_pre = len(samples)
@@ -146,6 +147,7 @@ def crop_spectrum(sample, regions):
     x_segments = []
     y_segments = []
 
+    # Use binary search for efficient slicing
     for min_x, max_x in regions:
         left = np.searchsorted(sample.x, min_x, side='left')
         right = np.searchsorted(sample.x, max_x, side='right')

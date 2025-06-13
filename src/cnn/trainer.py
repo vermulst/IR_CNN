@@ -32,9 +32,12 @@ def train_model(samples, class_names):
 
     os.makedirs("plots", exist_ok=True)
 
+    # train with epochs
     for epoch in range(50):
         model.train()
         running_loss = 0.0
+
+        # train iteration
         for inputs, labels, weights in train_loader:
             inputs, labels, weights = inputs.to(device), labels.to(device), weights.to(device)
             optimizer.zero_grad()
@@ -47,7 +50,7 @@ def train_model(samples, class_names):
         avg_loss = running_loss / len(train_loader)
         loss_history.append(avg_loss)
 
-        # Validation
+        # test iteration
         model.eval()
         with torch.no_grad():
             class_tp = [0] * num_classes
@@ -67,6 +70,7 @@ def train_model(samples, class_names):
                     class_fp[i] += ((preds[:, i] == 1) & (labels[:, i] == 0)).sum().item()
                     class_fn[i] += ((preds[:, i] == 0) & (labels[:, i] == 1)).sum().item()
 
+        # calculate individual and macro f1 scores
         f1_scores = []
         for i in range(num_classes):
             precision = class_tp[i] / (class_tp[i] + class_fp[i]) if (class_tp[i] + class_fp[i]) else 0
@@ -78,11 +82,13 @@ def train_model(samples, class_names):
         macro_f1 = sum(f1_scores) / num_classes
         macro_f1_history.append(macro_f1)
 
+        # print model info
         print(f"Epoch {epoch + 1}, Loss: {avg_loss:.4f}, Macro F1: {macro_f1:.4f}")
         for i in range(num_classes):
             acc = 100 * class_correct[i] / class_total[i] if class_total[i] else 0
             print(f"  {class_names[i]} - Acc: {acc:.2f}%, F1: {100 * f1_scores[i]:.2f}%")
 
+        # save only if the macro f1 score improved
         if macro_f1 > best_macro_f1:
             best_macro_f1 = macro_f1
             torch.save(model.state_dict(), "best_model.pth")
@@ -91,6 +97,7 @@ def train_model(samples, class_names):
                 for i, name in enumerate(class_names):
                     f.write(f"{name}: F1: {100 * f1_scores[i]:.2f}%\n")
 
+    # plots and saves model statistics into /plots
     save_f1_plot(f1_history, class_names, out_path="plots/f1_per_class.png")
     save_macro_f1_plot(macro_f1_history, out_path="plots/macro_f1.png")
     save_loss_plot(loss_history, out_path="plots/loss.png")

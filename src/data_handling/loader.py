@@ -38,6 +38,7 @@ def read_metadata(metadata, datafolder, dataset_type):
     path_to_smiles = {} # PATH -> SMILES
 
     # Read out metadata
+    # Depending on dataset type, metadata format is different
     for _ in metadata:
         if (dataset_type == "chemotion"):
             compound = _
